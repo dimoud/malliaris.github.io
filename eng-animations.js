@@ -203,7 +203,9 @@
     }
 
     /* ─── 9. REVEAL ON SCROLL ────────────────────────────────────────────── */
-    var revealEls = document.querySelectorAll('[data-reveal], [data-reveal-r]');
+    var revealEls = document.querySelectorAll(
+        '[data-reveal], [data-reveal-r], [data-reveal-left], [data-reveal-right], [data-reveal-clip]'
+    );
     if (revealEls.length && 'IntersectionObserver' in window) {
         var revealObs = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
@@ -211,7 +213,9 @@
                     var siblings = Array.prototype.filter.call(
                         entry.target.parentElement.children,
                         function (el) {
-                            return el.hasAttribute('data-reveal') || el.hasAttribute('data-reveal-r');
+                            return el.hasAttribute('data-reveal') || el.hasAttribute('data-reveal-r') ||
+                                   el.hasAttribute('data-reveal-left') || el.hasAttribute('data-reveal-right') ||
+                                   el.hasAttribute('data-reveal-clip');
                         }
                     );
                     var idx = siblings.indexOf(entry.target);
@@ -225,6 +229,68 @@
         revealEls.forEach(function (el) { revealObs.observe(el); });
     } else {
         revealEls.forEach(function (el) { el.classList.add('revealed'); });
+    }
+
+    /* ─── 10. WORD-BY-WORD REVEAL ────────────────────────────────────────── */
+    var wordEls = document.querySelectorAll('[data-word-reveal]');
+    wordEls.forEach(function (el) {
+        /* Split text nodes into word spans, preserving child elements */
+        (function splitWords(node) {
+            if (node.nodeType === 3) {
+                var words = node.textContent.split(/(\s+)/);
+                var frag = document.createDocumentFragment();
+                words.forEach(function (w) {
+                    if (/^\s+$/.test(w)) {
+                        frag.appendChild(document.createTextNode(w));
+                    } else if (w.length) {
+                        var span = document.createElement('span');
+                        span.className = 'wr-word';
+                        span.textContent = w;
+                        frag.appendChild(span);
+                    }
+                });
+                node.parentNode.replaceChild(frag, node);
+            } else if (node.nodeType === 1 && node.nodeName !== 'SPAN') {
+                Array.from(node.childNodes).forEach(splitWords);
+            }
+        })(el);
+
+        /* Assign staggered delays */
+        var words = el.querySelectorAll('.wr-word');
+        words.forEach(function (w, i) {
+            w.style.transitionDelay = (i * 55) + 'ms';
+        });
+    });
+
+    if (wordEls.length && 'IntersectionObserver' in window) {
+        var wordObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    wordObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        wordEls.forEach(function (el) { wordObs.observe(el); });
+    } else {
+        wordEls.forEach(function (el) { el.classList.add('revealed'); });
+    }
+
+    /* ─── 11. PARALLAX PHOTOS ────────────────────────────────────────────── */
+    var parallaxPhotos = document.querySelectorAll('.parallax-photo');
+
+    function updateParallax() {
+        if (!parallaxPhotos.length) return;
+        var vh = window.innerHeight;
+        parallaxPhotos.forEach(function (wrap) {
+            var img = wrap.querySelector('img');
+            if (!img) return;
+            var rect = wrap.getBoundingClientRect();
+            if (rect.bottom < 0 || rect.top > vh) return;
+            var pct  = (vh - rect.top) / (vh + rect.height);   /* 0→1 top-to-bottom */
+            var yOff = (pct - 0.5) * 36;                        /* ±18px */
+            img.style.transform = 'scale(1.08) translateY(' + yOff.toFixed(2) + 'px)';
+        });
     }
 
     /* ─── 0. SCROLL PROGRESS BAR ─────────────────────────────────────────── */
@@ -250,6 +316,7 @@
         updateProgress();
         updateNav();
         updateCaliper();
+        updateParallax();
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });

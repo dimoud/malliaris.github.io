@@ -264,6 +264,8 @@ nav.scrolled {
     font-weight: 700; font-size: 14px; letter-spacing: 1px;
     border-radius: 4px;
     border: none; cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     transition: background 0.25s, transform 0.2s;
     width: fit-content;
     text-transform: uppercase;
@@ -293,6 +295,9 @@ nav.scrolled {
     width: 1px; height: 36px;
     background: rgba(255,255,255,0.15);
 }
+
+/* Scroll hint — hidden on desktop, shown via mobile media query */
+.hero-scroll-hint { display: none; }
 
 /* ===== MARQUEE ===== */
 .marquee-wrap {
@@ -457,9 +462,10 @@ nav.scrolled {
 .heading-helmet {
     position: absolute;
     width: 80px;
-    right: -2cm;
+    right: 0;
     top: calc(-10px - 1cm);
     pointer-events: none;
+    z-index: 999;
 }
 .heading-helmet svg {
     width: 100%; height: auto;
@@ -668,21 +674,20 @@ nav.scrolled {
 .services-header .section-heading em { color: var(--accent); }
 .services-lead {
     font-size: clamp(14px, 1.3vw, 16px); line-height: 1.7;
-    color: rgba(255,255,255,0.65); margin-top: 14px; max-width: 680px;
+    color: rgba(255,255,255,0.65); margin-top: 0; max-width: 900px;
 }
 .services-legal {
-    margin-top: 12px; margin-bottom: -1cm; padding: 14px 20px;
+    margin-top: 12px; padding: 14px 20px;
     background: rgba(232,84,26,0.1);
     border-left: 3px solid var(--accent);
     border-radius: 0 6px 6px 0;
     font-size: 15px; line-height: 1.65;
     color: rgba(255,255,255,0.75); max-width: 1360px;
-    position: relative; top: -1cm;
 }
 
 /* sec-meas — measurement bar decoration */
 .sec-meas {
-    max-width: 1240px; margin: -28px auto 40px;
+    max-width: 1240px; margin: 20px auto 40px;
     display: flex; align-items: center; gap: 10px;
     color: rgba(255,255,255,0.25);
     font-size: 11px; letter-spacing: 2px;
@@ -753,12 +758,12 @@ nav.scrolled {
     max-width: 1240px; margin: 0 auto 56px;
 }
 
-/* Crane decoration — faint right-side watermark */
+/* Crane decoration — background watermark */
 .crane-decoration {
     position: absolute;
-    right: -20px; top: 40px;
-    width: clamp(140px, 18vw, 220px);
-    opacity: 0.08;
+    right: -40px; top: 20px;
+    width: clamp(320px, 40vw, 520px);
+    opacity: 0.06;
     color: var(--ink);
     pointer-events: none;
     z-index: 0;
@@ -821,7 +826,7 @@ nav.scrolled {
 }
 .sectors-lead {
     font-size: clamp(14px, 1.3vw, 16px); line-height: 1.7;
-    color: var(--slate); margin-top: 12px; max-width: 680px;
+    color: var(--slate); margin-top: 12px; max-width: 900px;
 }
 
 /* ===== IN ACTION ===== */
@@ -853,10 +858,12 @@ nav.scrolled {
     width: 100%; height: 100%;
     object-fit: cover;
     filter: contrast(1.05) saturate(0.88);
-    transition: transform 0.7s var(--ease);
+    transition: none;
     display: block;
+    transform: scale(1.08) translateY(0px);
 }
-.action-photo-wrap:hover img { transform: scale(1.04); }
+/* Hover handled via JS parallax; fallback for non-JS */
+.action-photo-wrap:hover img { filter: contrast(1.08) saturate(0.95); }
 
 .action-caption {
     position: absolute; bottom: 0; left: 0; right: 0;
@@ -1076,6 +1083,8 @@ nav.scrolled {
     font-size: 14px; font-weight: 700; letter-spacing: 1px;
     text-transform: uppercase;
     padding: 14px 28px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     transition: background 0.25s, transform 0.2s;
     width: 100%;
 }
@@ -1159,6 +1168,65 @@ footer {
 .ec-logo { height: 18px; width: auto; opacity: 0.5; }
 .ec-name { font-weight: 600; }
 
+/* ===== DIRECTIONAL REVEALS ===== */
+[data-reveal-left] {
+    opacity: 0; transform: translateX(-52px);
+    transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+[data-reveal-left].revealed { opacity: 1; transform: none; }
+
+[data-reveal-right] {
+    opacity: 0; transform: translateX(52px);
+    transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+[data-reveal-right].revealed { opacity: 1; transform: none; }
+
+/* Clip wipe — left to right reveal for headings */
+[data-reveal-clip] {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.9s var(--ease);
+}
+[data-reveal-clip].revealed { clip-path: inset(0 0% 0 0); }
+
+/* Word-by-word reveal */
+[data-word-reveal] .wr-word {
+    display: inline-block;
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+[data-word-reveal].revealed .wr-word { opacity: 1; transform: none; }
+
+/* Service number slide-in (icon pop removed) */
+
+/* Service number slide-in */
+@keyframes numSlide {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 0.6; transform: none; }
+}
+.service-card.revealed .service-num { animation: numSlide 0.4s var(--ease) 0.08s both; }
+
+/* Resource card stagger delays */
+.resources-grid .resource-card:nth-child(1) { transition-delay: 0ms; }
+.resources-grid .resource-card:nth-child(2) { transition-delay: 80ms; }
+.resources-grid .resource-card:nth-child(3) { transition-delay: 160ms; }
+.resources-grid .resource-card:nth-child(4) { transition-delay: 240ms; }
+.resources-grid .resource-card:nth-child(5) { transition-delay: 320ms; }
+.resources-grid .resource-card:nth-child(6) { transition-delay: 400ms; }
+
+/* Parallax photo wrapper */
+.parallax-photo { overflow: hidden; border-radius: inherit; }
+.parallax-photo img { will-change: transform; transition: transform 0.7s var(--ease); }
+.parallax-photo:hover img { transform: scale(1.04) !important; }
+
+/* Quote banner entrance */
+@keyframes quoteSlide {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: none; }
+}
+.quote-banner.revealed blockquote { animation: quoteSlide 0.8s var(--ease) 0.15s both; }
+.quote-banner.revealed .quote-icon { animation: quoteSlide 0.6s var(--ease) 0s both; }
+.quote-banner.revealed .quote-author { animation: quoteSlide 0.6s var(--ease) 0.35s both; }
+
 /* ===== MOBILE ===== */
 @media (max-width: 900px) {
     .hamburger { display: flex; }
@@ -1182,9 +1250,85 @@ footer {
     }
     .nav-links a.nav-cta { border: 1.5px solid var(--accent); padding: 12px 32px; }
 
-    .hero-photo-group { display: none; }
-    .hero-inner { max-width: 90%; padding-left: 5%; }
+    /* ── Hero: mobile column layout ──────────────────────────── */
+    .hero-hex { display: none; }
+
+    /* Overlay: directional gradient looks wrong on centred column — use radial */
+    .hero-overlay {
+        background: radial-gradient(ellipse at 50% 40%,
+            rgba(15,25,41,0.55) 0%,
+            rgba(15,25,41,0.88) 65%,
+            rgba(15,25,41,0.97) 100%);
+    }
+
+    /* Hero itself: flex column, photo + name are the centred focal block */
+    .hero {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100svh;
+        padding-top: 0;
+        gap: 0;
+    }
+
+    /*
+     * Push photo so its visual centre sits at 50svh.
+     * Formula: margin-top = 50svh − nav(88px) − half_photo_height
+     * The max() guards against negative values on tiny screens.
+     */
+    .hero-photo-group {
+        position: relative;
+        right: auto; top: auto; transform: none;
+        width: clamp(160px, 50vw, 220px);
+        height: clamp(160px, 50vw, 220px);
+        margin-top: max(calc(50svh - 88px - clamp(80px, 25vw, 110px)), 32px);
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    /* Larger photo border + glow on mobile */
+    .hero-photo-wrap { border-width: 3px; }
+
+    /* Shield badge: fix size (2.3vw = ~9px on mobile — invisible) */
+    .shield-badge-svg { width: 28px; }
+    .ch-label { font-size: 8px; }
+
+    /* Hero inner: tight gap, everything centred */
+    .hero-inner {
+        max-width: 100%;
+        padding: 14px 6% 0;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* Reorder: hide credential, show name first, then eyebrow, CTA, stats */
+    .hero-credential { display: none; }
+    .hero-name   { order: 1; align-items: center; }
+    .hero-eyebrow { order: 2; font-size: 12px; letter-spacing: 1.5px; }
+    .btn-accent  { order: 3; width: 100%; max-width: 320px; justify-content: center; padding: 15px 24px; }
+    .hero-stats  { order: 4; justify-content: center; margin-top: 4px; }
+
+    /* Name size */
     .hero-name .line1, .hero-name .line2 { font-size: clamp(40px, 12vw, 68px); }
+
+    /* Fix stat numbers: 2.8vw = ~11px on mobile — use explicit px */
+    .stat-num { font-size: 22px; }
+    .stat-lbl { font-size: 10px; }
+
+    /* Scroll hint: visible only on mobile, pinned to bottom of hero */
+    .hero-scroll-hint {
+        display: flex;
+        position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+        z-index: 4;
+        color: rgba(255,255,255,0.4);
+        font-size: 18px;
+        animation: scrollBounce 2s ease-in-out infinite;
+    }
+    @keyframes scrollBounce {
+        0%, 100% { transform: translateX(-50%) translateY(0);   opacity: 0.4; }
+        50%       { transform: translateX(-50%) translateY(6px); opacity: 0.75; }
+    }
 
     .about-grid { grid-template-columns: 1fr; }
     .about-aside { order: -1; }
@@ -1197,6 +1341,14 @@ footer {
     .crane-decoration { display: none; }
 
     .footer-top { flex-direction: column; align-items: flex-start; }
+
+    /* Disable heavy parallax on tablets */
+    .parallax-photo img { will-change: auto; }
+
+    /* Directional reveals collapse to vertical on small screens */
+    [data-reveal-left], [data-reveal-right] {
+        transform: translateY(20px);
+    }
 }
 
 @media (max-width: 600px) {
@@ -1204,8 +1356,81 @@ footer {
     .sectors-grid { grid-template-columns: 1fr; }
     .resources-grid { grid-template-columns: 1fr; }
 
+    /* Hero — 600px breakpoint refinements */
     .hero-stats { gap: 0; flex-wrap: wrap; }
-    .hero-stat { padding: 6px 16px; }
+    .hero-stat { padding: 6px 12px; }
+    .btn-accent { padding: 14px 20px; font-size: 13px; }
 
+    /* About */
+    .about-section { padding: 48px 5%; }
+    .about-grid { gap: 32px; }
+    .about-aside { padding: 18px; }
+    .feature-row { padding: 14px 16px; gap: 14px; }
+    .feature-row i { width: 38px; height: 38px; font-size: 14px; }
+
+    /* Services */
+    .service-card { padding: 24px 20px; }
+
+    /* Sectors */
+    .sector-card { padding: 22px 18px; }
+
+    /* In action */
+    .in-action-section { padding: 40px 5%; }
+
+    /* Quote */
+    .quote-banner { padding: 36px 5%; }
+    .quote-banner blockquote { font-size: clamp(16px, 4.5vw, 22px); }
+
+    /* Resources */
+    .resource-card { padding: 24px 20px; }
+
+    /* Contact */
+    .contact-section { padding: 48px 5%; }
     .contact-form-wrap { padding: 20px 16px; }
+    .calendly-cta { font-size: 13px; padding: 12px 18px; width: 100%; justify-content: center; }
+
+    /* Footer */
+    .footer-links { gap: 16px; }
+    .footer-links a { font-size: 11px; }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+    .hero-name .line1, .hero-name .line2 { font-size: clamp(34px, 13vw, 52px); }
+    .hero-stats { flex-direction: column; align-items: center; gap: 8px; }
+    .hero-stat-sep { display: none; }
+    .hero-stat { padding: 0; }
+    .about-grid { gap: 24px; }
+    .services-grid, .sectors-grid, .resources-grid { gap: 12px; }
+}
+
+/* iOS input zoom fix — must be >= 16px to prevent auto-zoom */
+@media (max-width: 900px) {
+    .field input, .field select, .field textarea {
+        font-size: 16px;
+    }
+}
+
+/* Notch / safe-area support */
+@supports (padding: env(safe-area-inset-bottom)) {
+    footer {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    .contact-section {
+        padding-bottom: max(clamp(64px, 9vw, 120px), calc(env(safe-area-inset-bottom) + 40px));
+    }
+}
+
+/* Disable clip-path reveal on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal], [data-reveal-left], [data-reveal-right],
+    [data-reveal-clip], [data-word-reveal] .wr-word,
+    .service-card, .sector-card, .resource-card,
+    .feature-row, .about-aside {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
 }
