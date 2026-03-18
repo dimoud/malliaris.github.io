@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Βάϊος Λιάπης | Πολιτικός Μηχανικός Αθήνα</title>
+    <meta name="description" content="Διπλωματούχος Πολιτικός Μηχανικός ΑΠΘ – Αθήνα & Αττική. Ηλεκτρονική ταυτότητα, αυθαίρετα, ΠΕΑ, οικοδομικές άδειες.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="expertease-credit.css">
+</head>
+<body>
+
+    <div id="progress"></div>
+
+    <!-- Scroll measurement ruler -->
+    <div class="scroll-ruler" id="scrollRuler" aria-hidden="true">
+        <div class="sr-tick"></div>
+        <div class="sr-track" id="srTrack">
+            <div class="sr-fill" id="srFill"></div>
+            <div class="sr-ticks" id="srTicksRow"></div>
+        </div>
+        <span class="sr-value" id="srValue">0.000 m</span>
+        <div class="sr-tick"></div>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="nav">
+        <a href="#" class="nav-logo">
+            <div class="logo-circle">
+                <img src="logo.peg.jpg" alt="Λιάπης Λογότυπο"
+                     onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(135deg,#1a1410,#2d2010);display:flex;align-items:center;justify-content:center;font-family:serif;font-size:18px;font-weight:700;color:#c9a86c\'>ΒΛ</div>'">
+            </div>
+            <div class="logo-text">
+                <span class="name">Β. ΛΙΑΠΗΣ</span>
+                <span class="title" data-i18n="nav.title">Πολιτικός Μηχανικός</span>
+            </div>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about" data-i18n="nav.about">Σχετικά</a>
+            <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
+            <a href="#projects" data-i18n="nav.projects">Έργα</a>
+            <a href="#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <button class="lang-btn active" data-lang="el" onclick="setLang('el')">🇬🇷 <span class="lcode">ΕΛ</span></button>
+            <div class="lang-sep"></div>
+            <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 <span class="lcode">EN</span></button>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Scroll Elevation Meter -->
+    <div class="scroll-elev" id="scrollElev">
+        <div class="elev-track">
+            <div class="elev-fill" id="elevFill"></div>
+            <div class="elev-dot" id="elevDot"></div>
+            <div class="elev-ticks">
+                <div class="elev-tick major"><span>+12m</span></div>
+                <div class="elev-tick"></div>
+                <div class="elev-tick major"><span>+6m</span></div>
+                <div class="elev-tick"></div>
+                <div class="elev-tick major"><span>±0</span></div>
+            </div>
+        </div>
+        <span class="elev-label">ΥΨ</span>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="hero-slide active" id="slide1"></div>
+        <div class="hero-slide" id="slide2"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-blueprint" aria-hidden="true"></div>
+        <div class="crosshair-wrap" id="crosshairWrap" aria-hidden="true">
+            <div class="crosshair"><span class="ch-circle"></span></div>
+            <span class="ch-label">ΑΠΘ</span>
+        </div>
+
+        <img src="photo.jpeg" alt="Βάϊος Λιάπης" class="hero-photo"
+             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=800'">
+
+        <div class="hero-inner">
+            <h1 class="hero-name">
+                <span class="line1" data-i18n="hero.name1">ΒΑΪΟΣ</span>
+                <span class="line2" data-i18n="hero.name2">ΛΙΑΠΗΣ</span>
+            </h1>
+            <div class="hero-eyebrow"><span data-i18n="hero.eyebrow">Πολιτικός Μηχανικός ΑΠΘ</span></div>
+            <a href="#contact" class="btn-gold" data-i18n="hero.cta">Επικοινωνία</a>
+            <div class="hero-meas" id="heroMeas" aria-hidden="true">
+                <div class="hm-tick"></div>
+                <div class="hm-bar"></div>
+                <span class="hm-label" id="heroMeasLabel">ΠΡΟΣΟΨΗ &mdash; 24.000 m</span>
+                <div class="hm-bar hm-r"></div>
+                <div class="hm-tick"></div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m1">Άμεση Αυτοψία</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m2">Ηλεκτρονική Ταυτότητα Κτιρίου</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m3">Νομιμοποίηση Αυθαιρέτων</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m4">Ενεργειακά Πιστοποιητικά ΠΕΑ</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m5">Οικοδομικές Άδειες</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m6">Διπλωματούχος Μηχανικός ΑΠΘ</span></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m1">Άμεση Αυτοψία</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m2">Ηλεκτρονική Ταυτότητα Κτιρίου</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m3">Νομιμοποίηση Αυθαιρέτων</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m4">Ενεργειακά Πιστοποιητικά ΠΕΑ</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m5">Οικοδομικές Άδειες</span></div>
+            <div class="marquee-item"><span class="marquee-dot"></span><span data-i18n="marquee.m6">Διπλωματούχος Μηχανικός ΑΠΘ</span></div>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+        <div class="about-grid about-grid--single">
+            <div class="about-content" data-reveal>
+                <h2 class="section-heading light" data-i18n-html="about.heading">
+                  <em>  Εμπειρία & <em>Εξειδίκευση</em>
+                </h2>
+                <p class="about-lead" data-i18n-html="about.lead">
+                    Διπλωματούχος Πολιτικός Μηχανικός του Αριστοτέλειου Πανεπιστημίου Θεσσαλονίκης, με πολυετή εμπειρία στην αντιμετώπιση πολεοδομικών, κτηματολογικών και κατασκευαστικών θεμάτων για ιδιώτες και επαγγελματίες σε όλη την Αττική.
+                </p>
+                <div class="dim-row" data-dim>
+                    <div class="dim-tick"></div>
+                    <div class="dim-bar dim-l"></div>
+                    <span class="dim-value"><span data-i18n="about.dim">Αθήνα &mdash; Αττική</span></span>
+                    <div class="dim-bar dim-r"></div>
+                    <div class="dim-tick"></div>
+                </div>
+                <div class="about-features">
+
+                    <div class="feature-row" data-reveal>
+                        <i class="fa-solid fa-clock"></i>
+                        <strong data-i18n="feature.timeline.label">Χρονοδιάγραμμα</strong>
+                        <span data-i18n="feature.timeline.text">Γρήγορη ανταπόκριση &amp; τήρηση προθεσμιών</span>
+                    </div>
+                    <div class="feature-row" data-reveal>
+                        <i class="fa-solid fa-handshake"></i>
+                        <strong data-i18n="feature.transparency.label">Διαφάνεια</strong>
+                        <span data-i18n="feature.transparency.text">Σαφής ενημέρωση σε κάθε στάδιο</span>
+                    </div>
+                    <div class="feature-row" data-reveal>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <strong data-i18n="feature.direct.label">Αμεση</strong>
+                        <span data-i18n="feature.direct.text">Εξυπηρέτηση σε ολόκληρη την Αττική</span>
+                    </div>
+                </div>
+
+                <!-- Caliper animation -->
+                <div class="caliper-wrap" id="caliperWrap" aria-hidden="true">
+                    <svg class="caliper-svg" id="caliperSvg" viewBox="0 0 480 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Scale beam -->
+                        <rect x="88" y="38" width="310" height="4" rx="1" stroke="currentColor" stroke-width="1" fill="rgba(201,168,108,0.07)"/>
+                        <!-- Scale ticks: major every 62px ≈ 1m, minor every 15.5px ≈ 0.25m -->
+                        <g stroke="currentColor" opacity="0.45">
+                            <line x1="103" y1="38" x2="103" y2="44" stroke-width="0.8"/>
+                            <line x1="118" y1="38" x2="118" y2="44" stroke-width="0.8"/>
+                            <line x1="134" y1="38" x2="134" y2="44" stroke-width="0.8"/>
+                            <line x1="150" y1="36" x2="150" y2="46" stroke-width="1.1"/><!-- 1m -->
+                            <line x1="165" y1="38" x2="165" y2="44" stroke-width="0.8"/>
+                            <line x1="181" y1="38" x2="181" y2="44" stroke-width="0.8"/>
+                            <line x1="196" y1="38" x2="196" y2="44" stroke-width="0.8"/>
+                            <line x1="212" y1="36" x2="212" y2="46" stroke-width="1.1"/><!-- 2m -->
+                            <line x1="227" y1="38" x2="227" y2="44" stroke-width="0.8"/>
+                            <line x1="243" y1="38" x2="243" y2="44" stroke-width="0.8"/>
+                            <line x1="258" y1="38" x2="258" y2="44" stroke-width="0.8"/>
+                            <line x1="274" y1="36" x2="274" y2="46" stroke-width="1.1"/><!-- 3m -->
+                            <line x1="289" y1="38" x2="289" y2="44" stroke-width="0.8"/>
+                            <line x1="305" y1="38" x2="305" y2="44" stroke-width="0.8"/>
+                            <line x1="320" y1="38" x2="320" y2="44" stroke-width="0.8"/>
+                            <line x1="336" y1="36" x2="336" y2="46" stroke-width="1.1"/><!-- 4m -->
+                            <line x1="352" y1="38" x2="352" y2="44" stroke-width="0.8"/>
+                            <line x1="367" y1="38" x2="367" y2="44" stroke-width="0.8"/>
+                            <line x1="383" y1="38" x2="383" y2="44" stroke-width="0.8"/>
+                        </g>
+                        <!-- Fixed left jaw -->
+                        <path d="M88 18 L88 60 L70 60 L70 42" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="rgba(201,168,108,0.06)"/>
+                        <!-- Sliding right jaw (JS animates translateX on this group, starts at -262px = closed) -->
+                        <g id="calJawGroup" style="transform:translateX(-262px)">
+                            <path d="M350 18 L350 60 L368 60 L368 42" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="rgba(201,168,108,0.06)"/>
+                            <line x1="350" y1="36" x2="350" y2="54" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+                        </g>
+                        <!-- Dimension line above -->
+                        <line x1="86" y1="13" x2="90" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><!-- left diagonal tick -->
+                        <line id="calDimLine" x1="88" y1="16" x2="88" y2="16" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+                        <line id="calDimTickR" x1="86" y1="13" x2="90" y2="20" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><!-- right tick (mirrors left, x updates) -->
+                        <!-- Value label -->
+                        <text id="caliperVal" x="88" y="10" text-anchor="middle"
+                              font-family="Cormorant Garamond, serif" font-size="12"
+                              letter-spacing="2.5" fill="currentColor" opacity="0.85">0.000 m</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services-section" id="services">
+        <div class="services-header">
+            <div data-reveal>
+                <div class="eyebrow"><span data-i18n="services.eyebrow">Τι προσφέρουμε</span></div>
+                <h2 class="section-heading" data-i18n-html="services.heading">Οι <em>Υπηρεσίες</em> μας</h2>
+            </div>
+        </div>
+
+        <div class="sec-meas" data-sec-meas aria-hidden="true">
+            <div class="sec-meas-tick"></div>
+            <div class="sec-meas-bar bar-l"></div>
+            <span class="sec-meas-label" id="servicesMeasLabel">12 ΥΠΗΡΕΣΙΕΣ &mdash; 480.00 m²</span>
+            <div class="sec-meas-bar bar-r"></div>
+            <div class="sec-meas-tick"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-reveal>
+                <div class="service-num">01</div>
+                <i class="fa-solid fa-map-location-dot service-icon"></i>
+                <h3 data-i18n="s1.title">Δήλωση στο Κτηματολόγιο</h3>
+                <p data-i18n="s1.text">Αναλαμβάνουμε την ηλεκτρονική υποβολή της δήλωσής σας ώστε η διαδικασία να ολοκληρωθεί με ορθότητα και να κατοχυρώσετε την ιδιοκτησία σας.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">02</div>
+                <i class="fa-solid fa-city service-icon"></i>
+                <h3 data-i18n="s2.title">Πολεοδομικές Άδειες</h3>
+                <p data-i18n="s2.text">Οι πολεοδομικές άδειες εκδίδονται ηλεκτρονικά. Ο μηχανικός, εξουσιοδοτημένος από τον κύριο του έργου, αναλαμβάνει ως πιστοποιημένος χρήστης όλη τη διαδικασία.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">03</div>
+                <i class="fa-solid fa-right-left service-icon"></i>
+                <h3 data-i18n="s3.title">Μεταφορά Αυθαιρέτων στο Ν.4495/17</h3>
+                <p data-i18n="s3.text">Σύμφωνα με την ισχύουσα νομοθεσία (άρθρο 88, Ν.4495/2017), αναλαμβάνουμε τη μεταφορά αυθαίρετων κατασκευών που έχουν υπαχθεί σε παλαιότερους νόμους.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">04</div>
+                <i class="fa-solid fa-certificate service-icon"></i>
+                <h3 data-i18n="s4.title">Βεβαιώσεις Μηχανικού Ν.4495/2017</h3>
+                <p data-i18n="s4.text">Σε συμβολαιογραφικές πράξεις επί ακινήτων όπως αγοραπωλησία, μεταβίβαση, γονική παροχή, απαιτείται η βεβαίωση του μηχανικού που αναλαμβάνουμε άμεσα.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">05</div>
+                <i class="fa-solid fa-helmet-safety service-icon"></i>
+                <h3 data-i18n="s5.title">Επίβλεψη Κατασκευών &amp; Έργων</h3>
+                <p data-i18n="s5.text">Ως φυσικό επακόλουθο μιας οικοδομικής άδειας, αναλαμβάνουμε την επίβλεψη της κατασκευής για την ομαλή λειτουργία του εργοταξίου.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">06</div>
+                <i class="fa-solid fa-house-circle-exclamation service-icon"></i>
+                <h3 data-i18n="s6.title">Νομιμοποίηση &amp; Τακτοποίηση Αυθαιρέτων</h3>
+                <p data-i18n="s6.text">Αναλαμβάνουμε την τακτοποίηση αυθαίρετων κατασκευών και χρήσεων σύμφωνα με τον ισχύοντα νόμο 4495/2017.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">07</div>
+                <i class="fa-solid fa-file-signature service-icon"></i>
+                <h3 data-i18n="s7.title">Ηλεκτρονική Ταυτότητα Κτιρίων</h3>
+                <p data-i18n="s7.text">Στόχος της ΗΤΚ είναι η λεπτομερής αποτύπωση της υφιστάμενης κατάστασης κάθε κτιρίου και των οικοδομικών αδειών του για ασφαλείς μεταβιβάσεις.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">08</div>
+                <i class="fa-solid fa-handshake service-icon"></i>
+                <h3 data-i18n="s8.title">Υπηρεσία Μιας Στάσης</h3>
+                <p data-i18n="s8.text">Το γραφείο μας και οι συνεργάτες αναλαμβάνουν κάθε υπόθεση από την αρχή μέχρι το τέλος, εξασφαλίζοντας πλήρη συνέπεια και αποτελεσματικότητα.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">09</div>
+                <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
+                <h3 data-i18n="s9.title">Ανακαινίσεις &amp; Επισκευές &amp; Μονώσεις</h3>
+                <p data-i18n="s9.text">Η ανακαίνιση εξασφαλίζει κάλυψη λειτουργικών αναγκών και εκσυγχρονισμό των υφιστάμενων κατασκευών σύμφωνα με τις σύγχρονες απαιτήσεις.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">10</div>
+                <i class="fa-solid fa-bolt-lightning service-icon"></i>
+                <h3 data-i18n="s10.title">Ενεργειακά Πιστοποιητικά</h3>
+                <p data-i18n="s10.text">Αναλαμβάνουμε την ενεργειακή επιθεώρηση σε κτίρια κάθε χρήσης (κατοικίες, καταστήματα, ξενοδοχεία) σύμφωνα με τη νεώτερη νομοθεσία.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">11</div>
+                <i class="fa-solid fa-store service-icon"></i>
+                <h3 data-i18n="s11.title">Άδειες Λειτουργίας</h3>
+                <p data-i18n="s11.text">Αναλαμβάνουμε όλη τη διαδικασία για την επιτυχή έκδοση της άδειας λειτουργίας της επιχείρησής σας σε κάθε τύπο εμπορικής δραστηριότητας.</p>
+            </div>
+            <div class="service-card" data-reveal>
+                <div class="service-num">12</div>
+                <i class="fa-solid fa-map service-icon"></i>
+                <h3 data-i18n="s12.title">Τοπογραφικά Διαγράμματα</h3>
+                <p data-i18n="s12.text">Σχέδιο που αναπαριστά το περίγραμμα του κτιρίου και τα όρια του οικοπέδου με ακριβείς συντεταγμένες στο Ελληνικό Γεωδαιτικό Σύστημα Αναφοράς.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects-section section-pad" id="projects">
+        <div class="projects-header">
+            <div data-reveal>
+                <div class="eyebrow"><span data-i18n="projects.eyebrow">Το χαρτοφυλάκιό μας</span></div>
+                <h2 class="section-heading light" data-i18n-html="projects.heading">Επιλεγμένα <em>Έργα</em></h2>
+            </div>
+        </div>
+        <div class="sec-meas" data-sec-meas aria-hidden="true">
+            <div class="sec-meas-tick"></div>
+            <div class="sec-meas-bar bar-l"></div>
+            <span class="sec-meas-label" id="projectsMeasLabel">6 ΕΡΓΑ &mdash; 1250.00 m²</span>
+            <div class="sec-meas-bar bar-r"></div>
+            <div class="sec-meas-tick"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-reveal>
+                <img src="cover_photo.jpg" alt="Έργο 1"
+                     onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&q=80&w=800'">
+                <div class="project-card-overlay"></div>
+                <div class="project-card-info">
+                    <div class="project-cat" data-i18n="p1.cat">Ηλεκτρονική Ταυτότητα</div>
+                    <h3 data-i18n="p1.title">Κατοικία Αθήνα</h3>
+                    <p data-i18n="p1.desc">Πλήρης ΗΤΚ &amp; βεβαίωση μηχανικού για μεταβίβαση</p>
+                </div>
+            </div>
+            <div class="project-card" data-reveal>
+                <img src="cover_photo_2.jpg" alt="Έργο 2"
+                     onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800'">
+                <div class="project-card-overlay"></div>
+                <div class="project-card-info">
+                    <div class="project-cat" data-i18n="p2.cat">Οικοδομική Άδεια</div>
+                    <h3 data-i18n="p2.title">Νέα Κατασκευή Πειραιάς</h3>
+                    <p data-i18n="p2.desc">Αρχιτεκτονική μελέτη &amp; αδειοδότηση</p>
+                </div>
+            </div>
+            <div class="project-card" data-reveal>
+                <img src="cover_photo.jpg" alt="Έργο 3"
+                     onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800'">
+                <div class="project-card-overlay"></div>
+                <div class="project-card-info">
+                    <div class="project-cat" data-i18n="p3.cat">Τακτοποίηση Αυθαίρετου</div>
+                    <h3 data-i18n="p3.title">Μονοκατοικία Γλυφάδα</h3>
+                    <p data-i18n="p3.desc">Νομιμοποίηση κατά Ν.4495/2017</p>
+                </div>
+            </div>
+            <div class="project-card" data-reveal>
+                <img src="cover_photo_2.jpg" alt="Έργο 4"
+                     onerror="this.src='https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&q=80&w=800'">
+                <div class="project-card-overlay"></div>
+                <div class="project-card-info">
+                    <div class="project-cat" data-i18n="p4.cat">Ενεργειακό Πιστοποιητικό</div>
+                    <h3 data-i18n="p4.title">Εμπορικό Κτίριο Μαρούσι</h3>
+                    <p data-i18n="p4.desc">ΠΕΑ &amp; ενεργειακή αναβάθμιση</p>
+                </div>
+            </div>
+            <div class="project-card" data-reveal>
+                <img src="cover_photo.jpg" alt="Έργο 5"
+                     onerror="this.src='https://images.unsplash.com/photo-1590725121839-892b458a74fe?auto=format&fit=crop&q=80&w=800'">
+                <div class="project-card-overlay"></div>
+                <div class="project-card-info">
+                    <div class="project-cat" data-i18n="p5.cat">Scan to BIM</div>
+                    <h3 data-i18n="p5.title">Βιομηχανικό Κτίριο Ελαιώνας</h3>
+                    <p data-i18n="p5.desc">3D Laser Scanning &amp; ψηφιακή αποτύπωση</p>
+                </div>
+            </div>
+            <div class="project-card" data-reveal>
+                <img src="cover_photo_2.jpg" alt="Έργο 6"
+                     onerror="this.src='https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&q=80&w=800'">
+                <div class="project-card-overlay"></div>
+                <div class="project-card-info">
+                    <div class="project-cat" data-i18n="p6.cat">Ανακαίνιση</div>
+                    <h3 data-i18n="p6.title">Διαμέρισμα Κολωνάκι</h3>
+                    <p data-i18n="p6.desc">Πλήρης ανακαίνιση &amp; επίβλεψη</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info" data-reveal>
+                <div class="eyebrow"><span data-i18n="contact.eyebrow">Επικοινωνία</span></div>
+                <h2 class="section-heading light" data-i18n-html="contact.heading">Μιλήστε <em>μαζί μας</em></h2>
+                <p class="contact-lead" data-i18n="contact.lead">
+                    Είμαστε εδώ για κάθε ερώτηση ή ανάγκη. Επικοινωνήστε μαζί μας σήμερα για δωρεάν αρχική ενημέρωση.
+                </p>
+
+                <div class="person-card">
+                    <img src="photo.jpeg" alt="Βάϊος Λιάπης" class="person-photo"
+                         onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+                    <div class="person-details">
+                        <h3>Βάϊος Λιάπης</h3>
+                        <p data-i18n="contact.role">Πολιτικός Μηχανικός ΑΠΘ</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail-list">
+                    <a href="tel:6948675267" class="contact-detail">
+                        <i class="fa-solid fa-phone"></i>
+                        694 867 5267
+                    </a>
+                    <a href="mailto:vaioliap93@gmail.com" class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        vaioliap93@gmail.com
+                    </a>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Αθήνα &amp; Όλη η Αττική
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap" data-reveal>
+                <h3 data-i18n="form.title">Στείλτε μήνυμα</h3>
+                <form class="form-fields" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="field">
+                            <label data-i18n="form.label.name">Ονοματεπώνυμο</label>
+                            <input type="text" placeholder="Το όνομά σας" data-i18n-placeholder="form.ph.name" required>
+                        </div>
+                        <div class="field">
+                            <label data-i18n="form.label.phone">Τηλέφωνο</label>
+                            <input type="tel" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label data-i18n="form.label.email">Email</label>
+                        <input type="email" placeholder="email@example.gr" data-i18n-placeholder="form.ph.email" required>
+                    </div>
+                    <div class="field">
+                        <label data-i18n="form.label.subject">Αντικείμενο</label>
+                        <select>
+                            <option value="" disabled selected data-i18n="form.select.default">Επιλέξτε υπηρεσία</option>
+                            <option data-i18n="form.opt.1">Ηλεκτρονική Ταυτότητα Κτιρίου</option>
+                            <option data-i18n="form.opt.2">Νομιμοποίηση Αυθαιρέτων</option>
+                            <option data-i18n="form.opt.3">Ενεργειακό Πιστοποιητικό (ΠΕΑ)</option>
+                            <option data-i18n="form.opt.4">Οικοδομική Άδεια</option>
+                            <option data-i18n="form.opt.5">Άλλο</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label data-i18n="form.label.message">Μήνυμα</label>
+                        <textarea placeholder="Περιγράψτε σύντομα το αίτημά σας..." data-i18n-placeholder="form.ph.message"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" data-i18n="form.submit">Αποστολή Μηνύματος</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo-circle">
+                    <img src="logo.peg.jpg" alt="Logo"
+                         onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:#1a1410;display:flex;align-items:center;justify-content:center;font-family:serif;font-size:18px;font-weight:700;color:#c9a86c\'>ΒΛ</div>'">
+                </div>
+                <div class="footer-brand-text">
+                    <p class="fname">Βάϊος Λιάπης</p>
+                    <p class="ftitle" data-i18n="footer.title">Διπλωματούχος Πολιτικός Μηχανικός ΑΠΘ</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#about" data-i18n="nav.about">Σχετικά</a>
+                <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
+                <a href="#projects" data-i18n="nav.projects">Έργα</a>
+                <a href="#contact" data-i18n="nav.contact">Επικοινωνία</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <a href="mailto:vaioliap93@gmail.com" class="social-link" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:6948675267" class="social-link" title="Τηλέφωνο">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- EXPERTEASE CREDIT BANNER — modular component (expertease-credit.css) -->
+        <hr class="ec-rule">
+        <div class="expertease-credit">
+            <div class="ec-inner">
+                <span class="ec-copy">© 2026 · All Rights Reserved</span>
+                <span class="ec-divider"></span>
+                <a href="https://expertease.eu/webdesign" target="_blank" rel="noopener" class="ec-brand">
+                    <span class="ec-label">Designed by</span>
+                    <img src="logo_expertease.png" alt="Design Expertease" class="ec-logo">
+                    <span class="ec-name">Design Expertease</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* Mobile menu */
+        function toggleMenu() {
+            const menu = document.getElementById('navLinks');
+            const isOpen = menu.classList.toggle('open');
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+        function closeMenu() {
+            document.getElementById('navLinks').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        document.querySelectorAll('#navLinks a').forEach(a => {
+            a.addEventListener('click', closeMenu);
+        });
+        /* Close on Escape key */
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+        /* Contact form */
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-submit');
+            const orig = btn.textContent;
+            btn.textContent = 'Στάλθηκε ✓';
+            btn.style.background = '#2d7a4f';
+            btn.style.color = '#fff';
+            setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+        }
+    </script>
+    <script src="eng-animations.js"></script>
+    <script src="i18n.js"></script>
+</body>
+</html>
