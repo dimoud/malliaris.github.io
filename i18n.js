@@ -1,5 +1,6 @@
 /**
  * i18n.js — Greek / English translation toggle
+ * Malliaris H&S Engineer — Σταύρος Μάλλιαρης
  * Modular & reusable. Drop into any page that uses data-i18n attributes.
  *
  * Attributes recognised:
@@ -20,172 +21,199 @@
     const t = {
 
         /* NAV */
-        'nav.title':    { el: 'Πολιτικός Μηχανικός',   en: 'Civil Engineer' },
-        'nav.about':    { el: 'Σχετικά',                en: 'About' },
-        'nav.services': { el: 'Υπηρεσίες',              en: 'Services' },
-        'nav.projects': { el: 'Έργα',                   en: 'Projects' },
-        'nav.contact':  { el: 'Επικοινωνία',            en: 'Contact' },
+        'nav.title':    { el: 'Τεχνικός Ασφαλείας',          en: 'Safety Officer' },
+        'nav.about':    { el: 'Σχετικά',                      en: 'About' },
+        'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
+        'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
+        'nav.contact':  { el: 'Επικοινωνία',                  en: 'Contact' },
 
         /* HERO */
-        'hero.name1':   { el: 'ΒΑΪΟΣ',                   en: 'VAIOS' },
-        'hero.name2':   { el: 'ΛΙΑΠΗΣ',                  en: 'LIAPIS' },
-        'hero.eyebrow': { el: 'Πολιτικός Μηχανικός ΑΠΘ', en: 'Civil Engineer — AUTH' },
-        'hero.cta':     { el: 'Επικοινωνία',              en: 'Get in Touch' },
+        'hero.name1':    { el: 'ΣΤΑΥΡΟΣ',                                      en: 'STAVROS' },
+        'hero.name2':    { el: 'ΜΑΛΛΙΑΡΗΣ',                                    en: 'MALLIARIS' },
+        'hero.eyebrow':  { el: 'Μηχανικός Υγείας & Ασφάλειας ΑΠΘ',            en: 'H&S Engineer — AUTH' },
+        'hero.cta':      { el: 'Επικοινωνία',                                  en: 'Get in Touch' },
+        'hero.stat1.num':{ el: '7+',                                            en: '7+' },
+        'hero.stat1.lbl':{ el: 'χρόνια εμπειρίας',                             en: 'years experience' },
+        'hero.stat2.num':{ el: 'ASP®',                                          en: 'ASP®' },
+        'hero.stat2.lbl':{ el: 'πιστοποίηση',                                  en: 'certification' },
+        'hero.stat3.num':{ el: 'ΑΠΘ',                                          en: 'AUTH' },
+        'hero.stat3.lbl':{ el: 'πολ. μηχανικός',                               en: 'civil engineer' },
 
         /* MARQUEE */
-        'marquee.m1': { el: 'Άμεση Αυτοψία',                    en: 'Immediate Site Inspection' },
-        'marquee.m2': { el: 'Ηλεκτρονική Ταυτότητα Κτιρίου',   en: 'Building e-Identity' },
-        'marquee.m3': { el: 'Νομιμοποίηση Αυθαιρέτων',         en: 'Unauthorized Structure Legalization' },
-        'marquee.m4': { el: 'Ενεργειακά Πιστοποιητικά ΠΕΑ',    en: 'Energy Performance Certificates' },
-        'marquee.m5': { el: 'Οικοδομικές Άδειες',               en: 'Building Permits' },
-        'marquee.m6': { el: 'Διπλωματούχος Μηχανικός ΑΠΘ',     en: 'Graduate Engineer AUTH' },
+        'marquee.m1': { el: 'Τεχνικός Ασφαλείας',                    en: 'Safety Officer' },
+        'marquee.m2': { el: 'Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Risk Assessment (ΓΕΕΚ)' },
+        'marquee.m3': { el: 'Σχέδια Εκκένωσης',                      en: 'Evacuation Plans' },
+        'marquee.m4': { el: 'Εκπαιδεύσεις Υ&Α',                     en: 'H&S Training' },
+        'marquee.m5': { el: 'ASP® Certified',                        en: 'ASP® Certified' },
+        'marquee.m6': { el: 'Πολιτικός Μηχανικός ΑΠΘ',              en: 'Civil Engineer AUTH' },
 
         /* ABOUT */
+        'about.eyebrow': { el: 'Σχετικά με εμένα',  en: 'About Me' },
         'about.heading': {
-            el: '<em>Εμπειρία &amp; <em>Εξειδίκευση</em>',
+            el: 'Εμπειρία &amp; <em>Εξειδίκευση</em>',
             en: 'Experience &amp; <em>Expertise</em>',
         },
         'about.lead': {
-            el: 'Διπλωματούχος Πολιτικός Μηχανικός του Αριστοτέλειου Πανεπιστημίου Θεσσαλονίκης, με <span class="years-exp"></span>+ χρόνια εμπειρία στην αντιμετώπιση πολεοδομικών, κτηματολογικών και κατασκευαστικών θεμάτων για ιδιώτες και επαγγελματίες σε όλη την Αττική.',
-            en: 'Licensed Civil Engineer from the Aristotle University of Thessaloniki, with <span class="years-exp"></span>+ years of experience in urban planning, cadastral, and construction matters for individuals and professionals throughout Attica.',
+            el: 'Πιστοποιημένος Επαγγελματίας Υγείας και Ασφάλειας στην Εργασία, με σπουδές Πολιτικού Μηχανικού ΑΠΘ και πάνω από 7 χρόνια διεθνούς εμπειρίας, παρέχοντας ολοκληρωμένες υπηρεσίες πρόληψης και συμμόρφωσης σε επιχειρήσεις κάθε μεγέθους.<br><br>Αποτελεσματική υποστήριξη κάθε τύπου επιχείρησης, από εστιατόρια, καταστήματα και γραφεία, μέχρι εταιρείες παροχής υπηρεσιών, βιομηχανικές εγκαταστάσεις και εργοτάξια.',
+            en: 'Certified Occupational Health & Safety professional, with a Civil Engineering background from AUTH and over 7 years of international experience delivering comprehensive prevention and compliance services to businesses of every size.<br><br>Effective support for all business types — from restaurants, shops and offices to service companies, industrial facilities and construction sites.',
         },
-        'about.dim': { el: 'Αθήνα — Αττική', en: 'Athens — Attica' },
+        'about.dim': { el: 'Ελλάδα — Διεθνώς', en: 'Greece — International' },
 
         /* FEATURES */
-        'feature.timeline.label':     { el: 'Χρονοδιάγραμμα', en: 'Timeline' },
-        'feature.timeline.text':      { el: 'Γρήγορη ανταπόκριση & τήρηση προθεσμιών', en: 'Fast response & strict deadline compliance' },
-        'feature.transparency.label': { el: 'Διαφάνεια',       en: 'Transparency' },
-        'feature.transparency.text':  { el: 'Σαφής ενημέρωση σε κάθε στάδιο',          en: 'Clear updates at every stage' },
-        'feature.direct.label':       { el: 'Άμεση',           en: 'Direct' },
-        'feature.direct.text':        { el: 'Εξυπηρέτηση σε ολόκληρη την Αττική',      en: 'Service across all of Attica' },
+        'feature.risk.label':        { el: 'Αξιολόγηση Κινδύνου',          en: 'Risk Assessment' },
+        'feature.risk.text':         { el: 'Αναγνώριση κινδύνων & πρακτικές λύσεις που λειτουργούν στην πράξη', en: 'Hazard identification & practical solutions that work in the field' },
+        'feature.custom.label':      { el: 'Εξατομικευμένη Προσέγγιση',    en: 'Tailored Approach' },
+        'feature.custom.text':       { el: 'Εξατομικευμένη αξιολόγηση, προσαρμοσμένες λύσεις ανά μέγεθος επιχείρησης', en: 'Individual assessment, solutions adapted to your business size' },
+        'feature.compliance.label':  { el: 'Νομική Κάλυψη',                en: 'Legal Compliance' },
+        'feature.compliance.text':   { el: 'Εχεμύθεια, σαφής επικοινωνία με διοίκηση και προσωπικό', en: 'Confidentiality, clear communication with management and staff' },
 
         /* SERVICES */
-        'services.eyebrow': { el: 'Τι προσφέρουμε',  en: 'What we offer' },
+        'services.eyebrow': { el: 'Τι προσφέρω',  en: 'What I offer' },
         'services.heading': {
-            el: 'Οι <em>Υπηρεσίες</em> μας',
-            en: 'Our <em>Services</em>',
+            el: 'Οι <em>Υπηρεσίες</em> μου',
+            en: 'My <em>Services</em>',
         },
-        'service.more': { el: 'Μάθε Περισσότερα', en: 'Learn More' },
 
-        's1.title': { el: 'Δήλωση στο Κτηματολόγιο',              en: 'Land Registry Declaration' },
-        's1.text':  { el: 'Αναλαμβάνουμε την ηλεκτρονική υποβολή της δήλωσής σας ώστε η διαδικασία να ολοκληρωθεί με ορθότητα και να κατοχυρώσετε την ιδιοκτησία σας.', en: 'We handle the electronic submission of your declaration to ensure the process is completed correctly and your property ownership is fully secured.' },
-
-        's2.title': { el: 'Πολεοδομικές Άδειες',                  en: 'Urban Planning Permits' },
-        's2.text':  { el: 'Οι πολεοδομικές άδειες εκδίδονται ηλεκτρονικά. Ο μηχανικός, εξουσιοδοτημένος από τον κύριο του έργου, αναλαμβάνει ως πιστοποιημένος χρήστης όλη τη διαδικασία.', en: 'Urban planning permits are issued electronically. The engineer, authorized by the project owner, manages the entire process as a certified user.' },
-
-        's3.title': { el: 'Μεταφορά Αυθαιρέτων στο Ν.4495/17',   en: 'Transfer of Unauthorized Structures (Law 4495/17)' },
-        's3.text':  { el: 'Σύμφωνα με την ισχύουσα νομοθεσία (άρθρο 88, Ν.4495/2017), αναλαμβάνουμε τη μεταφορά αυθαίρετων κατασκευών που έχουν υπαχθεί σε παλαιότερους νόμους.', en: 'Under current legislation (Article 88, Law 4495/2017), we handle the transfer of unauthorized constructions previously registered under earlier laws.' },
-
-        's4.title': { el: 'Βεβαιώσεις Μηχανικού Ν.4495/2017',    en: 'Engineer Certificates (Law 4495/2017)' },
-        's4.text':  { el: 'Σε συμβολαιογραφικές πράξεις επί ακινήτων όπως αγοραπωλησία, μεταβίβαση, γονική παροχή, απαιτείται η βεβαίωση του μηχανικού που αναλαμβάνουμε άμεσα.', en: 'For notarial acts on properties such as sales, transfers, or parental grants, an engineer\'s certificate is required — we handle this promptly.' },
-
-        's5.title': { el: 'Επίβλεψη Κατασκευών & Έργων',         en: 'Construction & Project Supervision' },
-        's5.text':  { el: 'Ως φυσικό επακόλουθο μιας οικοδομικής άδειας, αναλαμβάνουμε την επίβλεψη της κατασκευής για την ομαλή λειτουργία του εργοταξίου.', en: 'As a natural follow-up to a building permit, we take on the supervision of the construction for smooth and efficient site operation.' },
-
-        's6.title': { el: 'Νομιμοποίηση & Τακτοποίηση Αυθαιρέτων', en: 'Legalization & Regularization of Unauthorized Structures' },
-        's6.text':  { el: 'Αναλαμβάνουμε την τακτοποίηση αυθαίρετων κατασκευών και χρήσεων σύμφωνα με τον ισχύοντα νόμο 4495/2017.', en: 'We handle the regularization of unauthorized constructions and uses in accordance with the current Law 4495/2017.' },
-
-        's7.title': { el: 'Ηλεκτρονική Ταυτότητα Κτιρίων',       en: 'Electronic Building Identity' },
-        's7.text':  { el: 'Στόχος της ΗΤΚ είναι η λεπτομερής αποτύπωση της υφιστάμενης κατάστασης κάθε κτιρίου και των οικοδομικών αδειών του για ασφαλείς μεταβιβάσεις.', en: 'The BEI aims to provide a detailed record of each building\'s current status and building permits, ensuring secure property transfers.' },
-
-        's8.title': { el: 'Υπηρεσία Μιας Στάσης',                 en: 'One-Stop Service' },
-        's8.text':  { el: 'Το γραφείο μας και οι συνεργάτες αναλαμβάνουν κάθε υπόθεση από την αρχή μέχρι το τέλος, εξασφαλίζοντας πλήρη συνέπεια και αποτελεσματικότητα.', en: 'Our office and partners handle every case from start to finish, ensuring full consistency and effectiveness.' },
-
-        's9.title': { el: 'Ανακαινίσεις & Επισκευές & Μονώσεις',  en: 'Renovations, Repairs & Insulation' },
-        's9.text':  { el: 'Η ανακαίνιση εξασφαλίζει κάλυψη λειτουργικών αναγκών και εκσυγχρονισμό των υφιστάμενων κατασκευών σύμφωνα με τις σύγχρονες απαιτήσεις.', en: 'Renovation ensures functional coverage and modernization of existing structures in line with contemporary requirements.' },
-
-        's10.title': { el: 'Ενεργειακά Πιστοποιητικά',            en: 'Energy Performance Certificates' },
-        's10.text':  { el: 'Αναλαμβάνουμε την ενεργειακή επιθεώρηση σε κτίρια κάθε χρήσης (κατοικίες, καταστήματα, ξενοδοχεία) σύμφωνα με τη νεώτερη νομοθεσία.', en: 'We carry out energy inspections for buildings of all types (residences, shops, hotels) in accordance with current legislation.' },
-
-        's11.title': { el: 'Άδειες Λειτουργίας',                  en: 'Operating Licences' },
-        's11.text':  { el: 'Αναλαμβάνουμε όλη τη διαδικασία για την επιτυχή έκδοση της άδειας λειτουργίας της επιχείρησής σας σε κάθε τύπο εμπορικής δραστηριότητας.', en: 'We handle the entire process for successfully obtaining the operating licence for your business across all commercial activity types.' },
-
-        's12.title': { el: 'Τοπογραφικά Διαγράμματα',             en: 'Topographic Diagrams' },
-        's12.text':  { el: 'Σχέδιο που αναπαριστά το περίγραμμα του κτιρίου και τα όρια του οικοπέδου με ακριβείς συντεταγμένες στο Ελληνικό Γεωδαιτικό Σύστημα Αναφοράς.', en: 'A plan depicting the building outline and plot boundaries with precise coordinates in the Greek Geodetic Reference System.' },
-
-        /* PROJECTS */
-        'projects.eyebrow': { el: 'Το χαρτοφυλάκιό μας',   en: 'Our Portfolio' },
-        'projects.heading': {
-            el: 'Επιλεγμένα <em>Έργα</em>',
-            en: 'Selected <em>Projects</em>',
+        's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας',         en: 'Safety Officer Coverage' },
+        's1.text':  {
+            el: 'Υποχρεωτική κατά Ν. 3850/2010, Άρθρο 8. Μηνιαίες επισκέψεις για αναγνώριση κινδύνων, επίβλεψη συνθηκών εργασίας και στοχευμένες προτάσεις.',
+            en: 'Mandatory under Law 3850/2010, Article 8. Monthly visits for hazard identification, supervision of working conditions, and targeted recommendations.',
         },
-        'p1.cat':   { el: 'Ηλεκτρονική Ταυτότητα',      en: 'Electronic Identity' },
-        'p1.title': { el: 'Κατοικία Αθήνα',              en: 'Residence Athens' },
-        'p1.desc':  { el: 'Πλήρης ΗΤΚ & βεβαίωση μηχανικού για μεταβίβαση', en: 'Full BEI & engineer\'s certificate for property transfer' },
 
-        'p2.cat':   { el: 'Οικοδομική Άδεια',            en: 'Building Permit' },
-        'p2.title': { el: 'Νέα Κατασκευή Πειραιάς',      en: 'New Construction Piraeus' },
-        'p2.desc':  { el: 'Αρχιτεκτονική μελέτη & αδειοδότηση', en: 'Architectural study & permit approval' },
+        's2.title': { el: 'ΓΕΕΚ',                               en: 'Risk Assessment Study' },
+        's2.text':  {
+            el: 'Υποχρεωτική κατά Ν. 3850/2010, Άρθρο 43. Εκπόνηση μελέτης για την εκτίμηση επαγγελματικού κινδύνου ανάλογα με τη δραστηριότητα και τις θέσεις εργασίας.',
+            en: 'Mandatory under Law 3850/2010, Article 43. Preparation of the occupational risk assessment study based on the activity and job positions.',
+        },
 
-        'p3.cat':   { el: 'Τακτοποίηση Αυθαίρετου',     en: 'Unauthorized Structure Settlement' },
-        'p3.title': { el: 'Μονοκατοικία Γλυφάδα',        en: 'Detached House Glyfada' },
-        'p3.desc':  { el: 'Νομιμοποίηση κατά Ν.4495/2017', en: 'Legalization under Law 4495/2017' },
+        's3.title': { el: 'Εκπαιδεύσεις Υ&Α',                  en: 'H&S Training' },
+        's3.text':  {
+            el: 'Ανάλογα με τις ανάγκες της κάθε επιχείρησης, παρέχουμε ευρύ φάσμα εκπαιδεύσεων για εργαζόμενους κατά Ν. 3850/2010, Άρθρο 48.',
+            en: 'Tailored to the needs of each business, we provide a wide range of employee training programmes under Law 3850/2010, Article 48.',
+        },
 
-        'p4.cat':   { el: 'Ενεργειακό Πιστοποιητικό',   en: 'Energy Certificate' },
-        'p4.title': { el: 'Εμπορικό Κτίριο Μαρούσι',    en: 'Commercial Building Maroussi' },
-        'p4.desc':  { el: 'ΠΕΑ & ενεργειακή αναβάθμιση', en: 'EPC & energy upgrade' },
+        's4.title': { el: 'Διερεύνηση Εργατικών Ατυχημάτων',   en: 'Workplace Accident Investigation' },
+        's4.text':  {
+            el: 'Root Cause Analysis, προτάσεις διορθωτικών ενεργειών και σύνταξη έκθεσης ατυχήματος με εχεμύθεια και επαγγελματισμό.',
+            en: 'Root Cause Analysis, corrective action recommendations and accident report preparation with full confidentiality and professionalism.',
+        },
 
-        'p5.cat':   { el: 'Scan to BIM',                 en: 'Scan to BIM' },
-        'p5.title': { el: 'Βιομηχανικό Κτίριο Ελαιώνας', en: 'Industrial Building Eleonas' },
-        'p5.desc':  { el: '3D Laser Scanning & ψηφιακή αποτύπωση', en: '3D Laser Scanning & digital survey' },
+        's5.title': { el: 'Σχέδια Εκκένωσης',                  en: 'Evacuation Plans' },
+        's5.text':  {
+            el: 'Μελέτη, σχεδιασμός και αποτύπωση Σχεδίων Διαφυγής και Εκκένωσης για συμμόρφωση με την Πυροσβεστική Υπηρεσία.',
+            en: 'Study, design and documentation of Escape and Evacuation Plans for compliance with the Fire Service requirements.',
+        },
 
-        'p6.cat':   { el: 'Ανακαίνιση',                  en: 'Renovation' },
-        'p6.title': { el: 'Διαμέρισμα Κολωνάκι',         en: 'Apartment Kolonaki' },
-        'p6.desc':  { el: 'Πλήρης ανακαίνιση & επίβλεψη', en: 'Full renovation & supervision' },
+        's6.title': { el: 'Προετοιμασία ΣΕΠΕ',                 en: 'Labour Inspectorate Preparation' },
+        's6.text':  {
+            el: 'Έλεγχος του φακέλου Υ&Α για διαπίστωση συμμόρφωσης με την ισχύουσα νομοθεσία και πρόταση διορθωτικών ενεργειών.',
+            en: 'Review of the H&S file to verify compliance with current legislation and proposal of corrective actions.',
+        },
+
+        /* SECTORS */
+        'sectors.eyebrow': { el: 'Κλάδοι δραστηριότητας',  en: 'Activity Sectors' },
+        'sectors.heading': {
+            el: 'Τομείς <em>Εξειδίκευσης</em>',
+            en: 'Sectors of <em>Specialisation</em>',
+        },
+
+        /* RESOURCES */
+        'resources.eyebrow': { el: 'Γνώση & Πόροι',                      en: 'Knowledge & Resources' },
+        'resources.heading': {
+            el: 'Άρθρα &amp; <em>Χρήσιμοι Σύνδεσμοι</em>',
+            en: 'Articles &amp; <em>Useful Links</em>',
+        },
 
         /* CONTACT */
         'contact.eyebrow': { el: 'Επικοινωνία', en: 'Contact' },
         'contact.heading': {
-            el: 'Μιλήστε <em>μαζί μας</em>',
+            el: 'Μιλήστε <em>μαζί μου</em>',
             en: 'Let\'s <em>talk</em>',
         },
         'contact.lead': {
-            el: 'Είμαστε εδώ για κάθε ερώτηση ή ανάγκη. Επικοινωνήστε μαζί μας σήμερα για δωρεάν αρχική ενημέρωση.',
-            en: 'We\'re here for any question or need. Get in touch today for a free initial consultation.',
+            el: 'Είμαι εδώ για κάθε ερώτηση ή ανάγκη. Επικοινωνήστε σήμερα για δωρεάν αρχική ενημέρωση ή κλείστε ραντεβού 15 λεπτών.',
+            en: 'I\'m here for any question or need. Get in touch today for a free initial consultation or book a 15-minute appointment.',
         },
-        'contact.role': { el: 'Πολιτικός Μηχανικός ΑΠΘ', en: 'Civil Engineer AUTH' },
+        'contact.role':    { el: 'Μηχανικός Υγείας & Ασφάλειας ΑΠΘ, MEng, ASP®', en: 'H&S Engineer AUTH, MEng, ASP®' },
+        'contact.calendly':{ el: 'Κλείστε Ραντεβού',                               en: 'Book an Appointment' },
 
         /* FORM */
-        'form.title':          { el: 'Στείλτε μήνυμα',        en: 'Send a Message' },
-        'form.label.name':     { el: 'Ονοματεπώνυμο',         en: 'Full Name' },
-        'form.ph.name':        { el: 'Το όνομά σας',           en: 'Your name' },
-        'form.label.phone':    { el: 'Τηλέφωνο',              en: 'Phone' },
-        'form.label.email':    { el: 'Email',                  en: 'Email' },
-        'form.ph.email':       { el: 'email@example.gr',       en: 'email@example.com' },
-        'form.label.subject':  { el: 'Αντικείμενο',           en: 'Subject' },
-        'form.select.default': { el: 'Επιλέξτε υπηρεσία',     en: 'Select a service' },
-        'form.opt.1':          { el: 'Ηλεκτρονική Ταυτότητα Κτιρίου', en: 'Building e-Identity' },
-        'form.opt.2':          { el: 'Νομιμοποίηση Αυθαιρέτων',       en: 'Unauthorized Structure Legalization' },
-        'form.opt.3':          { el: 'Ενεργειακό Πιστοποιητικό (ΠΕΑ)', en: 'Energy Performance Certificate (EPC)' },
-        'form.opt.4':          { el: 'Οικοδομική Άδεια',               en: 'Building Permit' },
-        'form.opt.5':          { el: 'Άλλο',                           en: 'Other' },
-        'form.label.message':  { el: 'Μήνυμα',                en: 'Message' },
+        'form.title':          { el: 'Στείλτε μήνυμα',           en: 'Send a Message' },
+        'form.label.name':     { el: 'Ονοματεπώνυμο',            en: 'Full Name' },
+        'form.ph.name':        { el: 'Το όνομά σας',              en: 'Your name' },
+        'form.label.phone':    { el: 'Τηλέφωνο',                 en: 'Phone' },
+        'form.label.email':    { el: 'Email',                     en: 'Email' },
+        'form.ph.email':       { el: 'email@example.gr',          en: 'email@example.com' },
+        'form.label.subject':  { el: 'Αντικείμενο',              en: 'Subject' },
+        'form.select.default': { el: 'Επιλέξτε υπηρεσία',        en: 'Select a service' },
+        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',               en: 'Safety Officer Coverage' },
+        'form.opt.2':          { el: 'ΓΕΕΚ — Εκτίμηση Επαγγελματικού Κινδύνου', en: 'Risk Assessment Study (ΓΕΕΚ)' },
+        'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                        en: 'H&S Training' },
+        'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',          en: 'Accident Investigation' },
+        'form.opt.5':          { el: 'Σχέδια Εκκένωσης',                         en: 'Evacuation Plans' },
+        'form.opt.6':          { el: 'Προετοιμασία ΣΕΠΕ',                        en: 'Labour Inspectorate Prep' },
+        'form.opt.7':          { el: 'Άλλο',                                     en: 'Other' },
+        'form.label.message':  { el: 'Μήνυμα',                   en: 'Message' },
         'form.ph.message':     { el: 'Περιγράψτε σύντομα το αίτημά σας...', en: 'Briefly describe your request...' },
-        'form.submit':         { el: 'Αποστολή Μηνύματος',    en: 'Send Message' },
+        'form.submit':         { el: 'Αποστολή Μηνύματος',       en: 'Send Message' },
+
+        /* GAUGE */
+        'gauge.label': { el: 'Συμμόρφωση', en: 'Compliance' },
+
+        /* CHECKLIST */
+        'cl.item1': { el: 'ΓΕΕΚ εκπονημένο',              en: 'Risk assessment completed' },
+        'cl.item2': { el: 'Εκπαίδευση εργαζομένων',       en: 'Employee training done' },
+        'cl.item3': { el: 'Σχέδιο εκκένωσης',             en: 'Evacuation plan in place' },
+        'cl.item4': { el: 'Σήμανση ασφαλείας',            en: 'Safety signage installed' },
+        'cl.item5': { el: 'Ν.3850/2010 συμμόρφωση',       en: 'Law 3850/2010 compliant' },
+
+        /* SECTOR CARDS */
+        'sec1.title': { el: 'Κατασκευές',             en: 'Construction' },
+        'sec1.text':  { el: 'Εργοτάξια, ανακαινίσεις, τεχνικά έργα — πλήρης Υ&Α κάλυψη.', en: 'Construction sites, renovations, infrastructure — full H&S coverage.' },
+        'sec2.title': { el: 'Βιομηχανία',             en: 'Industry' },
+        'sec2.text':  { el: 'Εργοστάσια, αποθήκες, παραγωγικές μονάδες υψηλού κινδύνου.', en: 'Factories, warehouses, high-risk production units.' },
+        'sec3.title': { el: 'Λιανικό Εμπόριο',       en: 'Retail' },
+        'sec3.text':  { el: 'Καταστήματα, εμπορικά κέντρα, logistics — ασφάλεια πελατών & προσωπικού.', en: 'Shops, shopping centres, logistics — customer & staff safety.' },
+        'sec4.title': { el: 'Φιλοξενία',             en: 'Hospitality' },
+        'sec4.text':  { el: 'Ξενοδοχεία, εστιατόρια, τουριστικές εγκαταστάσεις — HACCP & πυρασφάλεια.', en: 'Hotels, restaurants, tourist facilities — HACCP & fire safety.' },
+        'sec5.title': { el: 'Υγειονομικές Μονάδες', en: 'Healthcare' },
+        'sec5.text':  { el: 'Κλινικές, ιατρεία, εργαστήρια — βιολογικοί & χημικοί κίνδυνοι.', en: 'Clinics, practices, labs — biological & chemical hazards.' },
+        'sec6.title': { el: 'Ναυτιλία & Λιμάνια',   en: 'Maritime & Ports' },
+        'sec6.text':  { el: 'Πλοία, λιμενικές εγκαταστάσεις — διεθνή πρότυπα ISM & ISPS.', en: 'Vessels, port facilities — international ISM & ISPS standards.' },
+
+        /* IN ACTION */
+        'action.eyebrow': { el: 'Στη Δράση',       en: 'In the Field' },
+        'action.heading': {
+            el: 'Εικόνες <em>Πεδίου</em>',
+            en: 'Field <em>Photos</em>',
+        },
+        'action.cap1': { el: 'Επιθεώρηση Ασφαλείας Εργοταξίου', en: 'Construction Site Safety Inspection' },
+        'action.cap2': { el: 'Εκπαίδευση &amp; Αξιολόγηση Κινδύνου', en: 'Training &amp; Risk Assessment' },
+
+        /* QUOTE */
+        'quote.text': {
+            el: '"Η ασφάλεια δεν είναι δαπάνη — είναι επένδυση στους ανθρώπους σας."',
+            en: '"Safety is not a cost — it is an investment in your people."',
+        },
+
+        /* RESOURCES */
+        'res1.title': { el: 'Οδηγός ΓΕΕΚ',                    en: 'Risk Assessment Guide' },
+        'res1.text':  { el: 'Βήμα-βήμα οδηγίες για εκπόνηση Γραπτής Εκτίμησης Επαγγελματικού Κινδύνου.', en: 'Step-by-step guide for preparing a Written Occupational Risk Assessment.' },
+        'res2.title': { el: 'Checklist Ασφαλείας Εργοταξίου', en: 'Construction Site Safety Checklist' },
+        'res2.text':  { el: 'Πρακτική λίστα ελέγχου για εβδομαδιαίες επιθεωρήσεις εργοταξίου.', en: 'Practical checklist for weekly construction site inspections.' },
+        'res3.title': { el: 'Εγχειρίδιο Εκπαίδευσης ΜΑΠ',   en: 'PPE Training Manual' },
+        'res3.text':  { el: 'Πλήρες εγχειρίδιο επιλογής & ορθής χρήσης Μέσων Ατομικής Προστασίας.', en: 'Complete manual for selecting & correctly using Personal Protective Equipment.' },
+        'res.soon':   { el: 'Σύντομα', en: 'Coming Soon' },
+
+        /* CONTACT */
+        'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & International' },
 
         /* FOOTER */
-        'footer.title': { el: 'Διπλωματούχος Πολιτικός Μηχανικός ΑΠΘ', en: 'Graduate Civil Engineer AUTH' },
-        'footer.copy': {
-            el: '&copy; 2026 Βάϊος Λιάπης &mdash; Πολιτικός Μηχανικός Αθήνα',
-            en: '&copy; 2026 Vaios Liapis &mdash; Civil Engineer Athens',
-        },
-        'footer.design': {
-            el: 'Σχεδιασμός <span class="design-brand">Design Expertease</span>',
-            en: 'Designed by <span class="design-brand">Design Expertease</span>',
-        },
+        'footer.title': { el: 'Μηχανικός Υγείας & Ασφάλειας ΑΠΘ', en: 'H&S Engineer AUTH' },
     };
 
     /* ─── STATE ──────────────────────────────────────────────────────────── */
     let currentLang = localStorage.getItem('lang') || 'el';
-
-    /* ─── YEARS OF EXPERIENCE (dynamic) ─────────────────────────────────── */
-    const EXP_START_YEAR = 2019;
-    function fillYearsExp() {
-        var years = new Date().getFullYear() - EXP_START_YEAR;
-        document.querySelectorAll('.years-exp').forEach(function (el) {
-            el.textContent = years;
-        });
-    }
 
     /* ─── APPLY TRANSLATIONS ─────────────────────────────────────────────── */
     function applyLang(lang) {
@@ -223,9 +251,6 @@
         document.querySelectorAll('.lang-btn').forEach(function (btn) {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
         });
-
-        /* re-fill dynamic years after innerHTML replacement */
-        fillYearsExp();
     }
 
     /* ─── PUBLIC API ─────────────────────────────────────────────────────── */
@@ -239,7 +264,6 @@
     window.setLang = applyLang;
 
     /* ─── INIT ───────────────────────────────────────────────────────────── */
-    /* Apply on DOM ready — handles page reload with saved preference */
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function () { applyLang(currentLang); });
     } else {
