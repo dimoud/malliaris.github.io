@@ -444,7 +444,7 @@
 
             <div class="contact-form-wrap" data-reveal-right>
                 <h3 data-i18n="form.title">Στείλτε μήνυμα</h3>
-                <form class="form-fields" onsubmit="handleSubmit(event)">
+                <form class="form-fields" action="https://formspree.io/f/mreyrlvk" method="POST" onsubmit="handleSubmit(event)">
                     <div class="form-row">
                         <div class="field">
                             <label data-i18n="form.label.name">Ονοματεπώνυμο</label>
@@ -583,10 +583,31 @@
             e.preventDefault();
             const btn = e.target.querySelector('.btn-submit');
             const orig = btn.textContent;
-            btn.textContent = 'Στάλθηκε \u2713';
-            btn.style.background = '#2DAA6E';
-            btn.style.color = '#fff';
-            setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; e.target.reset(); }, 3000);
+            btn.textContent = 'Αποστολή...';
+            btn.disabled = true;
+            fetch(e.target.action, {
+                method: 'POST',
+                body: new FormData(e.target),
+                headers: { 'Accept': 'application/json' }
+            }).then(res => {
+                if (res.ok) {
+                    btn.textContent = 'Στάλθηκε \u2713';
+                    btn.style.background = '#2DAA6E';
+                    btn.style.color = '#fff';
+                    e.target.reset();
+                    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 3000);
+                } else {
+                    btn.textContent = 'Σφάλμα. Δοκιμάστε ξανά.';
+                    btn.style.background = '#e74c3c';
+                    btn.style.color = '#fff';
+                    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 3000);
+                }
+            }).catch(() => {
+                btn.textContent = 'Σφάλμα. Δοκιμάστε ξανά.';
+                btn.style.background = '#e74c3c';
+                btn.style.color = '#fff';
+                setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 3000);
+            });
         }
     </script>
     <script src="eng-animations.js"></script>
