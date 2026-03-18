@@ -1313,8 +1313,11 @@ footer {
     .hero-name .line1, .hero-name .line2 { font-size: clamp(40px, 12vw, 68px); }
 
     /* Fix stat numbers: 2.8vw = ~11px on mobile — use explicit px */
-    .stat-num { font-size: 22px; }
-    .stat-lbl { font-size: 10px; }
+    .stat-num { font-size: 18px; }
+    .stat-lbl { font-size: 8px; }
+
+    /* Resources heading — center on mobile */
+    .resources-header { text-align: center; }
 
     /* Scroll hint: visible only on mobile, pinned to bottom of hero */
     .hero-scroll-hint {
@@ -1400,8 +1403,8 @@ footer {
     .hero-stats { flex-direction: row; align-items: center; justify-content: center; gap: 0; flex-wrap: nowrap; }
     .hero-stat-sep { display: block; }
     .hero-stat { padding: 0 8px; }
-    .stat-num { font-size: 18px; }
-    .stat-lbl { font-size: 9px; }
+    .stat-num { font-size: 14px; }
+    .stat-lbl { font-size: 7px; }
     .about-grid { gap: 24px; }
     .services-grid, .sectors-grid, .resources-grid { gap: 12px; }
 }
