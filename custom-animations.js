@@ -56,6 +56,9 @@
         }, { passive: true });
     })();
 
+    /* ─── 3–6. POINTER-ONLY EFFECTS (skip on touch devices) ───────────── */
+    if (!window.matchMedia('(hover: none)').matches) {
+
     /* ─── 3. 3D TILT — Sector carousel cards ──────────────────────────── */
     qsa('[data-tilt]').forEach(function (card) {
         card.addEventListener('mousemove', function (e) {
@@ -130,6 +133,8 @@
             glow.style.opacity = '0';
         });
     })();
+
+    } /* end (hover: none) guard */
 
     /* ─── 7. STAGGER REVEAL — service + resource cards ────────────────── */
     (function () {
