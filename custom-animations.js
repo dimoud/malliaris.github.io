@@ -94,7 +94,7 @@
     });
 
     /* ─── 5. MAGNETIC BUTTONS ──────────────────────────────────────────── */
-    qsa('.btn-accent, .nav-cta, .calendly-cta, .back-to-top').forEach(function (btn) {
+    qsa('.btn-accent, .nav-cta, .calendly-cta').forEach(function (btn) {
         btn.addEventListener('mousemove', function (e) {
             var rect = btn.getBoundingClientRect();
             var dx = e.clientX - rect.left - rect.width  / 2;

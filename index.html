@@ -734,14 +734,16 @@
         (function(){
             var btn = document.getElementById('backToTop');
             if(!btn) return;
-            window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 400); });
+            window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 400); }, {passive:true});
+            btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
         })();
     </script>
     <script src="custom-animations.js"></script>
 
     <!-- Back to top button -->
-    <button class="back-to-top" id="backToTop" title="Πάνω">
-        <i class="fa-solid fa-chevron-up"></i>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 10 10" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,7 5,3 8,7"/></svg>
+      Top
     </button>
 </body>
 </html>
