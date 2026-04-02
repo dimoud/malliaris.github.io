@@ -31,7 +31,7 @@
             <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
             <a href="#sectors" data-i18n="nav.sectors">Τομείς</a>
             <a href="#in-action" data-i18n="nav.action">ΔΡΑΣΗ</a>
-            <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
+            <a href="#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
         </div>
         <div class="lang-toggle" id="langToggle">
             <button class="lang-btn active" data-lang="el" onclick="setLang('el')">🇬🇷 <span class="lcode">ΕΛ</span></button>
@@ -587,7 +587,9 @@
 
             <div class="contact-form-wrap" data-reveal-right>
                 <h3 data-i18n="form.title">Φόρμα επικοινωνίας</h3>
-                <form class="form-fields" action="https://formspree.io/f/mreyrlvk" method="POST" onsubmit="handleSubmit(event)">
+                <form id="clientContactForm" class="form-fields">
+                    <input type="hidden" name="_to" value="stamalliaris2@gmail.com">
+                    <input type="hidden" name="_key" value="MyPrivateAgencyKey_99">
                     <div class="form-row">
                         <div class="field">
                             <label data-i18n="form.label.name">Ονοματεπώνυμο</label>
@@ -620,6 +622,7 @@
                         <textarea name="message" placeholder="Περιγράψτε σύντομα το αίτημά σας..." data-i18n-placeholder="form.ph.message"></textarea>
                     </div>
                     <button type="submit" class="btn-submit" data-i18n="form.submit">Αποστολή Μηνύματος</button>
+                    <p id="formStatus"></p>
                 </form>
             </div>
         </div>
@@ -720,41 +723,11 @@
             }
         })();
 
-        /* Contact form */
-        function handleSubmit(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('.btn-submit');
-            const orig = btn.textContent;
-            btn.textContent = 'Αποστολή...';
-            btn.disabled = true;
-            fetch(e.target.action, {
-                method: 'POST',
-                body: new FormData(e.target),
-                headers: { 'Accept': 'application/json' }
-            }).then(res => {
-                if (res.ok) {
-                    btn.textContent = 'Στάλθηκε \u2713';
-                    btn.style.background = '#2DAA6E';
-                    btn.style.color = '#fff';
-                    e.target.reset();
-                    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 3000);
-                } else {
-                    btn.textContent = 'Σφάλμα. Δοκιμάστε ξανά.';
-                    btn.style.background = '#e74c3c';
-                    btn.style.color = '#fff';
-                    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 3000);
-                }
-            }).catch(() => {
-                btn.textContent = 'Σφάλμα. Δοκιμάστε ξανά.';
-                btn.style.background = '#e74c3c';
-                btn.style.color = '#fff';
-                setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.style.color = ''; btn.disabled = false; }, 3000);
-            });
-        }
     </script>
     <script src="eng-animations.js"></script>
     <script src="safety-animations.js"></script>
     <script src="i18n.js"></script>
+    <script src="contact-form.js" defer></script>
 
     <script>
         /* ── Back to top ── */
