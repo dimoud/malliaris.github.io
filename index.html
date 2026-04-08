@@ -22,7 +22,7 @@
                 <img src="Image 2.png" alt="Σ. Μάλλιαρης" onerror="this.style.display='none'">
             </div>
             <div class="logo-text">
-                <span class="name">Σταύρος Μάλλιαρης</span>
+                <span class="name" data-i18n="name.stavros">Σταύρος Μάλλιαρης</span>
                 <span class="title" data-i18n="nav.title">Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας</span>
             </div>
         </a>
@@ -30,13 +30,13 @@
             <a href="#about" data-i18n="nav.about">Σχετικά</a>
             <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
             <a href="#sectors" data-i18n="nav.sectors">Τομείς</a>
-            <a href="#in-action" data-i18n="nav.action">ΔΡΑΣΗ</a>
+            <a href="#in-action" data-i18n="nav.action">ΣΤΗΝ ΔΡΑΣΗ</a>
             <a href="#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
         </div>
         <div class="lang-toggle" id="langToggle">
-            <button class="lang-btn active" data-lang="el" onclick="setLang('el')">🇬🇷 <span class="lcode">ΕΛ</span></button>
+            <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
             <div class="lang-sep"></div>
-            <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 <span class="lcode">EN</span></button>
+            <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
         </div>
         <div class="hamburger" id="hamburger" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -45,15 +45,19 @@
 
     <!-- ===== HERO ===== -->
     <header class="hero">
+        <canvas id="heroNet" aria-hidden="true"></canvas>
         <div class="hero-slide active" id="slide1"></div>
         <div class="hero-slide" id="slide2"></div>
         <div class="hero-overlay"></div>
         <div class="hero-hex" aria-hidden="true"></div>
 
         <div class="hero-photo-group">
-            <div class="hero-photo-wrap" style="cursor:pointer" onclick="window.open('https://calendly.com/stamalliaris2/15min','_blank')">
-                <img src="Image 1.png" alt="Σταύρος Μάλλιαρης" class="hero-photo"
+            <div class="hero-photo-wrap" style="cursor:pointer" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                <img src="Image 1.2.png" alt="Σταύρος Μάλλιαρης" class="hero-photo"
                      onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800'">
+            </div>
+            <div class="live-badge">
+                <span class="live-dot"></span>live
             </div>
         </div>
 
@@ -66,20 +70,20 @@
                 <span class="line2" data-i18n="hero.name2">ΜΑΛΛΙΑΡΗΣ</span>
             </h1>
             <div class="hero-eyebrow"><span data-i18n="hero.eyebrow">ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ ΜΗΧΑΝΙΚΟΣ ΥΓΕΙΑΣ ΚΑΙ ΑΣΦΑΛΕΙΑΣ ΑΠΘ</span></div>
-            <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="btn-accent" data-i18n="hero.cta">Επικοινωνία</a>
+            <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="btn-accent" data-i18n="hero.cta">ΠΑΡΕ ΠΡΟΣΦΟΡΑ</a>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <span class="stat-num" data-i18n="hero.stat1.num" data-countup="7" data-suffix="+">7+</span>
+                    <span class="stat-num slot-reel"><span class="slot-inner" data-i18n="hero.stat1.num">7+</span></span>
                     <span class="stat-lbl" data-i18n="hero.stat1.lbl">χρόνια εμπειρίας</span>
                 </div>
                 <div class="hero-stat-sep"></div>
                 <div class="hero-stat">
-                    <span class="stat-num slot-reel"><span class="slot-inner" data-i18n="hero.stat2.num">ASP®</span></span>
+                    <span class="stat-num slot-reel"><span class="slot-inner" data-i18n="hero.stat2.num">24Η/7</span></span>
                     <span class="stat-lbl" data-i18n="hero.stat2.lbl">ΚΑΘΕ ΤΥΠΟΣ ΕΠΙΧΕΙΡΗΣΗΣ</span>
                 </div>
                 <div class="hero-stat-sep"></div>
                 <div class="hero-stat">
-                    <span class="stat-num slot-reel"><span class="slot-inner" data-i18n="hero.stat3.num">ΑΠΘ</span></span>
+                    <span class="stat-num slot-reel"><span class="slot-inner" data-i18n="hero.stat3.num">360°</span></span>
                     <span class="stat-lbl" data-i18n="hero.stat3.lbl">ΠΛΗΡΗΣ ΚΑΛΥΨΗ ΣΕ ΘΕΜΑΤΑ Υ&amp;Α</span>
                 </div>
             </div>
@@ -187,74 +191,92 @@
     <section class="services-section" id="services">
         <div class="services-header">
             <div data-reveal>
-                <div class="eyebrow"><span data-i18n="services.eyebrow">Εξασφαλίστε κορυφαίες συνθήκες Υγείας &amp; Ασφάλειας — ΥΠΗΡΕΣΙΕΣ</span></div>
+                <div class="eyebrow"><span data-i18n="services.eyebrow">ΥΠΗΡΕΣΙΕΣ</span></div>
                 <h2 class="section-heading" data-i18n-html="services.heading">Παρέχουμε ένα <span class="hi-orange">πλήρες πακέτο</span> <em class="hi-white">Υπηρεσιών Υ&amp;Α</em></h2>
-                <p class="services-lead" data-i18n="services.lead" data-word-reveal>Από την ικανοποίηση των νομικών απαιτήσεων έως την διαμόρφωση κουλτούρας πρόληψης στην εταιρεία σας, ο Σταύρος Μάλλιαρης και η ομάδα του έχουνε τις λύσεις.</p>
-                <p class="services-legal" data-i18n-html="services.legal">Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — <strong>Νόμος 3850/2010, Άρθρο 8 &amp; 43</strong></p>
+                <p class="services-lead" data-i18n="services.lead" data-word-reveal>Από την ικανοποίηση των νομικών απαιτήσεων έως την διαμόρφωση κουλτούρας πρόληψης, ο Σταύρος Μάλλιαρης και η ομάδα του έχουν την τεχνογνωσία για να εξασφαλίσουν κορυφαίες συνθήκες Υγείας και Ασφάλειας στην επιχείρησή σας.</p>
+                <p class="services-legal" data-i18n-html="services.legal">Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — Νόμος 3850/2010, Άρθρο 8 &amp; 43</p>
             </div>
         </div>
 
         <div class="sec-meas" data-sec-meas aria-hidden="true">
             <div class="sec-meas-tick"></div>
             <div class="sec-meas-bar bar-l"></div>
-            <span class="sec-meas-label" id="servicesMeasLabel">6 ΥΠΗΡΕΣΙΕΣ - 100% ΙΚΑΝΟΠΟΙΗΣΗ</span>
+            <span class="sec-meas-label" id="servicesMeasLabel" data-i18n="services.measlabel">6 ΥΠΗΡΕΣΙΕΣ - 100% ΙΚΑΝΟΠΟΙΗΣΗ</span>
             <div class="sec-meas-bar bar-r"></div>
             <div class="sec-meas-tick"></div>
         </div>
 
         <div class="services-grid">
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=60&w=800')">
-                <div class="sc-bg" aria-hidden="true"></div>
-                <div class="sc-content">
-                    <div class="service-num">01</div>
-                    <i class="fa-solid fa-file-shield service-icon"></i>
-                    <h3 data-i18n="s1.title">Κάλυψη Τεχνικού Ασφαλείας</h3>
-                    <div class="sc-text-wrap"><p data-i18n="s1.text">Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας για αναγνώριση κινδύνων και στοχευμένες προτάσεις.</p></div>
-                </div>
-            </div>
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=60&w=800')">
-                <div class="sc-bg" aria-hidden="true"></div>
-                <div class="sc-content">
-                    <div class="service-num">02</div>
-                    <i class="fa-solid fa-person-chalkboard service-icon"></i>
-                    <h3 data-i18n="s2.title">Σύνταξη ΓΕΕΚ</h3>
-                    <div class="sc-text-wrap"><p data-i18n="s2.text">Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 43. Εκπόνηση μελέτης εκτίμησης επαγγελματικού κινδύνου ανάλογα με τη δραστηριότητα και τις θέσεις εργασίας.</p></div>
-                </div>
-            </div>
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=60&w=800')">
-                <div class="sc-bg" aria-hidden="true"></div>
-                <div class="sc-content">
-                    <div class="service-num">03</div>
-                    <i class="fa-solid fa-person-chalkboard service-icon"></i>
-                    <h3 data-i18n="s3.title">Εκπαιδεύσεις Υγείας &amp; Ασφάλειας</h3>
-                    <div class="sc-text-wrap"><p data-i18n="s3.text">Ανάλογα με τις ανάγκες κάθε επιχείρησης, παρέχουμε ευρύ φάσμα εκπαιδεύσεων για εργαζομένους σύμφωνα με Νόμο 3850/2010, Άρθρο 48.</p></div>
-                </div>
-            </div>
+            <!-- 01 Safety Officer Coverage — worker with hard hat & hi-vis vest on site -->
             <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&w=800')">
                 <div class="sc-bg" aria-hidden="true"></div>
                 <div class="sc-content">
-                    <div class="service-num">04</div>
-                    <i class="fa-solid fa-magnifying-glass-chart service-icon"></i>
-                    <h3 data-i18n="s4.title">Διερεύνηση Εργατικών Ατυχημάτων</h3>
+                    <div class="sc-top">
+                        <div class="service-num">01</div>
+                        <i class="fa-solid fa-file-shield service-icon"></i>
+                        <h3 data-i18n="s1.title">Κάλυψη Τεχνικού Ασφαλείας</h3>
+                    </div>
+                    <div class="sc-text-wrap"><p data-i18n="s1.text">Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας για αναγνώριση κινδύνων και στοχευμένες προτάσεις.</p></div>
+                </div>
+            </div>
+            <!-- 02 Written Risk Assessment — documents, pen, risk analysis paperwork -->
+            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=60&w=800')">
+                <div class="sc-bg" aria-hidden="true"></div>
+                <div class="sc-content">
+                    <div class="sc-top">
+                        <div class="service-num">02</div>
+                        <i class="fa-solid fa-person-chalkboard service-icon"></i>
+                        <h3 data-i18n="s2.title">Σύνταξη ΓΕΕΚ</h3>
+                    </div>
+                    <div class="sc-text-wrap"><p data-i18n="s2.text">Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 43. Εκπόνηση μελέτης εκτίμησης επαγγελματικού κινδύνου ανάλογα με τη δραστηριότητα και τις θέσεις εργασίας.</p></div>
+                </div>
+            </div>
+            <!-- 03 H&S Training — group training / presenter with employees -->
+            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=60&w=800')">
+                <div class="sc-bg" aria-hidden="true"></div>
+                <div class="sc-content">
+                    <div class="sc-top">
+                        <div class="service-num">03</div>
+                        <i class="fa-solid fa-person-chalkboard service-icon"></i>
+                        <h3 data-i18n="s3.title">Εκπαιδεύσεις Υγείας &amp; Ασφάλειας</h3>
+                    </div>
+                    <div class="sc-text-wrap"><p data-i18n="s3.text">Ανάλογα με τις ανάγκες κάθε επιχείρησης, παρέχουμε ευρύ φάσμα εκπαιδεύσεων για εργαζομένους σύμφωνα με Νόμο 3850/2010, Άρθρο 48.</p></div>
+                </div>
+            </div>
+            <!-- 04 Accident Investigation — caution tape / incident barrier at workplace -->
+            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1563906267088-b029e7101114?auto=format&fit=crop&q=60&w=800')">
+                <div class="sc-bg" aria-hidden="true"></div>
+                <div class="sc-content">
+                    <div class="sc-top">
+                        <div class="service-num">04</div>
+                        <i class="fa-solid fa-magnifying-glass-chart service-icon"></i>
+                        <h3 data-i18n="s4.title">Διερεύνηση Εργατικών Ατυχημάτων</h3>
+                    </div>
                     <div class="sc-text-wrap"><p data-i18n="s4.text">Διερεύνηση κάθε είδους εργατικού ατυχήματος με εχεμύθεια και πλήρη επαγγελματισμό. Root Cause Analysis, προτάσεις διορθωτικών ενεργειών και σύνταξη έκθεσης.</p></div>
                 </div>
             </div>
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?auto=format&fit=crop&q=60&w=800')">
+            <!-- 05 Evacuation Plan — fire exit green emergency sign on wall -->
+            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=60&w=800')">
                 <div class="sc-bg" aria-hidden="true"></div>
                 <div class="sc-content">
-                    <div class="service-num">05</div>
-                    <i class="fa-solid fa-person-running service-icon"></i>
-                    <h3 data-i18n="s5.title">Εκπόνηση Σχεδίων Εκκένωσης</h3>
+                    <div class="sc-top">
+                        <div class="service-num">05</div>
+                        <i class="fa-solid fa-person-running service-icon"></i>
+                        <h3 data-i18n="s5.title">Εκπόνηση Σχεδίων Εκκένωσης</h3>
+                    </div>
                     <div class="sc-text-wrap"><p data-i18n="s5.text">Μελέτη, σχεδιασμός και αποτύπωση Σχεδίων Διαφυγής και Εκκένωσης — βασικό εργαλείο συμμόρφωσης με Πυροσβεστική Υπηρεσία και εργατική νομοθεσία.</p></div>
                 </div>
             </div>
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=800')">
+            <!-- 06 SEPE Inspection Prep — inspector with clipboard doing official audit -->
+            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=60&w=800')">
                 <div class="sc-bg" aria-hidden="true"></div>
                 <div class="sc-content">
-                    <div class="service-num">06</div>
-                    <i class="fa-solid fa-clipboard-check service-icon"></i>
-                    <h3 data-i18n="s6.title">Προετοιμασία για Επιθεώρηση ΣΕΠΕ</h3>
-                    <div class="sc-text-wrap"><p data-i18n="s6.text">Έλεγχος του φακέλου Υγείας &amp; Ασφάλειας της επιχείρησης για διαπίστωση βαθμού συμμόρφωσης με την ισχύουσα νομοθεσία και πρόταση διορθωτικών ενεργειών.</p></div>
+                    <div class="sc-top">
+                        <div class="service-num">06</div>
+                        <i class="fa-solid fa-clipboard-check service-icon"></i>
+                        <h3 data-i18n="s6.title">Προετοιμασία για Επιθεώρηση ΣΕΠΕ</h3>
+                    </div>
+                    <div class="sc-text-wrap"><p data-i18n="s6.text">Έλεγχος συνθηκών εργασίας και φακέλου Υγείας &amp; Ασφάλειας της επιχείρησης για διαπίστωση βαθμού συμμόρφωσης με την ισχύουσα νομοθεσία και πρόταση διορθωτικών ενεργειών.</p></div>
                 </div>
             </div>
         </div>
@@ -263,7 +285,7 @@
     <!-- ===== SECTORS ===== -->
     <section class="sectors-section" id="sectors">
         <div class="sectors-header" data-reveal>
-            <div class="eyebrow"><span data-i18n="sectors.eyebrow">Τομείς Δραστηριότητας</span></div>
+            <div class="eyebrow"><span data-i18n="sectors.eyebrow">ΤΟΜΕΙΣ</span></div>
             <h2 class="section-heading" data-i18n-html="sectors.heading">Τομείς <em>Δραστηριότητας</em></h2>
             <p class="sectors-lead" data-i18n="sectors.lead">Μετά από πολυετή εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε είδους, ο Σταύρος Μάλλιαρης και η ομάδα του μπορούν να συμβουλέψουν πελάτες από κάθε τομέα δραστηριότητας.</p>
         </div>
@@ -301,6 +323,8 @@
         </div>
 
         <div class="sectors-carousel-wrap" id="sectorsWrap">
+            <button class="sectors-nav-arrow left" id="sectorsLeft" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="sectors-nav-arrow right" id="sectorsRight" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
             <div class="sectors-track" id="sectorsTrack">
                 <!-- Original set -->
                 <div class="sector-carousel-card" data-tilt>
@@ -349,7 +373,7 @@
                     </div>
                 </div>
                 <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b?auto=format&fit=crop&q=60&w=800" alt="Βιομηχανία και Παραγωγή" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=60&w=800" alt="Βιομηχανία και Παραγωγή" loading="lazy">
                     <div class="sector-card-overlay"></div>
                     <div class="sector-card-body">
                         <div class="sector-card-icon"><i class="fa-solid fa-industry"></i></div>
@@ -404,7 +428,7 @@
                     </div>
                 </div>
                 <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
                     <div class="sector-card-overlay"></div>
                     <div class="sector-card-body">
                         <div class="sector-card-icon"><i class="fa-solid fa-industry"></i></div>
@@ -413,7 +437,6 @@
                     </div>
                 </div>
             </div>
-            <p class="scroll-hint-label"><i class="fa-solid fa-hand-pointer"></i> Hover για παύση</p>
         </div>
 
         <!-- Quote banner moved here (after Sectors, before In Action) -->
@@ -496,7 +519,6 @@
                 </div>
             </div>
         </div>
-        <p class="scroll-hint-label" style="text-align:center;margin-top:16px;"><i class="fa-solid fa-hand-pointer"></i> Hover για παύση</p>
     </section>
 
     <!-- ===== RESOURCES ===== -->
@@ -509,7 +531,7 @@
             <div class="resource-card" data-reveal>
                 <div class="resource-icon"><i class="fa-solid fa-book"></i></div>
                 <h3 data-i18n="res1.title">ΕΛΙΝΥΑΕ</h3>
-                <p data-i18n="res1.text">Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — εκδόσεις, μελέτες, εκπαίδευση και ενημέρωση για Υ&amp;Α.</p>
+                <p data-i18n="res1.text">Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — νέες εκδόσεις, μελέτες, εκπαιδευτικό υλικό και ενημέρωση για την Υ&amp;Α.</p>
                 <a href="https://www.elinyae.gr/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="resource-card" data-reveal>
@@ -521,13 +543,13 @@
             <div class="resource-card" data-reveal>
                 <div class="resource-icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <h3 data-i18n="res3.title">Επιθεώρηση Εργασίας</h3>
-                <p data-i18n="res3.text">Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — υποχρεώσεις εργοδότη, Τεχνικός Ασφαλείας, έντυπα.</p>
+                <p data-i18n="res3.text">Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Ο ρόλος του Τεχνικού Ασφαλείας, Έντυπα.</p>
                 <a href="https://www.hli.gov.gr/asfaleia-kai-ygeia/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="resource-card" data-reveal>
                 <div class="resource-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
                 <h3 data-i18n="res4.title">OiRA — Εκτίμηση Κινδύνου</h3>
-                <p data-i18n="res4.text">Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο, εκδοθέντα από το Υπ. Εργασίας &amp; EU-OSHA.</p>
+                <p data-i18n="res4.text">Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο, εκδοθέντα από το Υπ. Εργασίας &amp; την EU-OSHA.</p>
                 <a href="https://oira.osha.europa.eu/en/Partners/hellenic-ministry-labour-and-social-affairs" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="resource-card" data-reveal>
@@ -556,10 +578,10 @@
                 </p>
 
                 <div class="person-card">
-                    <img src="Image 1.png" alt="Σταύρος Μάλλιαρης" class="person-photo"
+                    <img src="Image 1.2.png" alt="Σταύρος Μάλλιαρης" class="person-photo"
                          onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
                     <div class="person-details">
-                        <h3>Σταύρος Μάλλιαρης</h3>
+                        <h3 data-i18n="name.stavros">Σταύρος Μάλλιαρης</h3>
                         <p data-i18n="contact.role">Τεχνικός Ασφαλείας — MEng, ASP®</p>
                     </div>
                 </div>
@@ -581,7 +603,7 @@
 
                 <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="calendly-cta" data-i18n="contact.calendly">
                     <i class="fa-regular fa-calendar-check"></i>
-                    Κλείστε 📞 ραντεβού
+                    ΚΛΕΙΣΤΕ 📞 ΡΑΝΤΕΒΟΥ
                 </a>
             </div>
 
@@ -608,11 +630,11 @@
                         <label data-i18n="form.label.subject">Αντικείμενο</label>
                         <select name="subject">
                             <option value="" disabled selected data-i18n="form.select.default">Επιλέξτε υπηρεσία</option>
-                            <option data-i18n="form.opt.1">Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου</option>
-                            <option data-i18n="form.opt.2">Εκπαιδεύσεις Υ&amp;Α</option>
-                            <option data-i18n="form.opt.3">Σχέδιο Εκκένωσης</option>
-                            <option data-i18n="form.opt.4">Τεχνικός Ασφαλείας Εργοταξίου</option>
-                            <option data-i18n="form.opt.5">Σήμανση &amp; ΜΑΠ</option>
+                            <option data-i18n="form.opt.1">Κάλυψη Τεχνικού Ασφαλείας</option>
+                            <option data-i18n="form.opt.2">ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου</option>
+                            <option data-i18n="form.opt.3">Εκπαιδεύσεις Υ&amp;Α</option>
+                            <option data-i18n="form.opt.4">Διερεύνηση Εργατικού Ατυχήματος</option>
+                            <option data-i18n="form.opt.5">Σχέδια Εκκένωσης</option>
                             <option data-i18n="form.opt.6">Προετοιμασία για Επιθεώρηση ΣΕΠΕ</option>
                             <option data-i18n="form.opt.7">Άλλο</option>
                         </select>
@@ -621,7 +643,7 @@
                         <label data-i18n="form.label.message">Μήνυμα</label>
                         <textarea name="message" placeholder="Περιγράψτε σύντομα το αίτημά σας..." data-i18n-placeholder="form.ph.message"></textarea>
                     </div>
-                    <button type="submit" class="btn-submit" data-i18n="form.submit">Αποστολή Μηνύματος</button>
+                    <button type="submit" class="btn-submit" data-i18n="form.submit">Αποστολή Μηνύματος 📨</button>
                     <p id="formStatus"></p>
                 </form>
             </div>
@@ -636,7 +658,7 @@
                     <img src="Image 2.png" alt="Σ. Μάλλιαρης" onerror="this.style.display='none'">
                 </div>
                 <div class="footer-brand-text">
-                    <p class="fname">Σταύρος Μάλλιαρης</p>
+                    <p class="fname" data-i18n="name.stavros">Σταύρος Μάλλιαρης</p>
                     <p class="ftitle" data-i18n="footer.title">Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας</p>
                 </div>
             </div>
@@ -751,6 +773,326 @@
         })();
     </script>
     <script src="custom-animations.js"></script>
+
+    <script>
+    /* ── Sectors carousel — arrows + scroll wheel + touch swipe ── */
+    /* ── Infinite drag carousel factory ── */
+    function makeInfiniteCarousel(wrapId, trackId, autoSpeed, btnLId, btnRId, cardSelector) {
+        var wrap  = document.getElementById(wrapId);
+        var track = document.getElementById(trackId);
+        if (!wrap || !track) return;
+        var btnL = btnLId ? document.getElementById(btnLId) : null;
+        var btnR = btnRId ? document.getElementById(btnRId) : null;
+
+        /* Kill CSS animation — JS drives everything */
+        track.style.animation = 'none';
+
+        var pos      = 0;     /* scroll position in px (increases = moves left) */
+        var vel      = 0;     /* user-imparted velocity px/frame */
+        var dragging = false;
+        var lastT    = performance.now();
+
+        /* Half the track width = one full set of items (duplicated for seamless loop) */
+        function halfW() { return track.scrollWidth / 2; }
+
+        /* Wrap pos so it stays within [0, halfW) for seamless infinite loop */
+        function wrapPos() {
+            var h = halfW();
+            if (h <= 0) return;
+            pos = ((pos % h) + h) % h;
+        }
+
+        /* Main RAF loop */
+        (function loop(now) {
+            var dt = Math.min(now - lastT, 50); /* cap delta to avoid jumps after tab switch */
+            lastT = now;
+
+            if (!dragging) {
+                vel *= 0.92;                          /* friction */
+                pos += autoSpeed * (dt / 16) + vel;  /* auto-scroll + momentum */
+            } else {
+                pos += vel;                           /* pure drag, vel set by pointer */
+            }
+
+            wrapPos();
+            track.style.transform = 'translateX(' + (-pos) + 'px)';
+            requestAnimationFrame(loop);
+        })(performance.now());
+
+        /* ── Mouse drag ── */
+        var dragStartX = 0, dragStartPos = 0, prevX = 0, prevT = 0;
+        wrap.addEventListener('mousedown', function(e) {
+            dragging  = true;
+            vel       = 0;
+            dragStartX = e.clientX;
+            dragStartPos = pos;
+            prevX = e.clientX; prevT = performance.now();
+            wrap.style.cursor = 'grabbing';
+            e.preventDefault();
+        });
+        window.addEventListener('mousemove', function(e) {
+            if (!dragging) return;
+            var now = performance.now(), dt = now - prevT || 1;
+            vel = -(e.clientX - prevX) / dt * 16;
+            prevX = e.clientX; prevT = now;
+            pos = dragStartPos - (e.clientX - dragStartX);
+        });
+        window.addEventListener('mouseup', function() {
+            if (!dragging) return;
+            dragging = false;
+            wrap.style.cursor = '';
+        });
+
+        /* ── Mouse wheel — horizontal only ── */
+        wrap.addEventListener('wheel', function(e) {
+            if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return; /* ignore vertical scroll */
+            e.preventDefault();
+            vel += e.deltaX * 0.4;
+        }, {passive: false});
+
+        /* ── Touch — horizontal only ── */
+        var tPrevX = 0, tPrevT = 0, tStartX = 0, tStartY = 0, tStartPos = 0, tLocked = null;
+        wrap.addEventListener('touchstart', function(e) {
+            vel = 0;
+            tStartX = tPrevX = e.touches[0].clientX;
+            tStartY = e.touches[0].clientY;
+            tStartPos = pos;
+            tPrevT = performance.now();
+            tLocked = null; /* direction not yet determined */
+        }, {passive: true});
+        wrap.addEventListener('touchmove', function(e) {
+            var dx = e.touches[0].clientX - tStartX;
+            var dy = e.touches[0].clientY - tStartY;
+            /* determine lock direction on first significant move */
+            if (tLocked === null && (Math.abs(dx) > 4 || Math.abs(dy) > 4)) {
+                tLocked = Math.abs(dx) >= Math.abs(dy) ? 'h' : 'v';
+            }
+            if (tLocked !== 'h') return; /* vertical swipe — let page scroll */
+            e.preventDefault();
+            dragging = true;
+            var now = performance.now(), dt = now - tPrevT || 1;
+            vel = -(e.touches[0].clientX - tPrevX) / dt * 16;
+            tPrevX = e.touches[0].clientX; tPrevT = now;
+            pos = tStartPos - dx;
+        }, {passive: false});
+        wrap.addEventListener('touchend', function() { dragging = false; tLocked = null; }, {passive: true});
+
+        /* ── Arrow buttons ── */
+        function stepBy(px) {
+            vel = 0;
+            pos += px;
+        }
+        if (btnL) btnL.addEventListener('click', function() {
+            var c = cardSelector ? track.querySelector(cardSelector) : null;
+            stepBy(-(c ? c.offsetWidth + 20 : 320));
+        });
+        if (btnR) btnR.addEventListener('click', function() {
+            var c = cardSelector ? track.querySelector(cardSelector) : null;
+            stepBy(c ? c.offsetWidth + 20 : 320);
+        });
+    }
+
+    /* autoSpeed = px per frame at 60fps — matches original CSS durations:
+       sectors: 48s over halfW ≈ ~3px/frame, action: 38s ≈ ~3.8px/frame */
+    makeInfiniteCarousel('sectorsWrap',    'sectorsTrack', 1.4, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
+    makeInfiniteCarousel('actionStripWrap','actionStrip',  1.8, null, null, null);
+
+    /* ── Service cards — mobile tap-to-reveal ── */
+    (function(){
+        if(!window.matchMedia('(hover: none)').matches) return;
+        document.querySelectorAll('.service-card').forEach(function(card){
+            card.addEventListener('click', function(){
+                var isOpen = card.classList.contains('touched');
+                document.querySelectorAll('.service-card').forEach(function(c){ c.classList.remove('touched'); });
+                if(!isOpen) card.classList.add('touched');
+            });
+        });
+    })();
+
+    /* ── Dimension-measure animation for sec-meas ── */
+    (function(){
+        var meas  = document.querySelector('[data-sec-meas]');
+        var label = document.getElementById('servicesMeasLabel');
+        if (!meas || !label) return;
+
+        var full = label.textContent.trim();
+        var done = false;
+
+        function runMeasure() {
+            if (done) return;
+            done = true;
+
+            /* 1 — ticks snap in */
+            meas.classList.add('measured');
+
+            /* 2 — typewriter starts after bars finish extending (≈ 0.8s) */
+            var i = 0;
+            label.textContent = '';
+            setTimeout(function type() {
+                if (i <= full.length) {
+                    label.textContent = full.slice(0, i);
+                    i++;
+                    setTimeout(type, i < full.length ? 38 : 0);
+                }
+            }, 820);
+        }
+
+        /* Trigger when element scrolls into view */
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) { runMeasure(); io.disconnect(); }
+            }, { threshold: 0.5 });
+            io.observe(meas);
+        } else {
+            runMeasure();
+        }
+    })();
+
+    /* ── Slot-reel rolling animation on page open ── */
+    (function(){
+        var reels = document.querySelectorAll('.slot-reel .slot-inner');
+        reels.forEach(function(el){
+            var final = el.textContent.trim();
+            var chars = ['0','1','2','3','4','5','6','7','8','9','%','°','/','H','A','Z'];
+            var ticks = 0;
+            var maxTicks = 18;
+            var interval = setInterval(function(){
+                if(ticks >= maxTicks){
+                    clearInterval(interval);
+                    el.textContent = final;
+                    return;
+                }
+                el.textContent = Array.from(final).map(function(c){
+                    if(c === ' ' || c === '®') return c;
+                    return chars[Math.floor(Math.random()*chars.length)];
+                }).join('');
+                ticks++;
+            }, 110);
+        });
+    })();
+    </script>
+
+    <!-- ===== HERO NEURAL NETWORK ===== -->
+    <script>
+    (function(){
+        const canvas = document.getElementById('heroNet');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        const NODE_COUNT   = 110;   // more nodes = more connections
+        const MAX_DIST     = 190;   // max edge length
+        const NODE_R       = 3.5;   // node radius
+        const SPEED        = 0.38;  // base drift speed
+        const COLOR        = '210,230,220';  // soft greenish-white tint
+        const EDGE_ALPHA   = 0.36;
+        const NODE_ALPHA   = 0.55;
+        const REPEL_R      = 120;   // repel radius
+        const REPEL_F      = 1.8;   // repel force
+
+        let W, H, nodes = [], mouse = { x: -9999, y: -9999 };
+
+        function resize() {
+            const hero = canvas.parentElement;
+            W = canvas.width  = hero.offsetWidth;
+            H = canvas.height = hero.offsetHeight;
+        }
+
+        function mkNode() {
+            const angle = Math.random() * Math.PI * 2;
+            const spd   = SPEED * (0.5 + Math.random());
+            return {
+                x: Math.random() * W,
+                y: Math.random() * H,
+                vx: Math.cos(angle) * spd,
+                vy: Math.sin(angle) * spd,
+            };
+        }
+
+        function init() {
+            resize();
+            nodes = Array.from({ length: NODE_COUNT }, mkNode);
+        }
+
+        function tick() {
+            ctx.clearRect(0, 0, W, H);
+
+            // update positions
+            for (const n of nodes) {
+                // repel from cursor
+                const mdx = n.x - mouse.x, mdy = n.y - mouse.y;
+                const md  = Math.sqrt(mdx * mdx + mdy * mdy);
+                if (md < REPEL_R && md > 0) {
+                    const f = (1 - md / REPEL_R) * REPEL_F;
+                    n.vx += (mdx / md) * f * 0.05;
+                    n.vy += (mdy / md) * f * 0.05;
+                }
+
+                // dampen so nodes don't accelerate forever
+                n.vx *= 0.985;
+                n.vy *= 0.985;
+
+                // ensure minimum speed
+                const spd = Math.sqrt(n.vx * n.vx + n.vy * n.vy);
+                if (spd < SPEED * 0.3) {
+                    n.vx += (Math.random() - 0.5) * 0.12;
+                    n.vy += (Math.random() - 0.5) * 0.12;
+                }
+
+                n.x += n.vx;
+                n.y += n.vy;
+
+                // wrap edges
+                if (n.x < -20) n.x = W + 20;
+                else if (n.x > W + 20) n.x = -20;
+                if (n.y < -20) n.y = H + 20;
+                else if (n.y > H + 20) n.y = -20;
+            }
+
+            // draw edges
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const a = nodes[i], b = nodes[j];
+                    const dx = a.x - b.x, dy = a.y - b.y;
+                    const d  = Math.sqrt(dx * dx + dy * dy);
+                    if (d < MAX_DIST) {
+                        const alpha = (1 - d / MAX_DIST) * EDGE_ALPHA;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y);
+                        ctx.lineTo(b.x, b.y);
+                        ctx.strokeStyle = `rgba(${COLOR},${alpha})`;
+                        ctx.lineWidth   = 1.4;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // draw nodes
+            for (const n of nodes) {
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, NODE_R, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${COLOR},${NODE_ALPHA})`;
+                ctx.fill();
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        const hero = canvas.parentElement;
+        hero.addEventListener('mousemove', function(e) {
+            const r = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - r.left;
+            mouse.y = e.clientY - r.top;
+        }, { passive: true });
+        hero.addEventListener('mouseleave', function() {
+            mouse.x = -9999; mouse.y = -9999;
+        });
+
+        window.addEventListener('resize', () => { resize(); });
+
+        init();
+        tick();
+    })();
+    </script>
 
     <!-- Back to top button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">

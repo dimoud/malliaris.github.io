@@ -134,7 +134,7 @@
     var QUIZ_QUESTIONS = [
         {
             el: 'Έχετε εκπονήσει Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ);',
-            en: 'Do you have a Written Risk Assessment (ΓΕΕΚ)?',
+            en: 'Do you have a Written Occupational Risk Assessment (GEEK)?',
             pts: 14
         },
         {
@@ -180,8 +180,8 @@
     };
 
     var QUIZ_TITLE = {
-        el: 'Επίπεδο Ασφάλειάς σας',
-        en: 'Your Safety Level'
+        el: 'ΤΟ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΣΑΣ',
+        en: 'YOUR SAFETY LEVEL'
     };
 
     function getStatusKey(pct) {
@@ -246,7 +246,7 @@
 
         /* Set gauge title */
         var titleEl = $('sqGaugeTitle');
-        if (titleEl) titleEl.textContent = QUIZ_TITLE[lang];
+        if (titleEl) titleEl.innerHTML = '<strong>' + QUIZ_TITLE[lang] + '</strong>';
     }
 
     function rebuildQuizTexts() {
@@ -261,7 +261,7 @@
             textEl.innerHTML = q[lang] + (q.stavros ? makeBadgeHtml(lang) : '');
         });
         var titleEl = $('sqGaugeTitle');
-        if (titleEl) titleEl.textContent = QUIZ_TITLE[lang];
+        if (titleEl) titleEl.innerHTML = '<strong>' + QUIZ_TITLE[lang] + '</strong>';
         updateQuizStatus(gaugeCurrentPct);
     }
 

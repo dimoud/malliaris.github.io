@@ -25,19 +25,19 @@
         'nav.about':    { el: 'Σχετικά',                      en: 'About' },
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
-        'nav.action':   { el: 'ΔΡΑΣΗ',                        en: 'IN ACTION' },
+        'nav.action':   { el: 'ΣΤΗΝ ΔΡΑΣΗ',                    en: 'IN ACTION' },
         'nav.contact':  { el: 'Επικοινωνία',                  en: 'Contact' },
 
         /* HERO */
         'hero.name1':    { el: 'ΣΤΑΥΡΟΣ',                                      en: 'STAVROS' },
         'hero.name2':    { el: 'ΜΑΛΛΙΑΡΗΣ',                                    en: 'MALLIARIS' },
         'hero.eyebrow':  { el: 'ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ ΜΗΧΑΝΙΚΟΣ ΥΓΕΙΑΣ ΚΑΙ ΑΣΦΑΛΕΙΑΣ ΑΠΘ', en: 'CERTIFIED H&S ENGINEER - AUTH' },
-        'hero.cta':      { el: 'Επικοινωνία',                                  en: 'Get in Touch' },
+        'hero.cta':      { el: 'ΠΑΡΕ ΠΡΟΣΦΟΡΑ',                                en: 'GET A QUOTE' },
         'hero.stat1.num':{ el: '7+',                                            en: '7+' },
         'hero.stat1.lbl':{ el: 'χρόνια εμπειρίας',                             en: 'years experience' },
-        'hero.stat2.num':{ el: 'ASP®',                                          en: 'ASP®' },
+        'hero.stat2.num':{ el: '24Η/7',                                         en: '24H/7' },
         'hero.stat2.lbl':{ el: 'ΚΑΘΕ ΤΥΠΟΣ ΕΠΙΧΕΙΡΗΣΗΣ',                      en: 'EVERY TYPE OF BUSINESS' },
-        'hero.stat3.num':{ el: 'ΑΠΘ',                                          en: 'AUTH' },
+        'hero.stat3.num':{ el: '360°',                                          en: '360°' },
         'hero.stat3.lbl':{ el: 'ΠΛΗΡΗΣ ΚΑΛΥΨΗ ΣΕ ΘΕΜΑΤΑ Υ&Α',               en: 'FULL H&S COVERAGE' },
 
         /* MARQUEE */
@@ -62,7 +62,7 @@
         'about.dim': { el: 'Ελλάδα — Διεθνώς', en: 'Greece — International' },
 
         /* FEATURES — Γιατί να μας επιλέξετε */
-        'feature.risk.label':        { el: 'Πολυετής Εμπειρία σε Θέματα Ασφάλειας', en: 'Years of Safety Expertise' },
+        'feature.risk.label':        { el: 'Πολυετής Εμπειρία σε Θέματα Ασφάλειας', en: 'Safety Expertise' },
         'feature.risk.text':         { el: 'Αναγνωρίζουμε έγκαιρα κινδύνους και προτείνουμε πρακτικές λύσεις που λειτουργούν στην πράξη', en: 'We identify risks early and propose practical solutions that work in the field' },
         'feature.custom.label':      { el: 'Στοχευμένη Εξυπηρέτηση',    en: 'Targeted Service' },
         'feature.custom.text':       { el: 'Εξατομικευμένη αξιολόγηση και σαφείς προτάσεις προσαρμοσμένες στο μέγεθος και τον χαρακτήρα της επιχείρησης', en: 'Individual assessment with clear, specific proposals adapted to the size and nature of each business' },
@@ -70,19 +70,21 @@
         'feature.compliance.text':   { el: 'Διαχειριζόμαστε κάθε πληροφορία με απόλυτη εχεμύθεια και δίνουμε ιδιαίτερη έμφαση στη σαφή επικοινωνία με τη διοίκηση και το προσωπικό', en: 'We handle all information with full confidentiality and place special emphasis on clear communication with management and staff' },
 
         /* SERVICES */
-        'services.eyebrow': { el: 'Εξασφαλίστε κορυφαίες συνθήκες Υγείας & Ασφάλειας — ΥΠΗΡΕΣΙΕΣ', en: 'Ensure top-tier Health & Safety conditions — SERVICES' },
+        'services.eyebrow': { el: 'ΥΠΗΡΕΣΙΕΣ', en: 'SERVICES' },
         'services.heading': {
             el: 'Παρέχουμε ένα <span class="hi-orange">πλήρες πακέτο</span> <em class="hi-white">Υπηρεσιών Υ&amp;Α</em>',
             en: 'We provide a <span class="hi-orange">complete package</span> of <em class="hi-white">H&amp;S Services</em>',
         },
         'services.lead': {
-            el: 'Από την ικανοποίηση των νομικών απαιτήσεων έως την διαμόρφωση κουλτούρας πρόληψης στην εταιρεία σας, ο Σταύρος Μάλλιαρης και η ομάδα του έχουνε τις λύσεις.',
-            en: 'From meeting legal requirements to building a culture of prevention in your company, Stavros Malliaris and his team have the solutions.',
+            el: 'Από την ικανοποίηση των νομικών απαιτήσεων έως την διαμόρφωση κουλτούρας πρόληψης, ο Σταύρος Μάλλιαρης και η ομάδα του έχουν την τεχνογνωσία για να εξασφαλίσουν κορυφαίες συνθήκες Υγείας και Ασφάλειας στην επιχείρησή σας.',
+            en: 'From legal compliance to building a strong prevention culture, Stavros Malliaris and his team deliver the right solutions.',
         },
         'services.legal': {
-            el: 'Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — <strong>Νόμος 3850/2010, Άρθρο 8 &amp; 43</strong>',
-            en: 'Under Law 3850/2010, even a single employee requires a Safety Officer and a Risk Assessment — <strong>Law 3850/2010, Articles 8 &amp; 43</strong>',
+            el: 'Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — Νόμος 3850/2010, Άρθρο 8 &amp; 43',
+            en: 'Under Law 3850/2010, even a single employee business is required to have a declared Safety Officer and a Risk Assessment — Law 3850/2010, Articles 8 &amp; 43',
         },
+
+        'services.measlabel': { el: '6 ΥΠΗΡΕΣΙΕΣ - 100% ΙΚΑΝΟΠΟΙΗΣΗ', en: '6 SERVICES - 100% SATISFACTION' },
 
         's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Officer Coverage' },
         's1.text':  {
@@ -90,7 +92,7 @@
             en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Officer visits for hazard identification, supervision of working conditions, and targeted recommendations.',
         },
 
-        's2.title': { el: 'Σύνταξη ΓΕΕΚ', en: 'Written Risk Assessment (ΓΕΕΚ)' },
+        's2.title': { el: 'Σύνταξη ΓΕΕΚ', en: 'Written Occupational Risk Assessment (GEEK)' },
         's2.text':  {
             el: 'Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 43. Εκπόνηση μελέτης εκτίμησης επαγγελματικού κινδύνου ανάλογα με τη δραστηριότητα και τις θέσεις εργασίας.',
             en: 'Mandatory under Law 3850/2010, Article 43. We prepare the occupational risk assessment study based on your activity and job positions.',
@@ -114,14 +116,14 @@
             en: 'Study, design and documentation of Escape and Evacuation Plans — a key compliance tool for Fire Service and labour legislation.',
         },
 
-        's6.title': { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ', en: 'Labour Inspectorate (SEPE) Preparation' },
+        's6.title': { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ', en: 'Labour Inspectorate (SEPE) Audit Prep' },
         's6.text':  {
-            el: 'Έλεγχος φακέλου Υγείας & Ασφάλειας της επιχείρησης για διαπίστωση βαθμού συμμόρφωσης με την ισχύουσα νομοθεσία και πρόταση διορθωτικών ενεργειών.',
-            en: 'Review of the business H&S file to determine compliance level with current legislation and propose necessary corrective actions.',
+            el: 'Έλεγχος συνθηκών εργασίας και φακέλου Υγείας & Ασφάλειας της επιχείρησης για διαπίστωση βαθμού συμμόρφωσης με την ισχύουσα νομοθεσία και πρόταση διορθωτικών ενεργειών.',
+            en: 'Review of working conditions and the business H&S file to determine compliance level with current legislation and propose necessary corrective actions.',
         },
 
         /* SECTORS */
-        'sectors.eyebrow': { el: 'Τομείς Δραστηριότητας', en: 'Activity Sectors' },
+        'sectors.eyebrow': { el: 'ΤΟΜΕΙΣ', en: 'SECTORS' },
         'sectors.heading': {
             el: 'Τομείς <em>Δραστηριότητας</em>',
             en: 'Sectors of <em>Activity</em>',
@@ -149,7 +151,7 @@
             en: 'We are available for any question or need. Contact us today by filling in the form or booking a 15-minute phone appointment.',
         },
         'contact.role':    { el: 'Τεχνικός Ασφαλείας — MEng, ASP®', en: 'Safety Officer — MEng, ASP®' },
-        'contact.calendly':{ el: 'Κλείστε 📞 ραντεβού',              en: 'Book 📞 Appointment' },
+        'contact.calendly':{ el: 'ΚΛΕΙΣΤΕ 📞 ΡΑΝΤΕΒΟΥ',              en: 'BOOK 📞 APPOINTMENT' },
 
         /* FORM */
         'form.title':          { el: 'Φόρμα επικοινωνίας',        en: 'Contact Form' },
@@ -160,16 +162,16 @@
         'form.ph.email':       { el: 'email@example.gr',          en: 'email@example.com' },
         'form.label.subject':  { el: 'Αντικείμενο',              en: 'Subject' },
         'form.select.default': { el: 'Επιλέξτε υπηρεσία',        en: 'Select a service' },
-        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',               en: 'Safety Officer Coverage' },
-        'form.opt.2':          { el: 'ΓΕΕΚ — Εκτίμηση Επαγγελματικού Κινδύνου', en: 'Risk Assessment Study (ΓΕΕΚ)' },
-        'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                        en: 'H&S Training' },
-        'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',          en: 'Accident Investigation' },
-        'form.opt.5':          { el: 'Σχέδια Εκκένωσης',                         en: 'Evacuation Plans' },
-        'form.opt.6':          { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ',         en: 'Labour Inspectorate (SEPE) Prep' },
-        'form.opt.7':          { el: 'Άλλο',                                     en: 'Other' },
+        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',                             en: 'Safety Officer Coverage' },
+        'form.opt.2':          { el: 'ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Occupational Risk Assessment Study (GEEK)' },
+        'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                                     en: 'H&S Training' },
+        'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',                       en: 'Accident Investigation' },
+        'form.opt.5':          { el: 'Σχέδια Εκκένωσης',                                      en: 'Evacuation Plans' },
+        'form.opt.6':          { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ',                      en: 'Labour Inspectorate (SEPE) Audit Prep' },
+        'form.opt.7':          { el: 'Άλλο',                                                  en: 'Other' },
         'form.label.message':  { el: 'Μήνυμα',                   en: 'Message' },
         'form.ph.message':     { el: 'Περιγράψτε σύντομα το αίτημά σας...', en: 'Briefly describe your request...' },
-        'form.submit':         { el: 'Αποστολή Μηνύματος',       en: 'Send Message' },
+        'form.submit':         { el: 'Αποστολή Μηνύματος 📨',    en: 'Send Message 📨' },
 
         /* GAUGE */
         'gauge.label': { el: 'Συμμόρφωση', en: 'Compliance' },
@@ -217,15 +219,15 @@
         'action.eyebrow': { el: 'Στη Δράση',       en: 'In the Field' },
         'action.heading': {
             el: 'Επί το <em>Έργω</em>',
-            en: 'In the <em>Field</em>',
+            en: 'IN <em>ACTION</em>',
         },
-        'action.cap1': { el: 'Παρουσίαση Επικίνδυνων Ενεργειών',                            en: 'Presentation of Hazardous Operations' },
+        'action.cap1': { el: 'Παρουσίαση Επικίνδυνων Ενεργειών',                            en: 'Presentation of Hazardous Energies' },
         'action.cap2': { el: 'Εκπαίδευση Εργασίας σε Ύψος',                                en: 'Working at Height Training' },
-        'action.cap3': { el: 'Μηνιαία Συγκέντρωση Υ&Α Εργαζομένων',                        en: 'Monthly H&S Workers Meeting' },
-        'action.cap4': { el: 'Εκπαίδευση για Χρήση ΜΑΠ',                                   en: 'PPE Usage Training' },
+        'action.cap3': { el: 'Μηνιαία Συγκέντρωση Υ&Α Εργαζομένων',                        en: 'Monthly H&S Townhall Meeting' },
+        'action.cap4': { el: 'Εκπαίδευση για Χρήση ΜΑΠ',                                   en: 'Use of PPE Training' },
         'action.cap5': { el: 'Εκπαίδευση για Περιορισμένους Χώρους',                        en: 'Confined Space Entry Training' },
-        'action.cap6': { el: 'Καθημερινός Έλεγχος Ασφάλειας Χειριστών Αναβατορίου',        en: 'Daily Safety Check for Elevator Operators' },
-        'action.cap7': { el: 'Πρωινή Συνάντηση Υγείας και Ασφάλειας',                      en: 'Morning Health & Safety Briefing' },
+        'action.cap6': { el: 'Καθημερινός Έλεγχος Ασφάλειας Χειριστών Αναβατορίου',        en: 'Daily Safety Check for Hoist Operators' },
+        'action.cap7': { el: 'Πρωινή Συνάντηση Υγείας και Ασφάλειας',                      en: 'Morning Health & Safety Toolbox' },
 
         /* QUOTE */
         'quote.text': {
@@ -236,21 +238,27 @@
 
         /* RESOURCES */
         'res1.title': { el: 'ΕΛΙΝΥΑΕ', en: 'ELINYAE' },
-        'res1.text':  { el: 'Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — εκδόσεις, μελέτες, εκπαίδευση και ενημέρωση για Υ&Α.', en: 'Hellenic Institute for Occupational Health & Safety — publications, studies, training and updates.' },
+        'res1.text':  { el: 'Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — νέες εκδόσεις, μελέτες, εκπαιδευτικό υλικό και ενημέρωση για την Υ&Α.', en: 'Hellenic Institute for Occupational Health & Safety — new publications, studies, training material and H&S updates.' },
         'res2.title': { el: 'Νόμος 3850/2010', en: 'Law 3850/2010' },
         'res2.text':  { el: 'Κωδικοποιημένο κείμενο του Ν. 3850/2010 — ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία στην Ελλάδα.', en: 'Consolidated text of Law 3850/2010 — the primary Greek H&S at Work legislation.' },
         'res3.title': { el: 'Επιθεώρηση Εργασίας', en: 'Labour Inspectorate' },
-        'res3.text':  { el: 'Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — υποχρεώσεις εργοδότη, Τεχνικός Ασφαλείας, έντυπα.', en: 'Official enforcement body for labour legislation — employer obligations, Safety Officer requirements, official forms.' },
+        'res3.text':  { el: 'Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Ο ρόλος του Τεχνικού Ασφαλείας, Έντυπα.', en: 'Official enforcement body for labour legislation — Employer obligations, The Safety Officer role, Official forms.' },
         'res4.title': { el: 'OiRA — Εκτίμηση Κινδύνου', en: 'OiRA — Risk Assessment' },
-        'res4.text':  { el: 'Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο, εκδοθέντα από το Υπ. Εργασίας & EU-OSHA.', en: 'Interactive sector-specific occupational risk assessment tools published by the Ministry of Labour & EU-OSHA.' },
+        'res4.text':  { el: 'Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο, εκδοθέντα από το Υπ. Εργασίας & την EU-OSHA.', en: 'Interactive sector-specific occupational risk assessment tools published by the Ministry of Labour & EU-OSHA.' },
         'res5.title': { el: 'Αναγγελία Εργατικού Ατυχήματος', en: 'Workplace Accident Reporting' },
         'res5.text':  { el: 'Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr — υποχρεώσεις εργοδότη και βήματα υποβολής.', en: 'Official workplace accident reporting process via gov.gr — employer obligations and submission steps.' },
         'res6.title': { el: 'sepenet.gr', en: 'sepenet.gr' },
-        'res6.text':  { el: 'Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ — γρήγορη και εύκολη ηλεκτρονική διαδικασία.', en: 'Platform for online registration of Safety Officers with SEPE — quick and easy electronic process.' },
+        'res6.text':  { el: 'Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ — γρήγορη και εύκολη ηλεκτρονική διαδικασία.', en: 'Platform for online registration of Safety Officers with SEPE — quick and easy process.' },
         'res.visit':  { el: 'Επίσκεψη', en: 'Visit' },
 
         /* CONTACT */
-        'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & International' },
+        'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & Abroad' },
+
+        /* NAME */
+        'name.stavros': { el: 'Σταύρος Μάλλιαρης', en: 'Stavros Malliaris' },
+
+        /* HOVER HINT */
+        'hint.hover': { el: 'HOVER ΓΙΑ ΠΑΥΣΗ', en: 'HOVER TO PAUSE' },
 
         /* FOOTER */
         'footer.title': { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Officer - H&S Consultant' },
