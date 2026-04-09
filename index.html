@@ -49,6 +49,13 @@
         </div>
     </nav>
 
+    <!-- Mobile language bar — fixed below nav, centered, mobile only -->
+    <div class="lang-bar-mobile" id="langBarMobile">
+        <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
+        <div class="lang-sep"></div>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
+    </div>
+
     <!-- ===== HERO ===== -->
     <header class="hero">
         <canvas id="heroNet" aria-hidden="true"></canvas>
@@ -849,7 +856,7 @@
             lastT = now;
 
             if (!dragging) {
-                vel *= 0.92;                          /* friction */
+                vel *= 0.96;                          /* friction — longer coast */
                 pos += autoSpeed * (dt / 16) + vel;  /* auto-scroll + momentum */
             } else {
                 pos += vel;                           /* pure drag, vel set by pointer */
@@ -916,7 +923,16 @@
             tPrevX = e.touches[0].clientX; tPrevT = now;
             pos = tStartPos - dx;
         }, {passive: false});
-        wrap.addEventListener('touchend', function() { dragging = false; tLocked = null; }, {passive: true});
+        wrap.addEventListener('touchend', function() {
+            dragging = false; tLocked = null;
+            /* Overshoot pulse: briefly push past then snap back via friction */
+            if (Math.abs(vel) > 2) {
+                var overshoot = vel * 0.22;
+                vel += overshoot;
+                /* After 3 frames, counter the overshoot — simulates rubber-band snap */
+                setTimeout(function() { vel -= overshoot * 1.6; }, 50);
+            }
+        }, {passive: true});
 
         /* ── Arrow buttons ── */
         function stepBy(px) {
@@ -964,6 +980,10 @@
                 if(!isOpen) card.classList.add('touched');
             });
         });
+        // Close on scroll
+        window.addEventListener('scroll', function(){
+            document.querySelectorAll('.service-card.touched').forEach(function(c){ c.classList.remove('touched'); });
+        }, { passive: true });
     })();
 
     /* ── Dimension-measure animation for sec-meas ── */

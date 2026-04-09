@@ -109,6 +109,11 @@ nav.scrolled {
 .lang-toggle {
     display: flex; align-items: center; gap: 6px;
 }
+
+/* Mobile language bar — centered strip below nav, mobile only */
+.lang-bar-mobile {
+    display: none;
+}
 .lang-btn {
     background: none; border: none; cursor: pointer;
     font-size: 12px; letter-spacing: 0.5px;
@@ -502,12 +507,13 @@ nav.scrolled {
     display: flex; align-items: center; gap: 20px;
     padding: 20px 22px;
     background: var(--white);
+    /* stagger delays set per nth-child below */
     border: 1px solid var(--fog2);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(15,25,41,0.05);
     position: relative; overflow: hidden;
-    opacity: 0; transform: translateX(-20px);
-    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), box-shadow 0.25s, border-color 0.25s;
+    opacity: 0; transform: translateX(-32px);
+    transition: opacity 0.85s var(--ease), transform 0.85s var(--ease), box-shadow 0.25s, border-color 0.25s;
 }
 .feature-row::before {
     content: '';
@@ -522,6 +528,9 @@ nav.scrolled {
 .feature-row:nth-child(2):hover { border-color: rgba(240,144,48,0.25); box-shadow: 0 6px 24px rgba(240,144,48,0.1); }
 .feature-row:nth-child(3):hover { border-color: rgba(45,170,110,0.25); box-shadow: 0 6px 24px rgba(45,170,110,0.1); }
 
+.feature-row:nth-child(1) { transition-delay: 0ms; }
+.feature-row:nth-child(2) { transition-delay: 140ms; }
+.feature-row:nth-child(3) { transition-delay: 280ms; }
 .feature-row.revealed { opacity: 1; transform: none; }
 
 .feature-row i {
@@ -548,8 +557,8 @@ nav.scrolled {
     border-radius: 12px;
     padding: 28px;
     border: 1.5px solid var(--fog2);
-    opacity: 0; transform: translateY(24px);
-    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    opacity: 0; transform: translateX(36px);
+    transition: opacity 0.9s var(--ease) 0.15s, transform 0.9s var(--ease) 0.15s;
 }
 .about-aside.revealed { opacity: 1; transform: none; }
 
@@ -666,8 +675,8 @@ nav.scrolled {
 
 /* ===== DATA-REVEAL (general) ===== */
 [data-reveal] {
-    opacity: 0; transform: translateY(20px);
-    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
 }
 [data-reveal].revealed {
     opacity: 1; transform: none;
@@ -780,11 +789,19 @@ nav.scrolled {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.05);
     padding: 36px 28px;
-    transition: background 0.3s, border-color 0.3s, transform 0.3s var(--ease);
-    opacity: 0; transform: translateY(18px);
+    transition: opacity 1s var(--ease), transform 1s var(--ease), background 0.3s, border-color 0.3s;
+    opacity: 0; transform: translateY(32px);
     cursor: default;
 }
 .service-card.revealed { opacity: 1; transform: none; }
+
+/* Stagger service cards */
+.services-grid .service-card:nth-child(1) { transition-delay: 0ms; }
+.services-grid .service-card:nth-child(2) { transition-delay: 120ms; }
+.services-grid .service-card:nth-child(3) { transition-delay: 240ms; }
+.services-grid .service-card:nth-child(4) { transition-delay: 360ms; }
+.services-grid .service-card:nth-child(5) { transition-delay: 480ms; }
+.services-grid .service-card:nth-child(6) { transition-delay: 600ms; }
 .service-num {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 11px; font-weight: 700; letter-spacing: 2px;
@@ -1356,8 +1373,40 @@ footer {
     /* Nav logo: show subtitle same as desktop, slightly smaller */
     .logo-text .title { display: block; font-size: 9px; max-width: 160px; }
     .logo-rect { min-width: 60px; max-width: 90px; height: 38px; }
-    /* Lang toggle inside dropdown — hidden on desktop */
+    /* Lang toggle inside dropdown — hidden (moved to top bar) */
     .nav-lang-mobile { display: none; }
+
+    /* Mobile lang bar — centered strip pinned below nav */
+    .lang-bar-mobile {
+        display: flex;
+        align-items: center; justify-content: center; gap: 8px;
+        position: fixed; top: 72px; left: 0; right: 0;
+        z-index: 998;
+        padding: 7px 0 6px;
+        background: rgba(10,18,32,0.92);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(232,84,26,0.18);
+        transition: top 0.4s var(--ease);
+    }
+    nav.scrolled ~ .lang-bar-mobile { top: 60px; }
+    .lang-bar-mobile .lang-btn {
+        display: flex; align-items: center; gap: 5px;
+        font-size: 12px; font-weight: 600; letter-spacing: 0.8px;
+        padding: 4px 12px; border-radius: 4px;
+        color: rgba(255,255,255,0.5);
+        background: none; border: none; cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        transition: color 0.2s, background 0.2s;
+    }
+    .lang-bar-mobile .lang-btn.active {
+        color: var(--white);
+        background: rgba(232,84,26,0.18);
+    }
+    .lang-bar-mobile .lang-sep {
+        width: 1px; height: 14px;
+        background: rgba(255,255,255,0.2);
+    }
+    .lang-bar-mobile .flag-icon { width: 16px; }
 
     /* HERO */
     .hero-hex { display: none; }
@@ -1378,7 +1427,7 @@ footer {
         position: relative; right: auto; top: auto; transform: none;
         width: clamp(170px, 52vw, 230px);
         height: clamp(170px, 52vw, 230px);
-        margin-top: max(calc(50svh - 72px - clamp(85px, 26vw, 115px)), 28px);
+        margin-top: max(calc(50svh - 108px - clamp(85px, 26vw, 115px)), 28px);
         margin-bottom: 0; flex-shrink: 0;
     }
     .hero-photo-wrap { border-width: 3px; }
@@ -1457,25 +1506,9 @@ footer {
     /* Smaller nav link rows on phone */
     .nav-links a { font-size: 11px; padding: 7px 6px; min-height: 34px; letter-spacing: 0.6px; }
     .nav-links a.nav-cta { padding: 6px 14px; margin-top: 4px; font-size: 11px; }
-    /* Lang toggle shown at bottom of dropdown panel */
-    .nav-lang-mobile {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 6px;
-        width: 100%;
-        padding: 8px 0 2px;
-        border-top: 1px solid rgba(255,255,255,0.07);
-        margin-top: 4px;
-    }
-    .nav-lang-mobile .lang-btn {
-        display: flex; align-items: center; gap: 4px;
-        font-size: 11px; padding: 4px 7px;
-        color: rgba(255,255,255,0.5);
-    }
-    .nav-lang-mobile .lang-btn.active { color: var(--white); background: rgba(255,255,255,0.09); }
-    .nav-lang-mobile .lang-sep { width: 1px; height: 12px; background: rgba(255,255,255,0.15); }
-    .nav-lang-mobile .flag-icon { width: 15px; }
+    /* Lang bar adjustments for small phones */
+    .lang-bar-mobile { top: 64px; }
+    nav.scrolled ~ .lang-bar-mobile { top: 56px; }
 
     /* HERO */
     .hero-photo-group {
@@ -1511,11 +1544,39 @@ footer {
     .service-card { padding: 0; min-height: 150px; }
     /* Mobile: tap to reveal text (JS adds .touched class) */
     .sc-text-wrap { transform: translateY(0); }
+    /* Touched state: reflow card to natural height */
+    .service-card.touched,
+    .services-grid .service-card.touched {
+        overflow: visible;
+        min-height: unset;
+        height: auto;
+        transition-delay: 0ms !important;
+    }
     .service-card.touched .sc-bg { opacity: 0; }
-    .service-card.touched .sc-text-wrap { max-height: 300px !important; opacity: 1 !important; transform: translateY(0); }
-    .service-card.touched .sc-top { transform: translateY(-4px); }
+    .service-card.touched .sc-content {
+        position: relative;
+        inset: unset;
+        background: rgba(15,25,41,0.97);
+        height: auto;
+        min-height: 150px;
+        justify-content: flex-start;
+    }
+    .service-card.touched .sc-text-wrap {
+        max-height: unset !important;
+        height: auto;
+        overflow: visible;
+        opacity: 1 !important;
+        transform: none;
+        margin-top: 8px;
+    }
+    .service-card.touched p {
+        font-size: 12px;
+        line-height: 1.65;
+        color: rgba(255,255,255,0.72);
+    }
+    .service-card.touched .sc-top { transform: none; }
     .service-card h3 { font-size: 13px; }
-    .service-card p { font-size: 12px; }
+    .service-card p { font-size: 12px; line-height: 1.65; }
     .service-icon { font-size: 20px; margin-bottom: 10px; }
     .service-num { font-size: 10px; margin-bottom: 10px; }
     .sc-content { padding: 16px; }
