@@ -1,6 +1,6 @@
 /**
  * custom-animations.js — Malliaris H&S
- * Infinite-scroll strips, 3D tilt, magnetic buttons, cursor glow, stagger reveals
+ * Infinite-scroll  strips, 3D tilt, magnetic buttons, cursor glow, stagger reveals
  */
 (function () {
     'use strict';

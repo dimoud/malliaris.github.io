@@ -14,7 +14,7 @@
  *   #sqGaugeTitle        → title text node (updated on lang change)
  *   #sqStatus            → status message node
  *   #helmetWrap          → contains a <svg> element
- *   #craneWrap           → contains SVG with #craneArm group
+ *   #craneWrap1           → contains SVG with #craneArm group
  */
 
 (function () {

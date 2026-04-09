@@ -1,5 +1,5 @@
 /**
- * contact-form.js — Plug-and-play Google Apps Script form handler
+ * contact-form.js — Plug- and-play Google Apps Script form handler
  * Supports English & Greek (auto-detects lang="el" on <html>)
  */
 

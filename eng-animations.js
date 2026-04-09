@@ -10,7 +10,7 @@
  *   3. Hero Crosshair           — floats in hero, fades in on load
  *   4. Hero Measurement Line    — full-width /———— FACADE 24.000 m ————/ in hero
  *   5. Scroll Ruler             — fixed bottom /—value—/ ruler, live scroll-driven
- *   6. Caliper Animation        — SVG caliper opens/closes with live measurement
+ *   6. Caliper Animation         — SVG caliper opens/closes with live measurement
  *   7. Section Measurement Lines — [data-sec-meas] elements animate on scroll entry
  *   8. Hero Photo Crossfade     — .hero-slide elements crossfade every 10 s
  *   9. Reveal on Scroll         — [data-reveal] / [data-reveal-r] fade+slide in

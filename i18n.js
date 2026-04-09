@@ -11,7 +11,7 @@
  * Public API:
  *   window.I18n.setLang('el' | 'en')
  *   window.I18n.getLang()
- *   window.setLang(lang)          ← shorthand for onclick="setLang('el')"
+ *   window.setLang(lang)           ← shorthand for onclick="setLang('el')"
  */
 
 (function () {
