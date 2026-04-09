@@ -810,7 +810,10 @@
         (function(){
             var btn = document.getElementById('backToTop');
             if(!btn) return;
-            window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 400); }, {passive:true});
+            window.addEventListener('scroll', function(){
+                var half = (document.documentElement.scrollHeight - window.innerHeight) / 2;
+                btn.classList.toggle('visible', window.scrollY > half);
+            }, {passive:true});
             btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
         })();
     </script>
