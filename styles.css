@@ -110,9 +110,9 @@ nav.scrolled {
     display: flex; align-items: center; gap: 6px;
 }
 
-/* Desktop: nav-logo-group is just a passthrough flex wrapper */
+/* nav-logo-group: flex row on all breakpoints; mobile extras shown via media query */
 .nav-logo-group {
-    display: flex; align-items: center; gap: 0;
+    display: flex; align-items: center; gap: 0; flex-wrap: nowrap;
 }
 .nav-logo-lang-sep,
 .nav-logo-lang { display: none; }
@@ -1340,6 +1340,7 @@ footer {
     .lang-toggle { display: none; }
 
     /* Inline lang toggle next to name */
+    .nav-logo-group .nav-logo { flex-shrink: 1; min-width: 0; }
     .nav-logo-lang-sep {
         display: block;
         width: 1px; height: 28px;
@@ -1348,7 +1349,7 @@ footer {
         flex-shrink: 0;
     }
     .nav-logo-lang {
-        display: flex; align-items: center; gap: 2px;
+        display: flex; align-items: center; gap: 2px; flex-wrap: nowrap; flex-shrink: 0;
     }
     .nav-logo-lang .lang-btn {
         display: flex; align-items: center; gap: 3px;
