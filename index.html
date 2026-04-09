@@ -290,6 +290,16 @@
             <p class="sectors-lead" data-i18n="sectors.lead">Μετά από πολυετή εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε είδους, ο Σταύρος Μάλλιαρης και η ομάδα του μπορούν να συμβουλέψουν πελάτες από κάθε τομέα δραστηριότητας.</p>
         </div>
 
+        <!-- Mobile-only: compact 2-col sector grid (carousel hidden on mobile) -->
+        <div class="sectors-mobile-grid" aria-hidden="false">
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-utensils"></i></div><div class="smc-title" data-i18n="sec1.title">Εστίαση και Τουρισμός</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-store"></i></div><div class="smc-title" data-i18n="sec2.title">Εμπόριο και Υπηρεσίες</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-helmet-safety"></i></div><div class="smc-title" data-i18n="sec3.title">Κατασκευές και Υποδομές</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-truck"></i></div><div class="smc-title" data-i18n="sec4.title">Μεταφορές και Logistics</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-bolt"></i></div><div class="smc-title" data-i18n="sec5.title">Ενέργεια και Περιβάλλον</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-industry"></i></div><div class="smc-title" data-i18n="sec6.title">Βιομηχανία και Παραγωγή</div></div>
+        </div>
+
         <!-- Crane decoration -->
         <div class="crane-decoration" id="craneWrap" aria-hidden="true">
             <svg viewBox="0 0 180 130" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -565,6 +575,26 @@
                 <a href="https://e-services.hli.gov.gr/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
+
+        <!-- Mobile-only: infinite slow carousel strip (grid hidden on mobile) -->
+        <div class="resources-strip-wrap" id="resourcesStripWrap" style="display:none">
+            <div class="resources-strip" id="resourcesStrip">
+                <!-- Original set -->
+                <div class="resource-card"><div class="resource-icon"><i class="fa-solid fa-book"></i></div><h3 data-i18n="res1.title">ΕΛΙΝΥΑΕ</h3><p data-i18n="res1.text">Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — νέες εκδόσεις, μελέτες, εκπαιδευτικό υλικό.</p><a href="https://www.elinyae.gr/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card"><div class="resource-icon"><i class="fa-solid fa-scale-balanced"></i></div><h3 data-i18n="res2.title">Νόμος 3850/2010</h3><p data-i18n="res2.text">Κωδικοποιημένο κείμενο του Ν. 3850/2010 — ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία.</p><a href="https://www.e-nomothesia.gr/kat-ergasia-koinonike-asphalise/n-3850-2010.html" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card"><div class="resource-icon"><i class="fa-solid fa-shield-halved"></i></div><h3 data-i18n="res3.title">Επιθεώρηση Εργασίας</h3><p data-i18n="res3.text">Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Έντυπα.</p><a href="https://www.hli.gov.gr/asfaleia-kai-ygeia/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card"><div class="resource-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><h3 data-i18n="res4.title">OiRA — Εκτίμηση Κινδύνου</h3><p data-i18n="res4.text">Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο.</p><a href="https://oira.osha.europa.eu/en/Partners/hellenic-ministry-labour-and-social-affairs" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card"><div class="resource-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><h3 data-i18n="res5.title">Αναγγελία Ατυχήματος</h3><p data-i18n="res5.text">Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr.</p><a href="https://www.gov.gr/upourgeia/oloi-foreis/epitheorese-ergasias/anaggelia-ergatikou-atukhematos" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card"><div class="resource-icon"><i class="fa-solid fa-computer-mouse"></i></div><h3 data-i18n="res6.title">sepenet.gr</h3><p data-i18n="res6.text">Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ.</p><a href="https://e-services.hli.gov.gr/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="resource-card" aria-hidden="true"><div class="resource-icon"><i class="fa-solid fa-book"></i></div><h3 data-i18n="res1.title">ΕΛΙΝΥΑΕ</h3><p data-i18n="res1.text">Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — νέες εκδόσεις, μελέτες, εκπαιδευτικό υλικό.</p><a href="https://www.elinyae.gr/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card" aria-hidden="true"><div class="resource-icon"><i class="fa-solid fa-scale-balanced"></i></div><h3 data-i18n="res2.title">Νόμος 3850/2010</h3><p data-i18n="res2.text">Κωδικοποιημένο κείμενο του Ν. 3850/2010 — ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία.</p><a href="https://www.e-nomothesia.gr/kat-ergasia-koinonike-asphalise/n-3850-2010.html" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card" aria-hidden="true"><div class="resource-icon"><i class="fa-solid fa-shield-halved"></i></div><h3 data-i18n="res3.title">Επιθεώρηση Εργασίας</h3><p data-i18n="res3.text">Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Έντυπα.</p><a href="https://www.hli.gov.gr/asfaleia-kai-ygeia/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card" aria-hidden="true"><div class="resource-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><h3 data-i18n="res4.title">OiRA — Εκτίμηση Κινδύνου</h3><p data-i18n="res4.text">Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο.</p><a href="https://oira.osha.europa.eu/en/Partners/hellenic-ministry-labour-and-social-affairs" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card" aria-hidden="true"><div class="resource-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><h3 data-i18n="res5.title">Αναγγελία Ατυχήματος</h3><p data-i18n="res5.text">Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr.</p><a href="https://www.gov.gr/upourgeia/oloi-foreis/epitheorese-ergasias/anaggelia-ergatikou-atukhematos" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="resource-card" aria-hidden="true"><div class="resource-icon"><i class="fa-solid fa-computer-mouse"></i></div><h3 data-i18n="res6.title">sepenet.gr</h3><p data-i18n="res6.text">Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ.</p><a href="https://e-services.hli.gov.gr/" target="_blank" rel="noopener" class="resource-link" data-i18n="res.visit">Επίσκεψη <i class="fa-solid fa-arrow-right"></i></a></div>
+            </div>
+        </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
@@ -714,18 +744,23 @@
         /* Mobile menu */
         function toggleMenu() {
             const menu = document.getElementById('navLinks');
-            const isOpen = menu.classList.toggle('open');
-            document.body.style.overflow = isOpen ? 'hidden' : '';
+            menu.classList.toggle('open');
+            /* no body scroll lock — menu is a small panel, not full-screen */
         }
         function closeMenu() {
             document.getElementById('navLinks').classList.remove('open');
-            document.body.style.overflow = '';
         }
         document.querySelectorAll('#navLinks a').forEach(a => {
             a.addEventListener('click', closeMenu);
         });
         /* Close on Escape key */
         document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+        /* Close menu on scroll; track nav compact state for dropdown top offset */
+        window.addEventListener('scroll', function() {
+            const menu = document.getElementById('navLinks');
+            if (menu.classList.contains('open')) closeMenu();
+            menu.classList.toggle('nav-scrolled', window.scrollY > 60);
+        }, { passive: true });
 
         /* Count-up animation for [data-countup] elements */
         (function () {
@@ -892,10 +927,23 @@
         });
     }
 
-    /* autoSpeed = px per frame at 60fps — matches original CSS durations:
-       sectors: 48s over halfW ≈ ~3px/frame, action: 38s ≈ ~3.8px/frame */
-    makeInfiniteCarousel('sectorsWrap',    'sectorsTrack', 1.4, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
-    makeInfiniteCarousel('actionStripWrap','actionStrip',  1.8, null, null, null);
+    /* autoSpeed = px per frame at 60fps */
+    var isMobile = window.innerWidth <= 600;
+
+    /* Sectors: carousel on desktop/tablet, static grid on mobile (carousel hidden via CSS) */
+    if (!isMobile) {
+        makeInfiniteCarousel('sectorsWrap', 'sectorsTrack', 1.4, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
+    }
+
+    /* In-action work photos: slow on mobile (0.5 px/frame ≈ very gentle drift) */
+    makeInfiniteCarousel('actionStripWrap', 'actionStrip', isMobile ? 0.5 : 1.8, null, null, null);
+
+    /* Resources: infinite slow carousel on mobile only */
+    if (isMobile) {
+        var rsWrap = document.getElementById('resourcesStripWrap');
+        if (rsWrap) rsWrap.style.display = 'block';
+        makeInfiniteCarousel('resourcesStripWrap', 'resourcesStrip', 0.45, null, null, null);
+    }
 
     /* ── Service cards — mobile tap-to-reveal ── */
     (function(){
