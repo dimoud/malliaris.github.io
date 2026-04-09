@@ -1353,9 +1353,11 @@ footer {
         justify-content: center;
     }
 
-    /* Nav logo: hide subtitle on small tablets */
-    .logo-text .title { display: none; }
+    /* Nav logo: show subtitle same as desktop, slightly smaller */
+    .logo-text .title { display: block; font-size: 9px; max-width: 160px; }
     .logo-rect { min-width: 60px; max-width: 90px; height: 38px; }
+    /* Lang toggle inside dropdown — hidden on desktop */
+    .nav-lang-mobile { display: none; }
 
     /* HERO */
     .hero-hex { display: none; }
@@ -1446,11 +1448,34 @@ footer {
     /* NAV */
     nav { padding: 0 4%; height: 64px; }
     nav.scrolled { height: 56px; }
-    .logo-rect { min-width: 52px; max-width: 80px; height: 34px; padding: 3px 6px; }
-    .logo-text .name { font-size: 12px; letter-spacing: 0.3px; }
-    .hamburger span { width: 22px; }
-    .nav-links { top: 64px; }
+    .logo-rect { min-width: 44px; max-width: 68px; height: 30px; padding: 3px 5px; }
+    .logo-text .name { font-size: 11px; letter-spacing: 0.2px; }
+    .logo-text .title { font-size: 8.5px; max-width: 140px; }
+    .hamburger span { width: 20px; }
+    .nav-links { top: 64px; width: clamp(180px, 52vw, 230px); }
     .nav-links.nav-scrolled { top: 56px; }
+    /* Smaller nav link rows on phone */
+    .nav-links a { font-size: 11px; padding: 7px 6px; min-height: 34px; letter-spacing: 0.6px; }
+    .nav-links a.nav-cta { padding: 6px 14px; margin-top: 4px; font-size: 11px; }
+    /* Lang toggle shown at bottom of dropdown panel */
+    .nav-lang-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+        width: 100%;
+        padding: 8px 0 2px;
+        border-top: 1px solid rgba(255,255,255,0.07);
+        margin-top: 4px;
+    }
+    .nav-lang-mobile .lang-btn {
+        display: flex; align-items: center; gap: 4px;
+        font-size: 11px; padding: 4px 7px;
+        color: rgba(255,255,255,0.5);
+    }
+    .nav-lang-mobile .lang-btn.active { color: var(--white); background: rgba(255,255,255,0.09); }
+    .nav-lang-mobile .lang-sep { width: 1px; height: 12px; background: rgba(255,255,255,0.15); }
+    .nav-lang-mobile .flag-icon { width: 15px; }
 
     /* HERO */
     .hero-photo-group {
@@ -1512,10 +1537,8 @@ footer {
     .quote-banner { padding: 32px 4%; }
     .quote-banner blockquote { font-size: clamp(15px, 4.5vw, 20px); }
 
-    /* RESOURCES — hide grid, show infinite carousel strip on mobile */
+    /* RESOURCES — use carousel strip on mobile */
     .resources-section { padding: 44px 0; }
-    .resources-grid { display: none; }
-    .resources-strip-wrap { display: block !important; }
 
     /* CONTACT */
     .contact-section { padding: 44px 4%; }
@@ -1926,24 +1949,46 @@ footer {
 }
 
 /* ===== MOBILE-ONLY: Resources infinite strip ===== */
+/* ===== RESOURCES CAROUSEL STRIP ===== */
 .resources-strip-wrap {
-    display: none; /* shown only inside ≤600px media query */
+    display: none; /* activated via JS on all breakpoints */
     overflow: hidden;
     position: relative;
     padding: 8px 0;
+    max-width: 1240px; margin: 0 auto;
 }
 .resources-strip {
     display: flex;
-    gap: 14px;
+    gap: 16px;
+    align-items: stretch;
     width: max-content;
     will-change: transform;
 }
 .resources-strip .resource-card {
-    flex: 0 0 72vw;
+    flex: 0 0 clamp(260px, 26vw, 360px);
     border-radius: 10px;
-    padding: 20px 16px;
+    padding: 28px 24px;
     opacity: 1 !important;
     transform: none !important;
+    /* same dark bg as action strip items */
+    background: var(--white);
+    border: 1px solid var(--fog2);
+    display: flex; flex-direction: column;
+    box-shadow: 0 4px 20px rgba(15,25,41,0.06);
 }
-.resources-strip .resource-card h3 { font-size: 14px; }
-.resources-strip .resource-card p { font-size: 12px; line-height: 1.6; }
+.resources-strip .resource-card h3 { font-size: 15px; }
+.resources-strip .resource-card p   { font-size: 13px; line-height: 1.65; flex: 1; }
+.resources-strip .resource-card .resource-link { margin-top: auto; padding-top: 14px; }
+
+/* mobile overrides inside the strip */
+@media (max-width: 600px) {
+    .resources-strip .resource-card {
+        flex: 0 0 78vw;
+        padding: 18px 16px;
+    }
+    .resources-strip .resource-card h3 { font-size: 13px; }
+    .resources-strip .resource-card p   { font-size: 12px; }
+}
+@media (max-width: 380px) {
+    .resources-strip .resource-card { flex: 0 0 85vw; }
+}

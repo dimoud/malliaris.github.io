@@ -30,8 +30,14 @@
             <a href="#about" data-i18n="nav.about">Σχετικά</a>
             <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
             <a href="#sectors" data-i18n="nav.sectors">Τομείς</a>
-            <a href="#in-action" data-i18n="nav.action">ΣΤΗΝ ΔΡΑΣΗ</a>
+            <a href="#in-action" data-i18n="nav.action">Στη Δράση</a>
             <a href="#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
+            <!-- Language toggle — shown only in mobile dropdown -->
+            <div class="nav-lang-mobile">
+                <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
+                <div class="lang-sep"></div>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
+            </div>
         </div>
         <div class="lang-toggle" id="langToggle">
             <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
@@ -935,15 +941,18 @@
         makeInfiniteCarousel('sectorsWrap', 'sectorsTrack', 1.4, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
     }
 
-    /* In-action work photos: slow on mobile (0.5 px/frame ≈ very gentle drift) */
+    /* In-action work photos: left-moving strip (positive = moves left) */
     makeInfiniteCarousel('actionStripWrap', 'actionStrip', isMobile ? 0.5 : 1.8, null, null, null);
 
-    /* Resources: infinite slow carousel on mobile only */
-    if (isMobile) {
+    /* Resources: opposite direction (negative speed = moves right) — same speed magnitude as action strip */
+    (function () {
+        var rsGrid = document.querySelector('.resources-grid');
         var rsWrap = document.getElementById('resourcesStripWrap');
-        if (rsWrap) rsWrap.style.display = 'block';
-        makeInfiniteCarousel('resourcesStripWrap', 'resourcesStrip', 0.45, null, null, null);
-    }
+        if (!rsWrap) return;
+        if (rsGrid) rsGrid.style.display = 'none';
+        rsWrap.style.display = 'block';
+        makeInfiniteCarousel('resourcesStripWrap', 'resourcesStrip', isMobile ? -0.5 : -1.8, null, null, null);
+    })();
 
     /* ── Service cards — mobile tap-to-reveal ── */
     (function(){
