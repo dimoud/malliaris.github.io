@@ -143,11 +143,6 @@
             pts: 14
         },
         {
-            el: 'Υπάρχει σχέδιο εκκένωσης και γίνονται ασκήσεις ετοιμότητας;',
-            en: 'Do you have an evacuation plan with regular emergency drills?',
-            pts: 14
-        },
-        {
             el: 'Διαθέτουν οι εργαζόμενοι κατάλληλα ΜΑΠ (Μέσα Ατομικής Προστασίας);',
             en: 'Do employees have appropriate PPE (Personal Protective Equipment)?',
             pts: 14

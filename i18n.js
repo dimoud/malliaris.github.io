@@ -28,6 +28,11 @@
         'nav.action':   { el: 'ΣΤΗΝ ΔΡΑΣΗ',                    en: 'IN ACTION' },
         'nav.contact':  { el: 'Επικοινωνία',                  en: 'Contact' },
 
+        /* HERO CREDENTIAL */
+        'cred.studies':     { el: 'ΜΕΛΕΤΕΣ',       en: 'STUDIES' },
+        'cred.training':    { el: 'ΕΚΠΑΙΔΕΥΣΕΙΣ',  en: 'TRAINING' },
+        'cred.inspections': { el: 'ΕΠΙΘΕΩΡΗΣΕΙΣ',  en: 'INSPECTIONS' },
+
         /* HERO */
         'hero.name1':    { el: 'ΣΤΑΥΡΟΣ',                                      en: 'STAVROS' },
         'hero.name2':    { el: 'ΜΑΛΛΙΑΡΗΣ',                                    en: 'MALLIARIS' },
@@ -35,7 +40,7 @@
         'hero.cta':      { el: 'ΠΑΡΕ ΠΡΟΣΦΟΡΑ',                                en: 'GET A QUOTE' },
         'hero.stat1.num':{ el: '7+',                                            en: '7+' },
         'hero.stat1.lbl':{ el: 'χρόνια εμπειρίας',                             en: 'years experience' },
-        'hero.stat2.num':{ el: '24Η/7',                                         en: '24H/7' },
+        'hero.stat2.num':{ el: '24H/7',                                         en: '24H/7' },
         'hero.stat2.lbl':{ el: 'ΚΑΘΕ ΤΥΠΟΣ ΕΠΙΧΕΙΡΗΣΗΣ',                      en: 'EVERY TYPE OF BUSINESS' },
         'hero.stat3.num':{ el: '360°',                                          en: '360°' },
         'hero.stat3.lbl':{ el: 'ΠΛΗΡΗΣ ΚΑΛΥΨΗ ΣΕ ΘΕΜΑΤΑ Υ&Α',               en: 'FULL H&S COVERAGE' },
@@ -86,10 +91,10 @@
 
         'services.measlabel': { el: '6 ΥΠΗΡΕΣΙΕΣ - 100% ΙΚΑΝΟΠΟΙΗΣΗ', en: '6 SERVICES - 100% SATISFACTION' },
 
-        's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Officer Coverage' },
+        's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Officer Services' },
         's1.text':  {
-            el: 'Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 8. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας στο χώρο σας για αναγνώριση κινδύνων, επίβλεψη συνθηκών εργασίας και στοχευμένες προτάσεις.',
-            en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Officer visits for hazard identification, supervision of working conditions, and targeted recommendations.',
+            el: 'Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 8. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας στο χώρο σας για αναγνώριση κινδύνων, επίβλεψη συνθηκών εργασίας και στοχευμένες προτάσεις. Full-time ή Part-time.',
+            en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Officer visits for hazard identification, supervision of working conditions, and targeted recommendations. Full-time or Part-time.',
         },
 
         's2.title': { el: 'Σύνταξη ΓΕΕΚ', en: 'Written Occupational Risk Assessment (GEEK)' },
@@ -147,8 +152,8 @@
             en: 'Let\'s <em>talk</em>',
         },
         'contact.lead': {
-            el: 'Είμαστε διαθέσιμοι για κάθε ερώτηση ή ανάγκη σας. Επικοινωνήστε σήμερα συμπληρώνοντας τη φόρμα ή κλείνοντας ένα τηλεφωνικό ραντεβού 15 λεπτών.',
-            en: 'We are available for any question or need. Contact us today by filling in the form or booking a 15-minute phone appointment.',
+            el: 'Επικοινωνήστε σήμερα συμπληρώνοντας τη φόρμα ή κλείνοντας ένα τηλεφωνικό ραντεβού 15 λεπτών.',
+            en: 'Contact us today by filling in the form or booking a 15-minute phone appointment.',
         },
         'contact.role':    { el: 'Τεχνικός Ασφαλείας — MEng, ASP®', en: 'Safety Officer — MEng, ASP®' },
         'contact.calendly':{ el: 'ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ',                  en: 'BOOK APPOINTMENT' },
@@ -162,7 +167,7 @@
         'form.ph.email':       { el: 'email@example.gr',          en: 'email@example.com' },
         'form.label.subject':  { el: 'Αντικείμενο',              en: 'Subject' },
         'form.select.default': { el: 'Επιλέξτε υπηρεσία',        en: 'Select a service' },
-        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',                             en: 'Safety Officer Coverage' },
+        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',                             en: 'Safety Officer Services' },
         'form.opt.2':          { el: 'ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Occupational Risk Assessment Study (GEEK)' },
         'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                                     en: 'H&S Training' },
         'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',                       en: 'Accident Investigation' },
@@ -228,6 +233,11 @@
         'action.cap5': { el: 'Εκπαίδευση για Περιορισμένους Χώρους',                        en: 'Confined Space Entry Training' },
         'action.cap6': { el: 'Καθημερινός Έλεγχος Ασφάλειας Χειριστών Αναβατορίου',        en: 'Daily Safety Check for Hoist Operators' },
         'action.cap7': { el: 'Πρωινή Συνάντηση Υγείας και Ασφάλειας',                      en: 'Morning Health & Safety Toolbox' },
+
+        /* GOAL SECTION */
+        'goal.eyebrow':   { el: 'ΣΤΟΧΟΣ ΜΑΣ',     en: 'OUR GOAL' },
+        'goal.stat2.lbl': { el: 'κάλυψη Υ&Α',      en: 'H&S coverage' },
+        'goal.stat3.lbl': { el: 'ικανοποίηση',      en: 'satisfaction' },
 
         /* QUOTE */
         'quote.text': {
