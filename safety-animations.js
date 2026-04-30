@@ -126,7 +126,7 @@
 
     /* ─── B. SAFETY QUIZ ─────────────────────────────────────────────────── */
     /*
-     * Self-assessment game. 6 real H&S questions × 14 pts + 1 Stavros × 16 pts = 100%.
+     * Self-assessment game. 5 real H&S questions × 14 pts + 1 Stavros × 30 pts = 100%.
      * Only by working with Stavros Malliaris can the user reach 100%.
      * Gauge animates on each checkbox change. Status message & color update live.
      */
@@ -160,7 +160,7 @@
         {
             el: 'Συνεργάζεστε με τον Σταύρο Μάλλιαρη;',
             en: 'Do you work with Stavros Malliaris?',
-            pts: 16,
+            pts: 30,
             stavros: true
         }
     ];

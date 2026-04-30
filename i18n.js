@@ -80,10 +80,6 @@
             el: 'Παρέχουμε ένα <span class="hi-orange">πλήρες πακέτο</span> <em class="hi-white">Υπηρεσιών Υ&amp;Α</em>',
             en: 'We provide a <span class="hi-orange">complete package</span> of <em class="hi-white">H&amp;S Services</em>',
         },
-        'services.lead': {
-            el: 'Από την ικανοποίηση των νομικών απαιτήσεων έως την διαμόρφωση κουλτούρας πρόληψης, ο Σταύρος Μάλλιαρης και η ομάδα του έχουν την τεχνογνωσία για να εξασφαλίσουν κορυφαίες συνθήκες Υγείας και Ασφάλειας στην επιχείρησή σας.',
-            en: 'From legal compliance to building a strong prevention culture, Stavros Malliaris and his team deliver the right solutions.',
-        },
         'services.legal': {
             el: 'Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — Νόμος 3850/2010, Άρθρο 8 &amp; 43',
             en: 'Under Law 3850/2010, even a single employee business is required to have a declared Safety Officer and a Risk Assessment — Law 3850/2010, Articles 8 &amp; 43',
@@ -150,10 +146,6 @@
         'contact.heading': {
             el: 'Μιλήστε <em>μαζί μας</em>',
             en: 'Let\'s <em>talk</em>',
-        },
-        'contact.lead': {
-            el: 'Επικοινωνήστε σήμερα συμπληρώνοντας τη φόρμα ή κλείνοντας ένα τηλεφωνικό ραντεβού 15 λεπτών.',
-            en: 'Contact us today by filling in the form or booking a 15-minute phone appointment.',
         },
         'contact.role':    { el: 'Τεχνικός Ασφαλείας — MEng, ASP®', en: 'Safety Officer — MEng, ASP®' },
         'contact.calendly':{ el: 'ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ',                  en: 'BOOK APPOINTMENT' },

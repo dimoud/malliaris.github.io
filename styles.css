@@ -1825,9 +1825,10 @@ footer {
     transform: translateY(10px);
 }
 /* Hover: fade out image, slide up text */
+.service-card:hover { min-height: 320px; }
 .service-card:hover .sc-bg { opacity: 0; }
 .service-card:hover .sc-top { transform: translateY(-4px); }
-.service-card:hover .sc-text-wrap { max-height: 600px; opacity: 1; transform: translateY(0); }
+.service-card:hover .sc-text-wrap { max-height: 800px; opacity: 1; transform: translateY(0); }
 
 /* ===== SECTORS CAROUSEL — infinite auto-scroll ===== */
 .sectors-carousel-wrap {
