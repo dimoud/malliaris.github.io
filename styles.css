@@ -2236,7 +2236,22 @@ footer {
     border-radius: 0 2px 2px 0;
 }
 
-/* ── Hero load sequence ── */
+/* ── Hero load sequence — slide from sides ── */
+.sx-hero-left {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: opacity 0.85s cubic-bezier(.22,1,.36,1),
+                transform 0.85s cubic-bezier(.22,1,.36,1);
+}
+.sx-hero-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.82s cubic-bezier(.22,1,.36,1),
+                transform 0.82s cubic-bezier(.22,1,.36,1);
+}
+.sx-hero-in { opacity: 1; transform: none; }
+
+/* Keep sx-load for any legacy elements */
 .sx-load {
     opacity: 0;
     transform: translateY(22px);
@@ -2297,18 +2312,18 @@ footer {
 .sectors-section .sx-eyebrow::after  { background: var(--ink, #0f1929); }
 .sx-eyebrow-go::after { transform: translateX(105%); }
 
-/* ── Contact slide in from sides ── */
+/* ── Slide in from sides (scroll-triggered) ── */
 .sx-from-left {
-    opacity: 0; transform: translateX(-36px);
-    transition: opacity 0.75s cubic-bezier(.22,1,.36,1),
-                transform 0.75s cubic-bezier(.22,1,.36,1);
+    opacity: 0; transform: translateX(-52px);
+    transition: opacity 0.78s cubic-bezier(.22,1,.36,1),
+                transform 0.78s cubic-bezier(.22,1,.36,1);
 }
 .sx-from-left-go { opacity: 1; transform: none; }
 
 .sx-from-right {
-    opacity: 0; transform: translateX(36px);
-    transition: opacity 0.75s cubic-bezier(.22,1,.36,1),
-                transform 0.75s cubic-bezier(.22,1,.36,1);
+    opacity: 0; transform: translateX(52px);
+    transition: opacity 0.78s cubic-bezier(.22,1,.36,1),
+                transform 0.78s cubic-bezier(.22,1,.36,1);
 }
 .sx-from-right-go { opacity: 1; transform: none; }
 
@@ -2433,6 +2448,7 @@ footer {
 
 /* ── Reduced motion: everything instant ── */
 @media (prefers-reduced-motion: reduce) {
+    .sx-hero-left, .sx-hero-right,
     .sx-load, .sx-up, .sx-feature, .sx-card, .sx-heading,
     .sx-from-left, .sx-from-right {
         opacity: 1 !important; transform: none !important;

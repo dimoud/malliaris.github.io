@@ -20,28 +20,34 @@
     function q(sel) { return document.querySelector(sel); }
     function rAF(fn) { requestAnimationFrame(fn); }
 
-    /* ── A. HERO LOAD SEQUENCE — staggered fade-up ── */
+    /* ── A. HERO LOAD SEQUENCE — slide in from sides ── */
     (function() {
-        var items = [
-            { sel: '.hero-credential',  delay: 60  },
-            { sel: '.hero-name .line1', delay: 160 },
-            { sel: '.hero-name .line2', delay: 280 },
-            { sel: '.hero-eyebrow',     delay: 400 },
-            { sel: '.btn-accent',       delay: 520 },
-            { sel: '.hero-stats',       delay: 640 },
-            { sel: '.live-badge',       delay: 760 },
-            { sel: '.hero-scroll-hint', delay: 960 },
+        /* Text elements slide in from right */
+        var fromRight = [
+            { sel: '.hero-credential',  delay: 80  },
+            { sel: '.hero-name .line1', delay: 180 },
+            { sel: '.hero-name .line2', delay: 300 },
+            { sel: '.hero-eyebrow',     delay: 420 },
+            { sel: '.btn-accent',       delay: 540 },
+            { sel: '.hero-stats',       delay: 660 },
+            { sel: '.hero-scroll-hint', delay: 860 },
         ];
-        items.forEach(function(item) {
+        fromRight.forEach(function(item) {
             var el = q(item.sel);
             if (!el) return;
-            el.classList.add('sx-load');
-            setTimeout(function() { el.classList.add('sx-load-in'); }, item.delay);
+            el.classList.add('sx-hero-right');
+            setTimeout(function() { el.classList.add('sx-hero-in'); }, item.delay);
         });
+        /* Photo + badge slide in from left */
         var photo = q('.hero-photo-wrap');
         if (photo) {
-            photo.classList.add('sx-load');
-            setTimeout(function() { photo.classList.add('sx-load-in'); }, 100);
+            photo.classList.add('sx-hero-left');
+            setTimeout(function() { photo.classList.add('sx-hero-in'); }, 60);
+        }
+        var badge = q('.live-badge');
+        if (badge) {
+            badge.classList.add('sx-hero-left');
+            setTimeout(function() { badge.classList.add('sx-hero-in'); }, 220);
         }
     })();
 
@@ -68,15 +74,7 @@
         });
     })();
 
-    /* ── D. FEATURE ROWS — staggered slide-in ── */
-    (function() {
-        qAll('.feature-row').forEach(function(row, i) {
-            row.classList.add('sx-feature');
-            once(row, function(el) {
-                setTimeout(function() { el.classList.add('sx-feature-go'); }, i * 100);
-            });
-        });
-    })();
+    /* ── D. FEATURE ROWS — handled by section S below ── */
 
     /* ── E. RESOURCE CARDS — staggered fade-up ── */
     (function() {
@@ -152,6 +150,77 @@
             form.classList.add('sx-from-right');
             once(form, function(t) { setTimeout(function() { t.classList.add('sx-from-right-go'); }, 100); });
         }
+    })();
+
+    /* ── P. ABOUT SECTION — text left, visual right ── */
+    (function() {
+        var content = q('.about-content');
+        var visual  = q('.about-visual');
+        if (content) {
+            content.classList.add('sx-from-left');
+            once(content, function(t) { t.classList.add('sx-from-left-go'); }, { threshold: 0.1 });
+        }
+        if (visual) {
+            visual.classList.add('sx-from-right');
+            once(visual, function(t) { setTimeout(function() { t.classList.add('sx-from-right-go'); }, 120); }, { threshold: 0.1 });
+        }
+    })();
+
+    /* ── Q. SERVICE CARDS — alternate left/right ── */
+    (function() {
+        qAll('.service-card').forEach(function(card, i) {
+            var cls = (i % 2 === 0) ? 'sx-from-left' : 'sx-from-right';
+            card.classList.add(cls);
+            once(card, function(t) {
+                var goCls = (i % 2 === 0) ? 'sx-from-left-go' : 'sx-from-right-go';
+                setTimeout(function() { t.classList.add(goCls); }, (i % 3) * 80);
+            }, { threshold: 0.08 });
+        });
+    })();
+
+    /* ── R. SECTOR CARDS — alternate left/right ── */
+    (function() {
+        qAll('.sector-carousel-card').forEach(function(card, i) {
+            var cls = (i % 2 === 0) ? 'sx-from-left' : 'sx-from-right';
+            card.classList.add(cls);
+            once(card, function(t) {
+                var goCls = (i % 2 === 0) ? 'sx-from-left-go' : 'sx-from-right-go';
+                setTimeout(function() { t.classList.add(goCls); }, i * 60);
+            }, { threshold: 0.08 });
+        });
+    })();
+
+    /* ── S. FEATURE ROWS — odd left, even right ── */
+    (function() {
+        qAll('.feature-row').forEach(function(row, i) {
+            /* remove existing sx-feature added by section D to avoid conflict */
+            row.classList.remove('sx-feature');
+            var cls = (i % 2 === 0) ? 'sx-from-left' : 'sx-from-right';
+            row.classList.add(cls);
+            once(row, function(t) {
+                var goCls = (i % 2 === 0) ? 'sx-from-left-go' : 'sx-from-right-go';
+                setTimeout(function() { t.classList.add(goCls); }, i * 90);
+            }, { threshold: 0.08 });
+        });
+    })();
+
+    /* ── T. SECTIONS HEADER PAIRS — label left, heading right ── */
+    (function() {
+        qAll('.section-header, .services-header, .about-header').forEach(function(hdr) {
+            var label   = hdr.querySelector('.section-label, .eyebrow');
+            var heading = hdr.querySelector('.section-heading');
+            if (label) {
+                label.classList.add('sx-from-left');
+                once(label, function(t) { t.classList.add('sx-from-left-go'); }, { threshold: 0.1 });
+            }
+            if (heading) {
+                heading.classList.remove('sx-heading');
+                heading.classList.add('sx-from-right');
+                once(heading, function(t) {
+                    setTimeout(function() { t.classList.add('sx-from-right-go'); }, 100);
+                }, { threshold: 0.1 });
+            }
+        });
     })();
 
     /* ── J. STAT COUNTUP ── */
