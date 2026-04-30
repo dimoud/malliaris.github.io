@@ -292,10 +292,10 @@
 
     <!-- ===== SECTORS ===== -->
     <section class="sectors-section" id="sectors">
-        <div class="sectors-header" data-reveal>
+        <div class="sectors-header" data-reveal data-inview>
             <div class="eyebrow"><span data-i18n="sectors.eyebrow">ΤΟΜΕΙΣ</span></div>
-            <h2 class="section-heading" data-i18n-html="sectors.heading">Τομείς <em>Δραστηριότητας</em></h2>
-            <p class="sectors-lead" data-i18n="sectors.lead">Μετά από πολυετή εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε είδους, ο Σταύρος Μάλλιαρης και η ομάδα του μπορούν να συμβουλέψουν πελάτες από κάθε τομέα δραστηριότητας.</p>
+            <h2 class="section-heading" data-i18n-html="sectors.heading">Τομείς <em data-char-split>Δραστηριότητας</em></h2>
+            <p class="sectors-lead" data-i18n="sectors.lead" data-sx="up" data-sx-delay="200">Μετά από πολυετή εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε είδους, ο Σταύρος Μάλλιαρης και η ομάδα του μπορούν να συμβουλέψουν πελάτες από κάθε τομέα δραστηριότητας.</p>
         </div>
 
         <!-- Mobile-only: compact 2-col sector grid (carousel hidden on mobile) -->
@@ -500,7 +500,7 @@
 
     <!-- ===== IN ACTION ===== -->
     <section class="in-action-section" id="in-action">
-        <div class="in-action-header" data-reveal>
+        <div class="in-action-header" data-reveal data-sx="up">
             <div class="eyebrow"><span data-i18n="action.eyebrow">Στη Δράση</span></div>
             <h2 class="section-heading" data-i18n-html="action.heading">Επί το <em>Έργω</em></h2>
         </div>
@@ -570,7 +570,7 @@
 
     <!-- ===== RESOURCES ===== -->
     <section class="resources-section" id="resources">
-        <div class="resources-header" data-reveal>
+        <div class="resources-header" data-reveal data-sx="up">
             <div class="eyebrow"><span data-i18n="resources.eyebrow">Βιβλιοθήκη</span></div>
             <h2 class="section-heading" data-i18n-html="resources.heading">Δωρεάν <em>Πόροι</em></h2>
         </div>
@@ -872,6 +872,7 @@
         })();
     </script>
     <script src="custom-animations.js"></script>
+    <script src="scroll-effects.js" defer></script>
 
     <script>
     /* ── Infinite drag carousel factory ── */
@@ -1008,7 +1009,7 @@
 
     /* Sectors: carousel on desktop/tablet, static grid on mobile (carousel hidden via CSS) */
     if (!isMobile) {
-        makeInfiniteCarousel('sectorsWrap', 'sectorsTrack', 0, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
+        makeInfiniteCarousel('sectorsWrap', 'sectorsTrack', 0.4, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
     }
 
     /* In-action work photos: left-moving strip — pauses on hover */

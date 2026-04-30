@@ -2023,10 +2023,9 @@ footer {
     color: var(--white); font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer; z-index: 10;
-    opacity: 0; transition: opacity 0.3s;
-    pointer-events: none;
+    opacity: 1; transition: opacity 0.3s, background 0.2s, border-color 0.2s;
+    pointer-events: auto;
 }
-.sectors-carousel-wrap:hover .sectors-nav-arrow { opacity: 1; pointer-events: auto; }
 .sectors-nav-arrow.left { left: 12px; }
 .sectors-nav-arrow.right { right: 12px; }
 .sectors-nav-arrow:hover { background: var(--accent); border-color: var(--accent); }
@@ -2215,3 +2214,314 @@ footer {
     .goal-stats-row { width: 100%; justify-content: space-around; }
     .goal-stat { padding: 0 8px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLL-EFFECTS.JS — CSS counterpart
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── W. Scroll progress accent bar ── */
+.sx-scroll-bar {
+    position: fixed; top: 0; left: 0; z-index: 9999;
+    height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--accent), #ff9f60);
+    pointer-events: none;
+    transition: width 0.05s linear;
+}
+
+/* ── H. Hero particles canvas ── */
+.sx-particles {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    pointer-events: none; z-index: 0;
+    opacity: 0.6;
+}
+
+/* ── A. Hero load sequence ── */
+.sx-hero-hidden {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.sx-hero-in { opacity: 1; transform: none; }
+
+.sx-photo-hidden {
+    opacity: 0; transform: translateX(-30px) scale(0.96);
+    transition: opacity 0.85s cubic-bezier(.22,1,.36,1), transform 0.85s cubic-bezier(.22,1,.36,1);
+}
+.sx-photo-in { opacity: 1; transform: none; }
+
+/* ── O. Eyebrow pill wipe ── */
+.sx-eyebrow {
+    overflow: hidden;
+    position: relative;
+}
+.sx-eyebrow::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--fog, #f0f3f7);
+    transform: translateX(0);
+    transition: transform 0.55s cubic-bezier(.4,0,.2,1);
+    z-index: 1;
+}
+.sx-eyebrow-go::after { transform: translateX(110%); }
+
+/* ── General up/left/right/scale reveals (data-sx variants) ── */
+.sx-up {
+    opacity: 0; transform: translateY(36px);
+    transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.sx-up-go { opacity: 1; transform: none; }
+
+.sx-left {
+    opacity: 0; transform: translateX(-44px);
+    transition: opacity 0.75s cubic-bezier(.22,1,.36,1), transform 0.75s cubic-bezier(.22,1,.36,1);
+}
+.sx-left-go { opacity: 1; transform: none; }
+
+.sx-right {
+    opacity: 0; transform: translateX(44px);
+    transition: opacity 0.75s cubic-bezier(.22,1,.36,1), transform 0.75s cubic-bezier(.22,1,.36,1);
+}
+.sx-right-go { opacity: 1; transform: none; }
+
+.sx-scale {
+    opacity: 0; transform: scale(0.88);
+    transition: opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1);
+}
+.sx-scale-go { opacity: 1; transform: none; }
+
+.sx-zoom {
+    opacity: 0; transform: scale(1.08);
+    transition: opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1);
+}
+.sx-zoom-go { opacity: 1; transform: none; }
+
+.sx-rotate {
+    opacity: 0; transform: rotate(-6deg) translateY(20px);
+    transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.sx-rotate-go { opacity: 1; transform: none; }
+
+/* ── F. Feature rows ── */
+.sx-feature {
+    opacity: 0;
+    transform: translateX(-28px) scale(0.97);
+    transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+.sx-feature-go { opacity: 1; transform: none; }
+.sx-feature-go i {
+    animation: sx-icon-pop 0.5s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes sx-icon-pop {
+    from { transform: scale(0.5) rotate(-15deg); }
+    to   { transform: scale(1) rotate(0deg); }
+}
+
+/* ── G. Resource card perspective flip ── */
+.sx-card-flip {
+    opacity: 0;
+    transform: perspective(600px) rotateX(18deg) translateY(24px);
+    transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+.sx-card-flip-go { opacity: 1; transform: perspective(600px) rotateX(0deg) translateY(0); }
+
+/* ── M. Character split ── */
+.sx-char {
+    display: inline-block;
+    opacity: 0; filter: blur(6px); transform: translateY(14px);
+    transition: opacity 0.45s cubic-bezier(.22,1,.36,1),
+                filter 0.45s cubic-bezier(.22,1,.36,1),
+                transform 0.45s cubic-bezier(.22,1,.36,1);
+}
+.sx-char-go .sx-char { opacity: 1; filter: blur(0); transform: none; }
+
+/* ── S. Service number badges ── */
+.sx-num {
+    opacity: 0; transform: translateX(-12px);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+.sx-num-go { opacity: 0.6; transform: none; }
+
+/* ── V. Resource icon spin on hover ── */
+@keyframes sx-icon-spin-kf {
+    from { transform: rotate(0deg) scale(1); }
+    50%  { transform: rotate(180deg) scale(1.2); }
+    to   { transform: rotate(360deg) scale(1); }
+}
+.sx-icon-spin { animation: sx-icon-spin-kf 0.5s cubic-bezier(.4,0,.2,1); }
+
+/* ── D. Line draw ── */
+[data-line-draw] {
+    position: relative; overflow: hidden;
+}
+[data-line-draw]::before {
+    content: '';
+    position: absolute; left: 0; top: 50%;
+    width: 0; height: 2px;
+    background: var(--accent);
+    transition: width 0.9s cubic-bezier(.22,1,.36,1);
+}
+[data-line-draw].sx-line-go::before { width: 100%; }
+
+/* ── T. Scroll-driven skew — sections ──
+   Sections need overflow:hidden so skew doesn't cause layout shift */
+section {
+    transition: transform 0.12s linear;
+    will-change: transform;
+}
+
+/* ── Goal shield draw ── already done via JS inline styles ── */
+
+/* ── Goal section enhanced entrance ── */
+.goal-section {
+    transition: opacity 0.9s cubic-bezier(.22,1,.36,1), transform 0.9s cubic-bezier(.22,1,.36,1);
+}
+
+/* ── Pulse ring animation on goal shield ── */
+.goal-pulse-ring {
+    animation: sx-pulse 2.4s ease-in-out infinite;
+    transform-origin: 60px 70px;
+}
+@keyframes sx-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50%       { opacity: 0.12; transform: scale(1.22); }
+}
+
+/* ── Floating hero hex decoration ── */
+.hero-hex {
+    animation: sx-hex-float 6s ease-in-out infinite;
+}
+@keyframes sx-hex-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33%       { transform: translateY(-12px) rotate(3deg); }
+    66%       { transform: translateY(6px) rotate(-2deg); }
+}
+
+/* ── Hero scroll hint bounce ── */
+.hero-scroll-hint {
+    animation: sx-bounce 1.8s ease-in-out 1.2s infinite;
+}
+@keyframes sx-bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50%       { transform: translateY(8px); opacity: 1; }
+}
+
+/* ── Live badge pulse ── */
+.live-dot {
+    animation: sx-live 1.4s ease-in-out infinite;
+}
+@keyframes sx-live {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%       { transform: scale(1.6); opacity: 0.4; }
+}
+
+/* ── Stat slot reel animation on load ── */
+.slot-inner {
+    animation: sx-slot 0.6s cubic-bezier(.22,1,.36,1) 0.8s both;
+}
+@keyframes sx-slot {
+    from { opacity: 0; transform: translateY(100%); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* ── About section helmet SVG spin-in ── */
+#helmetSvg {
+    animation: sx-helmet-in 0.9s cubic-bezier(.34,1.56,.64,1) 0.4s both;
+    transform-origin: 60px 45px;
+}
+@keyframes sx-helmet-in {
+    from { opacity: 0; transform: scale(0.4) rotate(-20deg); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* ── Marquee dot pulse ── */
+.marquee-dot {
+    animation: sx-mdot 2s ease-in-out infinite;
+}
+.marquee-item:nth-child(2n) .marquee-dot { animation-delay: 0.3s; }
+.marquee-item:nth-child(3n) .marquee-dot { animation-delay: 0.6s; }
+@keyframes sx-mdot {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50%       { transform: scale(1.5); opacity: 1; }
+}
+
+/* ── Contact section eyebrow shimmer ── */
+.contact-section .eyebrow span {
+    background: linear-gradient(90deg, var(--accent) 0%, #ff9f60 50%, var(--accent) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: sx-shimmer 3s linear infinite;
+}
+@keyframes sx-shimmer {
+    0%   { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
+/* ── Resource card hover lift ── */
+.resource-card {
+    transition: transform 0.35s cubic-bezier(.22,1,.36,1), box-shadow 0.35s cubic-bezier(.22,1,.36,1), border-color 0.3s;
+}
+.resource-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(232,84,26,0.12);
+}
+
+/* ── Service card: icon pop on hover ── */
+.service-card:hover .service-icon {
+    animation: sx-icon-pop 0.4s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+/* ── Sectors header animated underline ── */
+.sectors-header .section-heading em {
+    position: relative;
+}
+.sectors-header .section-heading em::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 1s cubic-bezier(.22,1,.36,1) 0.3s;
+}
+.sectors-header.in-view .section-heading em::after { width: 100%; }
+
+/* ── About features heading underline ── */
+.about-content .section-heading {
+    position: relative; display: inline-block;
+}
+.about-content .section-heading::after {
+    content: '';
+    position: absolute; bottom: -6px; left: 0;
+    width: 0; height: 3px;
+    background: var(--accent); border-radius: 2px;
+    transition: width 0.9s cubic-bezier(.22,1,.36,1) 0.2s;
+}
+.about-content.revealed .section-heading::after { width: 60%; }
+
+/* ── Scroll-trigger in-view class ── */
+[data-inview] { transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1); }
+[data-inview]:not(.in-view) { opacity: 0; transform: translateY(28px); }
+[data-inview].in-view { opacity: 1; transform: none; }
+
+/* ── Reduced motion: disable all custom animations ── */
+@media (prefers-reduced-motion: reduce) {
+    .sx-hero-hidden, .sx-photo-hidden,
+    .sx-up, .sx-left, .sx-right, .sx-scale, .sx-zoom, .sx-rotate,
+    .sx-feature, .sx-card-flip, .sx-char, .sx-num,
+    [data-inview]:not(.in-view) {
+        opacity: 1 !important; transform: none !important; filter: none !important;
+    }
+    .sx-particles, .sx-scroll-bar { display: none; }
+    .goal-pulse-ring, .hero-hex, .hero-scroll-hint,
+    .live-dot, .slot-inner, #helmetSvg, .marquee-dot { animation: none; }
+    section { transition: none; }
+}
+
+/* ── Mobile: disable skew & tilt, keep fade reveals ── */
+@media (max-width: 600px) {
+    section { transform: none !important; transition: none; }
+    .sx-particles { opacity: 0.35; }
+}
+
