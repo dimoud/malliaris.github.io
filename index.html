@@ -951,17 +951,6 @@
     <script src="i18n.js"></script>
     <script src="contact-form.js" defer></script>
 
-    <script>
-        /* ── Back to top ── */
-        (function(){
-            var btn = document.getElementById('backToTop');
-            if(!btn) return;
-            window.addEventListener('scroll', function(){
-                btn.classList.toggle('visible', window.scrollY > 120);
-            }, {passive:true});
-            btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
-        })();
-    </script>
     <script src="custom-animations.js"></script>
     <script src="scroll-effects.js" defer></script>
 
@@ -1534,5 +1523,17 @@
       <svg viewBox="0 0 10 10" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,7 5,3 8,7"/></svg>
       Top
     </button>
+
+    <script>
+        /* ── Back to top ── */
+        (function(){
+            var btn = document.getElementById('backToTop');
+            if(!btn) return;
+            window.addEventListener('scroll', function(){
+                btn.classList.toggle('visible', window.scrollY > 120);
+            }, {passive:true});
+            btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+        })();
+    </script>
 </body>
 </html>
