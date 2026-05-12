@@ -336,6 +336,8 @@ nav.scrolled {
     display: flex; gap: 0;
     width: max-content;
     animation: marqueeScroll 28s linear infinite;
+    will-change: transform;
+    transform: translateZ(0);
 }
 @keyframes marqueeScroll {
     from { transform: translateX(0); }

@@ -271,18 +271,7 @@
         });
     })();
 
-    /* ── M. MARQUEE speed burst on scroll ── */
-    (function() {
-        var track = q('.marquee-track');
-        if (!track) return;
-        var base = 28, current = base, lastY = window.scrollY;
-        window.addEventListener('scroll', function() {
-            var dy = Math.abs(window.scrollY - lastY);
-            lastY = window.scrollY;
-            current = Math.max(8, base - dy * 0.5);
-            track.style.animationDuration = current + 's';
-        }, { passive: true });
-    })();
+    /* ── M. MARQUEE — pure CSS animation, no scroll interference ── */
 
     /* ── N. SECTORS HEADER in-view for CSS underline ── */
     (function() {
