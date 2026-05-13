@@ -554,12 +554,21 @@
                 <canvas id="goalCanvas" aria-hidden="true"></canvas>
             </div>
             <div class="goal-content">
-                <div class="goal-shield-wrap" aria-hidden="true">
-                    <svg class="goal-shield-svg" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="goal-shield-outer" d="M60 8 L108 28 L108 72 C108 100 60 132 60 132 C60 132 12 100 12 72 L12 28 Z" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>
-                        <path class="goal-shield-inner" d="M60 22 L96 38 L96 70 C96 92 60 118 60 118 C60 118 24 92 24 70 L24 38 Z" fill="var(--accent)" opacity="0.12"/>
-                        <path class="goal-check" d="M40 70 L54 84 L82 54" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        <circle class="goal-pulse-ring" cx="60" cy="70" r="28" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.4"/>
+                <div class="goal-mark-wrap" aria-hidden="true">
+                    <svg class="goal-mark-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer thin ring -->
+                        <circle class="gm-ring-outer" cx="60" cy="60" r="54" stroke="var(--accent)" stroke-width="0.75" opacity="0.25"/>
+                        <!-- Mid ring — draws in -->
+                        <circle class="gm-ring-mid" cx="60" cy="60" r="40" stroke="var(--accent)" stroke-width="1.25"/>
+                        <!-- Four tick marks at cardinal points -->
+                        <line class="gm-tick" x1="60" y1="6"  x2="60" y2="16" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                        <line class="gm-tick" x1="60" y1="104" x2="60" y2="114" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                        <line class="gm-tick" x1="6"  y1="60" x2="16" y2="60"  stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                        <line class="gm-tick" x1="104" y1="60" x2="114" y2="60" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                        <!-- Check mark -->
+                        <path class="gm-check" d="M44 60 L55 71 L76 48" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Pulse ring -->
+                        <circle class="gm-pulse" cx="60" cy="60" r="26" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.35"/>
                     </svg>
                 </div>
                 <div class="goal-text-block">
@@ -568,22 +577,6 @@
                         «Στόχος μας είναι η μετατροπή της ασφάλειας από τυπική υποχρέωση σε ουσιαστικό πλεονέκτημα για την επιχείρησή σας»
                     </blockquote>
                     <cite class="goal-author" data-i18n="quote.author">Σταύρος Μάλλιαρης — Μηχανικός Υγείας και Ασφάλειας, MEng, ASP®</cite>
-                    <div class="goal-stats-row">
-                        <div class="goal-stat">
-                            <span class="goal-stat-num" data-goal-count="7" data-goal-suffix="+">0+</span>
-                            <span class="goal-stat-lbl" data-i18n="hero.stat1.lbl">χρόνια εμπειρίας</span>
-                        </div>
-                        <div class="goal-stat-sep"></div>
-                        <div class="goal-stat">
-                            <span class="goal-stat-num" data-goal-count="360" data-goal-suffix="°">0°</span>
-                            <span class="goal-stat-lbl" data-i18n="goal.stat2.lbl">κάλυψη Υ&amp;Α</span>
-                        </div>
-                        <div class="goal-stat-sep"></div>
-                        <div class="goal-stat">
-                            <span class="goal-stat-num" data-goal-count="100" data-goal-suffix="%">0%</span>
-                            <span class="goal-stat-lbl" data-i18n="goal.stat3.lbl">ικανοποίηση</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -701,11 +694,6 @@
                 <h3 data-i18n="res7.title">EU-OSHA</h3>
                 <p data-i18n="res7.text">Ευρωπαϊκός Οργανισμός για την Ασφάλεια & Υγεία στην Εργασία — οδηγοί, εκστρατείες και βέλτιστες πρακτικές.</p>
             </a>
-            <a class="resource-card" data-reveal href="https://www.ilo.org/safework" target="_blank" rel="noopener">
-                <div class="resource-icon"><i class="fa-solid fa-globe"></i></div>
-                <h3 data-i18n="res8.title">ILO — Διεθνής Εργασία</h3>
-                <p data-i18n="res8.text">Διεθνής Οργανισμός Εργασίας — πρότυπα, εργαλεία και εκπαιδευτικό υλικό για Υ&Α παγκοσμίως.</p>
-            </a>
             <a class="resource-card" data-reveal href="https://www.efka.gov.gr/el/ergatikaatyhemata" target="_blank" rel="noopener">
                 <div class="resource-icon"><i class="fa-solid fa-file-medical"></i></div>
                 <h3 data-i18n="res9.title">ΙΚΑ — Εργατικά Ατυχήματα</h3>
@@ -716,12 +704,56 @@
                 <h3 data-i18n="res10.title">ΚΕΕΛΠΝΟ / ΕΟΔΥ</h3>
                 <p data-i18n="res10.text">Εθνικός Οργανισμός Δημόσιας Υγείας — πρωτόκολλα υγιεινής και ασφάλειας για εργασιακούς χώρους.</p>
             </a>
-            <a class="resource-card" data-reveal href="https://www.asep.gr/" target="_blank" rel="noopener">
-                <div class="resource-icon"><i class="fa-solid fa-id-card"></i></div>
-                <h3 data-i18n="res11.title">ΑΣΕΠ — Τεχνικός Ασφαλείας</h3>
-                <p data-i18n="res11.text">Επίσημος κατάλογος πιστοποιημένων Τεχνικών Ασφαλείας και προϋποθέσεις αναγνώρισης προσόντων.</p>
-            </a>
         </div>
+
+        <!-- Mobile-only: link list -->
+        <ul class="res-linklist">
+            <li><a class="res-ll-item" href="https://www.elinyae.gr/" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-book"></i></span>
+                <span class="res-ll-title" data-i18n="res1.title">ΕΛΙΝΥΑΕ</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://www.e-nomothesia.gr/kat-ergasia-koinonike-asphalise/n-3850-2010.html" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                <span class="res-ll-title" data-i18n="res2.title">Νόμος 3850/2010</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://www.hli.gov.gr/asfaleia-kai-ygeia/" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <span class="res-ll-title" data-i18n="res3.title">Επιθεώρηση Εργασίας</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://oira.osha.europa.eu/en/Partners/hellenic-ministry-labour-and-social-affairs" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                <span class="res-ll-title" data-i18n="res4.title">OiRA — Εκτίμηση Κινδύνου</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://www.gov.gr/upourgeia/oloi-foreis/epitheorese-ergasias/anaggelia-ergatikou-atukhematos" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                <span class="res-ll-title" data-i18n="res5.title">Αναγγελία Εργατικού Ατυχήματος</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://e-services.hli.gov.gr/" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-computer-mouse"></i></span>
+                <span class="res-ll-title" data-i18n="res6.title">sepenet.gr</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://osha.europa.eu/el" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-earth-europe"></i></span>
+                <span class="res-ll-title" data-i18n="res7.title">EU-OSHA</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://www.efka.gov.gr/el/ergatikaatyhemata" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-file-medical"></i></span>
+                <span class="res-ll-title" data-i18n="res9.title">ΙΚΑ — Εργατικά Ατυχήματα</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+            <li><a class="res-ll-item" href="https://eody.gov.gr/" target="_blank" rel="noopener">
+                <span class="res-ll-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+                <span class="res-ll-title" data-i18n="res10.title">ΚΕΕΛΠΝΟ / ΕΟΔΥ</span>
+                <i class="fa-solid fa-arrow-up-right-from-square res-ll-ext"></i>
+            </a></li>
+        </ul>
 
         <!-- Mobile-only: infinite slow carousel strip (grid hidden on mobile) -->
         <div class="resources-strip-wrap" id="resourcesStripWrap" style="display:none">
@@ -734,10 +766,8 @@
                 <a class="resource-card" href="https://www.gov.gr/upourgeia/oloi-foreis/epitheorese-ergasias/anaggelia-ergatikou-atukhematos" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><h3 data-i18n="res5.title">Αναγγελία Ατυχήματος</h3><p data-i18n="res5.text">Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr.</p></a>
                 <a class="resource-card" href="https://e-services.hli.gov.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-computer-mouse"></i></div><h3 data-i18n="res6.title">sepenet.gr</h3><p data-i18n="res6.text">Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ.</p></a>
                 <a class="resource-card" href="https://osha.europa.eu/el" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-earth-europe"></i></div><h3 data-i18n="res7.title">EU-OSHA</h3><p data-i18n="res7.text">Ευρωπαϊκός Οργανισμός για την Ασφάλεια & Υγεία στην Εργασία — οδηγοί και βέλτιστες πρακτικές.</p></a>
-                <a class="resource-card" href="https://www.ilo.org/safework" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-globe"></i></div><h3 data-i18n="res8.title">ILO — Διεθνής Εργασία</h3><p data-i18n="res8.text">Διεθνής Οργανισμός Εργασίας — πρότυπα και εκπαιδευτικό υλικό Υ&Α.</p></a>
                 <a class="resource-card" href="https://www.efka.gov.gr/el/ergatikaatyhemata" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-file-medical"></i></div><h3 data-i18n="res9.title">ΙΚΑ — Εργατικά Ατυχήματα</h3><p data-i18n="res9.text">Οδηγός αποζημίωσης εργατικών ατυχημάτων μέσω ΕΦΚΑ/ΙΚΑ.</p></a>
                 <a class="resource-card" href="https://eody.gov.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-heart-pulse"></i></div><h3 data-i18n="res10.title">ΚΕΕΛΠΝΟ / ΕΟΔΥ</h3><p data-i18n="res10.text">Πρωτόκολλα υγιεινής και ασφάλειας για εργασιακούς χώρους.</p></a>
-                <a class="resource-card" href="https://www.asep.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-id-card"></i></div><h3 data-i18n="res11.title">ΑΣΕΠ — Τεχνικός Ασφαλείας</h3><p data-i18n="res11.text">Κατάλογος πιστοποιημένων Τεχνικών Ασφαλείας και προϋποθέσεις αναγνώρισης.</p></a>
                 <!-- Duplicate set for seamless loop -->
                 <a class="resource-card" aria-hidden="true" href="https://www.elinyae.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-book"></i></div><h3 data-i18n="res1.title">ΕΛΙΝΥΑΕ</h3><p data-i18n="res1.text">Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας.</p></a>
                 <a class="resource-card" aria-hidden="true" href="https://www.e-nomothesia.gr/kat-ergasia-koinonike-asphalise/n-3850-2010.html" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-scale-balanced"></i></div><h3 data-i18n="res2.title">Νόμος 3850/2010</h3><p data-i18n="res2.text">Ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία.</p></a>
@@ -746,10 +776,8 @@
                 <a class="resource-card" aria-hidden="true" href="https://www.gov.gr/upourgeia/oloi-foreis/epitheorese-ergasias/anaggelia-ergatikou-atukhematos" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><h3 data-i18n="res5.title">Αναγγελία Ατυχήματος</h3><p data-i18n="res5.text">Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr.</p></a>
                 <a class="resource-card" aria-hidden="true" href="https://e-services.hli.gov.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-computer-mouse"></i></div><h3 data-i18n="res6.title">sepenet.gr</h3><p data-i18n="res6.text">Online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ.</p></a>
                 <a class="resource-card" aria-hidden="true" href="https://osha.europa.eu/el" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-earth-europe"></i></div><h3 data-i18n="res7.title">EU-OSHA</h3><p data-i18n="res7.text">Ευρωπαϊκός Οργανισμός Ασφάλειας & Υγείας — οδηγοί και βέλτιστες πρακτικές.</p></a>
-                <a class="resource-card" aria-hidden="true" href="https://www.ilo.org/safework" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-globe"></i></div><h3 data-i18n="res8.title">ILO — Διεθνής Εργασία</h3><p data-i18n="res8.text">Πρότυπα και εκπαιδευτικό υλικό Υ&Α διεθνώς.</p></a>
                 <a class="resource-card" aria-hidden="true" href="https://www.efka.gov.gr/el/ergatikaatyhemata" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-file-medical"></i></div><h3 data-i18n="res9.title">ΙΚΑ — Εργατικά Ατυχήματα</h3><p data-i18n="res9.text">Αποζημίωση εργατικών ατυχημάτων μέσω ΕΦΚΑ/ΙΚΑ.</p></a>
                 <a class="resource-card" aria-hidden="true" href="https://eody.gov.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-heart-pulse"></i></div><h3 data-i18n="res10.title">ΚΕΕΛΠΝΟ / ΕΟΔΥ</h3><p data-i18n="res10.text">Πρωτόκολλα υγιεινής για εργασιακούς χώρους.</p></a>
-                <a class="resource-card" aria-hidden="true" href="https://www.asep.gr/" target="_blank" rel="noopener"><div class="resource-icon"><i class="fa-solid fa-id-card"></i></div><h3 data-i18n="res11.title">ΑΣΕΠ — Τεχνικός Ασφαλείας</h3><p data-i18n="res11.text">Κατάλογος πιστοποιημένων Τεχνικών Ασφαλείας.</p></a>
             </div>
         </div>
     </section>
@@ -1236,17 +1264,70 @@
     /* ── Service cards — mobile tap-to-reveal ── */
     (function(){
         if(!window.matchMedia('(hover: none)').matches) return;
+
+        function openCard(card) {
+            var bg      = card.querySelector('.sc-bg');
+            var content = card.querySelector('.sc-content');
+            var top     = card.querySelector('.sc-top');
+            var wrap    = card.querySelector('.sc-text-wrap');
+            card.style.minHeight   = 'unset';
+            card.style.height      = 'auto';
+            card.style.overflow    = 'hidden';
+            if (bg)      { bg.style.opacity = '0'; }
+            if (content) {
+                content.style.position   = 'static';
+                content.style.display    = 'block';
+                content.style.background = 'rgba(15,25,41,0.97)';
+                content.style.padding    = '20px 16px';
+                content.style.height     = 'auto';
+                content.style.minHeight  = 'unset';
+            }
+            if (top) { top.style.transform = 'none'; top.style.marginBottom = '10px'; }
+            if (wrap) {
+                wrap.style.maxHeight  = 'none';
+                wrap.style.height     = 'auto';
+                wrap.style.overflow   = 'visible';
+                wrap.style.opacity    = '1';
+                wrap.style.transform  = 'none';
+            }
+            card.classList.add('touched');
+        }
+
+        function closeCard(card) {
+            var bg      = card.querySelector('.sc-bg');
+            var content = card.querySelector('.sc-content');
+            var top     = card.querySelector('.sc-top');
+            var wrap    = card.querySelector('.sc-text-wrap');
+            card.style.minHeight = '';
+            card.style.height    = '';
+            card.style.overflow  = '';
+            if (bg)      { bg.style.opacity = ''; }
+            if (content) {
+                content.style.position   = '';
+                content.style.display    = '';
+                content.style.background = '';
+                content.style.padding    = '';
+                content.style.height     = '';
+                content.style.minHeight  = '';
+            }
+            if (top) { top.style.transform = ''; top.style.marginBottom = ''; }
+            if (wrap) {
+                wrap.style.maxHeight = '';
+                wrap.style.height    = '';
+                wrap.style.overflow  = '';
+                wrap.style.opacity   = '';
+                wrap.style.transform = '';
+            }
+            card.classList.remove('touched');
+        }
+
         document.querySelectorAll('.service-card').forEach(function(card){
             card.addEventListener('click', function(){
-                var isOpen = card.classList.contains('touched');
-                document.querySelectorAll('.service-card').forEach(function(c){ c.classList.remove('touched'); });
-                if(!isOpen) card.classList.add('touched');
+                if(card.classList.contains('touched')) return;
+                document.querySelectorAll('.service-card').forEach(function(c){ closeCard(c); });
+                openCard(card);
             });
         });
-        // Close on scroll
-        window.addEventListener('scroll', function(){
-            document.querySelectorAll('.service-card.touched').forEach(function(c){ c.classList.remove('touched'); });
-        }, { passive: true });
     })();
 
     /* ── Dimension-measure animation for sec-meas ── */

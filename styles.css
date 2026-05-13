@@ -1553,40 +1553,19 @@ footer {
     .services-section { padding: 44px 4%; }
     .services-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
     .service-card { padding: 0; min-height: 173px; }
-    /* Mobile: tap to reveal text (JS adds .touched class) */
+    /* Mobile: reset text-wrap transform */
     .sc-text-wrap { transform: translateY(0); }
-    /* Touched state: reflow card to natural height */
+    /* Touched state: card spans full width */
     .service-card.touched,
     .services-grid .service-card.touched {
-        overflow: visible;
-        min-height: unset;
-        height: auto;
-        transition-delay: 0ms !important;
-    }
-    .service-card.touched .sc-bg { opacity: 0; }
-    .service-card.touched .sc-content {
-        position: relative;
-        inset: unset;
-        background: rgba(15,25,41,0.97);
-        height: auto;
-        min-height: 173px;
-        justify-content: flex-start;
-    }
-    .service-card.touched .sc-text-wrap {
-        max-height: unset !important;
-        height: auto;
-        overflow: visible;
-        opacity: 1 !important;
-        transform: none;
-        margin-top: 8px;
+        grid-column: 1 / -1;
     }
     .service-card.touched p {
-        font-size: 10px;
-        line-height: 1.6;
+        font-size: 12px;
+        line-height: 1.65;
         color: rgba(255,255,255,0.72);
     }
-    .service-card.touched h3 { font-size: 11px; }
-    .service-card.touched .sc-top { transform: none; }
+    .service-card.touched h3 { font-size: 13px; }
     .service-card h3 { font-size: 13px; }
     .service-card p { font-size: 10px; line-height: 1.6; }
     .service-icon { font-size: 20px; margin-bottom: 10px; }
@@ -1610,8 +1589,10 @@ footer {
     .quote-banner { padding: 32px 4%; }
     .quote-banner blockquote { font-size: clamp(15px, 4.5vw, 20px); }
 
-    /* RESOURCES — grid always visible */
+    /* RESOURCES — switch grid to link list */
     .resources-section { padding: 44px 4%; }
+    .resources-grid { display: none; }
+    .res-linklist { display: block; }
 
     /* CONTACT */
     .contact-section { padding: 44px 4%; }
@@ -1671,8 +1652,9 @@ footer {
     .stat-num { font-size: 15px; }
     .stat-lbl { font-size: 7px; max-width: 64px; }
     .about-grid { gap: 20px; }
-    .services-grid, .resources-grid { gap: 8px; }
-    .resources-grid { grid-template-columns: 1fr; }
+    .services-grid { gap: 8px; }
+    .resources-grid { display: none; }
+    .res-linklist { display: block; }
     .sector-carousel-card { flex: 0 0 85vw; }
     .action-strip-item { width: 85vw; }
     .contact-form-wrap { padding: 16px 12px; }
@@ -1800,7 +1782,7 @@ footer {
 /* ===== SERVICE CARDS — image visible at rest, text reveals on hover ===== */
 .service-card {
     position: relative; overflow: hidden;
-    min-height: 280px; cursor: pointer;
+    min-height: 320px; cursor: pointer;
     transition: box-shadow 0.4s ease, outline-color 0.4s ease;
     outline: 2px solid transparent;
     outline-offset: -2px;
@@ -1824,7 +1806,7 @@ footer {
     display: flex; flex-direction: column;
     justify-content: flex-end;
     padding: 28px;
-    background: linear-gradient(to top, rgba(15,25,41,0.93) 0%, rgba(15,25,41,0.15) 65%);
+    background: linear-gradient(to top, rgba(15,25,41,0.96) 0%, rgba(15,25,41,0.70) 55%, rgba(15,25,41,0.15) 100%);
 }
 .sc-top {
     display: flex; flex-direction: column; gap: 8px;
@@ -1837,7 +1819,7 @@ footer {
 }
 /* Hover: subtle image dim, slide up text — NO height jump */
 .service-card:hover .sc-top { transform: translateY(-6px); }
-.service-card:hover .sc-text-wrap { max-height: 260px; opacity: 1; transform: translateY(0); }
+.service-card:hover .sc-text-wrap { max-height: 180px; opacity: 1; transform: translateY(0); }
 
 /* ===== SECTORS CAROUSEL — infinite auto-scroll ===== */
 .sectors-carousel-wrap {
@@ -2050,7 +2032,7 @@ footer {
     display: none; /* shown only inside ≤600px media query */
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 0 4%;
+    padding: 0;
     max-width: 100%;
 }
 .smc-card {
@@ -2076,6 +2058,47 @@ footer {
 
 /* ===== MOBILE-ONLY: Resources infinite strip ===== */
 /* ===== RESOURCES CAROUSEL STRIP ===== */
+/* ===== RESOURCES LINK LIST (mobile only) ===== */
+.res-linklist {
+    display: none;
+    list-style: none; margin: 0; padding: 0;
+}
+@media (max-width: 600px) {
+    .res-linklist { display: block; }
+    .resources-grid { display: none; }
+}
+@media (max-width: 380px) {
+    .res-linklist { display: block; }
+    .resources-grid { display: none; }
+}
+.res-ll-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--fog2);
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+.res-ll-item:active { background: rgba(232,84,26,0.04); }
+.res-ll-icon {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(232,84,26,0.08);
+    border-radius: 9px;
+    color: var(--accent); font-size: 15px;
+}
+.res-ll-title {
+    flex: 1;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13.5px; font-weight: 700;
+    color: var(--ink); line-height: 1.3;
+}
+.res-ll-ext {
+    flex-shrink: 0;
+    font-size: 11px; color: var(--accent); opacity: 0.6;
+}
+
 .resources-strip-wrap {
     display: none; /* activated via JS on all breakpoints */
     overflow: hidden;
@@ -2125,7 +2148,7 @@ footer {
     background: var(--ink2);
     border-top: 3px solid var(--accent);
     overflow: hidden;
-    padding: clamp(56px, 8vw, 100px) 5%;
+    padding: clamp(48px, 6vw, 80px) 5%;
 }
 .goal-canvas-wrap {
     position: absolute; inset: 0; pointer-events: none; z-index: 0;
@@ -2136,38 +2159,45 @@ footer {
     max-width: 1080px; margin: 0 auto;
     display: flex; align-items: center; gap: clamp(32px, 6vw, 80px);
 }
-.goal-shield-wrap {
-    flex: 0 0 clamp(100px, 14vw, 160px);
+.goal-mark-wrap {
+    flex: 0 0 clamp(80px, 10vw, 120px);
     display: flex; align-items: center; justify-content: center;
 }
-.goal-shield-svg {
+.goal-mark-svg {
     width: 100%; height: auto;
-    filter: drop-shadow(0 0 18px rgba(45,170,110,0.35));
+    filter: drop-shadow(0 0 10px rgba(232,84,26,0.2));
 }
-.goal-shield-outer {
-    stroke-dasharray: 400;
-    stroke-dashoffset: 400;
-    animation: goalShieldDraw 1.4s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;
+.gm-ring-mid {
+    stroke-dasharray: 252;
+    stroke-dashoffset: 252;
+    animation: gmRingDraw 1.2s cubic-bezier(0.16,1,0.3,1) 0.2s forwards;
 }
-.goal-shield-inner { animation: goalFadeIn 0.8s ease 0.9s both; }
-.goal-check {
-    stroke-dasharray: 80;
-    stroke-dashoffset: 80;
-    animation: goalCheckDraw 0.6s cubic-bezier(0.16,1,0.3,1) 1.1s forwards;
+.gm-tick {
+    opacity: 0;
+    animation: gmFadeIn 0.4s ease forwards;
 }
-.goal-pulse-ring {
-    transform-origin: 60px 70px;
-    animation: goalPulse 2.8s ease-in-out 1.6s infinite;
+.gm-tick:nth-child(3) { animation-delay: 0.9s; }
+.gm-tick:nth-child(4) { animation-delay: 1.0s; }
+.gm-tick:nth-child(5) { animation-delay: 1.1s; }
+.gm-tick:nth-child(6) { animation-delay: 1.2s; }
+.gm-check {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: gmCheckDraw 0.55s cubic-bezier(0.16,1,0.3,1) 1.3s forwards;
 }
-@keyframes goalShieldDraw  { to { stroke-dashoffset: 0; } }
-@keyframes goalCheckDraw   { to { stroke-dashoffset: 0; } }
-@keyframes goalFadeIn      { from { opacity: 0; } to { opacity: 1; } }
-@keyframes goalPulse {
-    0%, 100% { transform: scale(1); opacity: 0.4; }
-    50%       { transform: scale(1.25); opacity: 0; }
+.gm-pulse {
+    transform-origin: 60px 60px;
+    animation: gmPulse 3s ease-in-out 1.8s infinite;
+}
+@keyframes gmRingDraw  { to { stroke-dashoffset: 0; } }
+@keyframes gmCheckDraw { to { stroke-dashoffset: 0; } }
+@keyframes gmFadeIn    { to { opacity: 1; } }
+@keyframes gmPulse {
+    0%, 100% { transform: scale(1);    opacity: 0.35; }
+    50%       { transform: scale(1.35); opacity: 0; }
 }
 .goal-text-block {
-    flex: 1; display: flex; flex-direction: column; gap: 16px;
+    flex: 1; display: flex; flex-direction: column; gap: 12px;
 }
 .goal-eyebrow {
     font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
@@ -2183,45 +2213,10 @@ footer {
     font-size: 12px; letter-spacing: 0.5px;
     color: rgba(255,255,255,0.4); font-style: normal;
 }
-.goal-stats-row {
-    display: flex; align-items: center; gap: 0;
-    margin-top: 8px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 14px 24px;
-    width: fit-content;
-}
-.goal-stat {
-    display: flex; flex-direction: column; align-items: center; gap: 4px;
-    padding: 0 24px;
-    transition: transform 0.3s;
-}
-.goal-stat:hover { transform: translateY(-3px); }
-.goal-stat-num {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(22px, 3vw, 32px);
-    font-weight: 800; color: var(--accent); line-height: 1;
-}
-.goal-stat-lbl {
-    font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
-    color: rgba(255,255,255,0.45); text-align: center;
-    max-width: 80px;
-}
-.goal-stat-sep {
-    width: 1px; height: 40px;
-    background: rgba(255,255,255,0.12);
-    flex-shrink: 0;
-}
 @media (max-width: 768px) {
-    .goal-content { flex-direction: column; text-align: center; gap: 28px; }
-    .goal-shield-wrap { flex: 0 0 90px; }
-    .goal-stats-row { padding: 12px 16px; }
-    .goal-stat { padding: 0 14px; }
-}
-@media (max-width: 480px) {
-    .goal-stats-row { width: 100%; justify-content: space-around; }
-    .goal-stat { padding: 0 8px; }
+    .goal-content { flex-direction: column; text-align: center; gap: 24px; }
+    .goal-mark-wrap { flex: 0 0 76px; width: 76px; }
+    .goal-section { margin-top: 44px; padding-top: 44px; padding-left: 0; padding-right: 0; }
 }
 
 /* ═══════════════════════════════════════════════════
@@ -2393,14 +2388,14 @@ footer {
     to   { opacity: 1; transform: none; }
 }
 
-/* ── Goal shield pulse ring ── */
-.goal-pulse-ring {
+/* ── Goal mark pulse ring ── */
+.gm-pulse {
     animation: sx-pulse-ring 2.5s ease-in-out infinite;
-    transform-origin: 60px 70px;
+    transform-origin: 60px 60px;
 }
 @keyframes sx-pulse-ring {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50%       { opacity: 0.1; transform: scale(1.2); }
+    0%, 100% { opacity: 0.35; transform: scale(1); }
+    50%       { opacity: 0;    transform: scale(1.4); }
 }
 
 /* ── Marquee dot pulse ── */
@@ -2457,6 +2452,6 @@ footer {
     }
     .sx-progress-bar,
     .hero-scroll-hint, .live-dot, .hero-hex,
-    .slot-inner, #helmetSvg, .goal-pulse-ring,
+    .slot-inner, #helmetSvg, .gm-pulse,
     .marquee-dot { animation: none !important; }
 }

@@ -257,19 +257,6 @@
         });
     })();
 
-    /* ── L. RESOURCE ICON SPIN on hover ── */
-    (function() {
-        qAll('.resource-card .resource-icon').forEach(function(icon) {
-            var card = icon.closest('.resource-card');
-            if (!card) return;
-            card.addEventListener('mouseenter', function() {
-                icon.classList.add('sx-spin');
-            });
-            icon.addEventListener('animationend', function() {
-                icon.classList.remove('sx-spin');
-            });
-        });
-    })();
 
     /* ── M. MARQUEE — pure CSS animation, no scroll interference ── */
 
