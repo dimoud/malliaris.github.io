@@ -168,7 +168,7 @@
         'form.opt.7':          { el: 'Άλλο',                                                  en: 'Other' },
         'form.label.message':  { el: 'Μήνυμα',                   en: 'Message' },
         'form.ph.message':     { el: 'Περιγράψτε σύντομα το αίτημά σας...', en: 'Briefly describe your request...' },
-        'form.submit':         { el: 'Αποστολή Μηνύματος 📨',    en: 'Send Message 📨' },
+        'form.submit':         { el: 'Αποστολή Μηνύματος ✉️',    en: 'Send Message ✉️' },
 
         /* GAUGE */
         'gauge.label': { el: 'Συμμόρφωση', en: 'Compliance' },

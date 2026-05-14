@@ -170,7 +170,7 @@
                 <span class="line2" data-i18n="hero.name2">ΜΑΛΛΙΑΡΗΣ</span>
             </h1>
             <div class="hero-eyebrow"><span data-i18n="hero.eyebrow">ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ ΜΗΧΑΝΙΚΟΣ ΥΓΕΙΑΣ ΚΑΙ ΑΣΦΑΛΕΙΑΣ ΑΠΘ</span></div>
-            <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="btn-accent" data-i18n="hero.cta">ΠΑΡΕ ΠΡΟΣΦΟΡΑ</a>
+            <a href="#contact" class="btn-accent" data-i18n="hero.cta">ΠΑΡΕ ΠΡΟΣΦΟΡΑ</a>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <span class="stat-num slot-reel"><span class="slot-inner" data-i18n="hero.stat1.num">10+</span></span>
@@ -785,38 +785,45 @@
 
     <!-- ===== CONTACT ===== -->
     <section class="contact-section" id="contact">
+        <div class="contact-header">
+            <div class="eyebrow"><span data-i18n="contact.eyebrow">Επικοινωνία</span></div>
+            <h2 class="section-heading light" data-i18n-html="contact.heading">Μιλήστε <em>μαζί μας</em></h2>
+        </div>
         <div class="contact-grid">
-            <div class="contact-info" data-reveal-left>
-                <div class="eyebrow"><span data-i18n="contact.eyebrow">Επικοινωνία</span></div>
-                <h2 class="section-heading light" data-i18n-html="contact.heading">Μιλήστε <em>μαζί μας</em></h2>
-                <div class="person-card">
-                    <img src="Image 1.2.png" alt="Σταύρος Μάλλιαρης" class="person-photo"
-                         onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
-                    <div class="person-details">
-                        <h3 data-i18n="name.stavros">Σταύρος Μάλλιαρης</h3>
-                        <p data-i18n="contact.role">Τεχνικός Ασφαλείας — MEng, ASP®</p>
-                    </div>
+            <div class="contact-left-col" data-reveal-left>
+                <div class="contact-gif-wrap">
+                    <img src="contact.gif" alt="Contact animation" class="contact-gif">
                 </div>
-
-                <div class="contact-detail-list">
-                    <a href="tel:+306976984845" class="contact-detail">
-                        <i class="fa-solid fa-phone"></i>
-                        +30 697 698 4845
-                    </a>
-                    <a href="mailto:stamalliaris2@gmail.com" class="contact-detail">
-                        <i class="fa-solid fa-envelope"></i>
-                        stamalliaris2@gmail.com
-                    </a>
-                    <div class="contact-detail">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span data-i18n="contact.location">Ελλάδα &amp; Διεθνώς</span>
+                <div class="contact-info">
+                    <div class="contact-person-row">
+                        <div class="person-card">
+                            <img src="Image 1.2.png" alt="Σταύρος Μάλλιαρης" class="person-photo"
+                                 onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+                            <div class="person-details">
+                                <h3 data-i18n="name.stavros">Σταύρος Μάλλιαρης</h3>
+                                <p data-i18n="contact.role">Τεχνικός Ασφαλείας — MEng, ASP®</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-list">
+                            <a href="tel:+306976984845" class="contact-detail">
+                                <i class="fa-solid fa-phone"></i>
+                                +30 697 698 4845
+                            </a>
+                            <a href="mailto:stamalliaris2@gmail.com" class="contact-detail">
+                                <i class="fa-solid fa-envelope"></i>
+                                stamalliaris2@gmail.com
+                            </a>
+                            <div class="contact-detail">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span data-i18n="contact.location">Ελλάδα &amp; Διεθνώς</span>
+                            </div>
+                        </div>
                     </div>
+                    <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="calendly-cta" data-i18n="contact.calendly">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        ΚΛΕΙΣΤΕ 📞 ΡΑΝΤΕΒΟΥ
+                    </a>
                 </div>
-
-                <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="calendly-cta" data-i18n="contact.calendly">
-                    <i class="fa-regular fa-calendar-check"></i>
-                    ΚΛΕΙΣΤΕ 📞 ΡΑΝΤΕΒΟΥ
-                </a>
             </div>
 
             <div class="contact-form-wrap" data-reveal-right>
@@ -855,7 +862,7 @@
                         <label data-i18n="form.label.message">Μήνυμα</label>
                         <textarea name="message" placeholder="Περιγράψτε σύντομα το αίτημά σας..." data-i18n-placeholder="form.ph.message"></textarea>
                     </div>
-                    <button type="submit" class="btn-submit" data-i18n="form.submit">Αποστολή Μηνύματος 📨</button>
+                    <button type="submit" class="btn-submit" data-i18n="form.submit">Αποστολή Μηνύματος ✉️</button>
                     <p id="formStatus"></p>
                 </form>
             </div>
