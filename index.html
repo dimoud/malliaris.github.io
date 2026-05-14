@@ -324,7 +324,7 @@
                 <div class="sc-content">
                     <div class="sc-top">
                         <div class="service-num">02</div>
-                        <i class="fa-solid fa-person-chalkboard service-icon"></i>
+                        <i class="fa-solid fa-file-lines service-icon"></i>
                         <h3 data-i18n="s2.title">Σύνταξη ΓΕΕΚ</h3>
                     </div>
                     <div class="sc-text-wrap"><p data-i18n="s2.text">Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 43. Εκπόνηση μελέτης εκτίμησης επαγγελματικού κινδύνου ανάλογα με τη δραστηριότητα και τις θέσεις εργασίας.</p></div>
@@ -343,7 +343,7 @@
                 </div>
             </div>
             <!-- 04 Accident Investigation — ambulance transporting injured person -->
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&q=60&w=800')">
+            <div class="service-card" data-reveal style="--card-img:url('ekav.jpg')">
                 <div class="sc-bg" aria-hidden="true"></div>
                 <div class="sc-content">
                     <div class="sc-top">
@@ -355,7 +355,7 @@
                 </div>
             </div>
             <!-- 05 Evacuation Plan — emergency exit sign illuminated -->
-            <div class="service-card" data-reveal style="--card-img:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=60&w=800')">
+            <div class="service-card" data-reveal style="--card-img:url('exit.jpg')">
                 <div class="sc-bg" aria-hidden="true"></div>
                 <div class="sc-content">
                     <div class="sc-top">
@@ -1266,67 +1266,11 @@
     (function(){
         if(!window.matchMedia('(hover: none)').matches) return;
 
-        function openCard(card) {
-            var bg      = card.querySelector('.sc-bg');
-            var content = card.querySelector('.sc-content');
-            var top     = card.querySelector('.sc-top');
-            var wrap    = card.querySelector('.sc-text-wrap');
-            card.style.minHeight   = 'unset';
-            card.style.height      = 'auto';
-            card.style.overflow    = 'hidden';
-            if (bg)      { bg.style.opacity = '0'; }
-            if (content) {
-                content.style.position   = 'static';
-                content.style.display    = 'block';
-                content.style.background = 'rgba(15,25,41,0.97)';
-                content.style.padding    = '20px 16px';
-                content.style.height     = 'auto';
-                content.style.minHeight  = 'unset';
-            }
-            if (top) { top.style.transform = 'none'; top.style.marginBottom = '10px'; }
-            if (wrap) {
-                wrap.style.maxHeight  = 'none';
-                wrap.style.height     = 'auto';
-                wrap.style.overflow   = 'visible';
-                wrap.style.opacity    = '1';
-                wrap.style.transform  = 'none';
-            }
-            card.classList.add('touched');
-        }
-
-        function closeCard(card) {
-            var bg      = card.querySelector('.sc-bg');
-            var content = card.querySelector('.sc-content');
-            var top     = card.querySelector('.sc-top');
-            var wrap    = card.querySelector('.sc-text-wrap');
-            card.style.minHeight = '';
-            card.style.height    = '';
-            card.style.overflow  = '';
-            if (bg)      { bg.style.opacity = ''; }
-            if (content) {
-                content.style.position   = '';
-                content.style.display    = '';
-                content.style.background = '';
-                content.style.padding    = '';
-                content.style.height     = '';
-                content.style.minHeight  = '';
-            }
-            if (top) { top.style.transform = ''; top.style.marginBottom = ''; }
-            if (wrap) {
-                wrap.style.maxHeight = '';
-                wrap.style.height    = '';
-                wrap.style.overflow  = '';
-                wrap.style.opacity   = '';
-                wrap.style.transform = '';
-            }
-            card.classList.remove('touched');
-        }
-
         document.querySelectorAll('.service-card').forEach(function(card){
             card.addEventListener('click', function(){
                 if(card.classList.contains('touched')) return;
-                document.querySelectorAll('.service-card').forEach(function(c){ closeCard(c); });
-                openCard(card);
+                document.querySelectorAll('.service-card').forEach(function(c){ c.classList.remove('touched'); });
+                card.classList.add('touched');
             });
         });
     })();
