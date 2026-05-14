@@ -38,7 +38,7 @@
         'hero.name2':    { el: 'ΜΑΛΛΙΑΡΗΣ',                                    en: 'MALLIARIS' },
         'hero.eyebrow':  { el: 'ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ ΜΗΧΑΝΙΚΟΣ ΥΓΕΙΑΣ ΚΑΙ ΑΣΦΑΛΕΙΑΣ ΑΠΘ', en: 'CERTIFIED H&S ENGINEER - AUTH' },
         'hero.cta':      { el: 'ΠΑΡΕ ΠΡΟΣΦΟΡΑ',                                en: 'GET A QUOTE' },
-        'hero.stat1.num':{ el: '7+',                                            en: '7+' },
+        'hero.stat1.num':{ el: '10+',                                           en: '10+' },
         'hero.stat1.lbl':{ el: 'χρόνια εμπειρίας',                             en: 'years experience' },
         'hero.stat2.num':{ el: '24H/7',                                         en: '24H/7' },
         'hero.stat2.lbl':{ el: 'ΚΑΘΕ ΤΥΠΟΣ ΕΠΙΧΕΙΡΗΣΗΣ',                      en: 'EVERY TYPE OF BUSINESS' },

@@ -2157,7 +2157,7 @@ footer {
 .goal-canvas-wrap canvas { width: 100%; height: 100%; display: block; }
 .goal-content {
     position: relative; z-index: 1;
-    max-width: 1080px; margin: 0 auto;
+    max-width: 1240px; margin: 0 auto;
     display: flex; align-items: center; gap: clamp(32px, 6vw, 80px);
 }
 .goal-mark-wrap {
@@ -2217,7 +2217,7 @@ footer {
 @media (max-width: 768px) {
     .goal-content { flex-direction: column; text-align: center; gap: 24px; }
     .goal-mark-wrap { flex: 0 0 76px; width: 76px; }
-    .goal-section { margin-top: 44px; padding-top: 44px; padding-left: 0; padding-right: 0; }
+    .goal-section { margin-top: 44px; padding-top: 44px; }
 }
 
 /* ═══════════════════════════════════════════════════
