@@ -21,7 +21,7 @@
     const t = {
 
         /* NAV */
-        'nav.title':    { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Officer - H&S Consultant' },
+        'nav.title':    { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Technician - H&S Consultant' },
         'nav.about':    { el: 'Σχετικά',                      en: 'About' },
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
@@ -46,7 +46,7 @@
         'hero.stat3.lbl':{ el: 'ΠΛΗΡΗΣ ΚΑΛΥΨΗ ΣΕ ΘΕΜΑΤΑ Υ&Α',               en: 'FULL H&S COVERAGE' },
 
         /* MARQUEE */
-        'marquee.m1': { el: 'Τεχνικός Ασφαλείας',                              en: 'Safety Officer' },
+        'marquee.m1': { el: 'Τεχνικός Ασφαλείας',                              en: 'Safety Technician' },
         'marquee.m2': { el: 'ΓΡΑΠΤΗ Εκτίμηση Επαγγελματικού Κινδύνου',        en: 'WRITTEN Risk Assessment (ΓΕΕΚ)' },
         'marquee.m3': { el: 'Σχέδια Εκκένωσης',                               en: 'Evacuation Plans' },
         'marquee.m4': { el: 'Εκπαιδεύσεις Υ&Α',                              en: 'H&S Training' },
@@ -82,15 +82,15 @@
         },
         'services.legal': {
             el: 'Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — Νόμος 3850/2010, Άρθρο 8 &amp; 43',
-            en: 'Under Law 3850/2010, even a single employee business is required to have a declared Safety Officer and a Risk Assessment — Law 3850/2010, Articles 8 &amp; 43',
+            en: 'Under Law 3850/2010, even a single employee business is required to have a declared Safety Technician and a Risk Assessment — Law 3850/2010, Articles 8 &amp; 43',
         },
 
         'services.measlabel': { el: '6 ΥΠΗΡΕΣΙΕΣ - 100% ΙΚΑΝΟΠΟΙΗΣΗ', en: '6 SERVICES - 100% SATISFACTION' },
 
-        's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Officer Services' },
+        's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Technician Services' },
         's1.text':  {
             el: 'Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 8. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας στο χώρο σας για αναγνώριση κινδύνων, επίβλεψη συνθηκών εργασίας και στοχευμένες προτάσεις. Full-time ή Part-time.',
-            en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Officer visits for hazard identification, supervision of working conditions, and targeted recommendations. Full-time or Part-time.',
+            en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Technician visits for hazard identification, supervision of working conditions, and targeted recommendations. Full-time or Part-time.',
         },
 
         's2.title': { el: 'Σύνταξη ΓΕΕΚ', en: 'Written Occupational Risk Assessment (GEEK)' },
@@ -147,7 +147,7 @@
             el: 'Μιλήστε <em>μαζί μας</em>',
             en: 'Let\'s <em>talk</em>',
         },
-        'contact.role':    { el: 'Τεχνικός Ασφαλείας — MEng, ASP®', en: 'Safety Officer — MEng, ASP®' },
+        'contact.role':    { el: 'Τεχνικός Ασφαλείας — MEng, ASP®', en: 'Safety Technician — MEng, ASP®' },
         'contact.calendly':{ el: 'ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ',                  en: 'BOOK APPOINTMENT' },
 
         /* FORM */
@@ -159,7 +159,7 @@
         'form.ph.email':       { el: 'email@example.gr',          en: 'email@example.com' },
         'form.label.subject':  { el: 'Αντικείμενο',              en: 'Subject' },
         'form.select.default': { el: 'Επιλέξτε υπηρεσία',        en: 'Select a service' },
-        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',                             en: 'Safety Officer Services' },
+        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',                             en: 'Safety Technician Services' },
         'form.opt.2':          { el: 'ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Occupational Risk Assessment Study (GEEK)' },
         'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                                     en: 'H&S Training' },
         'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',                       en: 'Accident Investigation' },
@@ -244,13 +244,13 @@
         'res2.title': { el: 'Νόμος 3850/2010', en: 'Law 3850/2010' },
         'res2.text':  { el: 'Κωδικοποιημένο κείμενο του Ν. 3850/2010 — ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία στην Ελλάδα.', en: 'Consolidated text of Law 3850/2010 — the primary Greek H&S at Work legislation.' },
         'res3.title': { el: 'Επιθεώρηση Εργασίας', en: 'Labour Inspectorate' },
-        'res3.text':  { el: 'Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Ο ρόλος του Τεχνικού Ασφαλείας, Έντυπα.', en: 'Official enforcement body for labour legislation — Employer obligations, The Safety Officer role, Official forms.' },
+        'res3.text':  { el: 'Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Ο ρόλος του Τεχνικού Ασφαλείας, Έντυπα.', en: 'Official enforcement body for labour legislation — Employer obligations, The Safety Technician role, Official forms.' },
         'res4.title': { el: 'OiRA — Εκτίμηση Κινδύνου', en: 'OiRA — Risk Assessment' },
         'res4.text':  { el: 'Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο, εκδοθέντα από το Υπ. Εργασίας & την EU-OSHA.', en: 'Interactive sector-specific occupational risk assessment tools published by the Ministry of Labour & EU-OSHA.' },
         'res5.title': { el: 'Αναγγελία Εργατικού Ατυχήματος', en: 'Workplace Accident Reporting' },
         'res5.text':  { el: 'Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr — υποχρεώσεις εργοδότη και βήματα υποβολής.', en: 'Official workplace accident reporting process via gov.gr — employer obligations and submission steps.' },
         'res6.title': { el: 'sepenet.gr', en: 'sepenet.gr' },
-        'res6.text':  { el: 'Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ — γρήγορη και εύκολη ηλεκτρονική διαδικασία.', en: 'Platform for online registration of Safety Officers with SEPE — quick and easy process.' },
+        'res6.text':  { el: 'Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ — γρήγορη και εύκολη ηλεκτρονική διαδικασία.', en: 'Platform for online registration of Safety Technicians with SEPE — quick and easy process.' },
         'res7.title': { el: 'EU-OSHA', en: 'EU-OSHA' },
         'res7.text':  { el: 'Ευρωπαϊκός Οργανισμός για την Ασφάλεια & Υγεία στην Εργασία — οδηγοί, εκστρατείες και βέλτιστες πρακτικές.', en: 'European Agency for Safety & Health at Work — guides, campaigns and best practices.' },
         'res8.title': { el: 'ILO — Διεθνής Εργασία', en: 'ILO — International Labour' },
@@ -259,8 +259,8 @@
         'res9.text':  { el: 'Οδηγός αποζημίωσης εργατικών ατυχημάτων και επαγγελματικών ασθενειών μέσω ΕΦΚΑ/ΙΚΑ.', en: 'Guide to compensation for workplace accidents and occupational diseases via EFKA/IKA.' },
         'res10.title': { el: 'ΚΕΕΛΠΝΟ / ΕΟΔΥ', en: 'EODY — Public Health' },
         'res10.text':  { el: 'Εθνικός Οργανισμός Δημόσιας Υγείας — πρωτόκολλα υγιεινής και ασφάλειας για εργασιακούς χώρους.', en: 'National Public Health Organisation — workplace hygiene and safety protocols.' },
-        'res11.title': { el: 'ΑΣΕΠ — Τεχνικός Ασφαλείας', en: 'ASEP — Safety Officer' },
-        'res11.text':  { el: 'Επίσημος κατάλογος πιστοποιημένων Τεχνικών Ασφαλείας και προϋποθέσεις αναγνώρισης προσόντων.', en: 'Official registry of certified Safety Officers and qualification recognition requirements.' },
+        'res11.title': { el: 'ΑΣΕΠ — Τεχνικός Ασφαλείας', en: 'ASEP — Safety Technician' },
+        'res11.text':  { el: 'Επίσημος κατάλογος πιστοποιημένων Τεχνικών Ασφαλείας και προϋποθέσεις αναγνώρισης προσόντων.', en: 'Official registry of certified Safety Technicians and qualification recognition requirements.' },
         'res.visit':  { el: 'Επίσκεψη', en: 'Visit' },
 
         /* CONTACT */
@@ -273,7 +273,7 @@
         'hint.hover': { el: 'HOVER ΓΙΑ ΠΑΥΣΗ', en: 'HOVER TO PAUSE' },
 
         /* FOOTER */
-        'footer.title': { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Officer - H&S Consultant' },
+        'footer.title': { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Technician - H&S Consultant' },
     };
 
     /* ─── STATE ──────────────────────────────────────────────────────────── */

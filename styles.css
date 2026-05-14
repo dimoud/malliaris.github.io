@@ -1139,7 +1139,7 @@ nav.scrolled {
 }
 
 .calendly-cta {
-    display: inline-flex; align-items: center; gap: 10px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
     padding: 14px 24px;
     background: var(--teal);
     color: var(--white);
@@ -1148,7 +1148,7 @@ nav.scrolled {
     font-size: 14px; font-weight: 700;
     letter-spacing: 0.5px;
     transition: background 0.25s, transform 0.2s;
-    width: fit-content;
+    width: 100%;
 }
 .calendly-cta:hover { background: #25956a; transform: translateY(-2px); }
 .calendly-cta i { font-size: 16px; }
@@ -2259,7 +2259,7 @@ footer {
     flex: 1; display: flex; flex-direction: column; gap: 12px;
 }
 .goal-eyebrow {
-    font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+    font-size: 14px; font-weight: 700; letter-spacing: 2.5px;
     color: var(--accent); text-transform: uppercase;
 }
 .goal-quote {
