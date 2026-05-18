@@ -431,13 +431,12 @@
             </svg>
         </div>
 
-        <div class="sectors-carousel-wrap" id="sectorsWrap">
+        <div class="sectors-coverflow-wrap" id="sectorsCoverflowWrap">
             <button class="sectors-nav-arrow left" id="sectorsLeft" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="sectors-nav-arrow right" id="sectorsRight" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-            <div class="sectors-track" id="sectorsTrack">
-                <!-- Original set -->
+            <div class="sectors-coverflow-stage" id="sectorsCoverflowStage">
                 <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=60&w=800" alt="Εστίαση και Τουρισμός" loading="lazy">
+                    <img src="kitchen.jpg" alt="Εστίαση και Τουρισμός" loading="lazy">
                     <div class="sector-card-overlay"></div>
                     <div class="sector-card-body">
                         <div class="sector-card-icon"><i class="fa-solid fa-utensils"></i></div>
@@ -446,7 +445,7 @@
                     </div>
                 </div>
                 <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=60&w=800" alt="Εμπόριο και Υπηρεσίες" loading="lazy">
+                    <img src="store.jpg" alt="Εμπόριο και Υπηρεσίες" loading="lazy">
                     <div class="sector-card-overlay"></div>
                     <div class="sector-card-body">
                         <div class="sector-card-icon"><i class="fa-solid fa-store"></i></div>
@@ -455,7 +454,7 @@
                     </div>
                 </div>
                 <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&w=800" alt="Κατασκευές και Υποδομές" loading="lazy">
+                    <img src="jobsite.jpg" alt="Κατασκευές και Υποδομές" loading="lazy">
                     <div class="sector-card-overlay"></div>
                     <div class="sector-card-body">
                         <div class="sector-card-icon"><i class="fa-solid fa-helmet-safety"></i></div>
@@ -490,63 +489,9 @@
                         <ul class="sector-card-list" data-i18n-html="sec6.text"></ul>
                     </div>
                 </div>
-                <!-- Duplicate for seamless loop -->
-                <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-utensils"></i></div>
-                        <div class="sector-card-title" data-i18n="sec1.title">Εστίαση και Τουρισμός</div>
-                        <ul class="sector-card-list" data-i18n-html="sec1.text"></ul>
-                    </div>
-                </div>
-                <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-store"></i></div>
-                        <div class="sector-card-title" data-i18n="sec2.title">Εμπόριο και Υπηρεσίες</div>
-                        <ul class="sector-card-list" data-i18n-html="sec2.text"></ul>
-                    </div>
-                </div>
-                <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-helmet-safety"></i></div>
-                        <div class="sector-card-title" data-i18n="sec3.title">Κατασκευές και Υποδομές</div>
-                        <ul class="sector-card-list" data-i18n-html="sec3.text"></ul>
-                    </div>
-                </div>
-                <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-truck"></i></div>
-                        <div class="sector-card-title" data-i18n="sec4.title">Μεταφορές και Logistics</div>
-                        <ul class="sector-card-list" data-i18n-html="sec4.text"></ul>
-                    </div>
-                </div>
-                <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="sector-card-title" data-i18n="sec5.title">Ενέργεια και Περιβάλλον</div>
-                        <ul class="sector-card-list" data-i18n-html="sec5.text"></ul>
-                    </div>
-                </div>
-                <div class="sector-carousel-card" data-tilt aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=60&w=800" alt="" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-industry"></i></div>
-                        <div class="sector-card-title" data-i18n="sec6.title">Βιομηχανία και Παραγωγή</div>
-                        <ul class="sector-card-list" data-i18n-html="sec6.text"></ul>
-                    </div>
-                </div>
             </div>
         </div>
+        <div class="sectors-cf-dots" id="sectorsDots" aria-hidden="true"></div>
 
     </section>
 
@@ -1123,10 +1068,88 @@
     /* autoSpeed = px per frame at 60fps */
     var isMobile = window.innerWidth <= 600;
 
-    /* Sectors: carousel on desktop/tablet, static grid on mobile (carousel hidden via CSS) */
-    if (!isMobile) {
-        makeInfiniteCarousel('sectorsWrap', 'sectorsTrack', 0.4, 'sectorsLeft', 'sectorsRight', '.sector-carousel-card');
-    }
+    /* Sectors: 3D Coverflow on desktop/tablet, static grid on mobile (coverflow hidden via CSS) */
+    (function() {
+        var stage = document.getElementById('sectorsCoverflowStage');
+        if (!stage) return;
+        var cards = Array.prototype.slice.call(stage.querySelectorAll('.sector-carousel-card'));
+        var total = cards.length;
+        var active = 0;
+
+        /* Dot indicators */
+        var dotsEl = document.getElementById('sectorsDots');
+        var dots = [];
+        if (dotsEl) {
+            cards.forEach(function(_, i) {
+                var d = document.createElement('button');
+                d.className = 'cf-dot';
+                d.setAttribute('aria-label', 'Slide ' + (i + 1));
+                d.addEventListener('click', function() { active = i; applyPositions(); });
+                dotsEl.appendChild(d);
+                dots.push(d);
+            });
+        }
+
+        function applyPositions() {
+            cards.forEach(function(card, i) {
+                var rel = i - active;
+                /* normalise to [-half, +half] for wrapping feel */
+                while (rel < -(total / 2)) rel += total;
+                while (rel >  (total / 2)) rel -= total;
+                var absRel = Math.abs(rel);
+                /* clear any inline transform/transition left by the tilt handler */
+                card.style.transform = '';
+                card.style.transition = '';
+                if (absRel > 2) {
+                    card.removeAttribute('data-cf-pos');
+                    card.setAttribute('data-cf-hidden', '');
+                } else {
+                    card.removeAttribute('data-cf-hidden');
+                    card.setAttribute('data-cf-pos', String(rel));
+                }
+            });
+            dots.forEach(function(d, i) {
+                d.classList.toggle('active', i === active);
+            });
+        }
+
+        function advance(dir) {
+            active = (active + dir + total) % total;
+            applyPositions();
+        }
+
+        /* Click on a side card to advance to it */
+        cards.forEach(function(card, i) {
+            card.addEventListener('click', function() {
+                var pos = card.getAttribute('data-cf-pos');
+                if (pos && pos !== '0') advance(parseInt(pos, 10));
+            });
+        });
+
+        var btnL = document.getElementById('sectorsLeft');
+        var btnR = document.getElementById('sectorsRight');
+        if (btnL) btnL.addEventListener('click', function() { advance(-1); });
+        if (btnR) btnR.addEventListener('click', function() { advance(1); });
+
+        /* Keyboard navigation when focus is inside the wrap */
+        var wrap = document.getElementById('sectorsCoverflowWrap');
+        if (wrap) {
+            wrap.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft')  { advance(-1); e.preventDefault(); }
+                if (e.key === 'ArrowRight') { advance(1);  e.preventDefault(); }
+            });
+        }
+
+        /* Swipe support */
+        var tStartX = 0;
+        stage.addEventListener('touchstart', function(e) { tStartX = e.touches[0].clientX; }, { passive: true });
+        stage.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - tStartX;
+            if (Math.abs(dx) > 40) advance(dx < 0 ? 1 : -1);
+        }, { passive: true });
+
+        applyPositions();
+    })();
 
     /* In-action work photos: left-moving strip — pauses on hover */
     (function(){

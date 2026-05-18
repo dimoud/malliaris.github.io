@@ -15,24 +15,7 @@
     /* ─── 3–6. POINTER-ONLY EFFECTS (skip on touch devices) ───────────── */
     if (!window.matchMedia('(hover: none)').matches) {
 
-    /* ─── 3. 3D TILT — Sector carousel cards ──────────────────────────── */
-    qsa('[data-tilt]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-            var rect = card.getBoundingClientRect();
-            var cx   = rect.left + rect.width  / 2;
-            var cy   = rect.top  + rect.height / 2;
-            var dx   = (e.clientX - cx) / (rect.width  / 2);   /* -1 … +1 */
-            var dy   = (e.clientY - cy) / (rect.height / 2);
-            var rotX =  dy * -6;   /* tilt range ±6° */
-            var rotY =  dx *  6;
-            card.style.transform = 'perspective(700px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(1.03)';
-            card.style.transition = 'transform 0.08s linear';
-        });
-        card.addEventListener('mouseleave', function () {
-            card.style.transform = '';
-            card.style.transition = 'transform 0.45s var(--ease, cubic-bezier(0.16,1,0.3,1))';
-        });
-    });
+    /* ─── 3. 3D TILT — disabled for sector coverflow cards ── */
 
     /* ─── 4. SERVICE CARDS — 3D tilt lite ─────────────────────────────── */
     qsa('.service-card').forEach(function (card) {
