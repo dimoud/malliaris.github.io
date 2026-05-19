@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7HGV18VNJ"></script>
+    <!-- Google tag (gtag.js) — loads only after cookie consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied'
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7HGV18VNJ"></script>
+    <script>
       gtag('js', new Date());
-
       gtag('config', 'G-W7HGV18VNJ');
     </script>
     <meta charset="UTF-8">
@@ -1782,6 +1786,113 @@
                 btn.classList.toggle('visible', window.scrollY > 120);
             }, {passive:true});
             btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+        })();
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <style>
+        #cookie-banner {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99999;
+            background: #1a1a2e;
+            color: #f0f0f0;
+            padding: 18px 24px;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.5;
+            box-shadow: 0 -2px 12px rgba(0,0,0,0.3);
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+        }
+        #cookie-banner p {
+            margin: 0;
+            flex: 1;
+            min-width: 200px;
+        }
+        #cookie-banner .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        #cookie-accept, #cookie-reject {
+            border-radius: 6px;
+            padding: 9px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #cookie-accept {
+            background: #2ecc71;
+            color: #fff;
+            border: none;
+        }
+        #cookie-reject {
+            background: transparent;
+            color: #f0f0f0;
+            border: 1px solid #f0f0f0;
+        }
+        @media (max-width: 540px) {
+            #cookie-banner {
+                padding: 14px 16px;
+                font-size: 13px;
+                gap: 12px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            #cookie-banner .cookie-buttons {
+                display: flex;
+                width: 100%;
+            }
+            #cookie-accept, #cookie-reject {
+                flex: 1;
+                padding: 10px 0;
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <div id="cookie-banner">
+        <p>Χρησιμοποιούμε cookies Google Analytics για να κατανοούμε πώς επισκέπτεστε τον ιστότοπό μας και να βελτιώνουμε τις υπηρεσίες μας. Δεν μοιραζόμαστε δεδομένα σας με τρίτους.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept">Αποδοχή</button>
+            <button id="cookie-reject">Απόρριψη</button>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            var CONSENT_KEY = 'cookie_consent';
+            var banner = document.getElementById('cookie-banner');
+
+            function enableAnalytics(){
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+            }
+
+            var saved = localStorage.getItem(CONSENT_KEY);
+            if(saved === 'accepted'){
+                enableAnalytics();
+            } else if(saved === 'rejected'){
+                // do nothing, stays denied
+            } else {
+                banner.style.display = 'flex';
+            }
+
+            document.getElementById('cookie-accept').addEventListener('click', function(){
+                localStorage.setItem(CONSENT_KEY, 'accepted');
+                enableAnalytics();
+                banner.style.display = 'none';
+            });
+
+            document.getElementById('cookie-reject').addEventListener('click', function(){
+                localStorage.setItem(CONSENT_KEY, 'rejected');
+                banner.style.display = 'none';
+            });
         })();
     </script>
 </body>
