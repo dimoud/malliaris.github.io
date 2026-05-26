@@ -344,8 +344,16 @@
                 <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
             </div>
         </div>
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
+        <div class="mobile-nav-right">
+            <div class="mobile-lang">
+                <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
+                <div class="lang-sep"></div>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
+            </div>
+            <div class="mobile-nav-sep"></div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
 
@@ -1082,11 +1090,13 @@
         /* Mobile menu */
         function toggleMenu() {
             const menu = document.getElementById('navLinks');
+            const hbg  = document.getElementById('hamburger');
             menu.classList.toggle('open');
-            /* no body scroll lock — menu is a small panel, not full-screen */
+            hbg.classList.toggle('open');
         }
         function closeMenu() {
             document.getElementById('navLinks').classList.remove('open');
+            document.getElementById('hamburger').classList.remove('open');
         }
         document.querySelectorAll('#navLinks a').forEach(a => {
             a.addEventListener('click', closeMenu);
