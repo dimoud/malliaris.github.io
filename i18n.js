@@ -25,6 +25,7 @@
         'nav.about':    { el: 'Σχετικά',                      en: 'About' },
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
+        'nav.team':     { el: 'Η ΟΜΑΔΑ ΜΑΣ',                   en: 'OUR TEAM' },
         'nav.action':   { el: 'ΣΤΗΝ ΔΡΑΣΗ',                    en: 'IN ACTION' },
         'nav.contact':  { el: 'Επικοινωνία',                  en: 'Contact' },
 
@@ -54,6 +55,20 @@
         'marquee.m8': { el: 'ΣΧΕΔΙΑ ΕΚΚΕΝΩΣΗΣ',                              en: 'EVACUATION PLANS' },
         'marquee.m9': { el: 'ΠΡΟΣΟΜΟΙΩΣΗ ΕΠΙΘΕΩΡΗΣΗΣ ΣΕΠΕ',                  en: 'LABOUR INSPECTORATE SIMULATION' },
 
+        /* TEAM */
+        'team.eyebrow':        { el: 'Η ΟΜΑΔΑ ΜΑΣ',                                            en: 'OUR TEAM' },
+        'team.heading':        { el: 'Γνωρίστε μας',                                            en: 'Meet the Team' },
+        'team.badge':          { el: 'ΙΔΡΥΤΗΣ',                                                 en: 'FOUNDER' },
+        'team.role':           { el: 'ΙΔΡΥΤΗΣ & ΕΠΙΚΕΦΑΛΗΣ ΜΗΧΑΝΙΚΟΣ',                        en: 'FOUNDER & LEAD ENGINEER' },
+        'team.name':           { el: 'Σταύρος Μάλλιαρης',                                       en: 'Stavros Malliaris' },
+        'team.bio':            { el: 'Διπλωματούχος Πολιτικός Μηχανικός ΑΠΘ με εξειδίκευση στην Υγεία και Ασφάλεια στην εργασία. 10+ χρόνια εμπειρίας σε εργοτάξια, βιομηχανίες και επιχειρήσεις κάθε τύπου σε Ελλάδα και εξωτερικό. Κάτοχος διεθνούς πιστοποίησης ASP® (BCSP) και Εσωτερικός Επιθεωρητής ISO 9001, 14001, και 45001. Συνδυάζει υψηλή τεχνική κατάρτιση με ρεαλιστικές και εφαρμόσιμες λύσεις στο πεδίο, που δίνουν αποτελέσματα χωρίς να εκτοξεύουν τον προϋπολογισμό. Οι 3 λέξεις που μας χαρακτηρίζουν;', en: 'Civil Engineer (AUTH) specialising in Health & Safety at Work. 10+ years of experience in construction sites, industrial facilities and all types of businesses in Greece and abroad. Holder of the ASP® (BCSP) certification and Internal Auditor for ISO 9001, 14001, and 45001. Combines high technical expertise with realistic, field-ready solutions that deliver results without blowing the budget. The 3 words that define us?' },
+        'team.pill.exp':       { el: '10+ Χρόνια Εμπειρίας',                                   en: '10+ Years Experience' },
+        'team.pill.exp.text':  { el: 'Διεθνής εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε τύπου', en: 'International experience in demanding infrastructure projects and every type of business' },
+        'team.pill.cert':      { el: 'ASP® Πιστοποιημένος',                                    en: 'ASP® Certified' },
+        'team.pill.cert.text': { el: 'Πιστοποίηση Board of Certified Safety Professionals (BCSP) — το υψηλότερο διεθνές πρότυπο', en: 'Board of Certified Safety Professionals (BCSP) certification — the highest international standard' },
+        'team.pill.cov':       { el: 'Πανελλαδική Κάλυψη',                                     en: 'Nationwide Coverage' },
+        'team.pill.cov.text':  { el: 'Εξυπηρέτηση επιχειρήσεων σε όλη την Ελλάδα — Αττική, Θεσσαλονίκη, Πανελλαδικά', en: 'Serving businesses across Greece — Attica, Thessaloniki, Nationwide' },
+
         /* ABOUT */
         'about.eyebrow': { el: 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ', en: 'WHO WE ARE' },
         'about.heading': {
@@ -67,12 +82,12 @@
         'about.dim': { el: 'Ελλάδα — Διεθνώς', en: 'Greece — International' },
 
         /* FEATURES — Γιατί να μας επιλέξετε */
-        'feature.risk.label':        { el: 'Πολυετής Εμπειρία σε Θέματα Ασφάλειας', en: 'Safety Expertise' },
-        'feature.risk.text':         { el: 'Αναγνωρίζουμε έγκαιρα κινδύνους και προτείνουμε πρακτικές λύσεις που λειτουργούν στην πράξη', en: 'We identify risks early and propose practical solutions that work in the field' },
+        'feature.risk.label':        { el: 'Πολυετής Εμπειρία', en: 'Safety Expertise' },
+        'feature.risk.text':         { el: 'Αναγνωρίζουμε έγκαιρα κινδύνους και προτείνουμε πρακτικές λύσεις που λειτουργούν στην πράξη και βοηθούν την παραγωγή', en: 'We identify risks early and propose practical solutions that work in the field and support production' },
         'feature.custom.label':      { el: 'Στοχευμένη Εξυπηρέτηση',    en: 'Targeted Service' },
         'feature.custom.text':       { el: 'Εξατομικευμένη αξιολόγηση και σαφείς προτάσεις προσαρμοσμένες στο μέγεθος και τον χαρακτήρα της επιχείρησης', en: 'Individual assessment with clear, specific proposals adapted to the size and nature of each business' },
-        'feature.compliance.label':  { el: 'Διακριτικότητα & Άρτια Επικοινωνία', en: 'Discretion & Clear Communication' },
-        'feature.compliance.text':   { el: 'Διαχειριζόμαστε κάθε πληροφορία με απόλυτη εχεμύθεια και δίνουμε ιδιαίτερη έμφαση στη σαφή επικοινωνία με τη διοίκηση και το προσωπικό', en: 'We handle all information with full confidentiality and place special emphasis on clear communication with management and staff' },
+        'feature.compliance.label':  { el: 'Άρτια Επικοινωνία', en: 'Clear Communication' },
+        'feature.compliance.text':   { el: 'Διαχειριζόμαστε κάθε πληροφορία με εχεμύθεια και δίνουμε ιδιαίτερη έμφαση στη σαφή επικοινωνία με τη διοίκηση και το προσωπικό', en: 'We handle all information with confidentiality and place special emphasis on clear communication with management and staff' },
 
         /* SERVICES */
         'services.eyebrow': { el: 'ΥΠΗΡΕΣΙΕΣ', en: 'SERVICES' },
