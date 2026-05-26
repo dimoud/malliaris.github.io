@@ -676,10 +676,14 @@ nav.scrolled {
     color: var(--slate);
     line-height: 1.65;
     margin: 4px 0 0;
+    white-space: nowrap;
 }
 @media (max-width: 700px) {
     .team-sub-cards { grid-template-columns: 1fr; }
     .team-sub-card { padding: 20px 16px; }
+    .team-value-pills { flex-wrap: nowrap !important; gap: 5px; }
+    .team-value-pill { font-size: 9px !important; letter-spacing: 0.8px; padding: 4px 8px !important; white-space: nowrap; }
+    .team-profile-bio { text-align: left; }
 }
 
 .team-value-pills {
