@@ -309,7 +309,8 @@
         'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & Abroad' },
 
         /* NAME */
-        'name.stavros': { el: 'ΜΑΛΛΙΑΡΗΣ ΣΤΑΥΡΟΣ', en: 'MALLIARIS STAVROS' },
+        'name.stavros':  { el: 'ΜΑΛΛΙΑΡΗΣ ΣΤΑΥΡΟΣ',      en: 'MALLIARIS STAVROS' },
+        'name.company':  { el: 'ΜΑΛΛΙΑΡΗΣ & ΣΥΝΕΡΓΑΤΕΣ', en: 'MALLIARIS & PARTNERS' },
 
         /* HOVER HINT */
         'hint.hover': { el: 'HOVER ΓΙΑ ΠΑΥΣΗ', en: 'HOVER TO PAUSE' },
