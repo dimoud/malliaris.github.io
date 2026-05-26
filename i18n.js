@@ -21,7 +21,7 @@
     const t = {
 
         /* NAV */
-        'nav.title':    { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Technician - H&S Consultant' },
+        'nav.title':    { el: 'Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
         'nav.about':    { el: 'Σχετικά',                      en: 'About' },
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
@@ -267,13 +267,13 @@
         'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & Abroad' },
 
         /* NAME */
-        'name.stavros': { el: 'Σταύρος Μάλλιαρης', en: 'Stavros Malliaris' },
+        'name.stavros': { el: 'Μάλλιαρης & Συνεργάτες', en: 'MALLIARIS & PARTNERS' },
 
         /* HOVER HINT */
         'hint.hover': { el: 'HOVER ΓΙΑ ΠΑΥΣΗ', en: 'HOVER TO PAUSE' },
 
         /* FOOTER */
-        'footer.title': { el: 'Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας', en: 'Safety Technician - H&S Consultant' },
+        'footer.title': { el: 'Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
     };
 
     /* ─── STATE ──────────────────────────────────────────────────────────── */

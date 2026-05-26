@@ -316,11 +316,11 @@
         <div class="nav-logo-group">
             <a href="#" class="nav-logo">
                 <div class="logo-rect">
-                    <img src="Image 2.png" alt="Σταύρος Μάλλιαρης — Τεχνικός Ασφαλείας" onerror="this.style.display='none'">
+                    <img src="Image 2.png" alt="Μάλλιαρης & Συνεργάτες — Υπηρεσίες Υγείας και Ασφάλειας" onerror="this.style.display='none'">
                 </div>
                 <div class="logo-text">
-                    <span class="name" data-i18n="name.stavros">Σταύρος Μάλλιαρης</span>
-                    <span class="title" data-i18n="nav.title">Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας</span>
+                    <span class="name" data-i18n="name.stavros">Μάλλιαρης & Συνεργάτες</span>
+                    <span class="title" data-i18n-html="nav.title">Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας</span>
                 </div>
             </a>
             <div class="nav-logo-lang-sep"></div>
@@ -330,17 +330,19 @@
                 <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
             </div>
         </div>
-        <div class="nav-links" id="navLinks">
-            <a href="#about" data-i18n="nav.about">Σχετικά</a>
-            <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
-            <a href="#sectors" data-i18n="nav.sectors">Τομείς</a>
-            <a href="#in-action" data-i18n="nav.action">Στη Δράση</a>
-            <a href="#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
-        </div>
-        <div class="lang-toggle" id="langToggle">
-            <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
-            <div class="lang-sep"></div>
-            <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+                <a href="#about" data-i18n="nav.about">Σχετικά</a>
+                <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
+                <a href="#sectors" data-i18n="nav.sectors">Τομείς</a>
+                <a href="#in-action" data-i18n="nav.action">Στη Δράση</a>
+                <a href="#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
+            </div>
+            <div class="lang-toggle" id="langToggle">
+                <button class="lang-btn active" data-lang="el" onclick="setLang('el')"><img src="https://flagcdn.com/w20/gr.png" alt="GR" class="flag-icon"> <span class="lcode">ΕΛ</span></button>
+                <div class="lang-sep"></div>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')"><img src="https://flagcdn.com/w20/gb.png" alt="EN" class="flag-icon"> <span class="lcode">EN</span></button>
+            </div>
         </div>
         <div class="hamburger" id="hamburger" onclick="toggleMenu()">
             <span></span><span></span><span></span>
@@ -1021,11 +1023,11 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="footer-logo-rect">
-                    <img src="Image 2.png" alt="Σταύρος Μάλλιαρης — Τεχνικός Ασφαλείας" onerror="this.style.display='none'">
+                    <img src="Image 2.png" alt="Μάλλιαρης & Συνεργάτες — Υπηρεσίες Υγείας και Ασφάλειας" onerror="this.style.display='none'">
                 </div>
                 <div class="footer-brand-text">
-                    <p class="fname" data-i18n="name.stavros">Σταύρος Μάλλιαρης</p>
-                    <p class="ftitle" data-i18n="footer.title">Τεχνικός Ασφαλείας - Σύμβουλος Υγείας και Ασφάλειας</p>
+                    <p class="fname" data-i18n="name.stavros">Μάλλιαρης & Συνεργάτες</p>
+                    <p class="ftitle" data-i18n-html="footer.title">Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας</p>
                 </div>
             </div>
             <div class="footer-links">
@@ -1096,6 +1098,12 @@
             const menu = document.getElementById('navLinks');
             if (menu.classList.contains('open')) closeMenu();
             menu.classList.toggle('nav-scrolled', window.scrollY > 60);
+            /* Show logo text only after scrolling past the hero section */
+            const hero = document.querySelector('.hero');
+            const logoText = document.querySelector('.logo-text');
+            if (hero && logoText) {
+                logoText.classList.toggle('logo-text--visible', window.scrollY >= hero.offsetHeight * 0.85);
+            }
         }, { passive: true });
 
         /* Count-up animation for [data-countup] elements */
@@ -1860,6 +1868,18 @@
                 text-align: center;
             }
         }
+    /* ── LOGO TEXT: hidden until past hero ── */
+    .logo-text {
+        opacity: 0;
+        transform: translateY(-6px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        pointer-events: none;
+    }
+    .logo-text.logo-text--visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
     </style>
 
     <div id="cookie-banner">
