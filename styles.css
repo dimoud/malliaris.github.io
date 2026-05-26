@@ -1749,6 +1749,7 @@ footer {
     .hero-photo-wrap { border-width: 3px; }
     .hero-inner {
         max-width: 100%; padding: 0 5%;
+        margin-left: 0;
         align-items: center; text-align: center;
         gap: 14px;
     }
@@ -2898,8 +2899,12 @@ footer {
         transform: none;
         animation: none;
         width: clamp(240px, 72vw, 320px);
-        margin: 0 auto;
+        margin: 40px auto 0;
         flex-shrink: 0;
+        order: 1;
+    }
+
+    .hero-inner {
         order: 0;
     }
 
