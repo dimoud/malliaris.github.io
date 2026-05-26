@@ -175,8 +175,8 @@
     };
 
     var QUIZ_TITLE = {
-        el: 'ΤΟ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΣΑΣ',
-        en: 'YOUR SAFETY LEVEL'
+        el: 'ΕΣΕΙΣ, ΤΙ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΕΧΕΤΕ;',
+        en: 'WHAT IS YOUR SAFETY LEVEL?'
     };
 
     function getStatusKey(pct) {
@@ -241,7 +241,7 @@
 
         /* Set gauge title */
         var titleEl = $('sqGaugeTitle');
-        if (titleEl) titleEl.innerHTML = '<strong>' + QUIZ_TITLE[lang] + '</strong>';
+        if (titleEl) titleEl.innerHTML = '<strong style="font-size:1.25em;">' + QUIZ_TITLE[lang] + '</strong>';
     }
 
     function rebuildQuizTexts() {
@@ -256,7 +256,7 @@
             textEl.innerHTML = q[lang] + (q.stavros ? makeBadgeHtml(lang) : '');
         });
         var titleEl = $('sqGaugeTitle');
-        if (titleEl) titleEl.innerHTML = '<strong>' + QUIZ_TITLE[lang] + '</strong>';
+        if (titleEl) titleEl.innerHTML = '<strong style="font-size:1.25em;">' + QUIZ_TITLE[lang] + '</strong>';
         updateQuizStatus(gaugeCurrentPct);
     }
 

@@ -22,7 +22,7 @@
 
         /* NAV */
         'nav.title':    { el: 'Σύμβουλοι Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
-        'nav.about':    { el: 'Σχετικά',                      en: 'About' },
+        'nav.about':    { el: 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ',                en: 'WHO WE ARE' },
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
         'nav.team':     { el: 'Η ΟΜΑΔΑ ΜΑΣ',                   en: 'OUR TEAM' },
@@ -72,9 +72,35 @@
         /* ABOUT */
         'about.eyebrow': { el: 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ', en: 'WHO WE ARE' },
         'about.heading': {
-            el: 'Σταύρος Μάλλιαρης',
-            en: 'Stavros Malliaris',
+            el: 'Το Προφίλ της Εταιρείας',
+            en: 'Company Profile',
         },
+        'about.bio.p1': {
+            el: 'Η εταιρεία ιδρύθηκε το 2026, ως απάντηση στις αυξανόμενες ανάγκες για ουσιαστική ασφάλεια στους χώρους εργασίας των ελληνικών επιχειρήσεων, με έναν ξεκάθαρο στόχο: κάθε εργαζόμενος να επιστρέφει ασφαλής στο σπίτι του.',
+            en: 'The company was founded in 2026, in response to the growing need for meaningful workplace safety in Greek businesses, with one clear goal: every employee returns home safe.',
+        },
+        'about.bio.p2': {
+            el: 'Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες Υγείας &amp; Ασφάλειας στην Εργασία, με τεχνική υποστήριξη, διαχείριση επαγγελματικού κινδύνου και ολοκληρωμένες συμβουλευτικές λύσεις προσαρμοσμένες σε κάθε έργο.',
+            en: 'Stavros Malliaris and his partners provide specialised Occupational Health &amp; Safety services, including technical support, risk management and comprehensive consulting solutions tailored to each project.',
+        },
+        'about.bio.p3': {
+            el: 'Από εργοτάξια έως ιδιωτικές επιχειρήσεις, η προσέγγιση βασίζεται στην πρόληψη, την οργάνωση και τη δημιουργία ασφαλών και αποδοτικών χώρων εργασίας.',
+            en: 'From construction sites to private businesses, our approach is based on prevention, organisation and the creation of safe, productive work environments.',
+        },
+        'about.bio.p4': {
+            el: 'Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.',
+            en: 'Because real safety always starts from the right foundations.',
+        },
+        'about.tl.m1': { el: 'ΜΑΡ 2026', en: 'MAR 2026' },
+        'about.tl.n1': { el: 'Ίδρυση',   en: 'Founded' },
+        'about.tl.m2': { el: 'ΑΠΡ 2026', en: 'APR 2026' },
+        'about.tl.n2.l1': { el: 'Πρώτοι', en: 'First' },
+        'about.tl.n2.l2': { el: 'Πελάτες', en: 'Clients' },
+        'about.tl.m3': { el: 'ΜΑΙ 2026', en: 'MAY 2026' },
+        'about.tl.n3.l1': { el: 'Επέκταση', en: 'Service' },
+        'about.tl.n3.l2': { el: 'Υπηρεσιών', en: 'Expansion' },
+        'about.tl.m4': { el: 'ΣΗΜΕΡΑ', en: 'TODAY' },
+        'about.tl.n4': { el: 'Εν εξελίξει', en: 'Ongoing' },
         'about.lead': {
             el: '<ul class="about-bullets"><li><span class="hi-num">5+</span> χρόνια <span class="hi-key">διεθνούς εμπειρίας</span> στην Υγεία &amp; Ασφάλεια</li><li>Πιστοποιημένος <span class="hi-badge">ASP®</span> &middot; Πολιτικός Μηχανικός <span class="hi-badge">ΑΠΘ</span></li><li>Εξυπηρέτηση <span class="hi-key">κάθε τύπου επιχείρησης</span> — εστιατόρια, γραφεία, εργοτάξια, βιομηχανίες</li><li>Εκατοντάδες ώρες εκπαίδευσης — <span class="hi-key">πρακτικές λύσεις</span> κατευθείαν στο πεδίο</li><li>Πλήρης <span class="hi-green">νομική κάλυψη</span> &amp; προστασία του ανθρώπινου δυναμικού σας</li></ul>',
             en: '<ul class="about-bullets"><li><span class="hi-num">5+</span> years of <span class="hi-key">international H&amp;S experience</span></li><li>Certified <span class="hi-badge">ASP®</span> &middot; Civil Engineer <span class="hi-badge">AUTH</span></li><li>Supporting <span class="hi-key">every business type</span> — restaurants, offices, construction sites, industry</li><li>Hundreds of training hours — <span class="hi-key">practical solutions</span> directly in the field</li><li>Full <span class="hi-green">legal compliance</span> &amp; protection of your most valuable asset: your people</li></ul>',

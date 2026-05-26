@@ -457,30 +457,103 @@
 
     <!-- ===== ABOUT ===== -->
     <section class="about-section" id="about" aria-label="Σχετικά με τον Σταύρο Μάλλιαρη — Τεχνικό Ασφαλείας">
-        <div class="about-quiz-center" data-reveal>
-            <!-- Safety Quiz Game -->
-            <div class="sq-gauge-block" id="complianceGauge">
-                <div class="sq-gauge-title" id="sqGaugeTitle"><strong>ΤΟ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΣΑΣ</strong></div>
-                <svg class="sq-gauge-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 28 100 A 72 72 0 0 1 172 100"
-                          stroke="#DDE5EE" stroke-width="10" stroke-linecap="round" fill="none"/>
-                    <path id="gaugeArcFill" d="M 28 100 A 72 72 0 0 1 172 100"
-                          stroke="#E8541A" stroke-width="10" stroke-linecap="round" fill="none"
-                          style="stroke-dasharray:0 226.195; stroke-dashoffset:0"/>
-                    <line id="gaugeNeedle" x1="100" y1="100" x2="100" y2="34"
-                          stroke="#0F1929" stroke-width="2" stroke-linecap="round"
-                          transform="rotate(90 100 100)"/>
-                    <circle cx="100" cy="100" r="5" fill="#0F1929" opacity="0.65"/>
-                    <text id="gaugeValue" x="100" y="88"
-                          text-anchor="middle"
-                          font-family="Space Grotesk,sans-serif" font-size="22" font-weight="700"
-                          fill="#0F1929">0%</text>
-                </svg>
-                <p class="sq-status" id="sqStatus"></p>
+        <div class="about-grid">
+            <div class="about-content" data-reveal>
+                <div class="eyebrow"><span data-i18n="about.eyebrow">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</span></div>
+                <div class="heading-helmet-wrap">
+                    <h2 class="section-heading" style="white-space:nowrap;" data-i18n-html="about.heading">Το Προφίλ της Εταιρείας</h2>
+                    <div class="heading-helmet" aria-hidden="true">
+                        <svg id="helmetSvg" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 58 Q18 44 30 32 Q44 18 60 16 Q76 18 90 32 Q102 44 100 58 Z"
+                                  fill="var(--accent)" opacity="0.92"/>
+                            <rect x="12" y="56" width="96" height="9" rx="4.5"
+                                  fill="var(--accent2)" opacity="0.85"/>
+                            <path d="M46 22 Q60 19 74 22 L74 38 Q60 35 46 38 Z"
+                                  fill="white" opacity="0.18"/>
+                            <path d="M53 30 L60 27 L67 30 L67 39 C67 44 60 47 60 47 C60 47 53 44 53 39 Z"
+                                  fill="white" opacity="0.35"/>
+                            <text x="60" y="40" text-anchor="middle"
+                                  font-family="Space Grotesk,sans-serif" font-size="6"
+                                  fill="white" opacity="0.8">ASP</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-bio" data-reveal style="display:flex;flex-direction:column;gap:1.1em;margin-top:2em;font-size:0.95em;">
+                    <p data-i18n="about.bio.p1">Η εταιρεία ιδρύθηκε το 2026, ως απάντηση στις αυξανόμενες ανάγκες για ουσιαστική ασφάλεια στους χώρους εργασίας των ελληνικών επιχειρήσεων, με έναν ξεκάθαρο στόχο: κάθε εργαζόμενος να επιστρέφει ασφαλής στο σπίτι του.</p>
+
+                    <p data-i18n-html="about.bio.p2" class="about-bio-p2">Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες Υγείας &amp; Ασφάλειας στην Εργασία, με τεχνική υποστήριξη, διαχείριση επαγγελματικού κινδύνου και ολοκληρωμένες συμβουλευτικές λύσεις προσαρμοσμένες σε κάθε έργο.</p>
+
+                    <p data-i18n="about.bio.p3">Από εργοτάξια έως ιδιωτικές επιχειρήσεις, η προσέγγιση βασίζεται στην πρόληψη, την οργάνωση και τη δημιουργία ασφαλών και αποδοτικών χώρων εργασίας.</p>
+
+                    <p><em data-i18n="about.bio.p4">Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.</em></p>
+
+                    <!-- Timeline -->
+                    <div style="width:100%;margin-top:2.5em;position:relative;">
+                        <!-- Rail -->
+                        <div style="position:absolute;top:18px;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent) 80%,transparent);opacity:0.25;border-radius:2px;"></div>
+
+                        <div style="display:flex;justify-content:space-between;align-items:flex-start;position:relative;">
+
+                            <!-- Node 1: Μάρτιος 2026 — Ίδρυση -->
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                                <div data-i18n="about.tl.m1" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΜΑΡ 2026</div>
+                                <div style="width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(232,84,26,0.18);flex-shrink:0;"></div>
+                                <div data-i18n="about.tl.n1" style="font-size:0.65em;color:currentColor;opacity:0.6;text-align:center;line-height:1.3;">Ίδρυση</div>
+                            </div>
+
+                            <!-- Node 2: Απρίλιος 2026 — Πρώτοι Πελάτες -->
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                                <div data-i18n="about.tl.m2" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΑΠΡ 2026</div>
+                                <div style="width:12px;height:12px;border-radius:50%;background:var(--accent);opacity:0.7;box-shadow:0 0 0 3px rgba(232,84,26,0.12);flex-shrink:0;margin:1px;"></div>
+                                <div style="font-size:0.65em;color:currentColor;opacity:0.6;text-align:center;line-height:1.3;"><span data-i18n="about.tl.n2.l1">Πρώτοι</span><br><span data-i18n="about.tl.n2.l2">Πελάτες</span></div>
+                            </div>
+
+                            <!-- Node 3: Μάιος 2026 — Επέκταση -->
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                                <div data-i18n="about.tl.m3" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΜΑΙ 2026</div>
+                                <div style="width:12px;height:12px;border-radius:50%;background:var(--accent);opacity:0.7;box-shadow:0 0 0 3px rgba(232,84,26,0.12);flex-shrink:0;margin:1px;"></div>
+                                <div style="font-size:0.65em;color:currentColor;opacity:0.6;text-align:center;line-height:1.3;"><span data-i18n="about.tl.n3.l1">Επέκταση</span><br><span data-i18n="about.tl.n3.l2">Υπηρεσιών</span></div>
+                            </div>
+
+                            <!-- Node 4: Σήμερα -->
+                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                                <div data-i18n="about.tl.m4" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΣΗΜΕΡΑ</div>
+                                <div style="width:14px;height:14px;border-radius:50%;background:transparent;border:2px solid var(--accent);box-shadow:0 0 0 3px rgba(232,84,26,0.18);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                                    <div style="width:5px;height:5px;border-radius:50%;background:var(--accent);"></div>
+                                </div>
+                                <div data-i18n="about.tl.n4" style="font-size:0.65em;color:var(--accent);font-weight:600;text-align:center;line-height:1.3;">Εν εξελίξει</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Quiz questions — populated by safety-animations.js -->
-            <div class="sq-questions" id="sqQuestions"></div>
+            <div class="about-aside" data-reveal>
+                <!-- Safety Quiz Game — hidden, to be moved to a separate page -->
+                <div class="sq-gauge-block" id="complianceGauge">
+                    <div class="sq-gauge-title" id="sqGaugeTitle"><strong style="font-size:1.25em;">ΤΙ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΕΧΕΤΕ;</strong></div>
+                    <svg class="sq-gauge-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 28 100 A 72 72 0 0 1 172 100"
+                              stroke="#DDE5EE" stroke-width="10" stroke-linecap="round" fill="none"/>
+                        <path id="gaugeArcFill" d="M 28 100 A 72 72 0 0 1 172 100"
+                              stroke="#E8541A" stroke-width="10" stroke-linecap="round" fill="none"
+                              style="stroke-dasharray:0 226.195; stroke-dashoffset:0"/>
+                        <line id="gaugeNeedle" x1="100" y1="100" x2="100" y2="34"
+                              stroke="#0F1929" stroke-width="2" stroke-linecap="round"
+                              transform="rotate(-90 100 100)"/>
+                        <circle cx="100" cy="100" r="5" fill="#0F1929" opacity="0.65"/>
+                        <text id="gaugeValue" x="100" y="88"
+                              text-anchor="middle"
+                              font-family="Space Grotesk,sans-serif" font-size="22" font-weight="700"
+                              fill="#0F1929">0%</text>
+                    </svg>
+                    <p class="sq-status" id="sqStatus"></p>
+                </div>
+
+                <!-- Quiz questions — populated by safety-animations.js -->
+                <div class="sq-questions" id="sqQuestions"></div>
+            </div>
         </div>
     </section>
 
