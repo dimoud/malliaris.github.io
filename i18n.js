@@ -34,9 +34,9 @@
         'cred.inspections': { el: 'ΕΠΙΘΕΩΡΗΣΕΙΣ',  en: 'INSPECTIONS' },
 
         /* HERO */
-        'hero.name1':    { el: 'ΣΤΑΥΡΟΣ',                                      en: 'STAVROS' },
-        'hero.name2':    { el: 'ΜΑΛΛΙΑΡΗΣ',                                    en: 'MALLIARIS' },
-        'hero.eyebrow':  { el: 'ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ ΜΗΧΑΝΙΚΟΣ ΥΓΕΙΑΣ ΚΑΙ ΑΣΦΑΛΕΙΑΣ ΑΠΘ', en: 'CERTIFIED H&S ENGINEER - AUTH' },
+        'hero.name1':    { el: 'ΜΑΛΛΙΑΡΗΣ &amp;',                             en: 'MALLIARIS &amp;' },
+        'hero.name2':    { el: '<span style="color:#E8541A;">ΣΥΝΕΡΓΑΤΕΣ</span>', en: '<span style="color:#E8541A;">PARTNERS</span>' },
+        'hero.eyebrow':  { el: 'ΥΠΗΡΕΣΙΕΣ ΥΓΕΙΑΣ ΚΑΙ ΑΣΦΑΛΕΙΑΣ ΣΤΗΝ ΕΡΓΑΣΙΑ', en: 'OCCUPATIONAL HEALTH AND SAFETY SERVICES' },
         'hero.cta':      { el: 'ΠΑΡΕ ΠΡΟΣΦΟΡΑ',                                en: 'GET A QUOTE' },
         'hero.stat1.num':{ el: '10+',                                           en: '10+' },
         'hero.stat1.lbl':{ el: 'χρόνια εμπειρίας',                             en: 'years experience' },
