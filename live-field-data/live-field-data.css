@@ -1,0 +1,113 @@
+/* ── Live Field Data card ────────────────────────────────────────
+   Drop-in styles. Override these CSS variables to theme:
+     --lfd-bg          panel background (default: rgba(8,18,36,0.55))
+     --lfd-border      panel border (default: rgba(255,255,255,0.16))
+     --lfd-ink         primary text (default: #E8EEF7)
+     --lfd-ink-dim     secondary text (default: #9BA8BD)
+     --lfd-ink-faint   tertiary/labels (default: #5F6E86)
+     --lfd-line        divider (default: rgba(255,255,255,0.08))
+     --lfd-accent      orange accent (default: #E85A1A)
+     --lfd-ok          status-ok green (default: #19B58A)
+   ──────────────────────────────────────────────────────────────── */
+
+.lfd {
+  --lfd-bg: rgba(8, 18, 36, 0.55);
+  --lfd-border: rgba(255, 255, 255, 0.16);
+  --lfd-ink: #E8EEF7;
+  --lfd-ink-dim: #9BA8BD;
+  --lfd-ink-faint: #5F6E86;
+  --lfd-line: rgba(255, 255, 255, 0.08);
+  --lfd-accent: #E85A1A;
+  --lfd-ok: #19B58A;
+
+  background: var(--lfd-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--lfd-border);
+  padding: 18px 18px 16px;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  color: var(--lfd-ink-dim);
+  box-sizing: border-box;
+}
+
+.lfd *, .lfd *::before, .lfd *::after { box-sizing: border-box; }
+
+.lfd-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--lfd-ink);
+  letter-spacing: 0.18em;
+  font-size: 10.5px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--lfd-line);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.lfd-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lfd-ok);
+  box-shadow: 0 0 0 3px rgba(25, 181, 138, 0.18);
+  animation: lfd-pulse 1.6s ease-in-out infinite;
+  flex: 0 0 auto;
+}
+
+@keyframes lfd-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(25, 181, 138, 0.18); }
+  50%      { box-shadow: 0 0 0 6px rgba(25, 181, 138, 0.02); }
+}
+
+.lfd-time {
+  margin-left: auto;
+  color: var(--lfd-ink-faint);
+  letter-spacing: 0.08em;
+}
+
+.lfd-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.lfd-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.lfd-label {
+  color: var(--lfd-ink-faint);
+  letter-spacing: 0.12em;
+}
+
+.lfd-value {
+  color: var(--lfd-ink);
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.lfd-value--ok { color: var(--lfd-ok); }
+
+.lfd-mini {
+  padding-top: 12px;
+  border-top: 1px solid var(--lfd-line);
+}
+
+.lfd-sparkline {
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+
+.lfd-mini-label {
+  color: var(--lfd-ink-faint);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  margin-top: 6px;
+}

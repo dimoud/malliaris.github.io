@@ -608,7 +608,7 @@ nav.scrolled {
 
 /* About aside — transparent card */
 .about-aside {
-    display: flex; flex-direction: column; gap: 20px;
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
     background: transparent;
     border-radius: 12px;
     padding: 28px;
@@ -616,6 +616,9 @@ nav.scrolled {
     opacity: 0; transform: translateX(36px);
     transition: opacity 0.9s var(--ease) 0.15s, transform 0.9s var(--ease) 0.15s;
 }
+
+.about-aside .sq-gauge-block,
+.about-aside .sq-questions { align-self: stretch; }
 .about-aside.revealed { opacity: 1; transform: none; }
 
 /* Helmet widget */
@@ -1504,10 +1507,11 @@ footer {
     }
     .hero {
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         min-height: 100svh;
-        padding-top: 0; gap: 0;
+        padding-top: 88px; gap: 16px;
+        padding-bottom: 56px;
     }
     .hero-photo-group {
         position: relative; right: auto; top: auto; transform: none;
@@ -1518,7 +1522,7 @@ footer {
     }
     .hero-photo-wrap { border-width: 3px; }
     .hero-inner {
-        max-width: 100%; padding: 16px 5% 0;
+        max-width: 100%; padding: 0 5%;
         align-items: center; text-align: center;
         gap: 14px;
     }
@@ -2602,6 +2606,101 @@ footer {
     transition: width 0.85s cubic-bezier(.22,1,.36,1) 0.3s;
 }
 .about-content.revealed .section-heading::after { width: 55%; }
+
+/* ===== HERO — LFD CARD ===== */
+.hero-lfd-group {
+    position: absolute;
+    right: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(260px, 26vw, 360px);
+    z-index: 2;
+    /* subtle entrance */
+    animation: lfdGroupFadeIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes lfdGroupFadeIn {
+    from { opacity: 0; transform: translateY(calc(-50% + 18px)); }
+    to   { opacity: 1; transform: translateY(-50%); }
+}
+
+/* Override LFD card defaults to blend with hero */
+.hero-lfd-group .lfd {
+    --lfd-bg: rgba(8, 18, 36, 0.72);
+    --lfd-border: rgba(232, 84, 26, 0.35);
+    --lfd-accent: #E8541A;
+    --lfd-ok: #2DAA6E;
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(232,84,26,0.18);
+}
+
+/* ===== ABOUT — PHOTO ===== */
+.about-photo-group {
+    position: relative;
+    width: clamp(160px, 22vw, 240px);
+    height: clamp(160px, 22vw, 240px);
+    margin: 0 auto 8px;
+    flex-shrink: 0;
+}
+
+.about-photo-wrap {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    animation: photoPulseAccent 3.5s ease-in-out infinite;
+}
+
+.about-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: contrast(1.04) saturate(0.92);
+}
+
+/* live-badge reuses existing styles — just reposition relative to new parent */
+.about-photo-group .live-badge {
+    position: absolute;
+    bottom: 6%; right: 3%;
+}
+
+/* ===== RESPONSIVE — LFD card ===== */
+@media (max-width: 900px) {
+    .hero-lfd-group {
+        position: relative;
+        right: auto; top: auto;
+        transform: none;
+        animation: none;
+        width: clamp(240px, 72vw, 320px);
+        margin: 0 auto;
+        flex-shrink: 0;
+        order: 0;
+    }
+
+    .about-photo-group {
+        width: clamp(140px, 44vw, 200px);
+        height: clamp(140px, 44vw, 200px);
+    }
+}
+
+@media (max-width: 600px) {
+    /* Hero: centre everything symmetrically */
+    .hero {
+        padding-top: 52px;   /* small nav height */
+        padding-bottom: 52px;
+        gap: 14px;
+    }
+
+    .hero-lfd-group {
+        width: min(86vw, 300px);
+        margin: 0;
+    }
+
+    .about-photo-group {
+        width: clamp(130px, 50vw, 180px);
+        height: clamp(130px, 50vw, 180px);
+    }
+}
 
 /* ── Reduced motion: everything instant ── */
 @media (prefers-reduced-motion: reduce) {

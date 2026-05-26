@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Live Field Data — standalone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="live-field-data.css">
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0A172A;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 40px;
+  }
+  .demo-wrap { width: 320px; }
+</style>
+</head>
+<body>
+
+  <div class="demo-wrap">
+    <!-- Drop-in markup. The script below populates the dynamic bits. -->
+    <div class="lfd" data-lfd>
+      <div class="lfd-header">
+        <span class="lfd-dot"></span>
+        LIVE FIELD DATA
+        <span class="lfd-time" data-lfd-time>--:--</span>
+      </div>
+      <div class="lfd-rows">
+        <div class="lfd-row">
+          <span class="lfd-label">STATUS</span>
+          <span class="lfd-value lfd-value--ok">OPERATIONAL</span>
+        </div>
+        <div class="lfd-row">
+          <span class="lfd-label">MONITORING</span>
+          <span class="lfd-value" data-lfd-monitoring>3 SITES</span>
+        </div>
+        <div class="lfd-row">
+          <span class="lfd-label">RISK INDEX</span>
+          <span class="lfd-value lfd-value--ok" data-lfd-risk>STABLE</span>
+        </div>
+        <div class="lfd-row">
+          <span class="lfd-label">REGION</span>
+          <span class="lfd-value">ATTICA · GR</span>
+        </div>
+      </div>
+      <div class="lfd-mini">
+        <svg class="lfd-sparkline" viewBox="0 0 100 30" preserveAspectRatio="none">
+          <polyline data-lfd-spark fill="none" stroke="var(--lfd-accent, #E85A1A)"
+                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <div class="lfd-mini-label">INCIDENT RATE · 12M ↓ 38%</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="live-field-data.js"></script>
+</body>
+</html>

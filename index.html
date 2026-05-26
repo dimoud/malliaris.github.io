@@ -302,9 +302,10 @@
     }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="live-field-data/live-field-data.css">
     <link rel="stylesheet" href="expertease-credit.css">
 </head>
 <body>
@@ -365,15 +366,38 @@
         <div class="hero-overlay"></div>
         <div class="hero-hex" aria-hidden="true"></div>
 
-        <div class="hero-photo-group">
-            <div class="hero-photo-wrap" style="cursor:pointer" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-                <img src="Image 1.2.png" alt="Σταύρος Μάλλιαρης" class="hero-photo"
-                     style="object-position: center top;"
-                     loading="eager" fetchpriority="high"
-                     onerror="this.src='Image 1.png'; this.onerror=null;">
-            </div>
-            <div class="live-badge">
-                <span class="live-dot"></span>live
+        <div class="hero-lfd-group">
+            <div class="lfd" data-lfd>
+                <div class="lfd-header">
+                    <span class="lfd-dot"></span>
+                    LIVE FIELD DATA
+                    <span class="lfd-time" data-lfd-time>--:--</span>
+                </div>
+                <div class="lfd-rows">
+                    <div class="lfd-row">
+                        <span class="lfd-label">STATUS</span>
+                        <span class="lfd-value lfd-value--ok">OPERATIONAL</span>
+                    </div>
+                    <div class="lfd-row">
+                        <span class="lfd-label">MONITORING</span>
+                        <span class="lfd-value" data-lfd-monitoring>3 SITES</span>
+                    </div>
+                    <div class="lfd-row">
+                        <span class="lfd-label">RISK INDEX</span>
+                        <span class="lfd-value lfd-value--ok" data-lfd-risk>STABLE</span>
+                    </div>
+                    <div class="lfd-row">
+                        <span class="lfd-label">REGION</span>
+                        <span class="lfd-value">ATTICA · GR</span>
+                    </div>
+                </div>
+                <div class="lfd-mini">
+                    <svg class="lfd-sparkline" viewBox="0 0 100 30" preserveAspectRatio="none">
+                        <polyline data-lfd-spark fill="none" stroke="var(--lfd-accent, #E85A1A)"
+                                  stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <div class="lfd-mini-label">INCIDENT RATE · 12M ↓ 38%</div>
+                </div>
             </div>
         </div>
 
@@ -476,6 +500,19 @@
             </div>
 
             <div class="about-aside" data-reveal>
+                <!-- Photo moved from hero -->
+                <div class="about-photo-group">
+                    <div class="about-photo-wrap" style="cursor:pointer" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                        <img src="Image 1.2.png" alt="Σταύρος Μάλλιαρης" class="about-photo"
+                             style="object-position: center top;"
+                             loading="lazy"
+                             onerror="this.src='Image 1.png'; this.onerror=null;">
+                    </div>
+                    <div class="live-badge">
+                        <span class="live-dot"></span>live
+                    </div>
+                </div>
+
                 <!-- Safety Quiz Game -->
                 <div class="sq-gauge-block" id="complianceGauge">
                     <div class="sq-gauge-title" id="sqGaugeTitle"><strong>ΤΟ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΣΑΣ</strong></div>
@@ -1147,6 +1184,7 @@
         })();
 
     </script>
+    <script src="live-field-data/live-field-data.js" defer></script>
     <script src="eng-animations.js"></script>
     <script src="safety-animations.js"></script>
     <script src="i18n.js"></script>
