@@ -188,7 +188,8 @@
             el: 'Μιλήστε <em>μαζί μας</em>',
             en: 'Let\'s <em>talk</em>',
         },
-        'contact.role':    { el: 'Τεχνικός Ασφαλείας — MEng, ASP®', en: 'Safety Technician — MEng, ASP®' },
+        'contact.role':    { el: 'Σύμβουλος Υγείας και Ασφάλειας', en: 'Health & Safety Consultant' },
+        'contact.role2':   { el: 'Πολιτικός Μηχανικός, MEng, ASP®', en: 'Civil Engineer, MEng, ASP®' },
         'contact.calendly':{ el: 'ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ',                  en: 'BOOK APPOINTMENT' },
 
         /* FORM */
@@ -308,7 +309,7 @@
         'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & Abroad' },
 
         /* NAME */
-        'name.stavros': { el: 'ΜΑΛΛΙΑΡΗΣ & ΣΥΝΕΡΓΑΤΕΣ', en: 'MALLIARIS & PARTNERS' },
+        'name.stavros': { el: 'ΜΑΛΛΙΑΡΗΣ ΣΤΑΥΡΟΣ', en: 'MALLIARIS STAVROS' },
 
         /* HOVER HINT */
         'hint.hover': { el: 'HOVER ΓΙΑ ΠΑΥΣΗ', en: 'HOVER TO PAUSE' },
