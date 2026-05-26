@@ -21,7 +21,7 @@
     const t = {
 
         /* NAV */
-        'nav.title':    { el: 'Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
+        'nav.title':    { el: 'Σύμβουλοι Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
         'nav.about':    { el: 'Σχετικά',                      en: 'About' },
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
@@ -267,7 +267,7 @@
         'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & Abroad' },
 
         /* NAME */
-        'name.stavros': { el: 'Μάλλιαρης & Συνεργάτες', en: 'MALLIARIS & PARTNERS' },
+        'name.stavros': { el: 'ΜΑΛΛΙΑΡΗΣ & ΣΥΝΕΡΓΑΤΕΣ', en: 'MALLIARIS & PARTNERS' },
 
         /* HOVER HINT */
         'hint.hover': { el: 'HOVER ΓΙΑ ΠΑΥΣΗ', en: 'HOVER TO PAUSE' },
