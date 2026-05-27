@@ -158,8 +158,8 @@
             pts: 14
         },
         {
-            el: 'Συνεργάζεστε με τον Σταύρο Μάλλιαρη;',
-            en: 'Do you work with Stavros Malliaris?',
+            el: 'Συνεργάζεστε με την Μάλλιαρης & Συνεργάτες;',
+            en: 'Do you work with Malliaris & Partners?',
             pts: 30,
             stavros: true
         }
@@ -216,7 +216,7 @@
     }
 
     function makeBadgeHtml(lang) {
-        return '<span class="sq-stavros-badge">' + (lang === 'el' ? '⭐ Κλειδί' : '⭐ Key') + '</span>';
+        return '<span class="sq-stavros-badge">' + (lang === 'el' ? '⭐ Ερώτηση Κλειδί' : '⭐ Key Question') + '</span>';
     }
 
     function buildQuiz() {

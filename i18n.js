@@ -49,7 +49,7 @@
         /* MARQUEE */
         'marquee.m1': { el: 'Τεχνικός Ασφαλείας',                              en: 'Safety Technician' },
         'marquee.m2': { el: 'ΓΡΑΠΤΗ Εκτίμηση Επαγγελματικού Κινδύνου',        en: 'WRITTEN Risk Assessment (ΓΕΕΚ)' },
-        'marquee.m3': { el: 'Σχέδια Εκκένωσης',                               en: 'Evacuation Plans' },
+        'marquee.m3': { el: 'Σχέδια Διαφυγής',                                en: 'Escape Plans' },
         'marquee.m4': { el: 'Εκπαιδεύσεις Υ&Α',                              en: 'H&S Training' },
         'marquee.m7': { el: 'ΔΙΕΡΕΥΝΗΣΗ ΕΡΓΑΤΙΚΩΝ ΑΤΥΧΗΜΑΤΩΝ',                en: 'WORKPLACE ACCIDENT INVESTIGATION' },
         'marquee.m8': { el: 'ΣΧΕΔΙΑ ΕΚΚΕΝΩΣΗΣ',                              en: 'EVACUATION PLANS' },
@@ -152,7 +152,7 @@
             en: 'We investigate all types of workplace accidents with full confidentiality, including Root Cause Analysis, corrective action recommendations, and accident report preparation.',
         },
 
-        's5.title': { el: 'Εκπόνηση Σχεδίων Εκκένωσης', en: 'Evacuation Plan Design' },
+        's5.title': { el: 'Εκπόνηση Σχεδίων Διαφυγής', en: 'Escape Plan Design' },
         's5.text':  {
             el: 'Μελέτη, σχεδιασμός και αποτύπωση Σχεδίων Διαφυγής και Εκκένωσης — βασικό εργαλείο συμμόρφωσης με Πυροσβεστική Υπηρεσία και εργατική νομοθεσία.',
             en: 'Study, design and documentation of Escape and Evacuation Plans — a key compliance tool for Fire Service and labour legislation.',
@@ -205,7 +205,7 @@
         'form.opt.2':          { el: 'ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Occupational Risk Assessment Study (GEEK)' },
         'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                                     en: 'H&S Training' },
         'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',                       en: 'Accident Investigation' },
-        'form.opt.5':          { el: 'Σχέδια Εκκένωσης',                                      en: 'Evacuation Plans' },
+        'form.opt.5':          { el: 'Σχέδια Διαφυγής',                                        en: 'Escape Plans' },
         'form.opt.6':          { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ',                      en: 'Labour Inspectorate (SEPE) Audit Prep' },
         'form.opt.7':          { el: 'Άλλο',                                                  en: 'Other' },
         'form.label.message':  { el: 'Μήνυμα',                   en: 'Message' },
@@ -278,7 +278,7 @@
             el: '«Στόχος μας είναι η μετατροπή της ασφάλειας από τυπική υποχρέωση σε ουσιαστικό πλεονέκτημα για την επιχείρησή σας»',
             en: '"Our goal is to transform safety from a formal obligation into a real competitive advantage for your business."',
         },
-        'quote.author': { el: 'Σταύρος Μάλλιαρης — Μηχανικός Υγείας και Ασφάλειας, MEng, ASP®', en: 'Stavros Malliaris — H&S Engineer, MEng, ASP®' },
+        'quote.author': { el: 'Σταύρος Μάλλιαρης - Πολιτικός Μηχανικός ΑΠΘ, MEng, ASP®', en: 'Stavros Malliaris - Civil Engineer AUTh, MEng, ASP®' },
 
         /* RESOURCES */
         'res1.title': { el: 'ΕΛΙΝΥΑΕ', en: 'ELINYAE' },

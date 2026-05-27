@@ -2954,8 +2954,7 @@ footer {
     }
 
     .hero-lfd-group {
-        width: min(86vw, 300px);
-        margin: 0;
+        display: none;
     }
 
     .about-photo-group {
