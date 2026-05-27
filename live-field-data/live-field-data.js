@@ -5,7 +5,7 @@
 // Markup contract (see preview.html for the full template):
 //   [data-lfd]              wrapper element
 //   [data-lfd-time]         clock text node       (HH:MM, 24h)
-//   [data-lfd-monitoring]   "N SITES" text node   (rotates 3-9)
+//   [data-lfd-monitoring]   location name text node (cycles through MONITORING_LOCATIONS)
 //   [data-lfd-risk]         risk index text node  ("STABLE" / "LOW")
 //   [data-lfd-spark]        <polyline> in the SVG sparkline
 //
@@ -32,6 +32,11 @@
     el.textContent = `${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
   }
 
+  const MONITORING_LOCATIONS = [
+    "ELLINIKON", "PAIANIA", "GLYFADA", "ALIMOS",
+    "KYPSELI", "PAGKRATI", "LARISSA"
+  ];
+
   function init(root) {
     if (root.__lfdInit) return;
     root.__lfdInit = true;
@@ -46,7 +51,7 @@
 
     let tick = 0;
     function step() {
-      if (monEl)   monEl.textContent  = `${(tick % 7) + 3} SITES`;
+      if (monEl)   monEl.textContent  = MONITORING_LOCATIONS[tick % MONITORING_LOCATIONS.length];
       if (riskEl)  riskEl.textContent = tick % 4 === 0 ? "LOW" : "STABLE";
       if (sparkEl) sparkEl.setAttribute("points", buildSparkPoints(tick));
       tick++;

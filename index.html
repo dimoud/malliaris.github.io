@@ -478,53 +478,79 @@
                         </svg>
                     </div>
                 </div>
-                <div class="about-bio" data-reveal style="display:flex;flex-direction:column;gap:1.1em;margin-top:2em;font-size:0.95em;">
-                    <p data-i18n="about.bio.p1">Η εταιρεία ιδρύθηκε το 2026, ως απάντηση στις αυξανόμενες ανάγκες για ουσιαστική ασφάλεια στους χώρους εργασίας των ελληνικών επιχειρήσεων, με έναν ξεκάθαρο στόχο: κάθε εργαζόμενος να επιστρέφει ασφαλής στο σπίτι του.</p>
-
-                    <p data-i18n-html="about.bio.p2" class="about-bio-p2">Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες Υγείας &amp; Ασφάλειας στην Εργασία, με τεχνική υποστήριξη, διαχείριση επαγγελματικού κινδύνου και ολοκληρωμένες συμβουλευτικές λύσεις προσαρμοσμένες σε κάθε έργο.</p>
-
-                    <p data-i18n="about.bio.p3">Από εργοτάξια έως ιδιωτικές επιχειρήσεις, η προσέγγιση βασίζεται στην πρόληψη, την οργάνωση και τη δημιουργία ασφαλών και αποδοτικών χώρων εργασίας.</p>
-
-                    <p><em data-i18n="about.bio.p4">Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.</em></p>
-
-                    <!-- Timeline -->
-                    <div style="width:100%;margin-top:2.5em;position:relative;">
-                        <!-- Rail -->
-                        <div style="position:absolute;top:18px;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent) 80%,transparent);opacity:0.25;border-radius:2px;"></div>
-
-                        <div style="display:flex;justify-content:space-between;align-items:flex-start;position:relative;">
-
-                            <!-- Node 1: Μάρτιος 2026 — Ίδρυση -->
-                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
-                                <div data-i18n="about.tl.m1" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΜΑΡ 2026</div>
-                                <div style="width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(232,84,26,0.18);flex-shrink:0;"></div>
-                                <div data-i18n="about.tl.n1" style="font-size:0.65em;color:currentColor;opacity:0.6;text-align:center;line-height:1.3;">Ίδρυση</div>
-                            </div>
-
-                            <!-- Node 2: Απρίλιος 2026 — Πρώτοι Πελάτες -->
-                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
-                                <div data-i18n="about.tl.m2" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΑΠΡ 2026</div>
-                                <div style="width:12px;height:12px;border-radius:50%;background:var(--accent);opacity:0.7;box-shadow:0 0 0 3px rgba(232,84,26,0.12);flex-shrink:0;margin:1px;"></div>
-                                <div style="font-size:0.65em;color:currentColor;opacity:0.6;text-align:center;line-height:1.3;"><span data-i18n="about.tl.n2.l1">Πρώτοι</span><br><span data-i18n="about.tl.n2.l2">Πελάτες</span></div>
-                            </div>
-
-                            <!-- Node 3: Μάιος 2026 — Επέκταση -->
-                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
-                                <div data-i18n="about.tl.m3" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΜΑΙ 2026</div>
-                                <div style="width:12px;height:12px;border-radius:50%;background:var(--accent);opacity:0.7;box-shadow:0 0 0 3px rgba(232,84,26,0.12);flex-shrink:0;margin:1px;"></div>
-                                <div style="font-size:0.65em;color:currentColor;opacity:0.6;text-align:center;line-height:1.3;"><span data-i18n="about.tl.n3.l1">Επέκταση</span><br><span data-i18n="about.tl.n3.l2">Υπηρεσιών</span></div>
-                            </div>
-
-                            <!-- Node 4: Σήμερα -->
-                            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
-                                <div data-i18n="about.tl.m4" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΣΗΜΕΡΑ</div>
-                                <div style="width:14px;height:14px;border-radius:50%;background:transparent;border:2px solid var(--accent);box-shadow:0 0 0 3px rgba(232,84,26,0.18);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
-                                    <div style="width:5px;height:5px;border-radius:50%;background:var(--accent);"></div>
-                                </div>
-                                <div data-i18n="about.tl.n4" style="font-size:0.65em;color:var(--accent);font-weight:600;text-align:center;line-height:1.3;">Εν εξελίξει</div>
-                            </div>
-
+                <!-- Mobile accordions — hidden on desktop -->
+                <div class="about-accordion-wrap">
+                    <div class="about-accordion">
+                        <button class="about-acc-btn" onclick="toggleAcc(this)">
+                            <span>Το Αντικείμενο</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="about-acc-body">
+                            <p>Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Σύνταξη ΓΕΕΚ.</p>
                         </div>
+                    </div>
+                    <div class="about-accordion">
+                        <button class="about-acc-btn" onclick="toggleAcc(this)">
+                            <span>Ίδρυση, Σκοπός και Όραμα</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="about-acc-body">
+                            <p>Η εταιρεία μας ιδρύθηκε το 2026, συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, την βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι <strong>αυξανόμενες ανάγκες για ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.</p>
+                        </div>
+                    </div>
+                    <div class="about-accordion">
+                        <button class="about-acc-btn" onclick="toggleAcc(this)">
+                            <span>Οι Δεσμεύσεις μας</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="about-acc-body">
+                            <p>Πιστεύουμε ότι η ασφάλεια δεν θα 'πρεπε να κοστίζει ακριβά, αντιθέτως θα 'πρεπε να βοηθάει την παραγωγή και την βιωσιμότητα της επιχείρησης. Σεβόμαστε τον προϋπολογισμό σας, δίνουμε βάρος στην πρόληψη και προτείνουμε πρακτικές λύσεις με μεγάλο αντίκρεισμα.</p>
+                            <p style="margin-top:1em;"><em>Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-bio" data-reveal style="display:flex;flex-direction:column;gap:1.1em;margin-top:2em;font-size:clamp(14px, 1.3vw, 16px);line-height:1.7;color:var(--slate);">
+                    <p data-i18n-html="about.bio.p1"></p>
+                </div>
+
+                <!-- Timeline -->
+                <div style="width:100%;margin-top:2.5em;position:relative;">
+                    <!-- Rail -->
+                    <div style="position:absolute;top:18px;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent) 80%,transparent);opacity:0.25;border-radius:2px;"></div>
+
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;position:relative;">
+
+                        <!-- Node 1: Μάρτιος 2026 — Ίδρυση -->
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                            <div data-i18n="about.tl.m1" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΜΑΡ 2026</div>
+                            <div style="width:14px;height:14px;border-radius:50%;background:#192744;box-shadow:0 0 0 3px rgba(25,39,68,0.18);flex-shrink:0;"></div>
+                            <div data-i18n="about.tl.n1" style="font-size:0.65em;color:#E8541A;text-align:center;line-height:1.3;">Ίδρυση</div>
+                        </div>
+
+                        <!-- Node 2: Απρίλιος 2026 — Πρώτοι Πελάτες -->
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                            <div data-i18n="about.tl.m2" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΑΠΡ 2026</div>
+                            <div style="width:14px;height:14px;border-radius:50%;background:#192744;box-shadow:0 0 0 3px rgba(25,39,68,0.18);flex-shrink:0;"></div>
+                            <div style="font-size:0.65em;color:#E8541A;text-align:center;line-height:1.3;"><span data-i18n="about.tl.n2.l1">Πρώτοι</span><br><span data-i18n="about.tl.n2.l2">Πελάτες</span></div>
+                        </div>
+
+                        <!-- Node 3: Μάιος 2026 — Επέκταση -->
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                            <div data-i18n="about.tl.m3" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΜΑΙ 2026</div>
+                            <div style="width:14px;height:14px;border-radius:50%;background:#192744;box-shadow:0 0 0 3px rgba(25,39,68,0.18);flex-shrink:0;"></div>
+                            <div style="font-size:0.65em;color:#E8541A;text-align:center;line-height:1.3;"><span data-i18n="about.tl.n3.l1">Επέκταση</span><br><span data-i18n="about.tl.n3.l2">Υπηρεσιών</span></div>
+                        </div>
+
+                        <!-- Node 4: Σήμερα -->
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+                            <div data-i18n="about.tl.m4" style="font-size:0.65em;font-weight:700;color:var(--accent);letter-spacing:0.04em;white-space:nowrap;">ΣΗΜΕΡΑ</div>
+                            <div style="width:14px;height:14px;border-radius:50%;background:transparent;border:2px solid #192744;box-shadow:0 0 0 3px rgba(25,39,68,0.18);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+                                <div style="width:5px;height:5px;border-radius:50%;background:#192744;"></div>
+                            </div>
+                            <div data-i18n="about.tl.n4" style="font-size:0.65em;color:#E8541A;font-weight:600;text-align:center;line-height:1.3;">Εν εξελίξει</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1179,18 +1205,10 @@
                 </div>
             </div>
             <div class="footer-links">
-                <a href="#about" data-i18n="nav.about">Σχετικά</a>
-                <a href="#services" data-i18n="nav.services">Υπηρεσίες</a>
-                <a href="#sectors" data-i18n="nav.sectors">Τομείς</a>
-                <a href="#contact" data-i18n="nav.contact">Επικοινωνία</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-socials">
-                <a href="mailto:info@stavrosmalliaris.gr" class="social-link" title="Email Σταύρος Μάλλιαρης — Τεχνικός Ασφαλείας" rel="me">
+                <a href="mailto:info@stavrosmalliaris.gr" class="social-link" title="Email" rel="me">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
-                <a href="tel:+306976984845" class="social-link" title="Τηλέφωνο Σταύρος Μάλλιαρης — Τεχνικός Ασφαλείας" rel="me">
+                <a href="tel:+306976984845" class="social-link" title="Τηλέφωνο" rel="me">
                     <i class="fa-solid fa-phone"></i>
                 </a>
                 <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="social-link" title="Calendly">
@@ -1198,7 +1216,6 @@
                 </a>
             </div>
         </div>
-
         <!-- EXPERTEASE CREDIT BANNER — modular component (expertease-credit.css) -->
         <hr class="ec-rule">
         <div class="expertease-credit">
@@ -1228,6 +1245,19 @@
 
     <script>
         /* Mobile menu */
+        function toggleAcc(btn) {
+            const body = btn.nextElementSibling;
+            const isOpen = btn.classList.contains('open');
+            document.querySelectorAll('.about-acc-btn.open').forEach(b => {
+                b.classList.remove('open');
+                b.nextElementSibling.classList.remove('open');
+            });
+            if (!isOpen) {
+                btn.classList.add('open');
+                body.classList.add('open');
+            }
+        }
+
         function toggleMenu() {
             const menu = document.getElementById('navLinks');
             const hbg  = document.getElementById('hamburger');

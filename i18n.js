@@ -76,20 +76,20 @@
             en: 'Company Profile',
         },
         'about.bio.p1': {
-            el: 'Η εταιρεία ιδρύθηκε το 2026, ως απάντηση στις αυξανόμενες ανάγκες για ουσιαστική ασφάλεια στους χώρους εργασίας των ελληνικών επιχειρήσεων, με έναν ξεκάθαρο στόχο: κάθε εργαζόμενος να επιστρέφει ασφαλής στο σπίτι του.',
-            en: 'The company was founded in 2026, in response to the growing need for meaningful workplace safety in Greek businesses, with one clear goal: every employee returns home safe.',
+            el: 'Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Σύνταξη ΓΕΕΚ.<br><br>Η εταιρεία μας ιδρύθηκε το 2026, συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, την βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι αυξανόμενες ανάγκες για <strong>ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.<br><br>Πιστεύουμε ότι η ασφάλεια δεν θα \'πρεπε να κοστίζει ακριβά, αντιθέτως θα \'πρεπε να βοηθάει την παραγωγή και την βιωσιμότητα της επιχείρησης. Σεβόμαστε τον προϋπολογισμό σας, δίνουμε βάρος στην πρόληψη και προτείνουμε πρακτικές λύσεις με μεγάλο αντίκρεισμα.<br><br>Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.',
+            en: 'Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician coverage to Staff Training and Written Risk Assessment (ΓΕΕΚ).<br><br>Our company was founded in 2026, bringing together engineers with over a decade of experience in construction, industry and services. The driving force was the growing need for meaningful safety in Greek workplaces. The goal is clear: every employee returns home safe.<br><br>We believe safety should not be expensive — on the contrary, it should support production and business sustainability. We respect each company\'s budget, focus on prevention and propose practical, high-impact solutions.<br><br>Because real safety always starts from the right foundations.',
         },
         'about.bio.p2': {
-            el: 'Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες Υγείας &amp; Ασφάλειας στην Εργασία, με τεχνική υποστήριξη, διαχείριση επαγγελματικού κινδύνου και ολοκληρωμένες συμβουλευτικές λύσεις προσαρμοσμένες σε κάθε έργο.',
-            en: 'Stavros Malliaris and his partners provide specialised Occupational Health &amp; Safety services, including technical support, risk management and comprehensive consulting solutions tailored to each project.',
+            el: '',
+            en: '',
         },
         'about.bio.p3': {
-            el: 'Από εργοτάξια έως ιδιωτικές επιχειρήσεις, η προσέγγιση βασίζεται στην πρόληψη, την οργάνωση και τη δημιουργία ασφαλών και αποδοτικών χώρων εργασίας.',
-            en: 'From construction sites to private businesses, our approach is based on prevention, organisation and the creation of safe, productive work environments.',
+            el: '',
+            en: '',
         },
         'about.bio.p4': {
-            el: 'Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.',
-            en: 'Because real safety always starts from the right foundations.',
+            el: '',
+            en: '',
         },
         'about.tl.m1': { el: 'ΜΑΡ 2026', en: 'MAR 2026' },
         'about.tl.n1': { el: 'Ίδρυση',   en: 'Founded' },
