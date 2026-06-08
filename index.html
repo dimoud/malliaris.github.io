@@ -486,7 +486,7 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
                         <div class="about-acc-body">
-                            <p>Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Σύνταξη ΓΕΕΚ.</p>
+                            <p>Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας και Συντονιστή Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Εκτιμήσεις Επαγγελματικού Κινδύνου.</p>
                         </div>
                     </div>
                     <div class="about-accordion">
@@ -495,7 +495,7 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
                         <div class="about-acc-body">
-                            <p>Η εταιρεία μας ιδρύθηκε το 2026, συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, την βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι <strong>αυξανόμενες ανάγκες για ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.</p>
+                            <p>Η εταιρεία μας ιδρύθηκε συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, την βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι <strong>αυξανόμενες ανάγκες για ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.</p>
                         </div>
                     </div>
                     <div class="about-accordion">
@@ -510,12 +510,16 @@
                     </div>
                 </div>
 
-                <div class="about-bio" data-reveal style="display:flex;flex-direction:column;gap:1.1em;margin-top:2em;font-size:clamp(14px, 1.3vw, 16px);line-height:1.7;color:var(--slate);">
-                    <p data-i18n-html="about.bio.p1"></p>
+                <div class="about-bio-frame">
+                    <div class="about-bio" data-reveal style="display:flex;flex-direction:column;gap:1.1em;font-size:clamp(14px, 1.3vw, 16px);line-height:1.7;color:var(--slate);">
+                        <p data-i18n-html="about.bio.p1"></p>
+                    </div>
+                    <span class="about-bio-corner-bl" aria-hidden="true"></span>
+                    <span class="about-bio-corner-br" aria-hidden="true"></span>
                 </div>
 
                 <!-- Timeline -->
-                <div style="width:100%;margin-top:2.5em;position:relative;">
+                <div class="about-timeline-wrap">
                     <!-- Rail -->
                     <div style="position:absolute;top:18px;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),var(--accent) 80%,transparent);opacity:0.25;border-radius:2px;"></div>
 
@@ -555,31 +559,6 @@
                 </div>
             </div>
 
-            <div class="about-aside" data-reveal>
-                <!-- Safety Quiz Game — hidden, to be moved to a separate page -->
-                <div class="sq-gauge-block" id="complianceGauge">
-                    <div class="sq-gauge-title" id="sqGaugeTitle"><strong style="font-size:1.25em;">ΤΙ ΕΠΙΠΕΔΟ ΑΣΦΑΛΕΙΑΣ ΕΧΕΤΕ;</strong></div>
-                    <svg class="sq-gauge-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 28 100 A 72 72 0 0 1 172 100"
-                              stroke="#DDE5EE" stroke-width="10" stroke-linecap="round" fill="none"/>
-                        <path id="gaugeArcFill" d="M 28 100 A 72 72 0 0 1 172 100"
-                              stroke="#E8541A" stroke-width="10" stroke-linecap="round" fill="none"
-                              style="stroke-dasharray:0 226.195; stroke-dashoffset:0"/>
-                        <line id="gaugeNeedle" x1="100" y1="100" x2="100" y2="34"
-                              stroke="#0F1929" stroke-width="2" stroke-linecap="round"
-                              transform="rotate(-90 100 100)"/>
-                        <circle cx="100" cy="100" r="5" fill="#0F1929" opacity="0.65"/>
-                        <text id="gaugeValue" x="100" y="88"
-                              text-anchor="middle"
-                              font-family="Space Grotesk,sans-serif" font-size="22" font-weight="700"
-                              fill="#0F1929">0%</text>
-                    </svg>
-                    <p class="sq-status" id="sqStatus"></p>
-                </div>
-
-                <!-- Quiz questions — populated by safety-animations.js -->
-                <div class="sq-questions" id="sqQuestions"></div>
-            </div>
         </div>
     </section>
 
@@ -1105,6 +1084,83 @@
         </div>
     </section>
 
+    <!-- ===== SAFETY QUIZ ===== -->
+    <section class="sqz-section" id="safety-quiz" aria-label="Κουίζ Ασφάλειας — Εκτίμηση Επιπέδου">
+        <canvas id="sqzCanvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+        <div class="sqz-intro" id="sqzIntro">
+            <div class="sqz-intro-left">
+                <span class="sqz-intro-eyebrow">Αυτοαξιολόγηση Ασφάλειας</span>
+                <p class="sqz-intro-question">Εσείς τι επίπεδο<br>ασφάλειας έχετε;</p>
+            </div>
+            <div class="sqz-intro-right">
+                <button class="sqz-start-btn" id="sqzStartBtn" onclick="SQZ.start()">Κάντε το κουίζ</button>
+                <p class="sqz-intro-meta"><i class="fa-regular fa-clock"></i> Ανώνυμο &amp; Σύντομο</p>
+            </div>
+        </div>
+
+        <div class="sqz-game" id="sqzGame" style="display:none;">
+            <!-- Col 1: Question + options -->
+            <div class="sqz-col sqz-col-question" id="sqzLeft">
+                <div class="sqz-step-label" id="sqzStepLabel"></div>
+                <p class="sqz-question-text" id="sqzQText"></p>
+                <div class="sqz-options" id="sqzOptions"></div>
+            </div>
+            <!-- Col 2: Image -->
+            <div class="sqz-col sqz-col-img">
+                <div class="sqz-question-img-wrap" id="sqzImgWrap">
+                    <img id="sqzQImg" src="" alt="" class="sqz-question-img">
+                </div>
+            </div>
+            <!-- Col 3: Progress bar -->
+            <div class="sqz-col sqz-col-progress" id="sqzRight">
+                <div class="sqz-progress-label" id="sqzProgressLabel">0 / 5</div>
+                <div class="sqz-progress-track">
+                    <div class="sqz-progress-fill" id="sqzProgressFill" style="width:0%"></div>
+                </div>
+                <div class="sqz-progress-steps" id="sqzProgressSteps"></div>
+            </div>
+            <!-- Col 4: Score ring -->
+            <div class="sqz-col sqz-col-ring">
+                <div class="sqz-score-ring-wrap">
+                    <svg class="sqz-score-ring" viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="32" stroke="#DDE5EE" stroke-width="6" fill="none"/>
+                        <circle id="sqzRingFill" cx="40" cy="40" r="32"
+                            stroke="var(--accent)" stroke-width="6" fill="none"
+                            stroke-linecap="round"
+                            stroke-dasharray="201.06" stroke-dashoffset="201.06"
+                            transform="rotate(-90 40 40)"/>
+                    </svg>
+                    <span class="sqz-score-pct" id="sqzScorePct">0%</span>
+                </div>
+                <p class="sqz-score-hint">Επίπεδο<br>ασφάλειάς σας</p>
+            </div>
+        </div>
+
+        <div class="sqz-result" id="sqzResult" style="display:none;">
+            <div class="sqz-result-inner">
+                <div class="sqz-result-ring-wrap">
+                    <svg class="sqz-result-ring" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="50" stroke="#DDE5EE" stroke-width="8" fill="none"/>
+                        <circle id="sqzResultRing" cx="60" cy="60" r="50"
+                            stroke="var(--accent)" stroke-width="8" fill="none"
+                            stroke-linecap="round"
+                            stroke-dasharray="314.16" stroke-dashoffset="314.16"
+                            transform="rotate(-90 60 60)"/>
+                    </svg>
+                    <span class="sqz-result-pct" id="sqzResultPct">0%</span>
+                </div>
+                <div class="sqz-result-text-col">
+                    <p class="sqz-result-verdict" id="sqzResultVerdict"></p>
+                    <p class="sqz-result-msg" id="sqzResultMsg"></p>
+                    <div class="sqz-result-actions">
+                        <a href="#contact" class="btn-accent sqz-result-cta">Ζητήστε Προσφορά</a>
+                        <button class="sqz-retry-btn" onclick="SQZ.restart()">Ξαναδοκιμάστε</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== CONTACT ===== -->
     <section class="contact-section" id="contact" aria-label="Επικοινωνία με Τεχνικό Ασφαλείας — Σταύρος Μάλλιαρης">
         <div class="contact-header">
@@ -1321,6 +1377,7 @@
     <script src="live-field-data/live-field-data.js" defer></script>
     <script src="eng-animations.js"></script>
     <script src="safety-animations.js"></script>
+    <script src="quiz.js"></script>
     <script src="i18n.js"></script>
     <script src="contact-form.js" defer></script>
 
@@ -1956,6 +2013,55 @@
             }, {threshold: 0.3});
             io.observe(goal);
         } else { runCounters(); }
+    })();
+    </script>
+
+    <!-- ===== QUIZ SECTION CANVAS ===== -->
+    <script>
+    (function(){
+        var canvas = document.getElementById('sqzCanvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var W, H, pts = [];
+        var N = 50, MAX_D = 140, SPEED = 0.25;
+
+        function resize() {
+            var section = canvas.parentElement;
+            W = canvas.width  = section.offsetWidth;
+            H = canvas.height = section.offsetHeight;
+        }
+        function mkPt() {
+            var a = Math.random() * Math.PI * 2, s = SPEED * (0.4 + Math.random());
+            return { x: Math.random() * W, y: Math.random() * H, vx: Math.cos(a)*s, vy: Math.sin(a)*s };
+        }
+        function init() { resize(); pts = Array.from({length:N}, mkPt); }
+        function tick() {
+            ctx.clearRect(0, 0, W, H);
+            for (var i = 0; i < pts.length; i++) {
+                var p = pts[i];
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0) p.x = W; else if (p.x > W) p.x = 0;
+                if (p.y < 0) p.y = H; else if (p.y > H) p.y = 0;
+                for (var j = i+1; j < pts.length; j++) {
+                    var q = pts[j], dx = p.x-q.x, dy = p.y-q.y, d = Math.sqrt(dx*dx+dy*dy);
+                    if (d < MAX_D) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+                        ctx.strokeStyle = 'rgba(232,84,26,' + (0.18 * (1 - d/MAX_D)) + ')';
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 1.5, 0, Math.PI*2);
+                ctx.fillStyle = 'rgba(232,84,26,0.35)';
+                ctx.fill();
+            }
+            requestAnimationFrame(tick);
+        }
+        init();
+        tick();
+        window.addEventListener('resize', function(){ resize(); }, {passive:true});
     })();
     </script>
 
