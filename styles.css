@@ -694,17 +694,17 @@ nav.scrolled {
 /* Sub-member cards */
 .team-sub-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 .team-sub-card {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 14px;
     background: var(--white);
     border: 1.5px solid var(--fog2);
     border-radius: 16px;
-    padding: 24px 28px;
+    padding: 20px 20px;
     box-shadow: 0 4px 24px rgba(15,25,41,0.06);
 }
 .team-sub-photo-wrap { flex-shrink: 0; }
@@ -720,8 +720,8 @@ nav.scrolled {
     font-size: 28px;
 }
 .team-sub-photo-circle {
-    width: 72px;
-    height: 72px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     border: 1.5px solid var(--ink);
@@ -733,6 +733,15 @@ nav.scrolled {
     gap: 4px;
     min-width: 0;
 }
+.team-sub-body .team-profile-role {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.team-sub-body .team-profile-role--normal-spacing {
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 12px;
+}
 .team-sub-name {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
@@ -742,11 +751,14 @@ nav.scrolled {
     line-height: 1.2;
 }
 .team-sub-bio {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--slate);
-    line-height: 1.65;
+    line-height: 1.5;
     margin: 4px 0 0;
     white-space: nowrap;
+}
+@media (max-width: 960px) and (min-width: 701px) {
+    .team-sub-cards { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 700px) {
     .team-sub-cards { grid-template-columns: 1fr; }
