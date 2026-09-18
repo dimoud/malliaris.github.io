@@ -158,7 +158,7 @@
             pts: 14
         },
         {
-            el: 'Συνεργάζεστε με την Μάλλιαρης & Συνεργάτες;',
+            el: 'Συνεργάζεστε με τη Μάλλιαρης & Συνεργάτες;',
             en: 'Do you work with Malliaris & Partners?',
             pts: 30,
             stavros: true
