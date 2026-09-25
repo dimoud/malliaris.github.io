@@ -57,7 +57,9 @@
       var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;
       function done() { if (timer) clearTimeout(timer); if (btn) { btn.textContent = label; btn.disabled = false; } }
 
-      fetch(GOOGLE_SCRIPT_URL, { method: 'POST', body: new FormData(form), signal: ctrl ? ctrl.signal : undefined })
+      var fd = new FormData(form);
+      fd.append('_lang', (document.documentElement.lang || 'el').slice(0, 2));   // γλώσσα του αντιγράφου προς τον πελάτη
+      fetch(GOOGLE_SCRIPT_URL, { method: 'POST', body: fd, signal: ctrl ? ctrl.signal : undefined })
         .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
         .then(function (json) {
           if (!(json && json.result === 'success')) throw new Error((json && json.error) || 'unexpected response');
