@@ -8,7 +8,7 @@ ORG_ID = DOMAIN + "/#organization"
 SITE_ID = DOMAIN + "/#website"
 PHONE_E164 = "+302110040193"
 PHONE_DISPLAY = "+30 211 0040 193"
-EMAIL = "info@stavrosmalliaris.gr"
+EMAIL = "info@malliarisandpartners.gr"
 MAP_URL = "https://share.google/xxk94ucxrcYaLiCtk"
 ADDRESS = {"@type": "PostalAddress", "streetAddress": "Δωδεκανήσου 16", "addressLocality": "Άλιμος",
            "postalCode": "17456", "addressRegion": "Αττική", "addressCountry": "GR"}

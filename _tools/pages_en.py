@@ -628,7 +628,7 @@ PAGES.append(dict(
     h1="Privacy <em>and cookies</em>",
     lead="This page explains what data the website collects, why, and how you can exercise your rights.",
     body=S("Controller", """
-<p>The controller is Malliaris &amp; Partners, Dodekanisou 16, 174 56 Alimos, Greece, tel. +30 211 0040 193, email <a href="mailto:info@stavrosmalliaris.gr">info@stavrosmalliaris.gr</a>.</p>
+<p>The controller is Malliaris &amp; Partners, Dodekanisou 16, 174 56 Alimos, Greece, tel. +30 211 0040 193, email <a href="mailto:info@malliarisandpartners.gr">info@malliarisandpartners.gr</a>.</p>
 """, "", "h-ctrl") + S("Contact form", """
 <p>When you use the contact form we receive your name, email, phone (if given), subject and message. We use them only to reply and to prepare an offer. The form is sent through a Google service (Apps Script) to our mailbox.</p>
 <p>We keep the correspondence as long as needed for your request and any resulting cooperation, and delete it when no longer needed or when you ask us to.</p>
@@ -637,7 +637,7 @@ PAGES.append(dict(
 <p>You can change your choice at any time via <a href="#" data-cc-open>Cookie settings</a>.</p>
 <p>The map on the contact section and the web fonts are loaded from Google services, which may log your IP address under their own policies.</p>
 """, "", "h-cookies") + S("Your rights", """
-<p>You have the right of access, rectification, erasure, restriction, portability and objection. Write to <a href="mailto:info@stavrosmalliaris.gr">info@stavrosmalliaris.gr</a>. If you believe we have not complied with the law, you may lodge a complaint with the Hellenic Data Protection Authority (<a href="https://www.dpa.gr/" target="_blank" rel="noopener">dpa.gr</a>).</p>
+<p>You have the right of access, rectification, erasure, restriction, portability and objection. Write to <a href="mailto:info@malliarisandpartners.gr">info@malliarisandpartners.gr</a>. If you believe we have not complied with the law, you may lodge a complaint with the Hellenic Data Protection Authority (<a href="https://www.dpa.gr/" target="_blank" rel="noopener">dpa.gr</a>).</p>
 <p class="src">Last updated: 25 September 2026</p>
 """, "", "h-rights"),
 ))
