@@ -3500,3 +3500,14 @@ footer {
     .sqz-result-cta { width: 100%; text-align: center; box-sizing: border-box; }
     .sqz-retry-btn  { width: 100%; text-align: center; box-sizing: border-box; }
 }
+
+/* ===== CONTACT MAP (αντικαθιστά το contact.gif) ===== */
+.contact-map-wrap {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+.contact-map-wrap iframe { display: block; width: 100%; height: 340px; }
+@media (max-width: 768px) { .contact-map-wrap iframe { height: 240px; } }

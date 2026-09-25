@@ -6,35 +6,39 @@
 (function () {
     'use strict';
 
+    /* Βάση διαδρομών: ο φάκελος του quiz.js, ώστε να δουλεύει και από /en/ και τοπικά */
+    var BASE = (document.currentScript && document.currentScript.src || '').replace(/[^\/]*$/, '');
+    var IMG = BASE + 'img/';
+
     var QUESTIONS = [
         {
             el: 'Έχετε εκπονήσει Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ);',
             en: 'Do you have a Written Occupational Risk Assessment (GEEK)?',
-            img: 'Risk Assessment.png',
+            img: IMG + 'quiz-geek.webp',
             pts: 20
         },
         {
             el: 'Εκπαιδεύονται τακτικά οι εργαζόμενοι σε θέματα Υγείας & Ασφάλειας;',
             en: 'Are employees regularly trained on Health & Safety topics?',
-            img: 'Training.jpg',
+            img: IMG + 'quiz-ekpaideusi.webp',
             pts: 20
         },
         {
             el: 'Διαθέτουν οι εργαζόμενοι κατάλληλα ΜΑΠ (Μέσα Ατομικής Προστασίας);',
             en: 'Do employees have appropriate PPE (Personal Protective Equipment)?',
-            img: 'PPE.jpg',
+            img: IMG + 'quiz-map.webp',
             pts: 20
         },
         {
             el: 'Υπάρχει σήμανση ασφαλείας σε όλους τους χώρους εργασίας;',
             en: 'Is safety signage displayed throughout all work areas?',
-            img: 'Signage.jpg',
+            img: IMG + 'quiz-simansi.webp',
             pts: 20
         },
         {
             el: 'Γνωρίζετε τις υποχρεώσεις σας βάσει του Ν. 3850/2010;',
             en: 'Are you aware of your obligations under Law N.3850/2010?',
-            img: 'N.3850.png',
+            img: IMG + 'quiz-nomothesia.webp',
             pts: 20
         }
     ];
