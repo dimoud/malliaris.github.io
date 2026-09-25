@@ -235,6 +235,7 @@
             resultEl.style.display = 'flex';
 
             $('sqzResultPct').textContent = score + '%';
+            if (window.ccEvent) window.ccEvent('quiz_complete', { score: score });
             $('sqzResultVerdict').textContent = res.verdict;
             $('sqzResultVerdict').style.color = res.color;
             $('sqzResultMsg').textContent = res.msg;

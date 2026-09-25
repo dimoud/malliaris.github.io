@@ -25,7 +25,7 @@
             var dy = (e.clientY - rect.top  - rect.height / 2) / (rect.height / 2);
             card.style.transform = 'perspective(600px) rotateX(' + (dy * -3) + 'deg) rotateY(' + (dx * 3) + 'deg) translateY(-4px)';
             card.style.transition = 'transform 0.08s linear';
-        });
+        }, { passive: true });
         card.addEventListener('mouseleave', function () {
             card.style.transform = '';
             card.style.transition = 'transform 0.4s cubic-bezier(0.16,1,0.3,1)';
@@ -40,7 +40,7 @@
             var dy = e.clientY - rect.top  - rect.height / 2;
             btn.style.transform = 'translate(' + dx * 0.22 + 'px, ' + dy * 0.22 + 'px)';
             btn.style.transition = 'transform 0.15s linear';
-        });
+        }, { passive: true });
         btn.addEventListener('mouseleave', function () {
             btn.style.transform = '';
             btn.style.transition = 'transform 0.5s cubic-bezier(0.16,1,0.3,1)';
@@ -67,7 +67,7 @@
             glow.style.left = (e.clientX - rect.left) + 'px';
             glow.style.top  = (e.clientY - rect.top)  + 'px';
             glow.style.opacity = '1';
-        });
+        }, { passive: true });
         hero.addEventListener('mouseleave', function () {
             glow.style.opacity = '0';
         });

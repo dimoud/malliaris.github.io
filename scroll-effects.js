@@ -250,7 +250,7 @@
                 var x = (e.clientX - r.left - r.width  / 2) * 0.18;
                 var y = (e.clientY - r.top  - r.height / 2) * 0.18;
                 btn.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-            });
+            }, { passive: true });
             btn.addEventListener('mouseleave', function() {
                 btn.style.transform = '';
             });

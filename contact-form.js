@@ -21,6 +21,7 @@
     el.textContent = msg;
     el.className = type === 'success' ? 'status-success' : 'status-error';
     el.style.display = 'block';
+    el.setAttribute('role', type === 'success' ? 'status' : 'alert');
   }
 
   function init() {
@@ -52,6 +53,8 @@
         .then(function (json) {
           if (json && json.result === 'success') {
             setStatus(status, T.success, 'success');
+            var subj = form.querySelector('[name="subject"]');
+            if (window.ccEvent) window.ccEvent('generate_lead', { form_id: 'clientContactForm', subject: subj ? subj.value : '' });
             form.reset();
           } else {
             throw new Error(json && json.error ? json.error : 'unexpected response');

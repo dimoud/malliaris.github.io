@@ -48,7 +48,7 @@
 
         /* MARQUEE */
         'marquee.m1': { el: 'Τεχνικός Ασφαλείας',                              en: 'Safety Technician' },
-        'marquee.m2': { el: 'ΓΡΑΠΤΗ Εκτίμηση Επαγγελματικού Κινδύνου',        en: 'WRITTEN Risk Assessment (ΓΕΕΚ)' },
+        'marquee.m2': { el: 'ΓΡΑΠΤΗ Εκτίμηση Επαγγελματικού Κινδύνου',        en: 'WRITTEN Risk Assessment (GEEK)' },
         'marquee.m3': { el: 'Σχέδια Διαφυγής',                                en: 'Escape Plans' },
         'marquee.m4': { el: 'Εκπαιδεύσεις Υ&Α',                              en: 'H&S Training' },
         'marquee.m7': { el: 'ΔΙΕΡΕΥΝΗΣΗ ΕΡΓΑΤΙΚΩΝ ΑΤΥΧΗΜΑΤΩΝ',                en: 'WORKPLACE ACCIDENT INVESTIGATION' },
@@ -76,8 +76,8 @@
             en: 'Company Profile',
         },
         'about.bio.p1': {
-            el: 'Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας και Συντονιστή Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Εκτιμήσεις Επαγγελματικού Κινδύνου.<br><br>Η εταιρεία μας ιδρύθηκε συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, τη βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι αυξανόμενες ανάγκες για <strong>ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.<br><br>Πιστεύουμε ότι η ασφάλεια δεν θα \'πρεπε να κοστίζει ακριβά, αντιθέτως θα \'πρεπε να βοηθάει την παραγωγή και τη βιωσιμότητα της επιχείρησης. Σεβόμαστε τον προϋπολογισμό σας, δίνουμε βάρος στην πρόληψη και προτείνουμε <strong>πρακτικές λύσεις με μεγάλο αντίκρεισμα</strong>.<br><br>Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.',
-            en: 'Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician coverage to Staff Training and Written Risk Assessment (ΓΕΕΚ).<br><br>Our company was founded in 2026, bringing together engineers with over a decade of experience in construction, industry and services. The driving force was the growing need for meaningful safety in Greek workplaces. The goal is clear: every employee returns home safe.<br><br>We believe safety should not be expensive — on the contrary, it should support production and business sustainability. We respect each company\'s budget, focus on prevention and propose practical, high-impact solutions.<br><br>Because real safety always starts from the right foundations.',
+            el: 'Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας και Συντονιστή Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Εκτιμήσεις Επαγγελματικού Κινδύνου.<br><br>Η εταιρεία μας ιδρύθηκε συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, τη βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι αυξανόμενες ανάγκες για <strong>ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.<br><br>Πιστεύουμε ότι η ασφάλεια δεν θα \'πρεπε να κοστίζει ακριβά, αντιθέτως θα \'πρεπε να βοηθάει την παραγωγή και τη βιωσιμότητα της επιχείρησης. Σεβόμαστε τον προϋπολογισμό σας, δίνουμε βάρος στην πρόληψη και προτείνουμε <strong>πρακτικές λύσεις με μεγάλο αντίκρισμα</strong>.<br><br>Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.',
+            en: 'Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician coverage to Staff Training and Written Risk Assessment (GEEK).<br><br>Our company was founded in 2026, bringing together engineers with over a decade of experience in construction, industry and services. The driving force was the growing need for meaningful safety in Greek workplaces. The goal is clear: every employee returns home safe.<br><br>We believe safety should not be expensive — on the contrary, it should support production and business sustainability. We respect each company\'s budget, focus on prevention and propose practical, high-impact solutions.<br><br>Because real safety always starts from the right foundations.',
         },
         'about.bio.p2': {
             el: '',
@@ -122,11 +122,11 @@
             en: 'We provide a <span class="hi-orange">complete package</span> of <em class="hi-white">H&amp;S Services</em>',
         },
         'services.legal': {
-            el: 'Σύμφωνα με το Ν. 3850/2010, ακόμα και για ένα άτομο προσωπικό <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και ΓΕΕΚ</strong> — Νόμος 3850/2010, Άρθρο 8 &amp; 43',
-            en: 'Under Law 3850/2010, even a single employee business is required to have a declared Safety Technician and a Risk Assessment — Law 3850/2010, Articles 8 &amp; 43',
+            el: 'Ακόμα και με έναν εργαζόμενο, <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου</strong> — ν. 3850/2010, όπως κωδικοποιήθηκε στον Κώδικα Εργατικού Δικαίου (ΠΔ 62/2025)',
+            en: 'Even with a single employee, <strong>a business must have a Safety Technician and a Written Occupational Risk Assessment</strong> — Law 3850/2010, as codified in the Greek Labour Code (Presidential Decree 62/2025)',
         },
 
-        'services.measlabel': { el: '6 ΥΠΗΡΕΣΙΕΣ - 100% ΙΚΑΝΟΠΟΙΗΣΗ', en: '6 SERVICES - 100% SATISFACTION' },
+        'services.measlabel': { el: '6 ΥΠΗΡΕΣΙΕΣ · ΕΝΑΣ ΣΥΝΕΡΓΑΤΗΣ', en: '6 SERVICES · ONE PARTNER' },
 
         's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Technician Services' },
         's1.text':  {
@@ -167,8 +167,8 @@
         /* SECTORS */
         'sectors.eyebrow': { el: 'ΤΟΜΕΙΣ', en: 'SECTORS' },
         'sectors.heading': {
-            el: 'Τομείς <em>Δραστηριότητας</em>',
-            en: 'Sectors of <em>Activity</em>',
+            el: 'Τομείς <em data-char-split>Δραστηριότητας</em>',
+            en: 'Sectors of <em data-char-split>Activity</em>',
         },
         'sectors.lead': {
             el: 'Μετά από πολυετή εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε είδους, ο Σταύρος Μάλλιαρης και η ομάδα του μπορούν να συμβουλέψουν πελάτες από κάθε τομέα δραστηριότητας.',
@@ -306,7 +306,7 @@
         'res.visit':  { el: 'Επίσκεψη', en: 'Visit' },
 
         /* CONTACT */
-        'contact.location': { el: 'Ελλάδα & Διεθνώς', en: 'Greece & Abroad' },
+        'contact.location': { el: 'Εξυπηρέτηση σε όλη την Αττική', en: 'Serving all of Attica' },
 
         /* NAME */
         'name.stavros':  { el: 'ΜΑΛΛΙΑΡΗΣ ΣΤΑΥΡΟΣ',      en: 'MALLIARIS STAVROS' },
@@ -317,15 +317,84 @@
 
         /* FOOTER */
         'footer.title': { el: 'Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
+        /* ─── ΑΝΑΒΑΘΜΙΣΗ SEO 09/2026 ─────────────────────────────────── */
+        'skip':        { el: 'Μετάβαση στο περιεχόμενο', en: 'Skip to content' },
+        'hero.h1sr':   { el: '— Υπηρεσίες Υγείας και Ασφάλειας στην Εργασία, Τεχνικός Ασφαλείας στην Αττική', en: '— Occupational Health & Safety Services, Safety Technician in Athens, Greece' },
+        's1.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
+        's2.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
+        's3.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
+        's4.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
+        's5.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
+        's6.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
+        'sectors.linkslabel': { el: 'Ανά κλάδο:', en: 'By sector:' },
+        'sectors.l1': { el: 'Κατασκευές & εργοτάξια', en: 'Construction sites (GR)' },
+        'sectors.l2': { el: 'Βιομηχανία & logistics', en: 'Industry & logistics (GR)' },
+        'sectors.l3': { el: 'Μικρές επιχειρήσεις', en: 'Small businesses (GR)' },
+        'sectors.l4': { el: 'Ξένες εταιρείες (EN)', en: 'Foreign companies in Greece' },
+        'team.v1': { el: 'ΕΙΛΙΚΡΙΝΕΙΑ', en: 'HONESTY' },
+        'team.v2': { el: 'ΜΕΘΟΔΙΚΟΤΗΤΑ', en: 'METHOD' },
+        'team.v3': { el: 'ΤΕΧΝΙΚΗ ΓΝΩΣΗ', en: 'TECHNICAL KNOW-HOW' },
+        'team.m1.role': { el: 'ΥΠΕΥΘΥΝΟΣ ΜΗΧΑΝΟΛΟΓΙΚΩΝ', en: 'MECHANICAL ENGINEERING LEAD' },
+        'team.m1.name': { el: 'Δημήτριος Μουδιώτης', en: 'Dimitrios Moudiotis' },
+        'team.m1.bio':  { el: 'Διπλ. Μηχανολόγος Μηχανικός ΑΠΘ', en: 'Mechanical Engineer, AUTh' },
+        'team.m2.role': { el: 'ΥΠΕΥΘΥΝΟΣ ΜΕΛΕΤΩΝ', en: 'ENGINEERING STUDIES LEAD' },
+        'team.m2.name': { el: 'Βάιος Λιάπης', en: 'Vaios Liapis' },
+        'team.m2.bio':  { el: 'Διπλ. Πολιτικός Μηχανικός ΑΠΘ', en: 'Civil Engineer, AUTh' },
+        'team.m3.name': { el: 'Ελευθέριος Αδάμ', en: 'Eleftherios Adam' },
+        'team.m3.bio':  { el: 'Πτυχ. Επιστήμονας Υλικών Παν. Πατρών', en: 'BSc Materials Science, University of Patras' },
+        'team.more': { el: 'Αναλυτικά βιογραφικά και πιστοποιήσεις της ομάδας', en: 'Full team profiles and credentials' },
+        'quiz.eyebrow':  { el: 'Αυτοαξιολόγηση Ασφάλειας', en: 'Safety self-check' },
+        'quiz.question': { el: 'Εσείς τι επίπεδο<br>ασφάλειας έχετε;', en: 'How safe is<br>your workplace?' },
+        'quiz.start':    { el: 'Κάντε το κουίζ', en: 'Take the quiz' },
+        'quiz.meta':     { el: 'Ανώνυμο & Σύντομο', en: 'Anonymous & quick' },
+        'quiz.hint':     { el: 'Επίπεδο<br>ασφάλειάς σας', en: 'Your safety<br>level' },
+        'quiz.cta':      { el: 'Ζητήστε Προσφορά', en: 'Request a quote' },
+        'quiz.retry':    { el: 'Ξαναδοκιμάστε', en: 'Try again' },
+        'faq.eyebrow': { el: 'Συχνές ερωτήσεις', en: 'Frequently asked questions' },
+        'faq.heading': { el: 'Όσα ρωτούν <em>οι επιχειρήσεις</em>', en: 'What companies <em>ask us</em>' },
+        'faq.q1': { el: 'Είναι υποχρεωτικός ο Τεχνικός Ασφαλείας;', en: 'Is a Safety Technician mandatory in Greece?' },
+        'faq.a1': { el: 'Ναι. Κάθε επιχείρηση που απασχολεί έστω και έναν εργαζόμενο πρέπει να έχει Τεχνικό Ασφαλείας, σύμφωνα με τον ν. 3850/2010, όπως κωδικοποιήθηκε στον Κώδικα Εργατικού Δικαίου (ΠΔ 62/2025). Σε μικρές επιχειρήσεις κατηγορίας Β΄ και Γ΄ με έως 20 εργαζόμενους, ο νόμος επιτρέπει υπό προϋποθέσεις να αναλάβει τα καθήκοντα ο ίδιος ο εργοδότης ή εργαζόμενός του, μετά από επιμόρφωση.', en: 'Yes. Every business with at least one employee must have a Safety Technician under Law 3850/2010, as codified in the Greek Labour Code (P.D. 62/2025). In small category B and C businesses with up to 20 employees, the law allows the employer or an employee to take on the duties under conditions, after specific training.' },
+        'faq.q2': { el: 'Τι είναι η ΓΕΕΚ και ποιος τη χρειάζεται;', en: 'What is the GEEK (written risk assessment)?' },
+        'faq.a2': { el: 'Η Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου καταγράφει τους κινδύνους κάθε θέσης εργασίας και τα μέτρα πρόληψης. Ο εργοδότης οφείλει να τη διαθέτει ανεξάρτητα από τον αριθμό των εργαζομένων (άρθρο 534 ΠΔ 62/2025, πρώην άρθρο 43 ν. 3850/2010).', en: 'The Written Occupational Risk Assessment (GEEK) records the hazards of every job position and the prevention measures. Every employer must have one, regardless of headcount (Article 534 of P.D. 62/2025, formerly Article 43 of Law 3850/2010).' },
+        'faq.q3': { el: 'Από τι εξαρτώνται οι ώρες και το κόστος του Τεχνικού Ασφαλείας;', en: 'What determines the hours and cost of a Safety Technician?' },
+        'faq.a3': { el: 'Από την κατηγορία επικινδυνότητας της επιχείρησης (Α΄, Β΄ ή Γ΄, που προκύπτει από τον ΚΑΔ της) και από τον αριθμό των εργαζομένων. Ο υπολογιστής ωρών στους οδηγούς μας δίνει μια πρώτη εικόνα· την ακριβή κατηγορία την ελέγχουμε εμείς πριν από κάθε προσφορά.', en: 'The risk category of the business (A, B or C, set by its activity code) and the number of employees. Our hours calculator gives a first estimate; we confirm the exact category before every quote.' },
+        'faq.q4': { el: 'Τι πρέπει να κάνει ο εργοδότης αν συμβεί εργατικό ατύχημα;', en: 'What must an employer do after a workplace accident?' },
+        'faq.a4': { el: 'Να το αναγγείλει μέσα σε 24 ώρες στην Επιθεώρηση Εργασίας και στον e-ΕΦΚΑ, και σε σοβαρό τραυματισμό ή θάνατο και στην αστυνομία, κρατώντας αμετάβλητα τα στοιχεία που βοηθούν να βρεθούν τα αίτια (άρθρο 534 παρ. 2 ΠΔ 62/2025, όπως τροποποιήθηκε με τον ν. 5239/2025).', en: 'Report it within 24 hours to the Labour Inspectorate and to e-EFKA, and also to the police in case of serious injury or death, keeping unchanged all evidence that can help establish the causes (Article 534(2) of P.D. 62/2025, as amended by Law 5239/2025).' },
+        'faq.q5': { el: 'Πού εξυπηρετείτε και σε ποια γλώσσα;', en: 'Where do you work and in which language?' },
+        'faq.a5': { el: 'Σε όλη την Αττική, με έδρα τον Άλιμο (Δωδεκανήσου 16). Συνεργαζόμαστε στα ελληνικά και στα αγγλικά, και με ξένες εταιρείες που δραστηριοποιούνται στην Ελλάδα.', en: 'Across Attica, based in Alimos (Dodekanisou 16). We work in Greek and English, including with foreign companies operating in Greece.' },
+        'faq.more': { el: 'Περισσότερα στους οδηγούς μας: ώρες Τεχνικού Ασφαλείας, έλεγχος της Επιθεώρησης Εργασίας, εργατικό ατύχημα', en: 'More in our guides (in Greek) and in our English guide for foreign companies' },
+        'contact.address':  { el: 'Δωδεκανήσου 16, 174 56 Άλιμος', en: 'Dodekanisou 16, 174 56 Alimos, Athens' },
+        'contact.maptitle': { el: 'Χάρτης: Μάλλιαρης & Συνεργάτες, Δωδεκανήσου 16, Άλιμος', en: 'Map: Malliaris & Partners, Dodekanisou 16, Alimos' },
+        'fn.services': { el: 'Υπηρεσίες', en: 'Services' },
+        'fn.sectors':  { el: 'Κλάδοι', en: 'Sectors' },
+        'fn.company':  { el: 'Η εταιρεία', en: 'Company' },
+        'fn.team':     { el: 'Η ομάδα', en: 'Our team' },
+        'fn.guides':   { el: 'Οδηγοί', en: 'Guides (GR)' },
+        'fn.calc':     { el: 'Υπολογιστής ωρών Τεχνικού Ασφαλείας', en: 'Safety technician hours calculator (GR)' },
+        'fn.privacy':  { el: 'Πολιτική απορρήτου', en: 'Privacy policy' },
+        'fn.cookies':  { el: 'Ρυθμίσεις cookies', en: 'Cookie settings' },
+        'fn.contact':  { el: 'Επικοινωνία', en: 'Contact' },
+        'lfd.demo': { el: 'ΕΝΔΕΙΚΤΙΚΗ ΑΠΕΙΚΟΝΙΣΗ', en: 'ILLUSTRATIVE ONLY' },
+        'logo.alt': { el: 'Μάλλιαρης & Συνεργάτες — Υπηρεσίες Υγείας και Ασφάλειας', en: 'Malliaris & Partners — Occupational Health and Safety' },
+        'acc1.t': { el: 'Το Αντικείμενο', en: 'What we do' },
+        'acc2.t': { el: 'Ίδρυση, Σκοπός και Όραμα', en: 'Founding, purpose and vision' },
+        'acc3.t': { el: 'Οι Δεσμεύσεις μας', en: 'Our commitments' },
+        'acc1.b': { el: '<p>Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας και Συντονιστή Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Εκτιμήσεις Επαγγελματικού Κινδύνου.</p>',
+                    en: '<p>Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician and Safety Coordinator coverage to staff training and occupational risk assessments.</p>' },
+        'acc2.b': { el: '<p>Η εταιρεία μας ιδρύθηκε συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, τη βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι <strong>αυξανόμενες ανάγκες για ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.</p>',
+                    en: '<p>Our company brought together engineers with over a decade of experience in construction, industry and services. The reason was the <strong>growing need for real safety</strong> in Greek workplaces. The goal is simple: every employee goes home safe.</p>' },
+        'acc3.b': { el: '<p>Πιστεύουμε ότι η ασφάλεια δεν θα \'πρεπε να κοστίζει ακριβά, αντιθέτως θα \'πρεπε να βοηθάει την παραγωγή και τη βιωσιμότητα της επιχείρησης. Σεβόμαστε τον προϋπολογισμό σας, δίνουμε βάρος στην πρόληψη και προτείνουμε πρακτικές λύσεις με μεγάλο αντίκρισμα.</p><p style="margin-top:1em;"><em>Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.</em></p>',
+                    en: '<p>We believe safety should not be expensive; it should support production and the sustainability of the business. We respect your budget, focus on prevention and propose practical, high-impact solutions.</p><p style="margin-top:1em;"><em>Because real safety always starts from the right foundations.</em></p>' },
+
     };
 
     /* ─── STATE ──────────────────────────────────────────────────────────── */
-    let currentLang = 'el';
+    let currentLang = ((document.documentElement.lang || 'el').slice(0, 2) === 'en') ? 'en' : 'el';
 
     /* ─── APPLY TRANSLATIONS ─────────────────────────────────────────────── */
     function applyLang(lang) {
         currentLang = lang;
-        localStorage.setItem('lang', lang);
+        try { localStorage.setItem('lang', lang); } catch (e) { /* ιδιωτική περιήγηση */ }
 
         /* text content */
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -349,6 +418,16 @@
             if (t[key] && t[key][lang] !== undefined) {
                 el.placeholder = t[key][lang];
             }
+        });
+
+        /* alt / title (εικόνες, iframe) */
+        document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-alt');
+            if (t[key] && t[key][lang] !== undefined) el.setAttribute('alt', t[key][lang]);
+        });
+        document.querySelectorAll('[data-i18n-title]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-title');
+            if (t[key] && t[key][lang] !== undefined) el.setAttribute('title', t[key][lang]);
         });
 
         /* update <html lang> attribute */

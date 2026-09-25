@@ -34,7 +34,7 @@
 
   const MONITORING_LOCATIONS = [
     "ELLINIKON", "PAIANIA", "GLYFADA", "ALIMOS",
-    "KYPSELI", "PAGKRATI", "LARISSA"
+    "KYPSELI", "PAGKRATI", "MAROUSSI"
   ];
 
   function init(root) {
