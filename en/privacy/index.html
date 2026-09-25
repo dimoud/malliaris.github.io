@@ -94,28 +94,45 @@
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <nav id="nav" aria-label="Main menu">
+    <nav id="nav">
         <div class="nav-logo-group">
             <a href="../../en/" class="nav-logo">
-                <div class="logo-rect"><img decoding="async" width="300" height="200" src="../../img/logo-malliaris-synergates.webp" alt="Malliaris &amp; Partners — home"></div>
+                <div class="logo-rect">
+                    <img decoding="async" width="300" height="200" src="../../img/logo-malliaris-synergates.webp" alt="Malliaris &amp; Partners — Occupational Health and Safety" data-i18n-alt="logo.alt" onerror="this.style.display='none'">
+                </div>
                 <div class="logo-text">
-                    <span class="name">MALLIARIS &amp; PARTNERS</span>
-                    <span class="title">Health &amp; Safety Consultants - Safety Technicians</span>
+                    <span class="name" data-i18n="name.company">MALLIARIS &amp; PARTNERS</span>
+                    <span class="title" data-i18n-html="nav.title">Health and Safety consultants -<br>Safety Technician services</span>
                 </div>
             </a>
             <div class="nav-logo-lang-sep"></div>
-            <div class="nav-logo-lang"><a class="lang-btn " data-lang="el" href="../../aporrito/" lang="el"><img src="../../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a><div class="lang-sep"></div><a class="lang-btn active" data-lang="en" href="./" lang="en"><img src="../../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a></div>
+            <div class="nav-logo-lang" id="navLogoLang">
+                <a class="lang-btn" data-lang="el" href="../../aporrito/" lang="el"><img src="../../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>
+                <div class="lang-sep"></div>
+                <a class="lang-btn active" data-lang="en" href="./" lang="en"><img src="../../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
+            </div>
         </div>
         <div class="nav-right">
             <div class="nav-links" id="navLinks">
-                <div class="nav-dd"><a href="../../en/#services">Services</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Services submenu"></button><div class="nav-dd-menu" id="dd-services"><a href="../../en/safety-technician-greece/">Safety technician</a><a href="../../en/risk-assessment-greece/">Written risk assessment</a><a href="../../en/foreign-companies-greece/">Foreign companies in Greece</a></div></div>
-                <a href="../../en/team/">Team</a>
-                <a href="../../en/#contact" class="nav-cta">Contact</a>
+                <a href="../../en/#about" data-i18n="nav.about">WHO WE ARE</a>
+                <!--dd:services--><div class="nav-dd"><a href="../../en/#services" data-i18n="nav.services">Services</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Services submenu"></button><div class="nav-dd-menu" id="dd-services"><a href="../../en/safety-technician-greece/">Safety technician</a><a href="../../en/risk-assessment-greece/">Written risk assessment</a><a href="../../en/foreign-companies-greece/">Foreign companies in Greece</a></div></div><!--/dd:services-->
+                <!--dd:sectors--><a href="../../en/#sectors" data-i18n="nav.sectors">Sectors</a><!--/dd:sectors-->
+                <a href="../../en/#team" data-i18n="nav.team">OUR TEAM</a>
+                <a href="../../en/#in-action" data-i18n="nav.action">IN ACTION</a>
+                <a href="../../en/#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
             </div>
-            <div class="lang-toggle"><a class="lang-btn " data-lang="el" href="../../aporrito/" lang="el"><img src="../../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a><div class="lang-sep"></div><a class="lang-btn active" data-lang="en" href="./" lang="en"><img src="../../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a></div>
+            <div class="lang-toggle" id="langToggle">
+                <a class="lang-btn" data-lang="el" href="../../aporrito/" lang="el"><img src="../../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>
+                <div class="lang-sep"></div>
+                <a class="lang-btn active" data-lang="en" href="./" lang="en"><img src="../../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
+            </div>
         </div>
         <div class="mobile-nav-right">
-            <div class="mobile-lang"><a class="lang-btn " data-lang="el" href="../../aporrito/" lang="el"><img src="../../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a><div class="lang-sep"></div><a class="lang-btn active" data-lang="en" href="./" lang="en"><img src="../../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a></div>
+            <div class="mobile-lang">
+                <a class="lang-btn" data-lang="el" href="../../aporrito/" lang="el"><img src="../../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>
+                <div class="lang-sep"></div>
+                <a class="lang-btn active" data-lang="en" href="./" lang="en"><img src="../../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
+            </div>
             <div class="mobile-nav-sep"></div>
             <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -125,6 +142,7 @@
 
     <main id="main">
     <header class="page-hero">
+        <canvas id="heroNet" aria-hidden="true"></canvas>
         <div class="page-hero-inner">
             <div class="breadcrumbs" role="navigation" aria-label="Breadcrumb"><ol><li><a href="../../en/">Home</a></li><li aria-current="page">Privacy policy</li></ol></div>
             <div class="eyebrow"><span>Information</span></div>
@@ -196,30 +214,59 @@
     <footer>
         <div class="footer-top">
             <div class="footer-brand">
-                <div class="footer-logo-rect"><img src="../../img/logo-malliaris-synergates.webp" alt="" width="300" height="200" loading="lazy" decoding="async"></div>
-                <div class="footer-brand-text"><p class="fname">MALLIARIS &amp; PARTNERS</p><p class="ftitle">Health &amp; Safety Consultants - Safety Technicians</p></div>
+                <div class="footer-logo-rect">
+                    <img decoding="async" width="300" height="200" src="../../img/logo-malliaris-synergates.webp" alt="Malliaris &amp; Partners — Occupational Health and Safety" data-i18n-alt="logo.alt" onerror="this.style.display='none'">
+                </div>
+                <div class="footer-brand-text">
+                    <p class="fname" data-i18n="name.company">MALLIARIS &amp; PARTNERS</p>
+                    <p class="ftitle" data-i18n-html="footer.title">Health and Safety consultants -<br>Safety Technician services</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:info@stavrosmalliaris.gr" class="social-link" title="Email" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+302110040193" class="social-link" title="+30 211 0040 193" aria-label="+30 211 0040 193">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="social-link" title="Calendly" aria-label="Calendly">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </a>
             </div>
         </div>
         <div class="footer-nav">
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Services</p>
-                <a href="../../en/safety-technician-greece/">Safety technician</a><a href="../../en/risk-assessment-greece/">Written risk assessment</a><a href="../../en/foreign-companies-greece/">Foreign companies in Greece</a><a href="../../en/">All services</a>
+                <p class="footer-nav-title" data-i18n="fn.services">Services</p>
+                <a href="../../en/safety-technician-greece/" data-i18n="s1.title">Safety Technician Services</a>
+                <a href="../../en/risk-assessment-greece/" data-i18n="s2.title">Written Occupational Risk Assessment (GEEK)</a>
+                <a href="../../ekpaideuseis-ygeias-asfaleias/" data-i18n="s3.title">H&amp;S Training Programmes</a>
+                <a href="../../diereynisi-ergatikou-atyximatos/" data-i18n="s4.title">Workplace Accident Investigation</a>
+                <a href="../../schedia-diafygis-ekkenosis/" data-i18n="s5.title">Escape Plan Design</a>
+                <a href="../../elegxos-epitheorisis-ergasias/" data-i18n="s6.title">Labour Inspectorate (SEPE) Audit Prep</a>
             </div>
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Company</p>
-                <a href="../../en/team/">Our team</a><a href="../../en/privacy/">Privacy policy</a><a href="#" data-cc-open>Cookie settings</a><a href="../../">Greek version</a>
+                <p class="footer-nav-title" data-i18n="fn.sectors">Sectors</p>
+                <a href="../../kataskeves-ergotaxia/" data-i18n="sectors.l1">Construction sites (GR)</a>
+                <a href="../../viomixania-logistics/" data-i18n="sectors.l2">Industry &amp; logistics (GR)</a>
+                <a href="../../mikres-epixeiriseis/" data-i18n="sectors.l3">Small businesses (GR)</a>
+                <a href="../../en/foreign-companies-greece/" data-i18n="sectors.l4">Foreign companies in Greece</a>
             </div>
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Greek guides</p>
-                <a href="../../odigoi/">Guides (in Greek)</a><a href="../../odigoi/ores-texnikou-asfaleias/">Hours calculator (GR)</a>
+                <p class="footer-nav-title" data-i18n="fn.company">Company</p>
+                <a href="../../en/team/" data-i18n="fn.team">Our team</a>
+                <a href="../../odigoi/" data-i18n="fn.guides">Guides (GR)</a>
+                <a href="../../odigoi/ores-texnikou-asfaleias/" data-i18n="fn.calc">Safety technician hours calculator (GR)</a>
+                <a href="../../en/privacy/" data-i18n="fn.privacy">Privacy policy</a>
+                <a href="#" data-cc-open data-i18n="fn.cookies">Cookie settings</a>
             </div>
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Contact</p>
+                <p class="footer-nav-title" data-i18n="fn.contact">Contact</p>
                 <a href="tel:+302110040193">+30 211 0040 193</a>
                 <a href="mailto:info@stavrosmalliaris.gr">info@stavrosmalliaris.gr</a>
-                <a href="https://share.google/xxk94ucxrcYaLiCtk" target="_blank" rel="noopener">Dodekanisou 16, 174 56 Alimos, Athens</a>
+                <a href="https://share.google/xxk94ucxrcYaLiCtk" target="_blank" rel="noopener" data-i18n="contact.address">Dodekanisou 16, 174 56 Alimos, Athens</a>
             </div>
         </div>
+        <!-- EXPERTEASE CREDIT BANNER — modular component (expertease-credit.css) -->
         <hr class="ec-rule">
         <div class="expertease-credit">
           <div class="ec-layer ec-layer--credit">
@@ -227,9 +274,21 @@
             <span class="ec-divider"></span>
             <a href="https://expertease.eu/webdesign" target="_blank" rel="noopener" class="ec-brand">
               <span class="ec-label">Designed by</span>
-              <img src="../../img/logo-expertease.webp" alt="Expertease Designs" class="ec-logo" width="96" height="95" loading="lazy" decoding="async">
+              <img decoding="async" loading="lazy" width="96" height="95" src="../../img/logo-expertease.webp" alt="Expertease Designs" class="ec-logo">
               <span class="ec-name">Expertease Designs</span>
             </a>
+          </div>
+          <div class="ec-layer ec-layer--ad">
+            <div class="ec-ad-ring">
+              <div class="ec-ad-logo"><img decoding="async" loading="lazy" width="96" height="95" src="../../img/logo-expertease.webp" alt="Expertease Designs"></div>
+            </div>
+            <div class="ec-ad-text">
+              <span class="ec-ad-question">Like this site?</span>
+              <a href="https://expertease.eu/webdesign" target="_blank" rel="noopener" class="ec-ad-cta">
+                Let's build yours
+                <span class="ec-ad-arrow"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="6.5" x2="11" y2="6.5"/><polyline points="7,2.5 11,6.5 7,10.5"/></svg></span>
+              </a>
+            </div>
           </div>
         </div>
     </footer>

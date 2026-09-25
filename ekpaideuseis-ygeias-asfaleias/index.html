@@ -147,30 +147,45 @@
 </head>
 <body>
     <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
-    <nav id="nav" aria-label="Κύριο μενού">
+    <nav id="nav">
         <div class="nav-logo-group">
             <a href="../" class="nav-logo">
-                <div class="logo-rect"><img decoding="async" width="300" height="200" src="../img/logo-malliaris-synergates.webp" alt="Μάλλιαρης &amp; Συνεργάτες — αρχική σελίδα"></div>
+                <div class="logo-rect">
+                    <img decoding="async" width="300" height="200" src="../img/logo-malliaris-synergates.webp" alt="Μάλλιαρης &amp; Συνεργάτες — Υπηρεσίες Υγείας και Ασφάλειας" data-i18n-alt="logo.alt" onerror="this.style.display='none'">
+                </div>
                 <div class="logo-text">
-                    <span class="name">ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ</span>
-                    <span class="title">Σύμβουλοι Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας</span>
+                    <span class="name" data-i18n="name.company">ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ</span>
+                    <span class="title" data-i18n-html="nav.title">Σύμβουλοι Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας</span>
                 </div>
             </a>
             <div class="nav-logo-lang-sep"></div>
-            <div class="nav-logo-lang"><a class="lang-btn active" data-lang="el" href="./" lang="el"><img src="../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a><div class="lang-sep"></div><a class="lang-btn " data-lang="en" href="../en/" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a></div>
+            <div class="nav-logo-lang" id="navLogoLang">
+                <a class="lang-btn active" data-lang="el" href="./" lang="el"><img src="../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>
+                <div class="lang-sep"></div>
+                <a class="lang-btn" data-lang="en" href="../en/" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
+            </div>
         </div>
         <div class="nav-right">
             <div class="nav-links" id="navLinks">
-                <div class="nav-dd"><a href="../#services">Υπηρεσίες</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Υπομενού υπηρεσιών"></button><div class="nav-dd-menu" id="dd-services"><a href="../texnikos-asfaleias/">Τεχνικός Ασφαλείας</a><a href="../geek-grapti-ektimisi-kindynou/">Γραπτή Εκτίμηση Κινδύνου (ΓΕΕΚ)</a><a href="../ekpaideuseis-ygeias-asfaleias/">Εκπαιδεύσεις Υγείας &amp; Ασφάλειας</a><a href="../diereynisi-ergatikou-atyximatos/">Διερεύνηση Εργατικού Ατυχήματος</a><a href="../schedia-diafygis-ekkenosis/">Σχέδια Διαφυγής &amp; Εκκένωσης</a><a href="../elegxos-epitheorisis-ergasias/">Προετοιμασία για Έλεγχο ΣΕΠΕ</a><span class="nav-dd-sep" aria-hidden="true"></span><a href="../odigoi/">Οδηγοί για εργοδότες</a></div></div>
-                <div class="nav-dd"><a href="../#sectors">Τομείς</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-sectors" aria-label="Υπομενού τομέων"></button><div class="nav-dd-menu" id="dd-sectors"><a href="../kataskeves-ergotaxia/">Κατασκευές &amp; Εργοτάξια</a><a href="../viomixania-logistics/">Βιομηχανία &amp; Logistics</a><a href="../mikres-epixeiriseis/">Καταστήματα, Εστίαση, Γραφεία</a><a href="../en/foreign-companies-greece/">Ξένες εταιρείες (στα αγγλικά)</a></div></div>
-                <a href="../omada/">Η ομάδα</a>
-                <a href="../odigoi/">Οδηγοί</a>
-                <a href="../#contact" class="nav-cta">Επικοινωνία</a>
+                <a href="../#about" data-i18n="nav.about">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</a>
+                <!--dd:services--><div class="nav-dd"><a href="../#services" data-i18n="nav.services">Υπηρεσίες</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Υπομενού υπηρεσιών"></button><div class="nav-dd-menu" id="dd-services"><a href="../texnikos-asfaleias/">Τεχνικός Ασφαλείας</a><a href="../geek-grapti-ektimisi-kindynou/">Γραπτή Εκτίμηση Κινδύνου (ΓΕΕΚ)</a><a href="../ekpaideuseis-ygeias-asfaleias/">Εκπαιδεύσεις Υγείας &amp; Ασφάλειας</a><a href="../diereynisi-ergatikou-atyximatos/">Διερεύνηση Εργατικού Ατυχήματος</a><a href="../schedia-diafygis-ekkenosis/">Σχέδια Διαφυγής &amp; Εκκένωσης</a><a href="../elegxos-epitheorisis-ergasias/">Προετοιμασία για Έλεγχο ΣΕΠΕ</a><span class="nav-dd-sep" aria-hidden="true"></span><a href="../odigoi/">Οδηγοί για εργοδότες</a></div></div><!--/dd:services-->
+                <!--dd:sectors--><div class="nav-dd"><a href="../#sectors" data-i18n="nav.sectors">Τομείς</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-sectors" aria-label="Υπομενού τομέων"></button><div class="nav-dd-menu" id="dd-sectors"><a href="../kataskeves-ergotaxia/">Κατασκευές &amp; Εργοτάξια</a><a href="../viomixania-logistics/">Βιομηχανία &amp; Logistics</a><a href="../mikres-epixeiriseis/">Καταστήματα, Εστίαση, Γραφεία</a><a href="../en/foreign-companies-greece/">Ξένες εταιρείες (στα αγγλικά)</a></div></div><!--/dd:sectors-->
+                <a href="../#team" data-i18n="nav.team">Η ΟΜΑΔΑ ΜΑΣ</a>
+                <a href="../#in-action" data-i18n="nav.action">ΣΤΗ ΔΡΑΣΗ</a>
+                <a href="../#contact" class="nav-cta" data-i18n="nav.contact">Επικοινωνία</a>
             </div>
-            <div class="lang-toggle"><a class="lang-btn active" data-lang="el" href="./" lang="el"><img src="../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a><div class="lang-sep"></div><a class="lang-btn " data-lang="en" href="../en/" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a></div>
+            <div class="lang-toggle" id="langToggle">
+                <a class="lang-btn active" data-lang="el" href="./" lang="el"><img src="../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>
+                <div class="lang-sep"></div>
+                <a class="lang-btn" data-lang="en" href="../en/" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
+            </div>
         </div>
         <div class="mobile-nav-right">
-            <div class="mobile-lang"><a class="lang-btn active" data-lang="el" href="./" lang="el"><img src="../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a><div class="lang-sep"></div><a class="lang-btn " data-lang="en" href="../en/" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a></div>
+            <div class="mobile-lang">
+                <a class="lang-btn active" data-lang="el" href="./" lang="el"><img src="../img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>
+                <div class="lang-sep"></div>
+                <a class="lang-btn" data-lang="en" href="../en/" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
+            </div>
             <div class="mobile-nav-sep"></div>
             <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Μενού" aria-controls="navLinks" aria-expanded="false">
                 <span></span><span></span><span></span>
@@ -180,6 +195,7 @@
 
     <main id="main">
     <header class="page-hero">
+        <canvas id="heroNet" aria-hidden="true"></canvas>
         <div class="page-hero-inner">
             <div class="breadcrumbs" role="navigation" aria-label="Διαδρομή"><ol><li><a href="../">Αρχική</a></li><li aria-current="page">Εκπαιδεύσεις Υ&amp;Α</li></ol></div>
             <div class="eyebrow"><span>Υπηρεσία</span></div>
@@ -308,30 +324,59 @@
     <footer>
         <div class="footer-top">
             <div class="footer-brand">
-                <div class="footer-logo-rect"><img src="../img/logo-malliaris-synergates.webp" alt="" width="300" height="200" loading="lazy" decoding="async"></div>
-                <div class="footer-brand-text"><p class="fname">ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ</p><p class="ftitle">Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας</p></div>
+                <div class="footer-logo-rect">
+                    <img decoding="async" width="300" height="200" src="../img/logo-malliaris-synergates.webp" alt="Μάλλιαρης &amp; Συνεργάτες — Υπηρεσίες Υγείας και Ασφάλειας" data-i18n-alt="logo.alt" onerror="this.style.display='none'">
+                </div>
+                <div class="footer-brand-text">
+                    <p class="fname" data-i18n="name.company">ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ</p>
+                    <p class="ftitle" data-i18n-html="footer.title">Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:info@stavrosmalliaris.gr" class="social-link" title="Email" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+302110040193" class="social-link" title="+30 211 0040 193" aria-label="+30 211 0040 193">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="https://calendly.com/stamalliaris2/15min" target="_blank" rel="noopener" class="social-link" title="Calendly" aria-label="Calendly">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </a>
             </div>
         </div>
         <div class="footer-nav">
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Υπηρεσίες</p>
-                <a href="../texnikos-asfaleias/">Τεχνικός Ασφαλείας</a><a href="../geek-grapti-ektimisi-kindynou/">Γραπτή Εκτίμηση Κινδύνου (ΓΕΕΚ)</a><a href="../ekpaideuseis-ygeias-asfaleias/">Εκπαιδεύσεις Υ&amp;Α</a><a href="../diereynisi-ergatikou-atyximatos/">Διερεύνηση ατυχημάτων</a><a href="../schedia-diafygis-ekkenosis/">Σχέδια διαφυγής</a><a href="../elegxos-epitheorisis-ergasias/">Έλεγχος Επιθεώρησης Εργασίας</a>
+                <p class="footer-nav-title" data-i18n="fn.services">Υπηρεσίες</p>
+                <a href="../texnikos-asfaleias/" data-i18n="s1.title">Κάλυψη Τεχνικού Ασφαλείας</a>
+                <a href="../geek-grapti-ektimisi-kindynou/" data-i18n="s2.title">Σύνταξη ΓΕΕΚ</a>
+                <a href="../ekpaideuseis-ygeias-asfaleias/" data-i18n="s3.title">Εκπαιδεύσεις Υγείας &amp; Ασφάλειας</a>
+                <a href="../diereynisi-ergatikou-atyximatos/" data-i18n="s4.title">Διερεύνηση Εργατικών Ατυχημάτων</a>
+                <a href="../schedia-diafygis-ekkenosis/" data-i18n="s5.title">Εκπόνηση Σχεδίων Διαφυγής</a>
+                <a href="../elegxos-epitheorisis-ergasias/" data-i18n="s6.title">Προετοιμασία για Επιθεώρηση ΣΕΠΕ</a>
             </div>
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Κλάδοι</p>
-                <a href="../kataskeves-ergotaxia/">Κατασκευές &amp; εργοτάξια</a><a href="../viomixania-logistics/">Βιομηχανία &amp; logistics</a><a href="../mikres-epixeiriseis/">Μικρές επιχειρήσεις</a><a href="../en/foreign-companies-greece/">Ξένες εταιρείες (EN)</a>
+                <p class="footer-nav-title" data-i18n="fn.sectors">Τομείς</p>
+                <a href="../kataskeves-ergotaxia/" data-i18n="sectors.l1">Κατασκευές &amp; εργοτάξια</a>
+                <a href="../viomixania-logistics/" data-i18n="sectors.l2">Βιομηχανία &amp; logistics</a>
+                <a href="../mikres-epixeiriseis/" data-i18n="sectors.l3">Μικρές επιχειρήσεις</a>
+                <a href="../en/foreign-companies-greece/" data-i18n="sectors.l4">Ξένες εταιρείες (EN)</a>
             </div>
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Η εταιρεία</p>
-                <a href="../omada/">Η ομάδα</a><a href="../odigoi/">Οδηγοί</a><a href="../odigoi/ores-texnikou-asfaleias/">Υπολογιστής ωρών ΤΑ</a><a href="../aporrito/">Πολιτική απορρήτου</a><a href="#" data-cc-open>Ρυθμίσεις cookies</a>
+                <p class="footer-nav-title" data-i18n="fn.company">Η εταιρεία</p>
+                <a href="../omada/" data-i18n="fn.team">Η ομάδα</a>
+                <a href="../odigoi/" data-i18n="fn.guides">Οδηγοί</a>
+                <a href="../odigoi/ores-texnikou-asfaleias/" data-i18n="fn.calc">Υπολογιστής ωρών Τεχνικού Ασφαλείας</a>
+                <a href="../aporrito/" data-i18n="fn.privacy">Πολιτική απορρήτου</a>
+                <a href="#" data-cc-open data-i18n="fn.cookies">Ρυθμίσεις cookies</a>
             </div>
             <div class="footer-nav-col">
-                <p class="footer-nav-title">Επικοινωνία</p>
+                <p class="footer-nav-title" data-i18n="fn.contact">Επικοινωνία</p>
                 <a href="tel:+302110040193">+30 211 0040 193</a>
                 <a href="mailto:info@stavrosmalliaris.gr">info@stavrosmalliaris.gr</a>
-                <a href="https://share.google/xxk94ucxrcYaLiCtk" target="_blank" rel="noopener">Δωδεκανήσου 16, 174 56 Άλιμος</a>
+                <a href="https://share.google/xxk94ucxrcYaLiCtk" target="_blank" rel="noopener" data-i18n="contact.address">Δωδεκανήσου 16, 174 56 Άλιμος</a>
             </div>
         </div>
+        <!-- EXPERTEASE CREDIT BANNER — modular component (expertease-credit.css) -->
         <hr class="ec-rule">
         <div class="expertease-credit">
           <div class="ec-layer ec-layer--credit">
@@ -339,9 +384,21 @@
             <span class="ec-divider"></span>
             <a href="https://expertease.eu/webdesign" target="_blank" rel="noopener" class="ec-brand">
               <span class="ec-label">Designed by</span>
-              <img src="../img/logo-expertease.webp" alt="Expertease Designs" class="ec-logo" width="96" height="95" loading="lazy" decoding="async">
+              <img decoding="async" loading="lazy" width="96" height="95" src="../img/logo-expertease.webp" alt="Expertease Designs" class="ec-logo">
               <span class="ec-name">Expertease Designs</span>
             </a>
+          </div>
+          <div class="ec-layer ec-layer--ad">
+            <div class="ec-ad-ring">
+              <div class="ec-ad-logo"><img decoding="async" loading="lazy" width="96" height="95" src="../img/logo-expertease.webp" alt="Expertease Designs"></div>
+            </div>
+            <div class="ec-ad-text">
+              <span class="ec-ad-question">Like this site?</span>
+              <a href="https://expertease.eu/webdesign" target="_blank" rel="noopener" class="ec-ad-cta">
+                Let's build yours
+                <span class="ec-ad-arrow"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="6.5" x2="11" y2="6.5"/><polyline points="7,2.5 11,6.5 7,10.5"/></svg></span>
+              </a>
+            </div>
           </div>
         </div>
     </footer>

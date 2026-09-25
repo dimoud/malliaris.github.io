@@ -366,7 +366,7 @@
         'contact.address':  { el: 'Δωδεκανήσου 16, 174 56 Άλιμος', en: 'Dodekanisou 16, 174 56 Alimos, Athens' },
         'contact.maptitle': { el: 'Χάρτης: Μάλλιαρης & Συνεργάτες, Δωδεκανήσου 16, Άλιμος', en: 'Map: Malliaris & Partners, Dodekanisou 16, Alimos' },
         'fn.services': { el: 'Υπηρεσίες', en: 'Services' },
-        'fn.sectors':  { el: 'Κλάδοι', en: 'Sectors' },
+        'fn.sectors':  { el: 'Τομείς', en: 'Sectors' },
         'fn.company':  { el: 'Η εταιρεία', en: 'Company' },
         'fn.team':     { el: 'Η ομάδα', en: 'Our team' },
         'fn.guides':   { el: 'Οδηγοί', en: 'Guides (GR)' },

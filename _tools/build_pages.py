@@ -113,62 +113,6 @@ def strip_tags(s):
     return re.sub(r"<[^>]+>", "", s)
 
 
-def nav(p, pre, alt):
-    el = p["lang"] == "el"
-    home = pre if el else pre + "en/"
-    if el:
-        drops = [N.dd("services", home + "#services", "Υπηρεσίες", N.SERVICES_EL, pre, "el", more=N.SERVICES_EL_MORE),
-                 N.dd("sectors", home + "#sectors", "Τομείς", N.SECTORS_EL, pre, "el")]
-        items = [("omada/", "Η ομάδα", pre), ("odigoi/", "Οδηγοί", pre)]
-        cta = (home + "#contact", "Επικοινωνία")
-    else:
-        drops = [N.dd("services", home + "#services", "Services", N.SERVICES_EN, pre, "en")]
-        items = [("team/", "Team", pre + "en/")]
-        cta = (home + "#contact", "Contact")
-    if el:
-        el_href, en_href = "./", (pre + alt.lstrip("/")) if alt else pre + "en/"
-    else:
-        en_href, el_href = "./", (pre + alt.lstrip("/")) if alt else pre
-
-    def lang_links():
-        a_el = "active" if el else ""
-        a_en = "" if el else "active"
-        return (f'<a class="lang-btn {a_el}" data-lang="el" href="{el_href}" hreflang="el" lang="el"><img src="{pre}img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>'
-                f'<div class="lang-sep"></div>'
-                f'<a class="lang-btn {a_en}" data-lang="en" href="{en_href}" hreflang="en" lang="en"><img src="{pre}img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>')
-    links = "\n".join(["                " + d for d in drops] + [f'                <a href="{base}{h}">{t}</a>' for h, t, base in items])
-    name = "ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ" if el else "MALLIARIS &amp; PARTNERS"
-    title = "Σύμβουλοι Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας" if el else "Health &amp; Safety Consultants - Safety Technicians"
-    alt_logo = "Μάλλιαρης &amp; Συνεργάτες — αρχική σελίδα" if el else "Malliaris &amp; Partners — home"
-    menu = "Μενού" if el else "Menu"
-    return f'''    <nav id="nav" aria-label="{"Κύριο μενού" if el else "Main menu"}">
-        <div class="nav-logo-group">
-            <a href="{home}" class="nav-logo">
-                <div class="logo-rect"><img decoding="async" width="300" height="200" src="{pre}img/logo-malliaris-synergates.webp" alt="{alt_logo}"></div>
-                <div class="logo-text">
-                    <span class="name">{name}</span>
-                    <span class="title">{title}</span>
-                </div>
-            </a>
-            <div class="nav-logo-lang-sep"></div>
-            <div class="nav-logo-lang">{lang_links()}</div>
-        </div>
-        <div class="nav-right">
-            <div class="nav-links" id="navLinks">
-{links}
-                <a href="{cta[0]}" class="nav-cta">{cta[1]}</a>
-            </div>
-            <div class="lang-toggle">{lang_links()}</div>
-        </div>
-        <div class="mobile-nav-right">
-            <div class="mobile-lang">{lang_links()}</div>
-            <div class="mobile-nav-sep"></div>
-            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="{menu}" aria-controls="navLinks" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>'''
-
 
 def hero(p, pre):
     el = p["lang"] == "el"
@@ -195,6 +139,7 @@ def hero(p, pre):
         else:
             meta = f'<p class="page-meta">Written and reviewed by <a href="{pre}en/team/">Stavros Malliaris</a>, Civil Engineer (AUTh), ASP® · Last updated: <time datetime="{upd}">{d.strftime("%d %B %Y")}</time></p>'
     return f'''    <header class="page-hero">
+        <canvas id="heroNet" aria-hidden="true"></canvas>
         <div class="page-hero-inner">
             <div class="breadcrumbs" role="navigation" aria-label="{"Διαδρομή" if el else "Breadcrumb"}"><ol>{"".join(crumbs)}</ol></div>
             <div class="eyebrow"><span>{p["eyebrow"]}</span></div>
@@ -293,63 +238,59 @@ def contact_band(p, pre):
     </section>'''
 
 
-def footer(p, pre):
-    el = p["lang"] == "el"
-    if el:
-        cols = [("Υπηρεσίες", [("texnikos-asfaleias/", "Τεχνικός Ασφαλείας"), ("geek-grapti-ektimisi-kindynou/", "Γραπτή Εκτίμηση Κινδύνου (ΓΕΕΚ)"),
-                               ("ekpaideuseis-ygeias-asfaleias/", "Εκπαιδεύσεις Υ&Α"), ("diereynisi-ergatikou-atyximatos/", "Διερεύνηση ατυχημάτων"),
-                               ("schedia-diafygis-ekkenosis/", "Σχέδια διαφυγής"), ("elegxos-epitheorisis-ergasias/", "Έλεγχος Επιθεώρησης Εργασίας")]),
-                ("Κλάδοι", [("kataskeves-ergotaxia/", "Κατασκευές & εργοτάξια"), ("viomixania-logistics/", "Βιομηχανία & logistics"),
-                            ("mikres-epixeiriseis/", "Μικρές επιχειρήσεις"), ("en/foreign-companies-greece/", "Ξένες εταιρείες (EN)")]),
-                ("Η εταιρεία", [("omada/", "Η ομάδα"), ("odigoi/", "Οδηγοί"), ("odigoi/ores-texnikou-asfaleias/", "Υπολογιστής ωρών ΤΑ"),
-                                ("aporrito/", "Πολιτική απορρήτου"), ("#cookies", "Ρυθμίσεις cookies")])]
-        brand, sub, contact = "ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ", "Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας", "Επικοινωνία"
-        addr = "Δωδεκανήσου 16, 174 56 Άλιμος"
-    else:
-        cols = [("Services", [("en/safety-technician-greece/", "Safety technician"), ("en/risk-assessment-greece/", "Written risk assessment"),
-                              ("en/foreign-companies-greece/", "Foreign companies in Greece"), ("en/", "All services")]),
-                ("Company", [("en/team/", "Our team"), ("en/privacy/", "Privacy policy"), ("#cookies", "Cookie settings"), ("", "Greek version")]),
-                ("Greek guides", [("odigoi/", "Guides (in Greek)"), ("odigoi/ores-texnikou-asfaleias/", "Hours calculator (GR)")])]
-        brand, sub, contact = "MALLIARIS &amp; PARTNERS", "Health &amp; Safety Consultants - Safety Technicians", "Contact"
-        addr = "Dodekanisou 16, 174 56 Alimos, Athens"
 
-    def a(h, t):
-        if h == "#cookies":
-            return f'<a href="#" data-cc-open>{esc(t)}</a>'
-        return f'<a href="{pre}{h}">{esc(t)}</a>'
-    colhtml = "".join(f'''
-            <div class="footer-nav-col">
-                <p class="footer-nav-title">{t}</p>
-                {"".join(a(h, x) for h, x in links)}
-            </div>''' for t, links in cols)
-    return f'''    <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <div class="footer-logo-rect"><img src="{pre}img/logo-malliaris-synergates.webp" alt="" width="300" height="200" loading="lazy" decoding="async"></div>
-                <div class="footer-brand-text"><p class="fname">{brand}</p><p class="ftitle">{sub}</p></div>
-            </div>
-        </div>
-        <div class="footer-nav">{colhtml}
-            <div class="footer-nav-col">
-                <p class="footer-nav-title">{contact}</p>
-                <a href="tel:{E.PHONE_E164}">{E.PHONE_DISPLAY}</a>
-                <a href="mailto:{E.EMAIL}">{E.EMAIL}</a>
-                <a href="{E.MAP_URL}" target="_blank" rel="noopener">{addr}</a>
-            </div>
-        </div>
-        <hr class="ec-rule">
-        <div class="expertease-credit">
-          <div class="ec-layer ec-layer--credit">
-            <span class="ec-copy">© 2026 · All Rights Reserved</span>
-            <span class="ec-divider"></span>
-            <a href="https://expertease.eu/webdesign" target="_blank" rel="noopener" class="ec-brand">
-              <span class="ec-label">Designed by</span>
-              <img src="{pre}img/logo-expertease.webp" alt="Expertease Designs" class="ec-logo" width="96" height="95" loading="lazy" decoding="async">
-              <span class="ec-name">Expertease Designs</span>
-            </a>
-          </div>
-        </div>
-    </footer>'''
+# ── Μπάρα και υποσέλιδο: αυτούσια από την αρχική (μία πηγή, ίδια σε κάθε σελίδα) ──
+import posixpath as _pp
+
+def _shell_part(lang, tag):
+    src = (ROOT / ("index.html" if lang == "el" else "en/index.html")).read_text(encoding="utf-8")
+    pat = r'<nav id="nav".*?</nav>' if tag == "nav" else r"<footer>.*?</footer>"
+    m = re.search(pat, src, re.S)
+    if not m:
+        raise SystemExit("δεν βρέθηκε <%s> στην αρχική (%s)" % (tag, lang))
+    return m.group(0)
+
+
+def _relink(html, pre, lang):
+    """Διαδρομές της αρχικής → διαδρομές για σελίδα με πρόθεμα pre."""
+    base = "" if lang == "el" else "en/"
+    home = pre + base
+
+    def fix(m):
+        attr, url = m.group(1), m.group(2)
+        if re.match(r"^(https?:|mailto:|tel:|data:|javascript:|/)", url):
+            return m.group(0)
+        if url == "#":
+            return '%s="%s"' % (attr, home)
+        if url.startswith("#"):
+            return '%s="%s%s"' % (attr, home, url)
+        root = _pp.normpath(base + url)
+        root = "" if root == "." else root
+        if url.endswith("/") and root and not root.endswith("/"):
+            root += "/"
+        return '%s="%s%s"' % (attr, pre, root)
+    html = re.sub(r'\b(href|src)="([^"]*)"', fix, html)
+    html = html.replace('<a href="%s" data-cc-open' % home, '<a href="#" data-cc-open')
+    return html
+
+
+def nav(p, pre, alt):
+    el = p["lang"] == "el"
+    html = _relink(_shell_part(p["lang"], "nav"), pre, p["lang"])
+    if el:
+        el_href, en_href = "./", (pre + alt.lstrip("/")) if alt else pre + "en/"
+    else:
+        en_href, el_href = "./", (pre + alt.lstrip("/")) if alt else pre
+    html = re.sub(r'(data-lang="el" href=")[^"]*"', lambda m: m.group(1) + el_href + '"', html)
+    html = re.sub(r'(data-lang="en" href=")[^"]*"', lambda m: m.group(1) + en_href + '"', html)
+    menu = "Μενού" if el else "Menu"
+    html = html.replace('<div class="hamburger" id="hamburger" onclick="toggleMenu()">',
+                        '<div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="%s" aria-controls="navLinks" aria-expanded="false">' % menu)
+    return "    " + html
+
+
+def footer(p, pre):
+    return "    " + _relink(_shell_part(p["lang"], "footer"), pre, p["lang"])
 
 
 def render(p, alt):
