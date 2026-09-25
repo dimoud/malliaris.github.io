@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import entity as E  # noqa: E402
+import navmenu as N  # noqa: E402
 
 TODAY = "2026-09-25"
 D = E.DOMAIN
@@ -116,12 +117,13 @@ def nav(p, pre, alt):
     el = p["lang"] == "el"
     home = pre if el else pre + "en/"
     if el:
-        items = [("#services", "Υπηρεσίες", home), ("#sectors", "Κλάδοι", home), ("omada/", "Η ομάδα", pre),
-                 ("odigoi/", "Οδηγοί", pre)]
+        drops = [N.dd("services", home + "#services", "Υπηρεσίες", N.SERVICES_EL, pre, "el", more=N.SERVICES_EL_MORE),
+                 N.dd("sectors", home + "#sectors", "Τομείς", N.SECTORS_EL, pre, "el")]
+        items = [("omada/", "Η ομάδα", pre), ("odigoi/", "Οδηγοί", pre)]
         cta = (home + "#contact", "Επικοινωνία")
     else:
-        items = [("#services", "Services", home), ("safety-technician-greece/", "Safety technician", pre + "en/"),
-                 ("foreign-companies-greece/", "Foreign companies", pre + "en/"), ("team/", "Team", pre + "en/")]
+        drops = [N.dd("services", home + "#services", "Services", N.SERVICES_EN, pre, "en")]
+        items = [("team/", "Team", pre + "en/")]
         cta = (home + "#contact", "Contact")
     if el:
         el_href, en_href = "./", (pre + alt.lstrip("/")) if alt else pre + "en/"
@@ -134,7 +136,7 @@ def nav(p, pre, alt):
         return (f'<a class="lang-btn {a_el}" data-lang="el" href="{el_href}" hreflang="el" lang="el"><img src="{pre}img/flag-gr.svg" alt="" class="flag-icon" width="20" height="14"> <span class="lcode">ΕΛ</span></a>'
                 f'<div class="lang-sep"></div>'
                 f'<a class="lang-btn {a_en}" data-lang="en" href="{en_href}" hreflang="en" lang="en"><img src="{pre}img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>')
-    links = "\n".join(f'                <a href="{base}{h}">{t}</a>' for h, t, base in items)
+    links = "\n".join(["                " + d for d in drops] + [f'                <a href="{base}{h}">{t}</a>' for h, t, base in items])
     name = "ΜΑΛΛΙΑΡΗΣ &amp; ΣΥΝΕΡΓΑΤΕΣ" if el else "MALLIARIS &amp; PARTNERS"
     title = "Σύμβουλοι Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας" if el else "Health &amp; Safety Consultants - Safety Technicians"
     alt_logo = "Μάλλιαρης &amp; Συνεργάτες — αρχική σελίδα" if el else "Malliaris &amp; Partners — home"
@@ -369,7 +371,8 @@ def render(p, alt):
     </main>
 
 {footer(p, pre)}
-    <script src="{pre}page.js" defer></script>{extra_js}
+    <script src="{pre}page.js" defer></script>
+    <script src="{pre}site-nav.js" defer></script>{extra_js}
 </body>
 </html>
 '''

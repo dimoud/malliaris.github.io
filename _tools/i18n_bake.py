@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import entity as E  # noqa: E402
+import navmenu as N  # noqa: E402
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 
@@ -127,8 +128,24 @@ EN_LINKS = {
 }
 
 
+def refresh_dd(text, t, lang):
+    """Βάζει/ανανεώνει τα υπομενού «Υπηρεσίες» και «Τομείς» της μπάρας (δείκτες <!--dd:…-->)."""
+    for key in ("services", "sectors"):
+        block = N.home_block(key, lang, t["nav." + key][lang])
+        pat = re.compile(r"<!--dd:%s-->.*?<!--/dd:%s-->" % (key, key), re.S)
+        if pat.search(text):
+            text = pat.sub(lambda m: block, text, count=1)
+        else:
+            old = re.compile(r'<a href="#%s" data-i18n="nav\.%s">[^<]*</a>' % (key, key))
+            text, n = old.subn(lambda m: block, text, count=1)
+            if not n:
+                raise SystemExit("δεν βρέθηκε ο σύνδεσμος #%s στη μπάρα" % key)
+    return text
+
+
 def to_en(text, t):
     D = E.DOMAIN
+    text = refresh_dd(text, t, "en")
     title = "Malliaris & Partners | Occupational Health & Safety, Athens"
     desc = ("Safety technician, written risk assessment, staff training, evacuation plans and labour "
             "inspection readiness for companies in Athens and Attica, Greece.")
@@ -180,7 +197,7 @@ def to_en(text, t):
 
 def main():
     t = load_dict()
-    src = (ROOT / "index.html").read_text(encoding="utf-8")
+    src = refresh_dd((ROOT / "index.html").read_text(encoding="utf-8"), t, "el")
     el, miss_el = bake(src, t, "el")
     (ROOT / "index.html").write_text(el, encoding="utf-8")
     en, miss_en = bake(el, t, "en")

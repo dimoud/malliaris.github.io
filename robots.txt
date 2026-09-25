@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.malliarisandpartners.gr/sitemap.xml
+Sitemap: https://malliarisandpartners.gr/sitemap.xml

@@ -3,7 +3,7 @@
 Μία πηγή αλήθειας: αν αλλάξει τηλέφωνο/διεύθυνση/email, αλλάζει ΕΔΩ και ξανατρέχει το _tools/build.py."""
 import json
 
-DOMAIN = "https://www.malliarisandpartners.gr"
+DOMAIN = "https://malliarisandpartners.gr"
 ORG_ID = DOMAIN + "/#organization"
 SITE_ID = DOMAIN + "/#website"
 PHONE_E164 = "+302110040193"

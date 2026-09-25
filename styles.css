@@ -3659,3 +3659,67 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 .footer-nav a:hover { color: var(--white); }
 @media (max-width: 900px) { .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .footer-nav { grid-template-columns: 1fr; } .footer-nav a { padding: 6px 0; } }
+
+/* ===== Υπομενού μπάρας: Υπηρεσίες / Τομείς ===== */
+.nav-dd { position: relative; display: flex; align-items: center; gap: 2px; }
+.nav-dd-toggle {
+    width: 22px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.65); transition: color 0.25s;
+}
+.nav-dd-toggle::before {
+    content: ''; width: 6px; height: 6px;
+    border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+    transform: translateY(-2px) rotate(45deg); transition: transform 0.25s var(--ease);
+}
+.nav-dd:hover .nav-dd-toggle, .nav-dd-toggle:focus-visible { color: var(--accent); }
+.nav-dd.dd-open .nav-dd-toggle::before { transform: translateY(1px) rotate(225deg); }
+.nav-dd-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.nav-dd-menu {
+    position: absolute; top: calc(100% + 16px); left: -20px; min-width: 290px;
+    display: flex; flex-direction: column; padding: 8px 0;
+    background: rgba(10,18,32,0.97); backdrop-filter: blur(20px);
+    border: 1px solid rgba(232,84,26,0.18); border-top: 2px solid var(--accent);
+    border-radius: 0 0 8px 8px; box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    opacity: 0; pointer-events: none; transform: translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease; z-index: 1001;
+}
+.nav-dd-menu::before { content: ''; position: absolute; left: 0; right: 0; top: -18px; height: 18px; }
+.nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu, .nav-dd.dd-open .nav-dd-menu {
+    opacity: 1; pointer-events: all; transform: translateY(0);
+}
+.nav-links .nav-dd-menu a {
+    display: block; padding: 10px 20px; border-left: 2px solid transparent;
+    font: 500 14px/1.35 'Inter', sans-serif; letter-spacing: 0; text-transform: none;
+    color: rgba(255,255,255,0.75); white-space: nowrap;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+.nav-links .nav-dd-menu a:hover, .nav-links .nav-dd-menu a:focus-visible {
+    color: var(--white); background: rgba(232,84,26,0.1); border-left-color: var(--accent);
+}
+.nav-dd-sep { display: block; height: 1px; margin: 6px 20px; background: rgba(255,255,255,0.08); }
+
+@media (max-width: 900px) {
+    .nav-links { max-height: calc(100vh - 70px); overflow-y: auto; overscroll-behavior: contain; }
+    .nav-dd { width: 100%; flex-wrap: wrap; justify-content: flex-end; gap: 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .nav-links .nav-dd > a { width: auto; flex: 1; border-bottom: none; }
+    .nav-dd-toggle { width: 40px; height: 40px; }
+    .nav-dd-menu, .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu {
+        position: static; min-width: 0; width: 100%; display: none;
+        padding: 0 0 6px; background: none; backdrop-filter: none; border: 0; box-shadow: none;
+        opacity: 1; pointer-events: all; transform: none;
+    }
+    .nav-dd-menu::before { display: none; }
+    .nav-dd.dd-open .nav-dd-menu { display: flex; }
+    .nav-links .nav-dd-menu a {
+        display: flex; justify-content: flex-end; width: 100%; min-height: 36px; padding: 7px 6px;
+        font-size: 12.5px; white-space: normal; text-align: right;
+        color: rgba(255,255,255,0.6); border-left: 0; border-bottom: 0; border-right: 2px solid transparent;
+    }
+    .nav-links .nav-dd-menu a:hover { background: none; border-right-color: var(--accent); }
+    .nav-dd-sep { margin: 4px 6px; }
+}
+@media (min-width: 901px) and (max-width: 1180px) {
+    .nav-links { gap: 20px; }
+    .nav-links > a, .nav-dd > a { white-space: nowrap; font-size: 12px; letter-spacing: 0.8px; }
+}
