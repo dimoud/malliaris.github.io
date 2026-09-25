@@ -40,13 +40,14 @@ def head(p, pre, alt):
                   f'<link rel="alternate" hreflang="x-default" href="{el_url}">']
     img = D + p.get("og_image", "/img/og-malliaris-synergates.jpg")
     site = "Μάλλιαρης &amp; Συνεργάτες" if el else "Malliaris &amp; Partners"
+    robots = '\n    <meta name="robots" content="noindex,follow">' if p.get("noindex") else ""
     return f'''<!DOCTYPE html>
 <html lang="{p["lang"]}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>{esc(p["title"])}</title>
-    <meta name="description" content="{esc(p["desc"])}">
+    <meta name="description" content="{esc(p["desc"])}">{robots}
     {chr(10).join("    " + l if i else l for i, l in enumerate(links))}
     <meta name="theme-color" content="#0F1929">
     <meta name="format-detection" content="telephone=no">
@@ -337,7 +338,10 @@ def main():
         out = ROOT / p["path"].strip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render(p, alt), encoding="utf-8")
-    write_sitemap(pages)
+    write_sitemap([p for p in pages if not p.get("noindex")])
+    # κοινά μέρη: μενού + υποσέλιδο αυτούσια από την αρχική (ίδιος κανόνας με τον έλεγχο N5)
+    import koina
+    koina.sync(ROOT, quiet=True)
     print("σελίδες:", len(pages))
 
 

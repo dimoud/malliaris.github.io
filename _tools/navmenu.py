@@ -15,7 +15,12 @@ SERVICES_EL = [
     ("schedia-diafygis-ekkenosis/", "Σχέδια Διαφυγής &amp; Εκκένωσης"),
     ("elegxos-epitheorisis-ergasias/", "Προετοιμασία για Έλεγχο ΣΕΠΕ"),
 ]
-SERVICES_EL_MORE = [("odigoi/", "Οδηγοί για εργοδότες")]
+SERVICES_EL_MORE = [
+    ("odigoi/", "Οδηγοί για εργοδότες"),
+    ("odigoi/ores-texnikou-asfaleias/", "Υπολογιστής ωρών Τεχνικού Ασφαλείας"),
+    ("odigoi/ergodotis-texnikos-asfaleias/", "Ο εργοδότης ως Τεχνικός Ασφαλείας"),
+    ("odigoi/ergatiko-atyxima-ti-kanei-o-ergodotis/", "Εργατικό ατύχημα: πρώτα βήματα"),
+]
 
 SECTORS_EL = [
     ("kataskeves-ergotaxia/", "Κατασκευές &amp; Εργοτάξια"),
@@ -26,7 +31,23 @@ SECTORS_EL = [
 
 SERVICES_EN = [
     ("en/safety-technician-greece/", "Safety technician"),
-    ("en/risk-assessment-greece/", "Written risk assessment"),
+    ("en/risk-assessment-greece/", "Written risk assessment (GEEK)"),
+    ("en/health-safety-training/", "Health &amp; safety training"),
+    ("en/accident-investigation/", "Accident investigation"),
+    ("en/evacuation-plans/", "Escape &amp; evacuation plans"),
+    ("en/labour-inspection-readiness/", "Labour Inspectorate readiness"),
+]
+SERVICES_EN_MORE = [
+    ("en/guides/", "Guides for employers"),
+    ("en/guides/safety-technician-hours/", "Safety technician hours calculator"),
+    ("en/guides/employer-as-safety-technician/", "Employer as safety technician"),
+    ("en/guides/workplace-accident-employer-steps/", "Workplace accident: first steps"),
+]
+
+SECTORS_EN = [
+    ("en/construction-sites/", "Construction sites"),
+    ("en/industry-logistics/", "Industry &amp; logistics"),
+    ("en/small-businesses/", "Shops, restaurants, offices"),
     ("en/foreign-companies-greece/", "Foreign companies in Greece"),
 ]
 
@@ -56,10 +77,10 @@ def home_block(key, lang, label, pre=""):
         else:
             inner = dd("sectors", "#sectors", label, SECTORS_EL, pre, "el", "nav.sectors")
     else:
+        # στην /en/ οι σύνδεσμοι γράφονται σχετικά με τη ρίζα της /en/
+        strip = lambda items: [(h[len("en/"):], t) for h, t in items]
         if key == "services":
-            # στην /en/ οι σύνδεσμοι γράφονται σχετικά με τη ρίζα της /en/
-            items = [(h[len("en/"):], t) for h, t in SERVICES_EN]
-            inner = dd("services", "#services", label, items, "", "en", "nav.services")
+            inner = dd("services", "#services", label, strip(SERVICES_EN), "", "en", "nav.services", strip(SERVICES_EN_MORE))
         else:
-            inner = f'<a href="#sectors" data-i18n="nav.sectors">{label}</a>'
+            inner = dd("sectors", "#sectors", label, strip(SECTORS_EN), "", "en", "nav.sectors")
     return f"<!--dd:{key}-->{inner}<!--/dd:{key}-->"

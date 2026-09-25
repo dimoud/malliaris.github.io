@@ -122,7 +122,18 @@ def bake(text, t, lang):
 EN_LINKS = {
     "texnikos-asfaleias/": "safety-technician-greece/",
     "geek-grapti-ektimisi-kindynou/": "risk-assessment-greece/",
+    "ekpaideuseis-ygeias-asfaleias/": "health-safety-training/",
+    "diereynisi-ergatikou-atyximatos/": "accident-investigation/",
+    "schedia-diafygis-ekkenosis/": "evacuation-plans/",
+    "elegxos-epitheorisis-ergasias/": "labour-inspection-readiness/",
+    "kataskeves-ergotaxia/": "construction-sites/",
+    "viomixania-logistics/": "industry-logistics/",
+    "mikres-epixeiriseis/": "small-businesses/",
     "omada/": "team/",
+    "odigoi/": "guides/",
+    "odigoi/ores-texnikou-asfaleias/": "guides/safety-technician-hours/",
+    "odigoi/ergodotis-texnikos-asfaleias/": "guides/employer-as-safety-technician/",
+    "odigoi/ergatiko-atyxima-ti-kanei-o-ergodotis/": "guides/workplace-accident-employer-steps/",
     "aporrito/": "privacy/",
     "en/foreign-companies-greece/": "foreign-companies-greece/",
 }
@@ -146,6 +157,7 @@ def refresh_dd(text, t, lang):
 def to_en(text, t):
     D = E.DOMAIN
     text = refresh_dd(text, t, "en")
+    text = text.replace('id="hamburger" role="button" tabindex="0" aria-label="Μενού"', 'id="hamburger" role="button" tabindex="0" aria-label="Menu"')
     title = "Malliaris & Partners | Occupational Health & Safety, Athens"
     desc = ("Safety technician, written risk assessment, staff training, evacuation plans and labour "
             "inspection readiness for companies in Athens and Attica, Greece.")

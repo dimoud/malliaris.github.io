@@ -165,7 +165,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P3 ΕΛΕΓΧΟΣ ΕΠΙΘΕΩΡΗΣΗΣ ΕΡΓΑΣΙΑΣ
 PAGES.append(dict(
-    lang="el", path="/elegxos-epitheorisis-ergasias/", alt=None,
+    lang="el", path="/elegxos-epitheorisis-ergasias/", alt="/en/labour-inspection-readiness/",
     title="Προετοιμασία για Έλεγχο Επιθεώρησης Εργασίας (ΣΕΠΕ)",
     desc="Τι ελέγχει η Επιθεώρηση Εργασίας στην υγεία και ασφάλεια και πώς προετοιμάζεται η επιχείρηση: προσομοίωση ελέγχου, λίστα εγγράφων, σχέδιο διορθώσεων.",
     crumb="Έλεγχος Επιθεώρησης Εργασίας", eyebrow="Υπηρεσία", service="Προετοιμασία για έλεγχο της Επιθεώρησης Εργασίας",
@@ -213,7 +213,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P4 ΕΚΠΑΙΔΕΥΣΕΙΣ
 PAGES.append(dict(
-    lang="el", path="/ekpaideuseis-ygeias-asfaleias/", alt=None,
+    lang="el", path="/ekpaideuseis-ygeias-asfaleias/", alt="/en/health-safety-training/",
     title="Εκπαιδεύσεις Υγείας και Ασφάλειας Εργαζομένων",
     desc="Εκπαιδεύσεις εργαζομένων στον χώρο σας: εργασία σε ύψος, ΜΑΠ, περιορισμένοι χώροι, πυρασφάλεια, εκκένωση, ΚΑΡΠΑ. Στα ελληνικά και στα αγγλικά.",
     crumb="Εκπαιδεύσεις Υ&Α", eyebrow="Υπηρεσία", service="Εκπαιδεύσεις υγείας και ασφάλειας εργαζομένων",
@@ -254,7 +254,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P5 ΣΧΕΔΙΑ ΔΙΑΦΥΓΗΣ
 PAGES.append(dict(
-    lang="el", path="/schedia-diafygis-ekkenosis/", alt=None,
+    lang="el", path="/schedia-diafygis-ekkenosis/", alt="/en/evacuation-plans/",
     title="Σχέδια Διαφυγής και Εκκένωσης για Επιχειρήσεις",
     desc="Μελέτη και αποτύπωση σχεδίων διαφυγής και εκκένωσης: κατόψεις με οδεύσεις, έξοδοι, πυροσβεστήρες, σημείο συγκέντρωσης, ρόλοι και ασκήσεις.",
     crumb="Σχέδια διαφυγής", eyebrow="Υπηρεσία", service="Σχέδια διαφυγής και εκκένωσης",
@@ -286,7 +286,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P6 ΔΙΕΡΕΥΝΗΣΗ ΑΤΥΧΗΜΑΤΟΣ
 PAGES.append(dict(
-    lang="el", path="/diereynisi-ergatikou-atyximatos/", alt=None,
+    lang="el", path="/diereynisi-ergatikou-atyximatos/", alt="/en/accident-investigation/",
     title="Διερεύνηση Εργατικού Ατυχήματος | Μάλλιαρης & Συνεργάτες",
     desc="Διερεύνηση εργατικών ατυχημάτων με αυτοψία, συνεντεύξεις και ανάλυση αιτίων: έκθεση ατυχήματος, διορθωτικά μέτρα και επικαιροποίηση της ΓΕΕΚ.",
     crumb="Διερεύνηση ατυχήματος", eyebrow="Υπηρεσία", service="Διερεύνηση εργατικών ατυχημάτων",
@@ -361,10 +361,10 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P8 ΚΑΤΑΣΚΕΥΕΣ
 PAGES.append(dict(
-    lang="el", path="/kataskeves-ergotaxia/", alt=None,
+    lang="el", path="/kataskeves-ergotaxia/", alt="/en/construction-sites/",
     title="Υγεία και Ασφάλεια σε Εργοτάξια και Κατασκευές",
     desc="Τεχνικός Ασφαλείας εργοταξίου, συντονιστής ασφάλειας, ΣΑΥ/ΦΑΥ, εκπαιδεύσεις εργασίας σε ύψος και επιθεωρήσεις για τεχνικές εταιρείες στην Αττική.",
-    crumb="Κατασκευές & εργοτάξια", eyebrow="Τομέας", service="Υγεία και ασφάλεια σε εργοτάξια",
+    crumb="Κατασκευές & εργοτάξια", eyebrow="Τομέας",
     h1="Υγεία και ασφάλεια <em>σε εργοτάξια και κατασκευές</em>",
     lead=("Τα εργοτάξια είναι ο χώρος από όπου ξεκινήσαμε. Καλύπτουμε Τεχνικό Ασφαλείας και συντονισμό ασφάλειας, "
           "συντάσσουμε ΣΑΥ και ΦΑΥ, εκπαιδεύουμε συνεργεία στο πεδίο και ελέγχουμε ικριώματα, μηχανήματα και "
@@ -400,10 +400,10 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P9 ΒΙΟΜΗΧΑΝΙΑ
 PAGES.append(dict(
-    lang="el", path="/viomixania-logistics/", alt=None,
+    lang="el", path="/viomixania-logistics/", alt="/en/industry-logistics/",
     title="Υγεία και Ασφάλεια σε Βιομηχανία και Logistics",
     desc="Τεχνικός Ασφαλείας και ΓΕΕΚ για βιομηχανίες, αποθήκες και εταιρείες logistics στην Αττική: περονοφόρα, ράφια, μηχανήματα, βάρδιες, εκπαιδεύσεις.",
-    crumb="Βιομηχανία & logistics", eyebrow="Τομέας", service="Υγεία και ασφάλεια σε βιομηχανία και αποθήκες",
+    crumb="Βιομηχανία & logistics", eyebrow="Τομέας",
     h1="Βιομηχανία, αποθήκες <em>και logistics</em>",
     lead=("Σε μια αποθήκη ή μια μονάδα παραγωγής, οι κίνδυνοι αλλάζουν με τη βάρδια, τον όγκο και το προσωπικό. "
           "Δουλεύουμε πάνω στη ροή της δουλειάς: κυκλοφορία περονοφόρων και πεζών, ράφια, μηχανήματα, χειρωνακτική "
@@ -427,10 +427,10 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P10 ΜΙΚΡΕΣ ΕΠΙΧΕΙΡΗΣΕΙΣ
 PAGES.append(dict(
-    lang="el", path="/mikres-epixeiriseis/", alt=None,
+    lang="el", path="/mikres-epixeiriseis/", alt="/en/small-businesses/",
     title="Τεχνικός Ασφαλείας για Καταστήματα, Εστίαση, Γραφεία",
     desc="Υγεία και ασφάλεια για μικρές επιχειρήσεις στην Αττική: Τεχνικός Ασφαλείας, ΓΕΕΚ και εκπαιδεύσεις για καταστήματα, εστίαση και γραφεία.",
-    crumb="Μικρές επιχειρήσεις", eyebrow="Τομέας", service="Υγεία και ασφάλεια για μικρές επιχειρήσεις",
+    crumb="Μικρές επιχειρήσεις", eyebrow="Τομέας",
     h1="Καταστήματα, εστίαση <em>και γραφεία</em>",
     lead=("Και με έναν υπάλληλο, η επιχείρηση χρειάζεται Τεχνικό Ασφαλείας και Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου. "
           "Για μικρές επιχειρήσεις κρατάμε τα πράγματα απλά: λίγες, στοχευμένες επισκέψεις, καθαρό φάκελο για τον "
@@ -465,7 +465,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── ΟΔΗΓΟΙ — κόμβος
 PAGES.append(dict(
-    lang="el", path="/odigoi/", alt=None, page_type="CollectionPage",
+    lang="el", path="/odigoi/", alt="/en/guides/", page_type="CollectionPage",
     title="Οδηγοί Υγείας και Ασφάλειας για Εργοδότες",
     desc="Πρακτικοί οδηγοί για εργοδότες: ώρες Τεχνικού Ασφαλείας, ο εργοδότης ως Τεχνικός Ασφαλείας, τι κάνετε μετά από εργατικό ατύχημα.",
     crumb="Οδηγοί", eyebrow="Οδηγοί", ctas=False,
@@ -502,7 +502,7 @@ CALC = """
 </form>
 """
 PAGES.append(dict(
-    lang="el", path="/odigoi/ores-texnikou-asfaleias/", alt=None, page_type="WebPage",
+    lang="el", path="/odigoi/ores-texnikou-asfaleias/", alt="/en/guides/safety-technician-hours/", page_type="WebPage",
     title="Ώρες Τεχνικού Ασφαλείας: Υπολογιστής ανά Κατηγορία",
     desc="Υπολογίστε ενδεικτικά τις ετήσιες ώρες απασχόλησης Τεχνικού Ασφαλείας και Ιατρού Εργασίας για επιχειρήσεις κατηγορίας Α΄, Β΄ και Γ΄.",
     crumbs=[("Οδηγοί", "/odigoi/")], crumb="Ώρες Τεχνικού Ασφαλείας", eyebrow="Οδηγός · Εργαλείο", ctas=False,
@@ -547,7 +547,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── G2 ΕΡΓΟΔΟΤΗΣ ΩΣ ΤΑ
 PAGES.append(dict(
-    lang="el", path="/odigoi/ergodotis-texnikos-asfaleias/", alt=None, page_type="Article" if False else "WebPage",
+    lang="el", path="/odigoi/ergodotis-texnikos-asfaleias/", alt="/en/guides/employer-as-safety-technician/", page_type="Article" if False else "WebPage",
     title="Ο Εργοδότης ως Τεχνικός Ασφαλείας: Τι Ισχύει από 2026",
     desc="Πότε μπορεί ο εργοδότης ή εργαζόμενός του να αναλάβει καθήκοντα Τεχνικού Ασφαλείας μετά τον ν. 5239/2025: όρια εργαζομένων, κατηγορίες, επιμόρφωση.",
     crumbs=[("Οδηγοί", "/odigoi/")], crumb="Ο εργοδότης ως Τεχνικός Ασφαλείας", eyebrow="Οδηγός", ctas=True,
@@ -584,7 +584,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── G4 ΕΡΓΑΤΙΚΟ ΑΤΥΧΗΜΑ
 PAGES.append(dict(
-    lang="el", path="/odigoi/ergatiko-atyxima-ti-kanei-o-ergodotis/", alt=None,
+    lang="el", path="/odigoi/ergatiko-atyxima-ti-kanei-o-ergodotis/", alt="/en/guides/workplace-accident-employer-steps/",
     title="Εργατικό Ατύχημα: Τι Κάνει ο Εργοδότης σε 24 Ώρες",
     desc="Εργατικό ατύχημα: αναγγελία σε 24 ώρες στην Επιθεώρηση Εργασίας και στον e-ΕΦΚΑ, πότε και στην αστυνομία, βιβλίο ατυχημάτων και διερεύνηση.",
     crumbs=[("Οδηγοί", "/odigoi/")], crumb="Εργατικό ατύχημα", eyebrow="Οδηγός", ctas=True,
@@ -617,7 +617,7 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── ΑΠΟΡΡΗΤΟ
 PAGES.append(dict(
-    lang="el", path="/aporrito/", alt="/en/privacy/", author=False, ctas=False,
+    lang="el", path="/aporrito/", alt="/en/privacy/", author=False, ctas=False, noindex=True,
     title="Πολιτική Απορρήτου και Cookies | Μάλλιαρης & Συνεργάτες",
     desc="Πώς χρησιμοποιεί η Μάλλιαρης & Συνεργάτες τα στοιχεία που στέλνετε από τη φόρμα επικοινωνίας και πώς λειτουργούν τα cookies του Google Analytics.",
     crumb="Πολιτική απορρήτου", eyebrow="Πληροφορίες",

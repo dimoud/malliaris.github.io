@@ -402,9 +402,9 @@
         <div class="nav-right">
             <div class="nav-links" id="navLinks">
                 <a href="#about" data-i18n="nav.about">WHO WE ARE</a>
-                <!--dd:services--><div class="nav-dd"><a href="#services" data-i18n="nav.services">Services</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Services submenu"></button><div class="nav-dd-menu" id="dd-services"><a href="safety-technician-greece/">Safety technician</a><a href="risk-assessment-greece/">Written risk assessment</a><a href="foreign-companies-greece/">Foreign companies in Greece</a></div></div><!--/dd:services-->
-                <!--dd:sectors--><a href="#sectors" data-i18n="nav.sectors">Sectors</a><!--/dd:sectors-->
-                <a href="#team" data-i18n="nav.team">OUR TEAM</a>
+                <!--dd:services--><div class="nav-dd"><a href="#services" data-i18n="nav.services">Services</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Services submenu"></button><div class="nav-dd-menu" id="dd-services"><a href="safety-technician-greece/">Safety technician</a><a href="risk-assessment-greece/">Written risk assessment (GEEK)</a><a href="health-safety-training/">Health &amp; safety training</a><a href="accident-investigation/">Accident investigation</a><a href="evacuation-plans/">Escape &amp; evacuation plans</a><a href="labour-inspection-readiness/">Labour Inspectorate readiness</a><span class="nav-dd-sep" aria-hidden="true"></span><a href="guides/">Guides for employers</a><a href="guides/safety-technician-hours/">Safety technician hours calculator</a><a href="guides/employer-as-safety-technician/">Employer as safety technician</a><a href="guides/workplace-accident-employer-steps/">Workplace accident: first steps</a></div></div><!--/dd:services-->
+                <!--dd:sectors--><div class="nav-dd"><a href="#sectors" data-i18n="nav.sectors">Sectors</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-sectors" aria-label="Sectors submenu"></button><div class="nav-dd-menu" id="dd-sectors"><a href="construction-sites/">Construction sites</a><a href="industry-logistics/">Industry &amp; logistics</a><a href="small-businesses/">Shops, restaurants, offices</a><a href="foreign-companies-greece/">Foreign companies in Greece</a></div></div><!--/dd:sectors-->
+                <a href="team/" data-i18n="nav.team">OUR TEAM</a>
                 <a href="#in-action" data-i18n="nav.action">IN ACTION</a>
                 <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
             </div>
@@ -421,7 +421,7 @@
                 <a class="lang-btn active" data-lang="en" href="./" hreflang="en" lang="en"><img src="../img/flag-gb.svg" alt="" class="flag-icon" width="20" height="10"> <span class="lcode">EN</span></a>
             </div>
             <div class="mobile-nav-sep"></div>
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Menu" aria-controls="navLinks" aria-expanded="false">
                 <span></span><span></span><span></span>
             </div>
         </div>
@@ -683,7 +683,7 @@
                         <i class="fa-solid fa-person-chalkboard service-icon"></i>
                         <h3 data-i18n="s3.title">H&amp;S Training Programmes</h3>
                     </div>
-                    <div class="sc-text-wrap"><p data-i18n="s3.text">Tailored to each business needs, we provide a wide range of employee training programmes under Law 3850/2010, Article 48.</p><a class="sc-link" href="../ekpaideuseis-ygeias-asfaleias/" data-i18n="s3.link">See the service</a></div>
+                    <div class="sc-text-wrap"><p data-i18n="s3.text">Tailored to each business needs, we provide a wide range of employee training programmes under Law 3850/2010, Article 48.</p><a class="sc-link" href="health-safety-training/" data-i18n="s3.link">See the service</a></div>
                 </div>
             </div>
             <!-- 04 Accident Investigation — ambulance transporting injured person -->
@@ -695,7 +695,7 @@
                         <i class="fa-solid fa-magnifying-glass-chart service-icon"></i>
                         <h3 data-i18n="s4.title">Workplace Accident Investigation</h3>
                     </div>
-                    <div class="sc-text-wrap"><p data-i18n="s4.text">We investigate all types of workplace accidents with full confidentiality, including Root Cause Analysis, corrective action recommendations, and accident report preparation.</p><a class="sc-link" href="../diereynisi-ergatikou-atyximatos/" data-i18n="s4.link">See the service</a></div>
+                    <div class="sc-text-wrap"><p data-i18n="s4.text">We investigate all types of workplace accidents with full confidentiality, including Root Cause Analysis, corrective action recommendations, and accident report preparation.</p><a class="sc-link" href="accident-investigation/" data-i18n="s4.link">See the service</a></div>
                 </div>
             </div>
             <!-- 05 Evacuation Plan — emergency exit sign illuminated -->
@@ -707,7 +707,7 @@
                         <i class="fa-solid fa-person-running service-icon"></i>
                         <h3 data-i18n="s5.title">Escape Plan Design</h3>
                     </div>
-                    <div class="sc-text-wrap"><p data-i18n="s5.text">Study, design and documentation of Escape and Evacuation Plans — a key compliance tool for Fire Service and labour legislation.</p><a class="sc-link" href="../schedia-diafygis-ekkenosis/" data-i18n="s5.link">See the service</a></div>
+                    <div class="sc-text-wrap"><p data-i18n="s5.text">Study, design and documentation of Escape and Evacuation Plans — a key compliance tool for Fire Service and labour legislation.</p><a class="sc-link" href="evacuation-plans/" data-i18n="s5.link">See the service</a></div>
                 </div>
             </div>
             <!-- 06 SEPE Inspection Prep — management inspection in factory/industrial plant -->
@@ -719,7 +719,7 @@
                         <i class="fa-solid fa-clipboard-check service-icon"></i>
                         <h3 data-i18n="s6.title">Labour Inspectorate (SEPE) Audit Prep</h3>
                     </div>
-                    <div class="sc-text-wrap"><p data-i18n="s6.text">Review of working conditions and the business H&amp;S file to determine compliance level with current legislation and propose necessary corrective actions.</p><a class="sc-link" href="../elegxos-epitheorisis-ergasias/" data-i18n="s6.link">See the service</a></div>
+                    <div class="sc-text-wrap"><p data-i18n="s6.text">Review of working conditions and the business H&amp;S file to determine compliance level with current legislation and propose necessary corrective actions.</p><a class="sc-link" href="labour-inspection-readiness/" data-i18n="s6.link">See the service</a></div>
                 </div>
             </div>
         </div>
@@ -731,7 +731,7 @@
             <div class="eyebrow"><span data-i18n="sectors.eyebrow">SECTORS</span></div>
             <h2 id="h-sectors" class="section-heading" data-i18n-html="sectors.heading">Sectors of <em data-char-split>Activity</em></h2>
             <p class="sectors-lead" data-i18n="sectors.lead" data-sx="up" data-sx-delay="200">With years of experience across demanding infrastructure projects and businesses of all kinds, Stavros Malliaris and his team can advise clients from every sector of activity.</p>
-            <p class="sector-links"><span data-i18n="sectors.linkslabel">By sector:</span> <a href="../kataskeves-ergotaxia/" data-i18n="sectors.l1">Construction sites (GR)</a> <a href="../viomixania-logistics/" data-i18n="sectors.l2">Industry &amp; logistics (GR)</a> <a href="../mikres-epixeiriseis/" data-i18n="sectors.l3">Small businesses (GR)</a> <a href="foreign-companies-greece/" hreflang="en" data-i18n="sectors.l4">Foreign companies in Greece</a></p>
+            <p class="sector-links"><span data-i18n="sectors.linkslabel">By sector:</span> <a href="construction-sites/" data-i18n="sectors.l1">Construction sites</a> <a href="industry-logistics/" data-i18n="sectors.l2">Industry &amp; logistics</a> <a href="small-businesses/" data-i18n="sectors.l3">Small businesses</a> <a href="foreign-companies-greece/" data-i18n="sectors.l4">Foreign companies in Greece</a></p>
         </div>
 
         <!-- Mobile-only: compact 2-col sector grid (carousel hidden on mobile) -->
@@ -1264,7 +1264,7 @@
                     <div class="faq-answer"><p data-i18n="faq.a5">Across Attica, based in Alimos (Dodekanisou 16). We work in Greek and English, including with foreign companies operating in Greece.</p></div>
                 </details>
             </div>
-            <p class="faq-more"><a href="../odigoi/" data-i18n="faq.more">More in our guides (in Greek) and in our English guide for foreign companies</a></p>
+            <p class="faq-more"><a href="guides/" data-i18n="faq.more">More in our guides: safety technician hours, Labour Inspectorate inspections, workplace accidents</a></p>
         </div>
     </section>
 
@@ -1394,23 +1394,23 @@
                 <p class="footer-nav-title" data-i18n="fn.services">Services</p>
                 <a href="safety-technician-greece/" data-i18n="s1.title">Safety Technician Services</a>
                 <a href="risk-assessment-greece/" data-i18n="s2.title">Written Occupational Risk Assessment (GEEK)</a>
-                <a href="../ekpaideuseis-ygeias-asfaleias/" data-i18n="s3.title">H&amp;S Training Programmes</a>
-                <a href="../diereynisi-ergatikou-atyximatos/" data-i18n="s4.title">Workplace Accident Investigation</a>
-                <a href="../schedia-diafygis-ekkenosis/" data-i18n="s5.title">Escape Plan Design</a>
-                <a href="../elegxos-epitheorisis-ergasias/" data-i18n="s6.title">Labour Inspectorate (SEPE) Audit Prep</a>
+                <a href="health-safety-training/" data-i18n="s3.title">H&amp;S Training Programmes</a>
+                <a href="accident-investigation/" data-i18n="s4.title">Workplace Accident Investigation</a>
+                <a href="evacuation-plans/" data-i18n="s5.title">Escape Plan Design</a>
+                <a href="labour-inspection-readiness/" data-i18n="s6.title">Labour Inspectorate (SEPE) Audit Prep</a>
             </div>
             <div class="footer-nav-col">
                 <p class="footer-nav-title" data-i18n="fn.sectors">Sectors</p>
-                <a href="../kataskeves-ergotaxia/" data-i18n="sectors.l1">Construction sites (GR)</a>
-                <a href="../viomixania-logistics/" data-i18n="sectors.l2">Industry &amp; logistics (GR)</a>
-                <a href="../mikres-epixeiriseis/" data-i18n="sectors.l3">Small businesses (GR)</a>
-                <a href="foreign-companies-greece/" hreflang="en" data-i18n="sectors.l4">Foreign companies in Greece</a>
+                <a href="construction-sites/" data-i18n="sectors.l1">Construction sites</a>
+                <a href="industry-logistics/" data-i18n="sectors.l2">Industry &amp; logistics</a>
+                <a href="small-businesses/" data-i18n="sectors.l3">Small businesses</a>
+                <a href="foreign-companies-greece/" data-i18n="sectors.l4">Foreign companies in Greece</a>
             </div>
             <div class="footer-nav-col">
                 <p class="footer-nav-title" data-i18n="fn.company">Company</p>
                 <a href="team/" data-i18n="fn.team">Our team</a>
-                <a href="../odigoi/" data-i18n="fn.guides">Guides (GR)</a>
-                <a href="../odigoi/ores-texnikou-asfaleias/" data-i18n="fn.calc">Safety technician hours calculator (GR)</a>
+                <a href="guides/" data-i18n="fn.guides">Guides</a>
+                <a href="guides/safety-technician-hours/" data-i18n="fn.calc">Safety technician hours calculator</a>
                 <a href="privacy/" data-i18n="fn.privacy">Privacy policy</a>
                 <a href="#" data-cc-open data-i18n="fn.cookies">Cookie settings</a>
             </div>
@@ -1466,9 +1466,15 @@
         function toggleMenu() {
             const menu = document.getElementById('navLinks');
             const hbg  = document.getElementById('hamburger');
-            menu.classList.toggle('open');
-            hbg.classList.toggle('open');
+            const open = menu.classList.toggle('open');
+            hbg.classList.toggle('open', open);
+            hbg.setAttribute('aria-expanded', open ? 'true' : 'false');
         }
+        (function(){
+            const hbg = document.getElementById('hamburger');
+            hbg.addEventListener('click', toggleMenu);
+            hbg.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); } });
+        })();
         function closeMenu() {
             document.getElementById('navLinks').classList.remove('open');
             document.getElementById('hamburger').classList.remove('open');
