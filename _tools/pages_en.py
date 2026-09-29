@@ -67,13 +67,13 @@ PAGES.append(dict(
 """, "Hours", "h-hours") + S("What the service includes", """
 <ul class="check-grid">
 <li>Formal appointment and notification in the Labour Inspectorate's information system</li>
-<li>Scheduled site visits, based on the hours your category requires</li>
-<li>Written recommendations after each visit, with priorities</li>
-<li>Preparing or updating the written occupational risk assessment</li>
-<li>Staff training and briefings, with attendance records for the file</li>
-<li>Checks of fire safety, escape routes and first-aid equipment</li>
 <li>Reminders of employer duties, e.g. reporting accidents within 24 hours and CPR training</li>
+<li>Written recommendations in the Safety Technician's Recommendations Book, after each visit</li>
+<li>Regular briefing of staff on occupational health and safety matters</li>
+<li>Scheduled visits to your premises, based on the hours your category requires</li>
 <li>Coordination with the occupational physician, where required</li>
+<li>Updating the Accident Book (if needed)</li>
+<li>Investigation of workplace accidents (if needed)</li>
 </ul>
 """, "Scope", "h-incl") + S("How we start", """
 <ol class="steps">
@@ -81,7 +81,7 @@ PAGES.append(dict(
 <li><strong>Category, hours, offer</strong>We check your classification, calculate the hours and send a written offer.</li>
 <li><strong>Appointment</strong>The appointment is made and notified, so the business is formally covered.</li>
 <li><strong>First site survey</strong>We walk the premises, review the existing file and note what is missing.</li>
-<li><strong>Regular visits</strong>Recommendations, training and follow-up of corrections, with the same contact person.</li>
+<li><strong>Regular visits</strong>Recommendations, briefings and follow-up of corrections, with the same person on our side.</li>
 </ol>
 {AUTHOR}
 """, "Process", "h-steps") + S("Sectors we work in", """
@@ -112,8 +112,8 @@ PAGES.append(dict(
          "Not necessarily. Even when the employer carries out the safety technician duties, the written risk assessment must be prepared by a person holding the safety technician qualifications set by law and the right specialisation for the activity."),
         ("How often is it updated?",
          "Whenever working conditions change materially: new equipment, new processes or positions, a move, after an accident, or when the Labour Inspectorate asks. We also recommend a yearly review."),
-        ("What is a MEEK?",
-         "\"Occupational risk assessment study\" (MEEK) is often used for the same document. What matters is the content: hazards per position, assessment, measures, owners and a timetable."),
+        ("What is a GEEK (or MEEK)?",
+         "\"Written occupational risk assessment\" (GEEK) or \"occupational risk assessment study\" (MEEK) often refer to the same document. What matters is the content: hazards per position, assessment, measures, owners and personal protective equipment."),
         ("Can we reuse our group's risk assessment?",
          "It is a useful starting point, but the Greek assessment has to reflect the local premises, positions and legal requirements, and be available in Greek."),
         ("How much does it cost?",
@@ -128,11 +128,12 @@ PAGES.append(dict(
 """, "Definition", "h-what") + S("What a proper assessment contains", """
 <ul>
 <li>A description of the business, the premises and the equipment</li>
-<li>Each job position, one by one, with the tasks each person performs</li>
-<li>The hazards of each position (mechanical, electrical, chemical, ergonomic, fire, psychosocial) and their assessment</li>
-<li>Measures already in place and those to be added, by priority</li>
-<li>Who is responsible for each measure and by when</li>
-<li>The resulting personal protective equipment and training needs</li>
+<li>Each job position, one by one</li>
+<li>The hazards of each position (mechanical, electrical, chemical, ergonomic, fire, psychosocial, etc.)</li>
+<li>The assessment of likelihood, severity and risk level</li>
+<li>The appropriate measures to prevent the risks</li>
+<li>Who is responsible for each measure and by when (if not already clear)</li>
+<li>The resulting personal protective equipment and training needs (where they go beyond the standard ones)</li>
 </ul>
 <div class="note">Law 5239/2025 explicitly added weight to psychosocial risks and to reasonable adjustments for employees with disabilities or chronic conditions (Article 533 of P.D. 62/2025). We cover both in the assessment.</div>
 """, "Contents", "h-contents") + S("How we prepare it", """
@@ -140,8 +141,8 @@ PAGES.append(dict(
 <li><strong>Data and drawings</strong>Floor plan, equipment list, organisation chart, previous assessment if there is one.</li>
 <li><strong>Site survey</strong>We see each position during working hours and talk to the employees.</li>
 <li><strong>Assessment</strong>We rate likelihood and severity for each hazard, with justification.</li>
-<li><strong>Action plan</strong>Practical measures with cost and timetable, starting with those that reduce risk the most.</li>
-<li><strong>Delivery and briefing</strong>A signed assessment and a short briefing for management and employees.</li>
+<li><strong>Action plan</strong>Appropriate risk prevention measures, starting with those that reduce risk the most.</li>
+<li><strong>Delivery and briefing</strong>A signed assessment, in PDF format, for the management to be informed.</li>
 </ol>
 {AUTHOR}
 """, "Method", "h-method"),
@@ -163,7 +164,7 @@ PAGES.append(dict(
         ("What penalties apply?",
          "Sanctions depend on the breach and on the size of the business. For the most common breaches (personal protective equipment, unlicensed machinery operators, lifting equipment) the Labour Code provides administrative sanctions for directly provable breaches (Article 572 of P.D. 62/2025). We do not quote amounts without seeing the specific case."),
         ("Can you be present during the inspection?",
-         "When we act as your safety technician, yes, provided we are told in time. We prepare with you the documents that will be requested."),
+         "When we act as your safety technician, we do everything we can to be present at the inspection, provided we are told in time. We also help you organise the documents that will be requested."),
         ("Do you run mock inspections for businesses that already have a safety technician?",
          "Yes. A second look from outside often finds gaps that day-to-day work hides. We do not replace your current partner unless you want us to."),
     ],
@@ -173,15 +174,15 @@ PAGES.append(dict(
 <p>Every inspection is different. On health and safety, the documents and points checked most often are these:</p>
 <ul class="check-grid">
 <li>Appointment of the safety technician (and occupational physician, where required) and its notification</li>
-<li>Written occupational risk assessment, up to date for the current positions</li>
-<li>Safety technician's recommendations book</li>
 <li>Accident book and list of accidents with more than three working days of incapacity (Article 534(2))</li>
+<li>Safety technician's recommendations book, with numbered and stamped pages</li>
+<li>Written occupational risk assessment, up to date for the current positions</li>
 <li>Records of staff training and briefings</li>
-<li>Personal protective equipment: selection, issue, use</li>
+<li>Personal protective equipment: selection, issue, use and maintenance</li>
 <li>Fire safety, escape routes, signage, first-aid equipment (Article 535)</li>
 <li>CPR and Heimlich training, mandatory since 1 January 2026</li>
 <li>Licences of machinery and lifting equipment operators, where relevant</li>
-<li>Installations: electrical, racking, machinery, guards</li>
+<li>Installations: electrical, plumbing, machinery, hazard signage</li>
 </ul>
 <p class="src">Legal basis: P.D. 62/2025 (Greek Labour Code), as amended by Laws 5239/2025 and 5297/2026.</p>
 """, "Checklist", "h-check") + S("What we do", """
@@ -217,11 +218,11 @@ PAGES.append(dict(
                 "en/labour-inspection-readiness/", "en/accident-investigation/", "en/guides/workplace-accident-employer-steps/"),
     body=S("Training topics", """
 <ul class="check-grid">
-<li>Work at height, scaffolding, ladders, harnesses and fall arrest</li>
+<li>Work at height, scaffolding, ladders, using a fall arrest harness or other equipment</li>
 <li>Selection, use and care of personal protective equipment (PPE)</li>
-<li>Work in confined spaces</li>
+<li>First aid, CPR and the Heimlich manoeuvre, using the Ministry of Labour material</li>
 <li>Fire safety, use of extinguishers, building evacuation</li>
-<li>First aid, CPR and the Heimlich manoeuvre</li>
+<li>Work in confined spaces</li>
 <li>Manual handling and ergonomics</li>
 <li>Safe use of machinery and tools</li>
 <li>Induction of new employees</li>
@@ -230,8 +231,8 @@ PAGES.append(dict(
 </ul>
 <figure class="page-figure"><img src="{PRE}img/ekpaideusi-ergasia-se-ypsos.webp" alt="Work at height training on a construction site" width="619" height="1100" loading="lazy" decoding="async" style="max-height:520px;object-fit:cover"><figcaption>Work at height training, from our work in the field.</figcaption></figure>
 """, "Programmes", "h-topics") + S("How it is organised", """
-<p>Training is not a generic lecture. We start from the hazards recorded in the written occupational risk assessment and from what we see during visits. We use photos from your own premises, show the right way on the actual equipment and close with short questions.</p>
-<p>For the company file we deliver a signed attendance sheet, the training material and a short certificate. For training that requires a certified provider (e.g. CPR on sites with more than 50 employees), we coordinate with the provider.</p>
+<p>Training is not a generic lecture. We start from the hazards recorded in the written occupational risk assessment and from what we see during visits. We use photos from your own premises, show the right way to use the equipment and close with short questions.</p>
+<p>For the company file we deliver a signed attendance sheet. For training that requires a certified provider (e.g. CPR on sites with more than 50 employees), we coordinate with the provider.</p>
 {AUTHOR}
 """, "Method", "h-how"),
 ))
@@ -302,7 +303,7 @@ PAGES.append(dict(
     title="Workplace Accident Investigation in Greece",
     desc="Workplace accident investigation with site survey, interviews and root-cause analysis: accident report, corrective actions and an updated risk assessment.",
     crumb="Accident investigation", eyebrow="Service", service="Workplace accident investigation",
-    h1="Workplace <em>accident investigation</em>",
+    h1="Workplace <em>accident investigation</em> <small>(outside the Safety Technician's duties)</small>",
     lead=("After an accident you need to understand what really happened, not only who got hurt. We survey the site, "
           "talk to those who were there, analyse the causes and give you a written report with measures, so it does "
           "not happen again. The investigation is handled discreetly."),

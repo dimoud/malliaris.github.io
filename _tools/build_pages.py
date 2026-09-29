@@ -131,14 +131,6 @@ def hero(p, pre):
         else:
             cta_html = (f'<div class="page-cta"><a href="{home}#contact" class="btn-accent">REQUEST A QUOTE</a>'
                         f'<a href="tel:{E.PHONE_E164}" class="btn-ghost"><i class="fa-solid fa-phone" aria-hidden="true"></i> {E.PHONE_DISPLAY}</a></div>')
-    upd = p.get("updated", TODAY)
-    d = date.fromisoformat(upd)
-    meta = ""
-    if p.get("author", True):
-        if el:
-            meta = f'<p class="page-meta">Σύνταξη και έλεγχος: <a href="{pre}omada/">Σταύρος Μάλλιαρης</a>, Πολιτικός Μηχανικός ΑΠΘ, ASP® · Τελευταία ενημέρωση: <time datetime="{upd}">{d.day}/{d.month}/{d.year}</time></p>'
-        else:
-            meta = f'<p class="page-meta">Written and reviewed by <a href="{pre}en/team/">Stavros Malliaris</a>, Civil Engineer (AUTh), ASP® · Last updated: <time datetime="{upd}">{d.strftime("%d %B %Y")}</time></p>'
     return f'''    <header class="page-hero">
         <canvas id="heroNet" aria-hidden="true"></canvas>
         <div class="page-hero-inner">
@@ -147,7 +139,6 @@ def hero(p, pre):
             <h1 class="page-h1">{p["h1"]}</h1>
             <p class="page-lead">{p["lead"]}</p>
             {cta_html}
-            {meta}
         </div>
     </header>'''
 

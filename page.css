@@ -28,6 +28,7 @@
     color: var(--white); max-width: 900px;
 }
 .page-h1 em { font-style: normal; color: var(--accent); }
+.page-h1 small { font-size: 0.42em; font-weight: 600; letter-spacing: 0; color: rgba(255,255,255,0.7); white-space: nowrap; }
 .page-lead {
     margin-top: 20px; max-width: 820px;
     font-size: clamp(16px, 1.5vw, 19px); line-height: 1.7; color: rgba(255,255,255,0.82);
@@ -42,8 +43,6 @@
 }
 .btn-ghost:hover { border-color: var(--accent); background: rgba(232,84,26,0.12); }
 .page-hero .btn-accent { text-decoration: none; }
-.page-meta { margin-top: 22px; font-size: 13px; color: rgba(255,255,255,0.55); }
-.page-meta a { color: rgba(255,255,255,0.8); }
 
 /* ── Σώμα κειμένου ── */
 .page-section { padding: clamp(48px, 7vw, 96px) 5%; background: var(--white); }
