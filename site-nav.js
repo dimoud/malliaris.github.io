@@ -1,4 +1,4 @@
-/* site-nav.js - υπομενού της μπάρας (Υπηρεσίες / Τομείς) και κάρτες υπηρεσιών που ανοίγουν τη σελίδα τους */
+/* site-nav.js - υπομενού της μπάρας (Υπηρεσίες / Τομείς) */
 (function () {
     'use strict';
 
@@ -32,17 +32,4 @@
         if (!e.target.closest || !e.target.closest('.nav-dd')) closeAll();
     });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
-
-    /* ── Κάρτες υπηρεσιών (αρχική): κλικ σε όλη την κάρτα → σελίδα υπηρεσίας ──
-       Σε οθόνη αφής το πρώτο πάτημα ανοίγει το κείμενο (όπως πριν), το δεύτερο ανοίγει τη σελίδα. */
-    var touch = window.matchMedia('(hover: none)').matches;
-    document.addEventListener('click', function (e) {
-        var card = e.target.closest && e.target.closest('.service-card');
-        if (!card || e.target.closest('a')) return;
-        var link = card.querySelector('.sc-link');
-        if (!link) return;
-        if (touch && !card.classList.contains('touched')) return;
-        if (e.ctrlKey || e.metaKey || e.button === 1) { window.open(link.href, '_blank'); return; }
-        window.location.href = link.href;
-    }, true);
 })();

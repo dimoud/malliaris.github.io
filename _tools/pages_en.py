@@ -11,8 +11,8 @@ REL = [
     ("en/risk-assessment-greece/", "fa-file-lines", "Written risk assessment (GEEK)", "Hazards per job position and prevention measures."),
     ("en/labour-inspection-readiness/", "fa-clipboard-check", "Labour Inspectorate readiness", "Mock inspection and a list of fixes."),
     ("en/health-safety-training/", "fa-person-chalkboard", "Health & safety training", "Work at height, PPE, fire safety, CPR."),
-    ("en/evacuation-plans/", "fa-person-running", "Engineering Studies", "Fire protection, escape plans, SAY-FAY, H&S plans."),
-    ("en/accident-investigation/", "fa-magnifying-glass-chart", "Accident investigation", "Causes, report and corrective actions."),
+    ("en/evacuation-plans/", "fa-compass-drafting", "Engineering Studies", "Fire protection, escape plans, SAY-FAY, H&S plans."),
+    ("en/safety-coordinator/", "fa-helmet-safety", "Safety coordinator", "Coordinating contractors and the H&S plan on site."),
     ("en/guides/safety-technician-hours/", "fa-calculator", "Hours calculator", "Indicative yearly safety technician hours."),
     ("en/guides/employer-as-safety-technician/", "fa-user-tie", "Employer as safety technician", "When it is allowed after 1 January 2026."),
     ("en/guides/workplace-accident-employer-steps/", "fa-triangle-exclamation", "Workplace accident", "The employer's first steps."),
@@ -54,7 +54,7 @@ PAGES.append(dict(
          "Yes. We write visit reports and action plans in English, while the legally required records are kept in Greek. See also <a href=\"{PRE}en/foreign-companies-greece/\">health and safety for foreign companies</a>."),
     ],
     related=rel("en/risk-assessment-greece/", "en/guides/safety-technician-hours/", "en/guides/employer-as-safety-technician/",
-                "en/labour-inspection-readiness/", "en/health-safety-training/", "en/accident-investigation/"),
+                "en/labour-inspection-readiness/", "en/health-safety-training/", "en/safety-coordinator/"),
     body=S("Who needs a safety technician", f"""
 <p>An employer must use a safety technician from the moment they employ even one person, whatever the activity. The legal basis is {LAW}, as amended in 2025.</p>
 <p>The safety technician advises the employer. They identify hazards, propose measures in writing and follow up on whether they are applied. Responsibility for taking the measures stays with the employer; our job is to show clearly what is needed and in what order.</p>
@@ -120,7 +120,7 @@ PAGES.append(dict(
          "It depends on the job positions, the premises and the level of risk. After a short call we send you a written offer."),
     ],
     related=rel("en/safety-technician-greece/", "en/labour-inspection-readiness/", "en/health-safety-training/",
-                "en/accident-investigation/", "en/evacuation-plans/", "en/guides/employer-as-safety-technician/"),
+                "en/safety-coordinator/", "en/evacuation-plans/", "en/guides/employer-as-safety-technician/"),
     body=S("What it is and who needs it", f"""
 <p>The employer must have a written assessment of the risks to employees' safety and health, together with the prevention measures that follow from it (Article 534 of P.D. 62/2025, formerly Article 43 of Law 3850/2010). The duty does not depend on size: it applies to a business with a single employee.</p>
 <p>In practice the risk assessment is the reference point for everything else: which training is needed, which personal protective equipment, what changes on the premises and in what order.</p>
@@ -215,7 +215,7 @@ PAGES.append(dict(
          "Yes. We deliver training in English for foreign companies and mixed teams."),
     ],
     related=rel("en/safety-technician-greece/", "en/risk-assessment-greece/", "en/evacuation-plans/",
-                "en/labour-inspection-readiness/", "en/accident-investigation/", "en/guides/workplace-accident-employer-steps/"),
+                "en/labour-inspection-readiness/", "en/safety-coordinator/", "en/guides/workplace-accident-employer-steps/"),
     body=S("Training topics", """
 <ul class="check-grid">
 <li>Work at height, scaffolding, ladders, using a fall arrest harness or other equipment</li>
@@ -229,7 +229,6 @@ PAGES.append(dict(
 <li>Morning toolbox talks on construction sites</li>
 <li>Briefings on dangerous practices with real examples</li>
 </ul>
-<figure class="page-figure"><img src="{PRE}img/ekpaideusi-ergasia-se-ypsos.webp" alt="Work at height training on a construction site" width="619" height="1100" loading="lazy" decoding="async" style="max-height:520px;object-fit:cover"><figcaption>Work at height training, from our work in the field.</figcaption></figure>
 """, "Programmes", "h-topics") + S("How it is organised", """
 <p>Training is not a generic lecture. We start from the hazards recorded in the written occupational risk assessment and from what we see during visits. We use photos from your own premises, show the right way to use the equipment and close with short questions.</p>
 <p>For the company file we deliver a signed attendance sheet. For training that requires a certified provider (e.g. CPR on sites with more than 50 employees), we coordinate with the provider.</p>
@@ -297,37 +296,66 @@ PAGES.append(dict(
 """, "Deliverables", "h-incl"),
 ))
 
-# ─────────────────────────────────────────────────────────────── P6 ACCIDENT INVESTIGATION
+# ─────────────────────────────────────────────────────────────── P6 SAFETY COORDINATOR
 PAGES.append(dict(
-    lang="en", path="/en/accident-investigation/", alt="/diereynisi-ergatikou-atyximatos/",
-    title="Workplace Accident Investigation in Greece",
-    desc="Workplace accident investigation with site survey, interviews and root-cause analysis: accident report, corrective actions and an updated risk assessment.",
-    crumb="Accident investigation", eyebrow="Service", service="Workplace accident investigation",
-    h1="Workplace <em>accident investigation</em> <small>(outside the Safety Technician's duties)</small>",
-    lead=("After an accident you need to understand what really happened, not only who got hurt. We survey the site, "
-          "talk to those who were there, analyse the causes and give you a written report with measures, so it does "
-          "not happen again. The investigation is handled discreetly."),
+    lang="en", path="/en/safety-coordinator/", alt="/syntonistis-asfaleias/",
+    title="Health and Safety Coordinator for Construction in Greece",
+    desc="Health and safety coordinator for construction projects in Athens and Attica: contractor coordination, H&S plan and file (SAY-FAY), site checks under P.D. 305/1996.",
+    crumb="Safety coordinator", eyebrow="Service", service="Health and safety coordinator for construction projects",
+    h1="Health and safety <em>coordinator</em> for construction projects",
+    lead=("When more than one contractor or subcontractor works on a site, the client must appoint a health and safety "
+          "coordinator. We take on the role from design to handover: we coordinate the trades, keep the H&amp;S plan "
+          "and file (SAY-FAY) up to date and check on site that the measures are applied."),
     faq=[
-        ("How soon must a workplace accident be reported?",
-         "Within 24 hours, to the Labour Inspectorate and e-EFKA. In case of serious injury or death, also to the police (Article 534(2) of P.D. 62/2025). See the <a href=\"{PRE}en/guides/workplace-accident-employer-steps/\">employer's first steps</a>."),
-        ("What counts as a serious injury?",
-         "Under the law, an injury is serious when it requires transfer to a healthcare facility and admission to hospital."),
-        ("Do you investigate incidents without injury?",
-         "Yes, and we recommend it. A near miss often shows the same problem as a serious accident, without the cost."),
+        ("When is a safety coordinator required?",
+         "Under P.D. 305/1996, when more than one company will work on the site, e.g. a main contractor with subcontractors "
+         "or self-employed tradespeople. The client appoints the coordinator for the design stage and for the construction stage."),
+        ("How is this different from a safety technician?",
+         "The <a href=\"{PRE}en/safety-technician-greece/\">safety technician</a> advises each employer about its own staff. "
+         "The coordinator looks at the project as a whole: how all the trades work together, in what order and with which shared measures. "
+         "Many projects need both roles."),
+        ("Does appointing a coordinator relieve the client of responsibility?",
+         "No. Appointing a coordinator does not relieve the client or the employers of their duties. "
+         "It helps them meet those duties in an organised and safe way."),
+        ("Is a prior notice to the Labour Inspectorate needed?",
+         "Yes, when the work lasts more than 30 working days and has more than 20 workers on site at the same time, "
+         "or when the total volume exceeds 500 person-days. The notice also names the project's coordinators."),
+        ("Do you also prepare the SAY-FAY?",
+         "Yes. The health and safety plan (SAY) and file (FAY) are part of the coordinator's duties at the design stage. "
+         "See also our <a href=\"{PRE}en/evacuation-plans/\">engineering studies</a>."),
+        ("When must the coordinator be on site full time?",
+         "Since 1 January 2026, under Law 5239/2025, the coordinator must be present for the whole duration of the works on public works "
+         "that require a class 4 or higher contractor, and on special (mainly non-residential) buildings with a footprint of 4,000 m² or more. "
+         "On all other projects the coordinator must be present at least at the start of each critical phase."),
     ],
-    related=rel("en/guides/workplace-accident-employer-steps/", "en/risk-assessment-greece/", "en/safety-technician-greece/",
+    related=rel("en/evacuation-plans/", "en/safety-technician-greece/", "en/risk-assessment-greece/",
                 "en/health-safety-training/", "en/labour-inspection-readiness/"),
-    body=S("How the investigation works", """
-<ol class="steps">
-<li><strong>Immediate contact</strong>We tell you what to leave unchanged at the scene and which reports are due.</li>
-<li><strong>Site survey</strong>Photos, measurements, checks of equipment and conditions as they were at the time.</li>
-<li><strong>Interviews</strong>With the employee, the witnesses and the shift supervisor, separately and calmly.</li>
-<li><strong>Root-cause analysis</strong>From the immediate cause we move to the deeper ones: organisation, training, equipment, time pressure.</li>
-<li><strong>Report and measures</strong>Written report, corrective actions with owners and deadlines, entry in the accident book and an updated risk assessment.</li>
-</ol>
-<p>The law requires the employer to record the causes and description of every accident in a special book, and the measures taken in the recommendations book. Our report is written to cover both.</p>
+    body=S("What the coordinator does", """
+<h3>At the design stage</h3>
+<ul class="check-grid">
+<li>Applying the general principles of prevention to architectural, technical and organisational choices</li>
+<li>Preparing the health and safety plan (SAY)</li>
+<li>Preparing the health and safety file (FAY) for future work on the building</li>
+<li>Estimating the duration of each phase and the work done at the same time</li>
+</ul>
+<h3>At the construction stage</h3>
+<ul class="check-grid">
+<li>Coordinating contractors, subcontractors and self-employed workers on site</li>
+<li>Checking that the SAY and the work procedures are applied</li>
+<li>Updating the SAY-FAY when the work or its sequence changes</li>
+<li>Organising cooperation and information between the trades</li>
+<li>Measures so that only authorised persons enter the site</li>
+<li>Regular visits with written observations to the client</li>
+</ul>
+<div class="note"><strong>New since 1 January 2026: full-time presence on large projects.</strong> Law 5239/2025 (Article 40) amended Article 6 of P.D. 305/1996 and set a minimum on-site presence for the coordinator:
+<ul>
+<li><strong>For the whole duration of the works</strong> on public works that require a class 4 or higher contractor (P.D. 71/2019), and on special buildings under Law 4067/2012 (main use other than housing) with a footprint of 4,000 m² or more according to the building permit.</li>
+<li><strong>At least at the start</strong> of the works, the load-bearing structure, the shell and interior layout, and the electrical and mechanical installations, on all other public or private projects.</li>
+</ul>
+The coordinator's minimum time is written explicitly in their contract and is not offset against the safety technician's time.</div>
+<p class="src">Legal basis: P.D. 305/1996, Article 6 as amended by Article 40 of Law 5239/2025 (Government Gazette A 178/2025).</p>
 {AUTHOR}
-""", "Method", "h-method"),
+""", "Duties", "h-duties"),
 ))
 
 # ─────────────────────────────────────────────────────────────── P8 CONSTRUCTION
@@ -346,7 +374,7 @@ PAGES.append(dict(
         ("What applies to construction machinery operators without a licence?",
          "The Labour Code expressly provides sanctions for an employer who assigns work to persons without the required licence (Article 572(6A) of P.D. 62/2025, added by Law 5297/2026). We check licences during our visits."),
     ],
-    related=rel("en/safety-technician-greece/", "en/health-safety-training/", "en/accident-investigation/",
+    related=rel("en/safety-technician-greece/", "en/health-safety-training/", "en/safety-coordinator/",
                 "en/risk-assessment-greece/", "en/labour-inspection-readiness/", "en/guides/workplace-accident-employer-steps/"),
     body=S("The hazards we see most often", """
 <ul>
@@ -380,7 +408,7 @@ PAGES.append(dict(
           "along the flow of the work: forklift and pedestrian traffic, racking, machinery, manual handling, and "
           "training that reaches the night shifts too."),
     related=rel("en/safety-technician-greece/", "en/risk-assessment-greece/", "en/health-safety-training/",
-                "en/labour-inspection-readiness/", "en/accident-investigation/", "en/guides/safety-technician-hours/"),
+                "en/labour-inspection-readiness/", "en/safety-coordinator/", "en/guides/safety-technician-hours/"),
     body=S("What we look at in a warehouse or plant", """
 <ul>
 <li>Forklift and pedestrian traffic, aisles, markings, mirrors</li>
@@ -482,20 +510,40 @@ PAGES.append(dict(
           "The company was founded in March 2026 and is based in Alimos, Athens, to give businesses real safety through "
           "practical solutions and clear communication."),
     related=rel("en/safety-technician-greece/", "en/risk-assessment-greece/", "en/health-safety-training/"),
-    body=S("People", """
-<div class="team-grid">
-  <article class="team-card"><img src="{PRE}img/stavros-malliaris.webp" alt="Stavros Malliaris" width="591" height="588" loading="lazy" decoding="async">
-    <div><div class="tc-role">Founder &amp; lead engineer</div><h3>Stavros Malliaris</h3>
-    <p>Civil Engineer (Aristotle University of Thessaloniki) specialising in occupational health and safety (MEng). Over ten years of experience on construction sites, industrial facilities and all types of businesses in Greece and abroad. ASP® certified by the Board of Certified Safety Professionals (BCSP) and internal auditor for ISO 9001, 14001 and 45001.</p></div></article>
-  <article class="team-card"><img src="{PRE}img/dimitrios-moudiotis.webp" alt="Dimitrios Moudiotis" width="400" height="400" loading="lazy" decoding="async">
-    <div><div class="tc-role">Mechanical engineering lead</div><h3>Dimitrios Moudiotis</h3>
-    <p>Mechanical Engineer (AUTh). Covers mechanical matters: machinery, work equipment, lifting equipment and vehicles. <a href="https://www.moudiotis.gr/" target="_blank" rel="noopener">moudiotis.gr</a></p></div></article>
-  <article class="team-card"><img src="{PRE}img/vaios-liapis.webp" alt="Vaios Liapis" width="347" height="400" loading="lazy" decoding="async">
-    <div><div class="tc-role">Engineering studies lead</div><h3>Vaios Liapis</h3>
-    <p>Civil Engineer (AUTh). Responsible for studies and drawings: floor plans, escape plans, technical studies. <a href="https://www.vaiosliapis.gr/" target="_blank" rel="noopener">vaiosliapis.gr</a></p></div></article>
-  <article class="team-card"><img src="{PRE}img/eleftherios-adam.webp" alt="Eleftherios Adam" width="400" height="400" loading="lazy" decoding="async">
-    <div><div class="tc-role">HSE officer</div><h3>Eleftherios Adam</h3>
-    <p>BSc Materials Science, University of Patras. Supports the team in the field, in inspections and in training.</p></div></article>
+    body=S("The people who support you", """
+<div class="team-profile-card">
+  <div class="team-profile-photo-wrap"><div class="about-photo-wrap" style="width:200px;height:200px;"><img src="{PRE}img/stavros-malliaris.webp" alt="Stavros Malliaris" width="591" height="588" class="about-photo" loading="lazy" decoding="async"></div></div>
+  <div class="team-profile-body">
+    <div class="team-profile-role">Founder &amp; lead engineer</div>
+    <h3 class="team-profile-name">Stavros Malliaris</h3>
+    <p class="team-profile-bio">Civil Engineer (Aristotle University of Thessaloniki) specialising in occupational health and safety (MEng). Over ten years of experience on construction sites, industrial facilities and all types of businesses in Greece and abroad. ASP® certified by the Board of Certified Safety Professionals (BCSP) and internal auditor for ISO 9001, 14001 and 45001.</p>
+  </div>
+</div>
+<div class="team-sub-cards">
+  <div class="team-sub-card">
+    <div class="team-sub-photo-wrap"><div class="team-sub-photo-circle"><img src="{PRE}img/dimitrios-moudiotis.webp" alt="Dimitrios Moudiotis" width="400" height="400" class="about-photo" loading="lazy" decoding="async"></div></div>
+    <div class="team-sub-body">
+      <div class="team-profile-role">Mechanical engineering lead</div>
+      <h4 class="team-sub-name">Dimitrios Moudiotis</h4>
+      <p class="team-sub-bio">Mechanical Engineer (AUTh). Covers mechanical matters: machinery, work equipment, lifting equipment and vehicles. <a href="https://www.moudiotis.gr/" target="_blank" rel="noopener">moudiotis.gr</a></p>
+    </div>
+  </div>
+  <div class="team-sub-card">
+    <div class="team-sub-photo-wrap"><div class="team-sub-photo-circle"><img src="{PRE}img/vaios-liapis.webp" alt="Vaios Liapis" width="347" height="400" class="about-photo" loading="lazy" decoding="async"></div></div>
+    <div class="team-sub-body">
+      <div class="team-profile-role">Engineering studies lead</div>
+      <h4 class="team-sub-name">Vaios Liapis</h4>
+      <p class="team-sub-bio">Civil Engineer (AUTh). Responsible for studies and drawings: floor plans, escape plans, technical studies. <a href="https://www.vaiosliapis.gr/" target="_blank" rel="noopener">vaiosliapis.gr</a></p>
+    </div>
+  </div>
+  <div class="team-sub-card">
+    <div class="team-sub-photo-wrap"><div class="team-sub-photo-circle"><img src="{PRE}img/eleftherios-adam.webp" alt="Eleftherios Adam" width="400" height="400" class="about-photo" loading="lazy" decoding="async"></div></div>
+    <div class="team-sub-body">
+      <div class="team-profile-role team-profile-role--normal-spacing">HSE officer</div>
+      <h4 class="team-sub-name">Eleftherios Adam</h4>
+      <p class="team-sub-bio">BSc Materials Science, University of Patras. Supports the team in the field, in inspections and in training.</p>
+    </div>
+  </div>
 </div>
 """, "Team", "h-people") + S("How we work", """
 <p>Three words describe us: <strong>honesty, method, technical knowledge</strong>. We say clearly what is needed and what is not, give priority to the measures that really reduce risk and respect the company's budget.</p>
@@ -633,7 +681,7 @@ PAGES.append(dict(
         ("What about occupational diseases?",
          "The employer reports a work-related disease to the Labour Inspectorate and e-EFKA within 5 days of being informed by the occupational physician or of a diagnosis by a public health system doctor."),
     ],
-    related=rel("en/accident-investigation/", "en/safety-technician-greece/", "en/labour-inspection-readiness/"),
+    related=rel("en/risk-assessment-greece/", "en/safety-technician-greece/", "en/labour-inspection-readiness/"),
     body=S("Step by step", """
 <ol class="steps">
 <li><strong>Care and safety</strong>First aid, call the ambulance (166 or 112) and move others away from the danger.</li>

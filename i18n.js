@@ -50,7 +50,7 @@
         'marquee.m1': { el: 'Τεχνικός Ασφαλείας - HSE Officer',                en: 'Safety Technician - HSE Officer' },
         'marquee.m2': { el: 'Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ)',  en: 'Written Occupational Risk Assessment (GEEK)' },
         'marquee.m3': { el: 'Εκπαιδεύσεις Υγείας & Ασφάλειας',                 en: 'H&S Training Programmes' },
-        'marquee.m4': { el: 'Διερεύνηση Εργατικών Ατυχημάτων',                 en: 'Workplace Accident Investigation' },
+        'marquee.m4': { el: 'Συντονιστής Ασφαλείας',                           en: 'Health & Safety Coordinator' },
         'marquee.m5': { el: 'Μελέτες Μηχανικού',                               en: 'Engineering Studies' },
         'marquee.m6': { el: 'Προετοιμασία για Επιθεώρηση',                     en: 'Inspection Readiness' },
 
@@ -146,10 +146,10 @@
             en: 'Mandatory for every business under Law 3850/2010, Article 48. Tailored to the needs of each business, we provide a wide range of training programmes for employees at every level.',
         },
 
-        's4.title': { el: 'Διερεύνηση Εργατικών Ατυχημάτων', en: 'Workplace Accident Investigation' },
+        's4.title': { el: 'Συντονιστής Ασφαλείας', en: 'Health & Safety Coordinator' },
         's4.text':  {
-            el: 'Διερεύνηση κάθε είδους εργατικού ατυχήματος με εχεμύθεια και πλήρη επαγγελματισμό. Root Cause Analysis, προτάσεις διορθωτικών ενεργειών και σύνταξη έκθεσης ατυχήματος.',
-            en: 'We investigate all types of workplace accidents with full confidentiality, including Root Cause Analysis, corrective action recommendations, and accident report preparation.',
+            el: 'Υποχρεωτικός σε κάθε τεχνικό έργο με περισσότερους από έναν εργολάβους, σύμφωνα με το ΠΔ 305/1996. Συντονισμός εργολάβων και υπεργολάβων, σύνταξη και ενημέρωση ΣΑΥ-ΦΑΥ και τακτικοί έλεγχοι στο εργοτάξιο, από τη μελέτη ως την παράδοση.',
+            en: 'Mandatory on every construction project with more than one contractor, under P.D. 305/1996. We coordinate contractors and subcontractors, prepare and update the H&S plan and file (SAY-FAY) and run regular site checks, from design to handover.',
         },
 
         's5.title': { el: 'Μελέτες Μηχανικού', en: 'Engineering Studies' },
@@ -204,7 +204,7 @@
         'form.opt.1':          { el: 'Τεχνικός Ασφαλείας - HSE Officer',                             en: 'Safety Technician - HSE Officer' },
         'form.opt.2':          { el: 'ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Occupational Risk Assessment Study (GEEK)' },
         'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                                     en: 'H&S Training' },
-        'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',                       en: 'Accident Investigation' },
+        'form.opt.4':          { el: 'Συντονιστής Ασφαλείας',                                 en: 'Health & Safety Coordinator' },
         'form.opt.5':          { el: 'Μελέτες Μηχανικού',                                                en: 'Engineering Studies' },
         'form.opt.6':          { el: 'Προετοιμασία για Επιθεώρηση',                      en: 'Inspection Readiness' },
         'form.opt.7':          { el: 'Άλλο',                                                  en: 'Other' },

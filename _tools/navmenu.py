@@ -11,7 +11,7 @@ SERVICES_EL = [
     ("texnikos-asfaleias/", "Τεχνικός Ασφαλείας - HSE Officer"),
     ("geek-grapti-ektimisi-kindynou/", "Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ)"),
     ("ekpaideuseis-ygeias-asfaleias/", "Εκπαιδεύσεις Υγείας &amp; Ασφάλειας"),
-    ("diereynisi-ergatikou-atyximatos/", "Διερεύνηση Εργατικού Ατυχήματος"),
+    ("syntonistis-asfaleias/", "Συντονιστής Ασφαλείας"),
     ("schedia-diafygis-ekkenosis/", "Μελέτες Μηχανικού"),
     ("elegxos-epitheorisis-ergasias/", "Προετοιμασία για Επιθεώρηση"),
 ]
@@ -33,7 +33,7 @@ SERVICES_EN = [
     ("en/safety-technician-greece/", "Safety technician - HSE officer"),
     ("en/risk-assessment-greece/", "Written risk assessment (GEEK)"),
     ("en/health-safety-training/", "Health &amp; safety training"),
-    ("en/accident-investigation/", "Accident investigation"),
+    ("en/safety-coordinator/", "Safety coordinator"),
     ("en/evacuation-plans/", "Engineering Studies"),
     ("en/labour-inspection-readiness/", "Inspection readiness"),
 ]

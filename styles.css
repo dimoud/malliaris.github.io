@@ -1947,33 +1947,6 @@ footer {
     .services-section { padding: 44px 4%; }
     .services-grid { grid-template-columns: 1fr 1fr; gap: 2px; align-items: start; }
     .service-card { padding: 0; min-height: 173px; }
-    /* Mobile: reset text-wrap transform */
-    .sc-text-wrap { transform: translateY(0); }
-    /* Touched state */
-    .service-card.touched {
-        box-shadow: 0 0 0 2px var(--accent), 0 8px 32px rgba(232,84,26,0.18);
-        outline-color: var(--accent);
-        min-height: unset;
-    }
-    .service-card.touched .sc-bg { opacity: 0; display: none; }
-    .service-card.touched .sc-content {
-        position: relative;
-        inset: unset;
-        min-height: unset;
-        justify-content: flex-start;
-        padding-top: 20px;
-        background: rgba(15,25,41,0.97);
-    }
-    .service-card.touched .sc-top { transform: none; }
-    .service-card.touched .sc-text-wrap {
-        max-height: none; opacity: 1; transform: none; overflow: visible;
-    }
-    .service-card.touched h3 { font-size: 12px; }
-    .service-card.touched p {
-        font-size: 10px;
-        line-height: 1.65;
-        color: rgba(255,255,255,0.82);
-    }
     .service-card h3 { font-size: 13px; }
     .service-card p { font-size: 10px; line-height: 1.6; }
     .service-icon { font-size: 20px; margin-bottom: 10px; }
@@ -2223,12 +2196,11 @@ footer {
 }
 .sc-text-wrap {
     overflow: hidden; max-height: 0; opacity: 0;
-    transition: max-height 0.6s cubic-bezier(.22,1,.36,1), opacity 0.5s ease, transform 0.5s cubic-bezier(.22,1,.36,1);
-    transform: translateY(8px);
+    transition: max-height 0.6s cubic-bezier(.22,1,.36,1), opacity 0.5s ease;
 }
 /* Hover: subtle image dim, slide up text - NO height jump */
 .service-card:hover .sc-top { transform: translateY(-6px); }
-.service-card:hover .sc-text-wrap { max-height: 180px; opacity: 1; transform: translateY(0); }
+.service-card:hover .sc-text-wrap { max-height: 180px; opacity: 1; }
 
 /* ===== SECTORS - 3D COVERFLOW CAROUSEL ===== */
 .sectors-coverflow-wrap {
@@ -3597,7 +3569,7 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 
 /* Σύνδεσμος στην κάρτα υπηρεσίας */
 .service-card:hover .sc-text-wrap,
-.service-card:focus-within .sc-text-wrap { max-height: 240px; opacity: 1; transform: translateY(0); }
+.service-card:focus-within .sc-text-wrap { max-height: 240px; opacity: 1; }
 .sc-link {
     display: inline-flex; align-items: center; gap: 6px;
     margin-top: 10px;
@@ -3606,6 +3578,10 @@ a.lang-btn { text-decoration: none; display: inline-block; }
     transition: gap 0.2s, color 0.2s;
 }
 .sc-link::after { content: '→'; }
+/* ο σύνδεσμος καλύπτει όλη την κάρτα: κλικ/πάτημα οπουδήποτε ανοίγει τη σελίδα της υπηρεσίας */
+.sc-link::before { content: ''; position: absolute; inset: 0; z-index: 1; }
+.sc-link:focus-visible { outline: none; }
+.service-card:has(.sc-link:focus-visible) { outline-color: var(--accent); }
 .sc-link:hover, .sc-link:focus-visible { color: var(--white); gap: 10px; }
 
 /* Σύνδεσμοι κλάδων κάτω από το κείμενο των τομέων */

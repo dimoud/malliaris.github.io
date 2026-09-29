@@ -123,7 +123,7 @@ EN_LINKS = {
     "texnikos-asfaleias/": "safety-technician-greece/",
     "geek-grapti-ektimisi-kindynou/": "risk-assessment-greece/",
     "ekpaideuseis-ygeias-asfaleias/": "health-safety-training/",
-    "diereynisi-ergatikou-atyximatos/": "accident-investigation/",
+    "syntonistis-asfaleias/": "safety-coordinator/",
     "schedia-diafygis-ekkenosis/": "evacuation-plans/",
     "elegxos-epitheorisis-ergasias/": "labour-inspection-readiness/",
     "kataskeves-ergotaxia/": "construction-sites/",

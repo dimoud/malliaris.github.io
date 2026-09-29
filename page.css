@@ -114,15 +114,17 @@
 @media (max-width: 900px) { .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .related-grid { grid-template-columns: 1fr; } }
 
-/* Ομάδα */
-.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 18px; }
-.team-card { display: flex; gap: 18px; padding: 20px; background: var(--white); border: 1px solid var(--fog2); border-radius: 10px; }
-.team-card img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.team-card .tc-role { font: 700 11px 'Space Grotesk', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
-.team-card h3 { font: 700 19px 'Space Grotesk', sans-serif; color: var(--ink); margin: 4px 0 6px; }
-.team-card p { font-size: 14.5px; color: var(--slate); line-height: 1.65; }
-.team-card a { color: var(--accent); }
-@media (max-width: 760px) { .team-grid { grid-template-columns: 1fr; } .team-card { flex-direction: column; } }
+/* Ομάδα: ίδιες κάρτες με την αρχική (styles.css), με διορθώσεις για το .prose */
+.prose .team-profile-card { margin-top: 18px; }
+.prose .team-profile-name { font: 800 clamp(24px, 3vw, 36px)/1.1 'Space Grotesk', sans-serif; margin: 0; }
+.prose .team-sub-cards { margin-top: 20px; }
+.prose .team-sub-name { margin: 0; }
+.prose .team-sub-bio { white-space: normal; }
+/* συνεργάτες: φωτογραφία πάνω, κείμενο σε όλο το πλάτος, ώστε οι τρεις κάρτες να έχουν ίδιο ύψος χωρίς κενά */
+.prose .team-sub-card { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+.prose .team-sub-photo-circle { width: 84px; height: 84px; }
+.prose .team-sub-body { align-items: center; }
+.prose .team-sub-body .team-profile-role { justify-content: center; }
 
 /* Υπολογιστής ωρών */
 .calc {

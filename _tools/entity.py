@@ -52,7 +52,7 @@ SERVICES = [
     ("Προετοιμασία για έλεγχο της Επιθεώρησης Εργασίας", "Labour inspection readiness", "/elegxos-epitheorisis-ergasias/"),
     ("Εκπαιδεύσεις υγείας και ασφάλειας", "Health and safety training", "/ekpaideuseis-ygeias-asfaleias/"),
     ("Μελέτες πυροπροστασίας, σχέδια διαφυγής, ΣΑΥ-ΦΑΥ και H&S Plan", "Fire protection studies, escape plans, SAY-FAY and H&S plans", "/schedia-diafygis-ekkenosis/"),
-    ("Διερεύνηση εργατικών ατυχημάτων", "Workplace accident investigation", "/diereynisi-ergatikou-atyximatos/"),
+    ("Συντονιστής Ασφάλειας και Υγείας έργου", "Health and safety coordinator for construction projects", "/syntonistis-asfaleias/"),
 ]
 
 def org(lang="el"):
@@ -62,9 +62,9 @@ def org(lang="el"):
         "name": "Μάλλιαρης & Συνεργάτες" if el else "Malliaris & Partners",
         "alternateName": ["Malliaris & Partners", "ΜΑΛΛΙΑΡΗΣ & ΣΥΝΕΡΓΑΤΕΣ"] if el else ["Μάλλιαρης & Συνεργάτες"],
         "description": ("Ομάδα μηχανικών που καλύπτει επιχειρήσεις στην Αττική σε θέματα υγείας και ασφάλειας στην εργασία: "
-                        "τεχνικός ασφαλείας, ΓΕΕΚ, εκπαιδεύσεις, σχέδια διαφυγής, διερεύνηση ατυχημάτων.") if el else
+                        "τεχνικός ασφαλείας, ΓΕΕΚ, εκπαιδεύσεις, σχέδια διαφυγής, συντονιστής ασφαλείας έργων.") if el else
                        ("Engineering team providing occupational health and safety services to companies in Athens and Attica: "
-                        "safety technician, written risk assessment, training, evacuation plans, accident investigation."),
+                        "safety technician, written risk assessment, training, evacuation plans, construction safety coordination."),
         "disambiguatingDescription": "Σύμβουλοι υγείας και ασφάλειας στην εργασία, Άλιμος Αττικής" if el else
                                      "Occupational health and safety consultancy based in Alimos, Attica, Greece",
         "url": DOMAIN + ("/" if el else "/en/"),
