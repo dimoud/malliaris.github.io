@@ -1,0 +1,14 @@
+#!/bin/sh
+# Κανόνας του site: καμία μεγάλη παύλα (em dash, U+2014) σε κανένα αρχείο.
+# Ελέγχει μόνο τις γραμμές που προστίθενται σε αυτό το commit.
+DASH=$(printf '\342\200\224')
+hits=$(git diff --cached -U0 --no-color | grep '^+' | grep -v '^+++' | grep -F "$DASH")
+if [ -n "$hits" ]; then
+    echo "Το commit ακυρώθηκε: βρέθηκε μεγάλη παύλα (em dash, U+2014)."
+    echo "Αντικατάστησέ την με κόμμα, άνω-κάτω τελεία ή απλό ενωτικό (-)."
+    git diff --cached --name-only | while read -r f; do
+        [ -f "$f" ] && grep -nF "$DASH" "$f" /dev/null
+    done
+    exit 1
+fi
+exit 0

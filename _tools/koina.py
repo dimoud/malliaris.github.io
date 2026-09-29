@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-koina.py — ΙΔΙΟ μενού ναυσιπλοΐας και ΙΔΙΟ υποσέλιδο σε ΟΛΕΣ τις σελίδες
+koina.py - ΙΔΙΟ μενού ναυσιπλοΐας και ΙΔΙΟ υποσέλιδο σε ΟΛΕΣ τις σελίδες
 
     python3 koina.py <φάκελος-site> [--check]
 
@@ -83,7 +83,7 @@ def primary_lang(site):
 
 
 def pages(site):
-    """{'home': {lang: Path}, 'subs': [(Path, lang)]} — υποσελίδες = κάθε άλλο index.html."""
+    """{'home': {lang: Path}, 'subs': [(Path, lang)]} - υποσελίδες = κάθε άλλο index.html."""
     prim = primary_lang(site)
     other = "en" if prim == "el" else "el"
     homes = {prim: site / "index.html"}

@@ -1,16 +1,16 @@
 /**
  * safety-animations.js  v2
- * Safety & H&S themed animations — modular, reusable, drop-in.
+ * Safety & H&S themed animations - modular, reusable, drop-in.
  *
  * Features:
- *   A. ComplianceGauge   — quiz-driven SVG gauge (replaces auto-animate)
- *   B. SafetyQuiz        — interactive H&S self-assessment game
- *   C. HelmetWidget      — animated SVG hard hat (bob + tilt)
- *   D. CraneWidget       — SVG crane with swinging jib arm
+ *   A. ComplianceGauge   - quiz-driven SVG gauge (replaces auto-animate)
+ *   B. SafetyQuiz        - interactive H&S self-assessment game
+ *   C. HelmetWidget      - animated SVG hard hat (bob + tilt)
+ *   D. CraneWidget       - SVG crane with swinging jib arm
  *
  * HTML hooks:
  *   #complianceGauge     → contains #gaugeArcFill, #gaugeNeedle, #gaugeValue
- *   #sqQuestions         → empty div — quiz questions injected here
+ *   #sqQuestions         → empty div - quiz questions injected here
  *   #sqGaugeTitle        → title text node (updated on lang change)
  *   #sqStatus            → status message node
  *   #helmetWrap          → contains a <svg> element
@@ -71,9 +71,9 @@
     var gaugeCurrentPct = 0;
 
     function getScoreColor(pct) {
-        if (pct >= 84) return '#2DAA6E';   /* green  — great / perfect */
-        if (pct >= 42) return '#F09030';   /* amber  — good / medium   */
-        return '#E8541A';                  /* orange — low             */
+        if (pct >= 84) return '#2DAA6E';   /* green  - great / perfect */
+        if (pct >= 42) return '#F09030';   /* amber  - good / medium   */
+        return '#E8541A';                  /* orange - low             */
     }
 
     function applyGaugeValue(pct) {
@@ -167,11 +167,11 @@
 
     var QUIZ_STATUS = {
         empty:   { el: '',                                                          en: '' },
-        low:     { el: 'Υψηλός κίνδυνος — απαιτείται άμεση δράση',                en: 'High risk — immediate action required' },
+        low:     { el: 'Υψηλός κίνδυνος, απαιτείται άμεση δράση',                en: 'High risk, immediate action required' },
         medium:  { el: 'Χρειάζεται βελτίωση',                                      en: 'Needs improvement' },
-        good:    { el: 'Καλή πρόοδος — υπάρχουν ακόμα κενά',                       en: 'Good progress — some gaps remain' },
+        good:    { el: 'Καλή πρόοδος, υπάρχουν ακόμα κενά',                       en: 'Good progress, some gaps remain' },
         great:   { el: 'Εξαιρετική συμμόρφωση!',                                   en: 'Excellent compliance!' },
-        perfect: { el: '🛡️ Πλήρης κάλυψη — μαζί με τον Σταύρο Μάλλιαρη!',        en: '🛡️ Full coverage — with Stavros Malliaris!' }
+        perfect: { el: '🛡️ Πλήρης κάλυψη, μαζί με τον Σταύρο Μάλλιαρη!',        en: '🛡️ Full coverage, with Stavros Malliaris!' }
     };
 
     var QUIZ_TITLE = {

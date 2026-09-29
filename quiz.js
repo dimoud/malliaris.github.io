@@ -1,5 +1,5 @@
 /**
- * quiz.js — Safety Self-Assessment Quiz
+ * quiz.js - Safety Self-Assessment Quiz
  * Step-by-step Yes/No questionnaire with image, progress bar, and result.
  */
 

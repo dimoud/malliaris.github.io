@@ -1,5 +1,5 @@
 /**
- * scroll-effects.js — Smooth scroll animations, NO skew, NO heavy effects
+ * scroll-effects.js - Smooth scroll animations, NO skew, NO heavy effects
  */
 (function () {
     'use strict';
@@ -20,7 +20,7 @@
     function q(sel) { return document.querySelector(sel); }
     function rAF(fn) { requestAnimationFrame(fn); }
 
-    /* ── A. HERO LOAD SEQUENCE — slide in from sides ── */
+    /* ── A. HERO LOAD SEQUENCE - slide in from sides ── */
     (function() {
         /* Text elements slide in from right */
         var fromRight = [
@@ -74,9 +74,9 @@
         });
     })();
 
-    /* ── D. FEATURE ROWS — handled by section S below ── */
+    /* ── D. FEATURE ROWS - handled by section S below ── */
 
-    /* ── E. RESOURCE CARDS — staggered fade-up ── */
+    /* ── E. RESOURCE CARDS - staggered fade-up ── */
     (function() {
         qAll('.resources-grid .resource-card').forEach(function(card, i) {
             card.classList.add('sx-card');
@@ -94,7 +94,7 @@
         });
     })();
 
-    /* ── G. SECTION HEADINGS — fade+rise ── */
+    /* ── G. SECTION HEADINGS - fade+rise ── */
     (function() {
         qAll('.section-heading').forEach(function(el) {
             el.classList.add('sx-heading');
@@ -152,7 +152,7 @@
         }
     })();
 
-    /* ── P. ABOUT SECTION — text left, visual right ── */
+    /* ── P. ABOUT SECTION - text left, visual right ── */
     (function() {
         var content = q('.about-content');
         var visual  = q('.about-visual');
@@ -166,7 +166,7 @@
         }
     })();
 
-    /* ── Q. SERVICE CARDS — alternate left/right ── */
+    /* ── Q. SERVICE CARDS - alternate left/right ── */
     (function() {
         qAll('.service-card').forEach(function(card, i) {
             var cls = (i % 2 === 0) ? 'sx-from-left' : 'sx-from-right';
@@ -178,7 +178,7 @@
         });
     })();
 
-    /* ── R. SECTOR CARDS — alternate left/right ── */
+    /* ── R. SECTOR CARDS - alternate left/right ── */
     (function() {
         qAll('.sector-carousel-card').forEach(function(card, i) {
             var cls = (i % 2 === 0) ? 'sx-from-left' : 'sx-from-right';
@@ -190,7 +190,7 @@
         });
     })();
 
-    /* ── S. FEATURE ROWS — odd left, even right ── */
+    /* ── S. FEATURE ROWS - odd left, even right ── */
     (function() {
         qAll('.feature-row').forEach(function(row, i) {
             /* remove existing sx-feature added by section D to avoid conflict */
@@ -204,7 +204,7 @@
         });
     })();
 
-    /* ── T. SECTIONS HEADER PAIRS — label left, heading right ── */
+    /* ── T. SECTIONS HEADER PAIRS - label left, heading right ── */
     (function() {
         qAll('.section-header, .services-header, .about-header').forEach(function(hdr) {
             var label   = hdr.querySelector('.section-label, .eyebrow');
@@ -258,7 +258,7 @@
     })();
 
 
-    /* ── M. MARQUEE — pure CSS animation, no scroll interference ── */
+    /* ── M. MARQUEE - pure CSS animation, no scroll interference ── */
 
     /* ── N. SECTORS HEADER in-view for CSS underline ── */
     (function() {

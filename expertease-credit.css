@@ -1,6 +1,6 @@
 /* ============================================================
-   EXPERTEASE CREDIT BANNER — modular component v4
-   Neutral — works on any dark background.
+   EXPERTEASE CREDIT BANNER - modular component v4
+   Neutral - works on any dark background.
    Transparent, no hardcoded background color.
    Usage:
      <hr class="ec-rule">
@@ -39,8 +39,8 @@ hr.ec-rule {
 }
 
 /* ─────────────────────────────────────────────
-   LAYER A — copyright + "designed by" credit
-   LAYER B — advertisement CTA
+   LAYER A - copyright + "designed by" credit
+   LAYER B - advertisement CTA
    They alternate: A visible → fade out → B visible → fade out → repeat
    ───────────────────────────────────────────── */
 
@@ -55,12 +55,12 @@ hr.ec-rule {
   padding: 0 6%;
 }
 
-/* Layer A: credit — visible first */
+/* Layer A: credit - visible first */
 .ec-layer--credit {
   animation: ec-fade-credit 9s ease-in-out infinite;
 }
 
-/* Layer B: ad — offset by 4.5s (half cycle) */
+/* Layer B: ad - offset by 4.5s (half cycle) */
 .ec-layer--ad {
   opacity: 0;
   animation: ec-fade-ad 9s ease-in-out infinite;
@@ -124,12 +124,12 @@ hr.ec-rule {
   display: block;
   opacity: 0.7;
   transition: opacity 0.3s;
-  filter: brightness(0) invert(1);   /* force white — neutral on any bg */
+  filter: brightness(0) invert(1);   /* force white - neutral on any bg */
 }
 
 .ec-brand:hover .ec-logo { opacity: 1; }
 
-/* ── brand name — clean white, no gold ── */
+/* ── brand name - clean white, no gold ── */
 .ec-name {
   font-size: 16px;
   font-weight: 600;

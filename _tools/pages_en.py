@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Content of inner pages — ENGLISH. One English page for every Greek page (same legal basis as pages_el.py).
+"""Content of inner pages - ENGLISH. One English page for every Greek page (same legal basis as pages_el.py).
 Rule: no Greek characters on English pages (transliterate: GEEK, SEPE, e-EFKA, KAD).
 """
 from pages_el import S, HLI_TA, HLI_GEEK, GOV_ACC, OIRA
@@ -11,7 +11,7 @@ REL = [
     ("en/risk-assessment-greece/", "fa-file-lines", "Written risk assessment (GEEK)", "Hazards per job position and prevention measures."),
     ("en/labour-inspection-readiness/", "fa-clipboard-check", "Labour Inspectorate readiness", "Mock inspection and a list of fixes."),
     ("en/health-safety-training/", "fa-person-chalkboard", "Health & safety training", "Work at height, PPE, fire safety, CPR."),
-    ("en/evacuation-plans/", "fa-person-running", "Escape & evacuation plans", "Floor plans, routes, roles and drills."),
+    ("en/evacuation-plans/", "fa-person-running", "Engineering Studies", "Fire protection, escape plans, SAY-FAY, H&S plans."),
     ("en/accident-investigation/", "fa-magnifying-glass-chart", "Accident investigation", "Causes, report and corrective actions."),
     ("en/guides/safety-technician-hours/", "fa-calculator", "Hours calculator", "Indicative yearly safety technician hours."),
     ("en/guides/employer-as-safety-technician/", "fa-user-tie", "Employer as safety technician", "When it is allowed after 1 January 2026."),
@@ -236,25 +236,39 @@ PAGES.append(dict(
 """, "Method", "h-how"),
 ))
 
-# ─────────────────────────────────────────────────────────────── P5 EVACUATION PLANS
+# ─────────────────────────────────────────────────────────────── P5 STUDIES
 PAGES.append(dict(
     lang="en", path="/en/evacuation-plans/", alt="/schedia-diafygis-ekkenosis/",
-    title="Escape and Evacuation Plans for Businesses in Greece",
-    desc="Escape and evacuation plans: floor plans with routes, exits, extinguishers and assembly point, plus roles, procedures and evacuation drills.",
-    crumb="Escape & evacuation plans", eyebrow="Service", service="Escape and evacuation plans",
-    h1="Escape <em>and evacuation plans</em>",
-    lead=("An escape plan shows at a glance where you are, how to get out and where to gather. We draw it on the real "
-          "floor plan, place it at the right points and combine it with an evacuation procedure, roles and a drill "
-          "for your staff."),
+    title="Fire Protection Studies, Escape Plans, SAY-FAY and H&S Plans in Greece",
+    desc="Fire protection studies, escape and evacuation plans, Health and Safety Plan and File (SAY-FAY) and subcontractor H&S Plans, by engineers from Aristotle University.",
+    crumb="Engineering Studies", eyebrow="Service", service="Fire protection studies, escape plans, SAY-FAY and H&S plans",
+    h1="Fire protection <em>and safety studies</em>",
+    lead=("We prepare the studies required by the Fire Service, labour legislation and main contractors: fire protection "
+          "studies, escape and evacuation plans, SAY-FAY for construction projects and H&amp;S Plans for subcontractors. "
+          "Every study is based on a survey of the actual premises or site and is delivered ready to submit or post."),
     faq=[
         ("Is an escape plan mandatory?",
          "The employer must take the measures needed for first aid, fire safety and evacuation, according to the size and nature of the business (Article 535 of P.D. 62/2025). In addition, fire safety rules require posted plans and an organised evacuation for many building uses. We check what applies to your premises during the site survey."),
+        ("When is a fire protection study needed?",
+         "It depends on the use, floor area and occupancy of the premises. For many businesses the study is a prerequisite for the Fire Safety Certificate or the operating licence. We check what applies to your premises during the site survey."),
+        ("When is a SAY-FAY needed?",
+         "The Health and Safety Plan (SAY) and Health and Safety File (FAY) are required for construction projects under P.D. 305/1996 and usually accompany the building permit application. The SAY is updated as construction progresses and the FAY is handed to the project owner at the end."),
+        ("What is a subcontractor H&S Plan?",
+         "It is the document in which a subcontractor shows the main contractor how it will carry out its scope of work safely: hazards, work methods, equipment, staff and emergency procedures. Large contractors usually ask for it before site access."),
         ("How often should an evacuation drill take place?",
          "We recommend at least one drill a year, and after changes to the premises or staff, unless the building use requires something stricter."),
     ],
     related=rel("en/health-safety-training/", "en/risk-assessment-greece/", "en/safety-technician-greece/",
                 "en/labour-inspection-readiness/"),
-    body=S("What is included", """
+    body=S("Studies we prepare", """
+<h3>Fire protection study</h3>
+<ul class="check-grid">
+<li>Classification of the building use and the requirements that apply to your premises</li>
+<li>Active and passive fire protection measures</li>
+<li>Floor plans with firefighting, detection and alarm equipment</li>
+<li>File for the Fire Safety Certificate</li>
+</ul>
+<h3>Escape and evacuation plans</h3>
 <ul class="check-grid">
 <li>Survey of the premises or work on the existing floor plan</li>
 <li>Escape routes, emergency exits and assembly point</li>
@@ -262,6 +276,20 @@ PAGES.append(dict(
 <li>A \"You are here\" plan for each posting point</li>
 <li>Evacuation procedure and appointment of responsible persons</li>
 <li>Staff training and an evacuation drill with a report</li>
+</ul>
+<h3>Health and Safety Plan and File (SAY-FAY)</h3>
+<ul class="check-grid">
+<li>Health and Safety Plan (SAY) for every phase of the project</li>
+<li>Health and Safety File (FAY) for future maintenance work</li>
+<li>Work schedule and risk assessment per phase</li>
+<li>Updates to the SAY-FAY as the project progresses</li>
+</ul>
+<h3>Subcontractor H&amp;S Plans</h3>
+<ul class="check-grid">
+<li>Health &amp; Safety Plan for the subcontractor's scope of work</li>
+<li>Method statements and risk assessments (RAMS)</li>
+<li>Equipment, certificates and staff qualifications</li>
+<li>Written in English or Greek, in the main contractor's template</li>
 </ul>
 <figure class="page-figure"><img src="{PRE}img/schedio-diafygis-ekkenosis.webp" alt="Emergency exit sign" width="784" height="900" loading="lazy" decoding="async" style="max-height:420px;object-fit:cover"></figure>
 {AUTHOR}
@@ -475,7 +503,7 @@ PAGES.append(dict(
 """, "Approach", "h-how"),
 ))
 
-# ─────────────────────────────────────────────────────────────── GUIDES — hub
+# ─────────────────────────────────────────────────────────────── GUIDES - hub
 PAGES.append(dict(
     lang="en", path="/en/guides/", alt="/odigoi/", page_type="CollectionPage", author=False, ctas=False,
     title="Health and Safety Guides for Employers in Greece",
@@ -506,8 +534,8 @@ CALC = """
       <input id="calcEmp" type="number" min="1" max="100000" value="10" inputmode="numeric"></div>
   </div>
   <div class="calc-out" aria-live="polite">
-    <div class="calc-box"><div class="cb-label">Safety technician</div><div class="cb-num" id="calcTA">—</div><div class="cb-sub" id="calcTAsub"></div></div>
-    <div class="calc-box"><div class="cb-label">Occupational physician</div><div class="cb-num" id="calcIE">—</div><div class="cb-sub" id="calcIEsub"></div></div>
+    <div class="calc-box"><div class="cb-label">Safety technician</div><div class="cb-num" id="calcTA">-</div><div class="cb-sub" id="calcTAsub"></div></div>
+    <div class="calc-box"><div class="cb-label">Occupational physician</div><div class="cb-num" id="calcIE">-</div><div class="cb-sub" id="calcIEsub"></div></div>
   </div>
   <p class="calc-note">Indicative calculation for a single site. The exact category follows from the activity code of the business (Article 500 of P.D. 62/2025), and special cases may change the result.</p>
 </form>

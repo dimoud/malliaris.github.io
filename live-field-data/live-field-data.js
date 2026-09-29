@@ -1,4 +1,4 @@
-// Live Field Data — vanilla JS animator. Works with any framework or no
+// Live Field Data - vanilla JS animator. Works with any framework or no
 // framework: include this script once, and any element with [data-lfd]
 // will get its clock, monitoring count, risk index, and sparkline animated.
 //
@@ -9,7 +9,7 @@
 //   [data-lfd-risk]         risk index text node  ("STABLE" / "LOW")
 //   [data-lfd-spark]        <polyline> in the SVG sparkline
 //
-// All of these are optional — omit anything you don't want to animate.
+// All of these are optional - omit anything you don't want to animate.
 
 (function () {
   const SPARK_POINTS = 28;

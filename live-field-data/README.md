@@ -4,9 +4,9 @@ Self-contained drop-in card. No framework required.
 
 ## Files
 
-- `live-field-data.css` — all styles, scoped under `.lfd`
-- `live-field-data.js`  — animates the clock, "MONITORING" count, "RISK INDEX", and sparkline
-- `preview.html`        — open this in a browser to see it in isolation
+- `live-field-data.css` - all styles, scoped under `.lfd`
+- `live-field-data.js`  - animates the clock, "MONITORING" count, "RISK INDEX", and sparkline
+- `preview.html`        - open this in a browser to see it in isolation
 
 ## Install
 
@@ -17,7 +17,7 @@ Copy `live-field-data.css` and `live-field-data.js` into your site, and load the
 <script src="/path/to/live-field-data.js" defer></script>
 ```
 
-Then paste the markup (from `preview.html`, the block inside `<div class="demo-wrap">`) anywhere in your hero section. Width is whatever the parent gives it — 280–360px looks best.
+Then paste the markup (from `preview.html`, the block inside `<div class="demo-wrap">`) anywhere in your hero section. Width is whatever the parent gives it - 280–360px looks best.
 
 The JS auto-initializes every `[data-lfd]` it finds on `DOMContentLoaded`. If you mount the card later (SPA / AJAX), call `window.LiveFieldData.refresh()` after insertion.
 
@@ -37,7 +37,7 @@ Override CSS variables on `.lfd` (or any ancestor):
 
 ## Localize / change content
 
-All copy is plain HTML — edit the strings directly in your template. The JS only touches the elements that have `data-lfd-*` hooks, so static labels ("STATUS", "REGION", "INCIDENT RATE · 12M ↓ 38%") stay exactly as you write them.
+All copy is plain HTML - edit the strings directly in your template. The JS only touches the elements that have `data-lfd-*` hooks, so static labels ("STATUS", "REGION", "INCIDENT RATE · 12M ↓ 38%") stay exactly as you write them.
 
 To change what the animated fields show, edit `live-field-data.js`:
 
@@ -47,4 +47,4 @@ To change what the animated fields show, edit `live-field-data.js`:
 
 ## Fonts
 
-The card expects "JetBrains Mono" (mono) and "Space Grotesk" (sans) — both Google Fonts. If your site already loads other fonts, swap the `font-family` lines in `live-field-data.css`. Any clean monospace works for the body.
+The card expects "JetBrains Mono" (mono) and "Space Grotesk" (sans) - both Google Fonts. If your site already loads other fonts, swap the `font-family` lines in `live-field-data.css`. Any clean monospace works for the body.

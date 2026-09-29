@@ -1,6 +1,6 @@
 /**
- * i18n.js — Greek / English translation toggle
- * Malliaris H&S Engineer — Σταύρος Μάλλιαρης
+ * i18n.js - Greek / English translation toggle
+ * Malliaris H&S Engineer - Σταύρος Μάλλιαρης
  * Modular & reusable. Drop into any page that uses data-i18n attributes.
  *
  * Attributes recognised:
@@ -65,9 +65,9 @@
         'team.pill.exp':       { el: '10+ Χρόνια Εμπειρίας',                                   en: '10+ Years Experience' },
         'team.pill.exp.text':  { el: 'Διεθνής εμπειρία σε απαιτητικά έργα υποδομών και επιχειρήσεις κάθε τύπου', en: 'International experience in demanding infrastructure projects and every type of business' },
         'team.pill.cert':      { el: 'ASP® Πιστοποιημένος',                                    en: 'ASP® Certified' },
-        'team.pill.cert.text': { el: 'Πιστοποίηση Board of Certified Safety Professionals (BCSP) — το υψηλότερο διεθνές πρότυπο', en: 'Board of Certified Safety Professionals (BCSP) certification — the highest international standard' },
+        'team.pill.cert.text': { el: 'Πιστοποίηση Board of Certified Safety Professionals (BCSP), το υψηλότερο διεθνές πρότυπο', en: 'Board of Certified Safety Professionals (BCSP) certification, the highest international standard' },
         'team.pill.cov':       { el: 'Πανελλαδική Κάλυψη',                                     en: 'Nationwide Coverage' },
-        'team.pill.cov.text':  { el: 'Εξυπηρέτηση επιχειρήσεων σε όλη την Ελλάδα — Αττική, Θεσσαλονίκη, Πανελλαδικά', en: 'Serving businesses across Greece — Attica, Thessaloniki, Nationwide' },
+        'team.pill.cov.text':  { el: 'Εξυπηρέτηση επιχειρήσεων σε όλη την Ελλάδα: Αττική, Θεσσαλονίκη, Πανελλαδικά', en: 'Serving businesses across Greece: Attica, Thessaloniki, Nationwide' },
 
         /* ABOUT */
         'about.eyebrow': { el: 'ΠΟΙΟΙ ΕΙΜΑΣΤΕ', en: 'WHO WE ARE' },
@@ -77,7 +77,7 @@
         },
         'about.bio.p1': {
             el: 'Ο Σταύρος Μάλλιαρης και οι συνεργάτες του παρέχουν εξειδικευμένες υπηρεσίες <strong>Υγείας &amp; Ασφάλειας στην Εργασία</strong>, από κάλυψη Τεχνικού Ασφαλείας και Συντονιστή Ασφαλείας μέχρι Εκπαιδεύσεις Προσωπικού και Εκτιμήσεις Επαγγελματικού Κινδύνου.<br><br>Η εταιρεία μας ιδρύθηκε συσπειρώνοντας μηχανικούς με πάνω από μια δεκαετία εμπειρία στις κατασκευές, τη βιομηχανία και τις υπηρεσίες. Αφορμή ήταν οι αυξανόμενες ανάγκες για <strong>ουσιαστική ασφάλεια</strong> στους χώρους εργασίας των ελληνικών επιχειρήσεων. Ο στόχος ξεκάθαρος: κάθε εργαζόμενος να επιστρέφει σπίτι του ασφαλής.<br><br>Πιστεύουμε ότι η ασφάλεια δεν θα \'πρεπε να κοστίζει ακριβά, αντιθέτως θα \'πρεπε να βοηθάει την παραγωγή και τη βιωσιμότητα της επιχείρησης. Σεβόμαστε τον προϋπολογισμό σας, δίνουμε βάρος στην πρόληψη και προτείνουμε <strong>πρακτικές λύσεις με μεγάλο αντίκρισμα</strong>.<br><br>Γιατί η πραγματική ασφάλεια ξεκινά πάντα από τις σωστές βάσεις.',
-            en: 'Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician coverage to Staff Training and Written Risk Assessment (GEEK).<br><br>Our company was founded in 2026, bringing together engineers with over a decade of experience in construction, industry and services. The driving force was the growing need for meaningful safety in Greek workplaces. The goal is clear: every employee returns home safe.<br><br>We believe safety should not be expensive — on the contrary, it should support production and business sustainability. We respect each company\'s budget, focus on prevention and propose practical, high-impact solutions.<br><br>Because real safety always starts from the right foundations.',
+            en: 'Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician coverage to Staff Training and Written Risk Assessment (GEEK).<br><br>Our company was founded in 2026, bringing together engineers with over a decade of experience in construction, industry and services. The driving force was the growing need for meaningful safety in Greek workplaces. The goal is clear: every employee returns home safe.<br><br>We believe safety should not be expensive; on the contrary, it should support production and business sustainability. We respect each company\'s budget, focus on prevention and propose practical, high-impact solutions.<br><br>Because real safety always starts from the right foundations.',
         },
         'about.bio.p2': {
             el: '',
@@ -102,12 +102,12 @@
         'about.tl.m4': { el: 'ΣΗΜΕΡΑ', en: 'TODAY' },
         'about.tl.n4': { el: 'Εν εξελίξει', en: 'Ongoing' },
         'about.lead': {
-            el: '<ul class="about-bullets"><li><span class="hi-num">5+</span> χρόνια <span class="hi-key">διεθνούς εμπειρίας</span> στην Υγεία &amp; Ασφάλεια</li><li>Πιστοποιημένος <span class="hi-badge">ASP®</span> &middot; Πολιτικός Μηχανικός <span class="hi-badge">ΑΠΘ</span></li><li>Εξυπηρέτηση <span class="hi-key">κάθε τύπου επιχείρησης</span> — εστιατόρια, γραφεία, εργοτάξια, βιομηχανίες</li><li>Εκατοντάδες ώρες εκπαίδευσης — <span class="hi-key">πρακτικές λύσεις</span> κατευθείαν στο πεδίο</li><li>Πλήρης <span class="hi-green">νομική κάλυψη</span> &amp; προστασία του ανθρώπινου δυναμικού σας</li></ul>',
-            en: '<ul class="about-bullets"><li><span class="hi-num">5+</span> years of <span class="hi-key">international H&amp;S experience</span></li><li>Certified <span class="hi-badge">ASP®</span> &middot; Civil Engineer <span class="hi-badge">AUTH</span></li><li>Supporting <span class="hi-key">every business type</span> — restaurants, offices, construction sites, industry</li><li>Hundreds of training hours — <span class="hi-key">practical solutions</span> directly in the field</li><li>Full <span class="hi-green">legal compliance</span> &amp; protection of your most valuable asset: your people</li></ul>',
+            el: '<ul class="about-bullets"><li><span class="hi-num">5+</span> χρόνια <span class="hi-key">διεθνούς εμπειρίας</span> στην Υγεία &amp; Ασφάλεια</li><li>Πιστοποιημένος <span class="hi-badge">ASP®</span> &middot; Πολιτικός Μηχανικός <span class="hi-badge">ΑΠΘ</span></li><li>Εξυπηρέτηση <span class="hi-key">κάθε τύπου επιχείρησης</span>, εστιατόρια, γραφεία, εργοτάξια, βιομηχανίες</li><li>Εκατοντάδες ώρες εκπαίδευσης, <span class="hi-key">πρακτικές λύσεις</span> κατευθείαν στο πεδίο</li><li>Πλήρης <span class="hi-green">νομική κάλυψη</span> &amp; προστασία του ανθρώπινου δυναμικού σας</li></ul>',
+            en: '<ul class="about-bullets"><li><span class="hi-num">5+</span> years of <span class="hi-key">international H&amp;S experience</span></li><li>Certified <span class="hi-badge">ASP®</span> &middot; Civil Engineer <span class="hi-badge">AUTH</span></li><li>Supporting <span class="hi-key">every business type</span>, restaurants, offices, construction sites, industry</li><li>Hundreds of training hours, <span class="hi-key">practical solutions</span> directly in the field</li><li>Full <span class="hi-green">legal compliance</span> &amp; protection of your most valuable asset: your people</li></ul>',
         },
-        'about.dim': { el: 'Ελλάδα — Διεθνώς', en: 'Greece — International' },
+        'about.dim': { el: 'Ελλάδα / Διεθνώς', en: 'Greece / International' },
 
-        /* FEATURES — Γιατί να μας επιλέξετε */
+        /* FEATURES - Γιατί να μας επιλέξετε */
         'feature.risk.label':        { el: 'Πολυετής Εμπειρία', en: 'Safety Expertise' },
         'feature.risk.text':         { el: 'Αναγνωρίζουμε έγκαιρα κινδύνους και προτείνουμε πρακτικές λύσεις που λειτουργούν στην πράξη και βοηθούν την παραγωγή', en: 'We identify risks early and propose practical solutions that work in the field and support production' },
         'feature.custom.label':      { el: 'Στοχευμένη Εξυπηρέτηση',    en: 'Targeted Service' },
@@ -122,19 +122,20 @@
             en: 'We provide a <span class="hi-orange">complete package</span> of <em class="hi-white">H&amp;S Services</em>',
         },
         'services.legal': {
-            el: 'Ακόμα και με έναν εργαζόμενο, <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου</strong> — ν. 3850/2010, όπως κωδικοποιήθηκε στον Κώδικα Εργατικού Δικαίου (ΠΔ 62/2025)',
-            en: 'Even with a single employee, <strong>a business must have a Safety Technician and a Written Occupational Risk Assessment</strong> — Law 3850/2010, as codified in the Greek Labour Code (Presidential Decree 62/2025)',
+            el: 'Ακόμα και με έναν εργαζόμενο, <strong>η επιχείρηση πρέπει να έχει Τεχνικό Ασφαλείας και Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου</strong>, ν. 3850/2010, όπως κωδικοποιήθηκε στον Κώδικα Εργατικού Δικαίου (ΠΔ 62/2025)',
+            en: 'Even with a single employee, <strong>a business must have a Safety Technician and a Written Occupational Risk Assessment</strong>, Law 3850/2010, as codified in the Greek Labour Code (Presidential Decree 62/2025)',
         },
 
         'services.measlabel': { el: '6 ΥΠΗΡΕΣΙΕΣ · ΕΝΑΣ ΣΥΝΕΡΓΑΤΗΣ', en: '6 SERVICES · ONE PARTNER' },
 
-        's1.title': { el: 'Κάλυψη Τεχνικού Ασφαλείας', en: 'Safety Technician Services' },
+        's1.title': { el: 'Τεχνικός Ασφαλείας - HSE Officer', en: 'Safety Technician - HSE Officer' },
+        's1.cardtitle': { el: 'Τεχνικός Ασφαλείας - <span class="sc-title-em">HSE Officer</span>', en: 'Safety Technician - HSE Officer' },
         's1.text':  {
-            el: 'Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 8. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας στο χώρο σας για αναγνώριση κινδύνων, επίβλεψη συνθηκών εργασίας και στοχευμένες προτάσεις. Full-time ή Part-time.',
-            en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Technician visits for hazard identification, supervision of working conditions, and targeted recommendations. Full-time or Part-time.',
+            el: 'Υποχρεωτικό για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 8. Μηνιαίες επισκέψεις Τεχνικού Ασφαλείας στο χώρο σας για αναγνώριση κινδύνων και στοχευμένες προτάσεις ή ακόμα και καθημερινή παρουσία full-time HSE Officer.',
+            en: 'Mandatory for every business under Law 3850/2010, Article 8. Monthly Safety Technician visits to your premises for hazard identification and targeted recommendations, or even a full-time HSE Officer on site every day.',
         },
 
-        's2.title': { el: 'Σύνταξη ΓΕΕΚ', en: 'Written Occupational Risk Assessment (GEEK)' },
+        's2.title': { el: 'Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ)', en: 'Written Occupational Risk Assessment (GEEK)' },
         's2.text':  {
             el: 'Υποχρεωτική για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 43. Εκπόνηση μελέτης εκτίμησης επαγγελματικού κινδύνου ανάλογα με τη δραστηριότητα και τις θέσεις εργασίας.',
             en: 'Mandatory under Law 3850/2010, Article 43. We prepare the occupational risk assessment study based on your activity and job positions.',
@@ -142,8 +143,8 @@
 
         's3.title': { el: 'Εκπαιδεύσεις Υγείας & Ασφάλειας', en: 'H&S Training Programmes' },
         's3.text':  {
-            el: 'Ανάλογα με τις ανάγκες κάθε επιχείρησης, παρέχουμε ευρύ φάσμα εκπαιδεύσεων για εργαζόμενους σύμφωνα με Νόμο 3850/2010, Άρθρο 48.',
-            en: 'Tailored to each business needs, we provide a wide range of employee training programmes under Law 3850/2010, Article 48.',
+            el: 'Υποχρεωτικό για κάθε εταιρεία σύμφωνα με το Νόμο 3850/2010, Άρθρο 48. Ανάλογα με τις ανάγκες κάθε επιχείρησης, παρέχουμε ευρύ φάσμα εκπαιδεύσεων για εργαζόμενους κάθε επιπέδου.',
+            en: 'Mandatory for every business under Law 3850/2010, Article 48. Tailored to the needs of each business, we provide a wide range of training programmes for employees at every level.',
         },
 
         's4.title': { el: 'Διερεύνηση Εργατικών Ατυχημάτων', en: 'Workplace Accident Investigation' },
@@ -152,13 +153,13 @@
             en: 'We investigate all types of workplace accidents with full confidentiality, including Root Cause Analysis, corrective action recommendations, and accident report preparation.',
         },
 
-        's5.title': { el: 'Εκπόνηση Σχεδίων Διαφυγής', en: 'Escape Plan Design' },
+        's5.title': { el: 'Μελέτες Μηχανικού', en: 'Engineering Studies' },
         's5.text':  {
-            el: 'Μελέτη, σχεδιασμός και αποτύπωση Σχεδίων Διαφυγής και Εκκένωσης — βασικό εργαλείο συμμόρφωσης με Πυροσβεστική Υπηρεσία και εργατική νομοθεσία.',
-            en: 'Study, design and documentation of Escape and Evacuation Plans — a key compliance tool for Fire Service and labour legislation.',
+            el: 'Μελέτη Πυροπροστασίας, Σχέδια Διαφυγής-Εκκένωσης, Σχέδιο και Φάκελος Ασφάλειας και Υγείας (ΣΑΥ-ΦΑΥ) και σύνταξη H&S Plan υπεργολάβων, τεκμηρίωση συμμόρφωσης με την Πυροσβεστική Υπηρεσία και την εργατική νομοθεσία.',
+            en: 'Fire protection studies, escape and evacuation plans, Health & Safety Plan and File (SAY-FAY) and subcontractor H&S Plans, documented compliance with Fire Service and labour legislation.',
         },
 
-        's6.title': { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ', en: 'Labour Inspectorate (SEPE) Audit Prep' },
+        's6.title': { el: 'Προετοιμασία για Επιθεώρηση', en: 'Inspection Readiness' },
         's6.text':  {
             el: 'Έλεγχος συνθηκών εργασίας και φακέλου Υγείας & Ασφάλειας της επιχείρησης για διαπίστωση βαθμού συμμόρφωσης με την ισχύουσα νομοθεσία και πρόταση διορθωτικών ενεργειών.',
             en: 'Review of working conditions and the business H&S file to determine compliance level with current legislation and propose necessary corrective actions.',
@@ -201,12 +202,12 @@
         'form.ph.email':       { el: 'email@example.gr',          en: 'email@example.com' },
         'form.label.subject':  { el: 'Αντικείμενο',              en: 'Subject' },
         'form.select.default': { el: 'Επιλέξτε υπηρεσία',        en: 'Select a service' },
-        'form.opt.1':          { el: 'Κάλυψη Τεχνικού Ασφαλείας',                             en: 'Safety Technician Services' },
+        'form.opt.1':          { el: 'Τεχνικός Ασφαλείας - HSE Officer',                             en: 'Safety Technician - HSE Officer' },
         'form.opt.2':          { el: 'ΓΕΕΚ - Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου',      en: 'Occupational Risk Assessment Study (GEEK)' },
         'form.opt.3':          { el: 'Εκπαιδεύσεις Υ&Α',                                     en: 'H&S Training' },
         'form.opt.4':          { el: 'Διερεύνηση Εργατικού Ατυχήματος',                       en: 'Accident Investigation' },
-        'form.opt.5':          { el: 'Σχέδια Διαφυγής',                                        en: 'Escape Plans' },
-        'form.opt.6':          { el: 'Προετοιμασία για Επιθεώρηση ΣΕΠΕ',                      en: 'Labour Inspectorate (SEPE) Audit Prep' },
+        'form.opt.5':          { el: 'Μελέτες Μηχανικού',                                                en: 'Engineering Studies' },
+        'form.opt.6':          { el: 'Προετοιμασία για Επιθεώρηση',                      en: 'Inspection Readiness' },
         'form.opt.7':          { el: 'Άλλο',                                                  en: 'Other' },
         'form.label.message':  { el: 'Μήνυμα',                   en: 'Message' },
         'form.ph.message':     { el: 'Περιγράψτε σύντομα το αίτημά σας...', en: 'Briefly describe your request...' },
@@ -235,8 +236,8 @@
         },
         'sec3.title': { el: 'Κατασκευές και Υποδομές', en: 'Construction & Infrastructure' },
         'sec3.text':  {
-            el: '<li>Σχέδιο Ασφάλειας και Υγείας (ΣΑΥ/ΦΑΥ)</li><li>Πρόληψη Πτώσεων &amp; Μέτρα Προστασίας</li><li>Επιθεώρηση Εργοταξίου — Έλεγχος εξοπλισμού</li><li>Ασφαλής Χρήση Μηχανημάτων Έργου</li><li>Οργάνωση Πυροπροστασίας Εργοταξίου</li>',
-            en: '<li>Safety &amp; Health Plan (SAY/FAY)</li><li>Fall Prevention &amp; Protection Measures</li><li>Site Inspection — Equipment Check</li><li>Safe Use of Construction Machinery</li><li>Site Fire Safety Organisation</li>',
+            el: '<li>Σχέδιο Ασφάλειας και Υγείας (ΣΑΥ/ΦΑΥ)</li><li>Πρόληψη Πτώσεων &amp; Μέτρα Προστασίας</li><li>Επιθεώρηση Εργοταξίου: Έλεγχος εξοπλισμού</li><li>Ασφαλής Χρήση Μηχανημάτων Έργου</li><li>Οργάνωση Πυροπροστασίας Εργοταξίου</li>',
+            en: '<li>Safety &amp; Health Plan (SAY/FAY)</li><li>Fall Prevention &amp; Protection Measures</li><li>Site Inspection: Equipment Check</li><li>Safe Use of Construction Machinery</li><li>Site Fire Safety Organisation</li>',
         },
         'sec4.title': { el: 'Μεταφορές και Logistics', en: 'Transport & Logistics' },
         'sec4.text':  {
@@ -282,26 +283,26 @@
 
         /* RESOURCES */
         'res1.title': { el: 'ΕΛΙΝΥΑΕ', en: 'ELINYAE' },
-        'res1.text':  { el: 'Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — νέες εκδόσεις, μελέτες, εκπαιδευτικό υλικό και ενημέρωση για την Υ&Α.', en: 'Hellenic Institute for Occupational Health & Safety — new publications, studies, training material and H&S updates.' },
+        'res1.text':  { el: 'Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας: νέες εκδόσεις, μελέτες, εκπαιδευτικό υλικό και ενημέρωση για την Υ&Α.', en: 'Hellenic Institute for Occupational Health & Safety: new publications, studies, training material and H&S updates.' },
         'res2.title': { el: 'Νόμος 3850/2010', en: 'Law 3850/2010' },
-        'res2.text':  { el: 'Κωδικοποιημένο κείμενο του Ν. 3850/2010 — ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία στην Ελλάδα.', en: 'Consolidated text of Law 3850/2010 — the primary Greek H&S at Work legislation.' },
+        'res2.text':  { el: 'Κωδικοποιημένο κείμενο του Ν. 3850/2010, ο βασικός νόμος για την Υγεία και Ασφάλεια στην Εργασία στην Ελλάδα.', en: 'Consolidated text of Law 3850/2010, the primary Greek H&S at Work legislation.' },
         'res3.title': { el: 'Επιθεώρηση Εργασίας', en: 'Labour Inspectorate' },
-        'res3.text':  { el: 'Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας — Υποχρεώσεις εργοδότη, Ο ρόλος του Τεχνικού Ασφαλείας, Έντυπα.', en: 'Official enforcement body for labour legislation — Employer obligations, The Safety Technician role, Official forms.' },
-        'res4.title': { el: 'OiRA — Εκτίμηση Κινδύνου', en: 'OiRA — Risk Assessment' },
+        'res3.text':  { el: 'Επίσημος φορέας ελέγχου εφαρμογής της εργατικής νομοθεσίας: Υποχρεώσεις εργοδότη, Ο ρόλος του Τεχνικού Ασφαλείας, Έντυπα.', en: 'Official enforcement body for labour legislation: Employer obligations, The Safety Technician role, Official forms.' },
+        'res4.title': { el: 'OiRA: Εκτίμηση Κινδύνου', en: 'OiRA: Risk Assessment' },
         'res4.text':  { el: 'Διαδραστικά εργαλεία εκτίμησης επαγγελματικού κινδύνου ανά κλάδο, εκδοθέντα από το Υπ. Εργασίας & την EU-OSHA.', en: 'Interactive sector-specific occupational risk assessment tools published by the Ministry of Labour & EU-OSHA.' },
         'res5.title': { el: 'Αναγγελία Εργατικού Ατυχήματος', en: 'Workplace Accident Reporting' },
-        'res5.text':  { el: 'Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr — υποχρεώσεις εργοδότη και βήματα υποβολής.', en: 'Official workplace accident reporting process via gov.gr — employer obligations and submission steps.' },
+        'res5.text':  { el: 'Επίσημη διαδικασία αναγγελίας εργατικού ατυχήματος μέσω gov.gr: υποχρεώσεις εργοδότη και βήματα υποβολής.', en: 'Official workplace accident reporting process via gov.gr: employer obligations and submission steps.' },
         'res6.title': { el: 'sepenet.gr', en: 'sepenet.gr' },
-        'res6.text':  { el: 'Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ — γρήγορη και εύκολη ηλεκτρονική διαδικασία.', en: 'Platform for online registration of Safety Technicians with SEPE — quick and easy process.' },
+        'res6.text':  { el: 'Πλατφόρμα για την online αναγγελία Τεχνικού Ασφαλείας στο ΣΕΠΕ, γρήγορη και εύκολη ηλεκτρονική διαδικασία.', en: 'Platform for online registration of Safety Technicians with SEPE, quick and easy process.' },
         'res7.title': { el: 'EU-OSHA', en: 'EU-OSHA' },
-        'res7.text':  { el: 'Ευρωπαϊκός Οργανισμός για την Ασφάλεια & Υγεία στην Εργασία — οδηγοί, εκστρατείες και βέλτιστες πρακτικές.', en: 'European Agency for Safety & Health at Work — guides, campaigns and best practices.' },
-        'res8.title': { el: 'ILO — Διεθνής Εργασία', en: 'ILO — International Labour' },
-        'res8.text':  { el: 'Διεθνής Οργανισμός Εργασίας — πρότυπα, εργαλεία και εκπαιδευτικό υλικό για Υ&Α παγκοσμίως.', en: 'International Labour Organization — global H&S standards, tools and training resources.' },
-        'res9.title': { el: 'ΙΚΑ — Εργατικά Ατυχήματα', en: 'IKA — Occupational Accidents' },
+        'res7.text':  { el: 'Ευρωπαϊκός Οργανισμός για την Ασφάλεια & Υγεία στην Εργασία: οδηγοί, εκστρατείες και βέλτιστες πρακτικές.', en: 'European Agency for Safety & Health at Work: guides, campaigns and best practices.' },
+        'res8.title': { el: 'ILO: Διεθνής Εργασία', en: 'ILO: International Labour' },
+        'res8.text':  { el: 'Διεθνής Οργανισμός Εργασίας: πρότυπα, εργαλεία και εκπαιδευτικό υλικό για Υ&Α παγκοσμίως.', en: 'International Labour Organization: global H&S standards, tools and training resources.' },
+        'res9.title': { el: 'ΙΚΑ: Εργατικά Ατυχήματα', en: 'IKA: Occupational Accidents' },
         'res9.text':  { el: 'Οδηγός αποζημίωσης εργατικών ατυχημάτων και επαγγελματικών ασθενειών μέσω ΕΦΚΑ/ΙΚΑ.', en: 'Guide to compensation for workplace accidents and occupational diseases via EFKA/IKA.' },
-        'res10.title': { el: 'ΚΕΕΛΠΝΟ / ΕΟΔΥ', en: 'EODY — Public Health' },
-        'res10.text':  { el: 'Εθνικός Οργανισμός Δημόσιας Υγείας — πρωτόκολλα υγιεινής και ασφάλειας για εργασιακούς χώρους.', en: 'National Public Health Organisation — workplace hygiene and safety protocols.' },
-        'res11.title': { el: 'ΑΣΕΠ — Τεχνικός Ασφαλείας', en: 'ASEP — Safety Technician' },
+        'res10.title': { el: 'ΚΕΕΛΠΝΟ / ΕΟΔΥ', en: 'EODY: Public Health' },
+        'res10.text':  { el: 'Εθνικός Οργανισμός Δημόσιας Υγείας: πρωτόκολλα υγιεινής και ασφάλειας για εργασιακούς χώρους.', en: 'National Public Health Organisation: workplace hygiene and safety protocols.' },
+        'res11.title': { el: 'ΑΣΕΠ: Τεχνικός Ασφαλείας', en: 'ASEP: Safety Technician' },
         'res11.text':  { el: 'Επίσημος κατάλογος πιστοποιημένων Τεχνικών Ασφαλείας και προϋποθέσεις αναγνώρισης προσόντων.', en: 'Official registry of certified Safety Technicians and qualification recognition requirements.' },
         'res.visit':  { el: 'Επίσκεψη', en: 'Visit' },
 
@@ -319,7 +320,7 @@
         'footer.title': { el: 'Υπηρεσίες Υγείας και Ασφάλειας - Τεχνικοί Ασφαλείας', en: 'Health and Safety consultants -<br>Safety Technician services' },
         /* ─── ΑΝΑΒΑΘΜΙΣΗ SEO 09/2026 ─────────────────────────────────── */
         'skip':        { el: 'Μετάβαση στο περιεχόμενο', en: 'Skip to content' },
-        'hero.h1sr':   { el: '— Υπηρεσίες Υγείας και Ασφάλειας στην Εργασία, Τεχνικός Ασφαλείας στην Αττική', en: '— Occupational Health & Safety Services, Safety Technician in Athens, Greece' },
+        'hero.h1sr':   { el: ': Υπηρεσίες Υγείας και Ασφάλειας στην Εργασία, Τεχνικός Ασφαλείας στην Αττική', en: ': Occupational Health & Safety Services, Safety Technician in Athens, Greece' },
         's1.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
         's2.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
         's3.link': { el: 'Δείτε την υπηρεσία', en: 'See the service' },
@@ -375,7 +376,7 @@
         'fn.cookies':  { el: 'Ρυθμίσεις cookies', en: 'Cookie settings' },
         'fn.contact':  { el: 'Επικοινωνία', en: 'Contact' },
         'lfd.demo': { el: 'ΕΝΔΕΙΚΤΙΚΗ ΑΠΕΙΚΟΝΙΣΗ', en: 'ILLUSTRATIVE ONLY' },
-        'logo.alt': { el: 'Μάλλιαρης & Συνεργάτες — Υπηρεσίες Υγείας και Ασφάλειας', en: 'Malliaris & Partners — Occupational Health and Safety' },
+        'logo.alt': { el: 'Μάλλιαρης & Συνεργάτες: Υπηρεσίες Υγείας και Ασφάλειας', en: 'Malliaris & Partners: Occupational Health and Safety' },
         'acc1.t': { el: 'Το Αντικείμενο', en: 'What we do' },
         'acc2.t': { el: 'Ίδρυση, Σκοπός και Όραμα', en: 'Founding, purpose and vision' },
         'acc3.t': { el: 'Οι Δεσμεύσεις μας', en: 'Our commitments' },

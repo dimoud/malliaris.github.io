@@ -1,4 +1,4 @@
-/* ores-calc.js — ενδεικτικός υπολογισμός ετήσιων ωρών Τεχνικού Ασφαλείας / Ιατρού Εργασίας
+/* ores-calc.js - ενδεικτικός υπολογισμός ετήσιων ωρών Τεχνικού Ασφαλείας / Ιατρού Εργασίας
    Συντελεστές: άρθρο 21 ν. 3850/2010 (όπως κωδικοποιήθηκε στο ΠΔ 62/2025). Ελάχιστο: 25 / 50 / 75 ώρες. */
 (function () {
     'use strict';
@@ -26,7 +26,7 @@
             document.getElementById('calcIE').textContent = fmt(ieH) + T.yr;
             document.getElementById('calcIEsub').textContent = n + ' × ' + fmt(coefIE(c)) + ' = ' + fmt(ie) + (ie < min(n) ? T.min + min(n) + T.hrs : '');
         } else {
-            document.getElementById('calcIE').textContent = '—';
+            document.getElementById('calcIE').textContent = '-';
             document.getElementById('calcIEsub').textContent = T.ie;
         }
         if (!sent && window.ccEvent) { sent = true; window.ccEvent('calc_use', { category: c }); }

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-navmenu.py — υπομενού «Υπηρεσίες» / «Τομείς» στην κεντρική μπάρα.
+navmenu.py - υπομενού «Υπηρεσίες» / «Τομείς» στην κεντρική μπάρα.
 
 Μία πηγή για: αρχική (index.html, ανάμεσα σε <!--dd:services--> … <!--/dd:services-->),
 en/index.html (το i18n_bake.py βάζει την αγγλική εκδοχή) και τις εσωτερικές σελίδες (build_pages.py).
@@ -8,12 +8,12 @@ en/index.html (το i18n_bake.py βάζει την αγγλική εκδοχή) 
 """
 
 SERVICES_EL = [
-    ("texnikos-asfaleias/", "Τεχνικός Ασφαλείας"),
-    ("geek-grapti-ektimisi-kindynou/", "Γραπτή Εκτίμηση Κινδύνου (ΓΕΕΚ)"),
+    ("texnikos-asfaleias/", "Τεχνικός Ασφαλείας - HSE Officer"),
+    ("geek-grapti-ektimisi-kindynou/", "Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ)"),
     ("ekpaideuseis-ygeias-asfaleias/", "Εκπαιδεύσεις Υγείας &amp; Ασφάλειας"),
     ("diereynisi-ergatikou-atyximatos/", "Διερεύνηση Εργατικού Ατυχήματος"),
-    ("schedia-diafygis-ekkenosis/", "Σχέδια Διαφυγής &amp; Εκκένωσης"),
-    ("elegxos-epitheorisis-ergasias/", "Προετοιμασία για Έλεγχο ΣΕΠΕ"),
+    ("schedia-diafygis-ekkenosis/", "Μελέτες Μηχανικού"),
+    ("elegxos-epitheorisis-ergasias/", "Προετοιμασία για Επιθεώρηση"),
 ]
 SERVICES_EL_MORE = [
     ("odigoi/", "Οδηγοί για εργοδότες"),
@@ -30,12 +30,12 @@ SECTORS_EL = [
 ]
 
 SERVICES_EN = [
-    ("en/safety-technician-greece/", "Safety technician"),
+    ("en/safety-technician-greece/", "Safety technician - HSE officer"),
     ("en/risk-assessment-greece/", "Written risk assessment (GEEK)"),
     ("en/health-safety-training/", "Health &amp; safety training"),
     ("en/accident-investigation/", "Accident investigation"),
-    ("en/evacuation-plans/", "Escape &amp; evacuation plans"),
-    ("en/labour-inspection-readiness/", "Labour Inspectorate readiness"),
+    ("en/evacuation-plans/", "Engineering Studies"),
+    ("en/labour-inspection-readiness/", "Inspection readiness"),
 ]
 SERVICES_EN_MORE = [
     ("en/guides/", "Guides for employers"),

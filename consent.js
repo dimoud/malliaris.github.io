@@ -1,5 +1,5 @@
 /**
- * consent.js — συγκατάθεση cookies (Consent Mode v2) + Google Analytics 4 + συμβάντα
+ * consent.js - συγκατάθεση cookies (Consent Mode v2) + Google Analytics 4 + συμβάντα
  * Μάλλιαρης & Συνεργάτες
  *
  * - Προεπιλογή: άρνηση και στα 4 σήματα. Το gtag.js ΔΕΝ κατεβαίνει πριν από το «Αποδοχή».

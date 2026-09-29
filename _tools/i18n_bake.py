@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-i18n_bake.py — «ψήνει» τις μεταφράσεις του i18n.js μέσα στο στατικό HTML.
+i18n_bake.py - «ψήνει» τις μεταφράσεις του i18n.js μέσα στο στατικό HTML.
 
     python3 _tools/i18n_bake.py            # index.html (ελληνικά) + en/index.html (αγγλικά)
 
@@ -171,7 +171,7 @@ def to_en(text, t):
     text = re.sub(r'<meta name="twitter:title" content="[^"]*">', '<meta name="twitter:title" content="%s">' % html.escape(title), text)
     text = re.sub(r'<meta property="og:description" content="[^"]*">', '<meta property="og:description" content="%s">' % desc, text)
     text = re.sub(r'<meta name="twitter:description" content="[^"]*">', '<meta name="twitter:description" content="%s">' % desc, text)
-    text = re.sub(r'<meta property="og:image:alt" content="[^"]*">', '<meta property="og:image:alt" content="Malliaris &amp; Partners — health and safety training on a construction site">', text)
+    text = re.sub(r'<meta property="og:image:alt" content="[^"]*">', '<meta property="og:image:alt" content="Malliaris &amp; Partners: health and safety training on a construction site">', text)
     text = text.replace('<meta property="og:locale" content="el_GR">', '<meta property="og:locale" content="en_GB">')
     text = text.replace('<meta property="og:locale:alternate" content="en_GB">', '<meta property="og:locale:alternate" content="el_GR">')
 

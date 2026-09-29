@@ -1,5 +1,5 @@
 /**
- * contact-form.js — φόρμα προς Google Apps Script                       — v2
+ * contact-form.js - φόρμα προς Google Apps Script                       - v2
  * ──────────────────────────────────────────────────────────────────────────
  *   1. Ανάπτυξη του Apps Script ως Web App (Execute as: Me, Access: Anyone).
  *   2. Η διεύθυνση /exec στο GOOGLE_SCRIPT_URL παρακάτω.

@@ -1,4 +1,4 @@
-/* styles.css — Σταύρος Μάλλιαρης | Τεχνικός Ασφαλείας */
+/* styles.css - Σταύρος Μάλλιαρης | Τεχνικός Ασφαλείας */
 
 :root {
     --ink:     #0F1929;
@@ -242,7 +242,7 @@ nav.scrolled {
     pointer-events: none;
 }
 
-/* Hero photo group — pulled further left toward centre */
+/* Hero photo group - pulled further left toward centre */
 .hero-photo-group {
     position: absolute;
     right: 16%;
@@ -265,7 +265,7 @@ nav.scrolled {
     filter: contrast(1.04) saturate(0.92);
 }
 
-/* Shield badge — overlays bottom-right of hero photo */
+/* Shield badge - overlays bottom-right of hero photo */
 .crosshair-wrap {
     position: absolute;
     bottom: 6%; right: 4%;
@@ -289,7 +289,7 @@ nav.scrolled {
     text-transform: uppercase;
 }
 
-/* Hero inner — shifted right toward centre */
+/* Hero inner - shifted right toward centre */
 .hero-inner {
     position: relative; z-index: 3;
     padding-left: clamp(5%, 5vw, 7%);
@@ -375,7 +375,7 @@ nav.scrolled {
     background: rgba(255,255,255,0.15);
 }
 
-/* Scroll hint — hidden on desktop, shown via mobile media query */
+/* Scroll hint - hidden on desktop, shown via mobile media query */
 .hero-scroll-hint { display: none; }
 
 /* ===== MARQUEE ===== */
@@ -478,7 +478,7 @@ nav.scrolled {
     margin-top: 0.5em;
 }
 
-/* Accordion — mobile bio */
+/* Accordion - mobile bio */
 .about-accordion-wrap { display: none; }
 .about-accordion { border: 1px solid rgba(25,39,68,0.15); border-radius: 8px; overflow: hidden; }
 .about-acc-btn {
@@ -785,7 +785,7 @@ nav.scrolled {
     padding: 4px 12px;
 }
 
-/* Profile card — photo left, bio right */
+/* Profile card - photo left, bio right */
 .team-profile-card {
     display: flex;
     align-items: flex-start;
@@ -914,7 +914,7 @@ nav.scrolled {
     .team-section { padding: 44px 4%; }
 }
 
-/* About aside — transparent card */
+/* About aside - transparent card */
 .about-aside {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     background: transparent;
@@ -1081,7 +1081,7 @@ nav.scrolled {
     color: rgba(255,255,255,0.75); max-width: 1360px;
 }
 
-/* sec-meas — dimension-measuring animation */
+/* sec-meas - dimension-measuring animation */
 .sec-meas {
     max-width: 1240px; margin: 20px auto 40px;
     display: flex; align-items: center; gap: 10px;
@@ -1185,6 +1185,7 @@ nav.scrolled {
     color: var(--white);
     margin-bottom: 10px; line-height: 1.3;
 }
+.service-card h3 .sc-title-em { font-size: 1.05em; }
 .service-card p {
     font-size: 13.5px; line-height: 1.7;
     color: rgba(255,255,255,0.45);
@@ -1201,7 +1202,7 @@ nav.scrolled {
     max-width: 1240px; margin: 0 auto 56px;
 }
 
-/* Crane decoration — background watermark */
+/* Crane decoration - background watermark */
 .crane-decoration {
     position: absolute;
     right: -40px; top: -60px;
@@ -1264,7 +1265,7 @@ nav.scrolled {
     padding-left: 14px; position: relative;
 }
 .sector-list li::before {
-    content: '—'; position: absolute; left: 0;
+    content: '-'; position: absolute; left: 0;
     color: var(--accent); font-size: 11px; top: 1px;
 }
 .sectors-lead {
@@ -1685,7 +1686,7 @@ footer {
 }
 [data-reveal-right].revealed { opacity: 1; transform: none; }
 
-/* Clip wipe — left to right reveal for headings */
+/* Clip wipe - left to right reveal for headings */
 [data-reveal-clip] {
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.9s var(--ease);
@@ -1737,13 +1738,13 @@ footer {
 .quote-banner.revealed .quote-author { animation: quoteSlide 0.6s var(--ease) 0.35s both; }
 
 /* ========================================================
-   MOBILE — 80% of users  (tablet ≤ 900 → phone ≤ 600 → xs ≤ 380)
+   MOBILE - 80% of users  (tablet ≤ 900 → phone ≤ 600 → xs ≤ 380)
    ======================================================== */
 
 /* ── Tablet / large phone (≤ 900px) ─────────────────────── */
 @media (max-width: 900px) {
 
-    /* NAV — always dark on mobile */
+    /* NAV - always dark on mobile */
     .mobile-nav-right { display: flex; }
     .lang-toggle { display: none; }
     .nav-logo-lang { display: none; }
@@ -1760,7 +1761,7 @@ footer {
     }
     nav.scrolled { height: 56px; }
 
-    /* Logo — compact */
+    /* Logo - compact */
     .logo-rect { min-width: 32px; max-width: 44px; height: 28px; padding: 2px 4px; }
     .logo-text .name { font-size: 12px; letter-spacing: 0.2px; }
     .logo-text .title { display: block; font-size: 8px; max-width: 150px; color: rgba(255,255,255,0.45); }
@@ -1883,16 +1884,16 @@ footer {
     .parallax-photo img { will-change: auto; }
     [data-reveal-left], [data-reveal-right] { transform: translateY(20px); }
 
-    /* Sectors coverflow — slightly smaller cards on tablet */
+    /* Sectors coverflow - slightly smaller cards on tablet */
     .sector-carousel-card { width: clamp(220px, 38vw, 300px); height: 340px; }
     .action-strip-item { width: clamp(230px, 42vw, 310px); }
     .action-strip  { animation-duration: 32s; }
 }
 
-/* ── Phone (≤ 600px) — PRIMARY TARGET ───────────────────── */
+/* ── Phone (≤ 600px) - PRIMARY TARGET ───────────────────── */
 @media (max-width: 600px) {
 
-    /* NAV — small phone refinements */
+    /* NAV - small phone refinements */
     nav { height: 52px; }
     nav.scrolled { height: 48px; }
     .logo-rect { max-width: 36px; height: 26px; }
@@ -1942,7 +1943,7 @@ footer {
     .feature-row strong { font-size: 13px; }
     .feature-row span { font-size: 12px; }
 
-    /* SERVICES — 2-column compact grid */
+    /* SERVICES - 2-column compact grid */
     .services-section { padding: 44px 4%; }
     .services-grid { grid-template-columns: 1fr 1fr; gap: 2px; align-items: start; }
     .service-card { padding: 0; min-height: 173px; }
@@ -1980,14 +1981,14 @@ footer {
     .sc-content { padding: 16px; }
     .services-lead { font-size: 14px; }
 
-    /* SECTORS — hide coverflow carousel, show compact 2-col static grid */
+    /* SECTORS - hide coverflow carousel, show compact 2-col static grid */
     .sectors-section { padding: 44px 4%; }
     .sectors-header { padding: 0; margin-bottom: 28px; }
     .sectors-coverflow-wrap { display: none; }
     .scroll-hint-label { display: none; }
     .sectors-mobile-grid { display: grid !important; }
 
-    /* IN ACTION — very slow infinite strip on mobile */
+    /* IN ACTION - very slow infinite strip on mobile */
     .in-action-section { padding: 44px 0; }
     .action-strip-item { width: 78vw; }
 
@@ -1996,7 +1997,7 @@ footer {
     .quote-banner { padding: 32px 4%; }
     .quote-banner blockquote { font-size: clamp(15px, 4.5vw, 20px); }
 
-    /* RESOURCES — switch grid to link list */
+    /* RESOURCES - switch grid to link list */
     .resources-section { padding: 44px 4%; }
     .resources-grid { display: none; }
     .res-linklist { display: block; }
@@ -2006,7 +2007,7 @@ footer {
     .contact-form-wrap { padding: 20px 16px; }
     .contact-person-row { flex-direction: column; align-items: flex-start; }
     .contact-lead { font-size: 14px; line-height: 1.7; }
-    /* Calendly CTA — prominent on mobile */
+    /* Calendly CTA - prominent on mobile */
     .calendly-cta {
         width: 100%; justify-content: center;
         padding: 16px 20px; font-size: 15px;
@@ -2016,7 +2017,7 @@ footer {
     .contact-detail { font-size: 15px; min-height: 44px; }
     .btn-submit { padding: 16px; font-size: 15px; min-height: 52px; }
 
-    /* FOOTER — centred on mobile */
+    /* FOOTER - centred on mobile */
     footer { padding: 36px 5% 0; }
     .footer-top {
         padding-bottom: 24px; gap: 16px;
@@ -2034,7 +2035,7 @@ footer {
     .ec-inner { justify-content: center; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
     .ec-divider { display: none; }
 
-    /* BACK TO TOP — centered floating button on mobile */
+    /* BACK TO TOP - centered floating button on mobile */
     .back-to-top {
         bottom: 20px; right: 50%; left: auto;
         transform: translateX(50%) translateY(16px);
@@ -2067,7 +2068,7 @@ footer {
     .contact-form-wrap { padding: 16px 12px; }
 }
 
-/* iOS input zoom fix — must be >= 16px to prevent auto-zoom */
+/* iOS input zoom fix - must be >= 16px to prevent auto-zoom */
 @media (max-width: 900px) {
     .field input, .field select, .field textarea {
         font-size: 16px;
@@ -2168,7 +2169,7 @@ footer {
     100% { transform: translateY(0); opacity: 1; }
 }
 
-/* ===== EYEBROW — one size larger ===== */
+/* ===== EYEBROW - one size larger ===== */
 .eyebrow span {
     font-size: 13px;
 }
@@ -2179,14 +2180,14 @@ footer {
     opacity: 0.85;
 }
 
-/* ===== SERVICES — heading color helpers ===== */
+/* ===== SERVICES - heading color helpers ===== */
 .hi-orange { color: var(--accent) !important; font-style: normal; }
 .hi-white  { color: var(--white)  !important; font-style: normal; }
 
 /* Services lead full width */
 .services-lead { max-width: 100%; }
 
-/* ===== SERVICE CARDS — image visible at rest, text reveals on hover ===== */
+/* ===== SERVICE CARDS - image visible at rest, text reveals on hover ===== */
 .service-card {
     position: relative; overflow: hidden;
     min-height: 320px; cursor: pointer;
@@ -2225,11 +2226,11 @@ footer {
     transition: max-height 0.6s cubic-bezier(.22,1,.36,1), opacity 0.5s ease, transform 0.5s cubic-bezier(.22,1,.36,1);
     transform: translateY(8px);
 }
-/* Hover: subtle image dim, slide up text — NO height jump */
+/* Hover: subtle image dim, slide up text - NO height jump */
 .service-card:hover .sc-top { transform: translateY(-6px); }
 .service-card:hover .sc-text-wrap { max-height: 180px; opacity: 1; transform: translateY(0); }
 
-/* ===== SECTORS — 3D COVERFLOW CAROUSEL ===== */
+/* ===== SECTORS - 3D COVERFLOW CAROUSEL ===== */
 .sectors-coverflow-wrap {
     position: relative;
     max-width: 1240px; margin: 0 auto;
@@ -2336,7 +2337,7 @@ footer {
     padding-left: 14px; position: relative; line-height: 1.5;
 }
 .sector-card-list li::before {
-    content: '—'; position: absolute; left: 0;
+    content: '-'; position: absolute; left: 0;
     color: var(--accent); font-size: 10px; top: 1px;
 }
 
@@ -2388,7 +2389,7 @@ footer {
 .sectors-quote blockquote { font-style: italic; }
 .sectors-quote:hover { background: rgba(25,39,68,0.95); }
 
-/* ===== IN ACTION — infinite auto-scroll strip ===== */
+/* ===== IN ACTION - infinite auto-scroll strip ===== */
 .action-strip-wrap {
     overflow: hidden; position: relative;
     padding: 8px 0;
@@ -2408,7 +2409,7 @@ footer {
     width: clamp(260px, 26vw, 360px);
     border-radius: 10px; overflow: hidden;
     position: relative;
-    /* 16:15 aspect ratio — 25% taller than original 16:12 */
+    /* 16:15 aspect ratio - 25% taller than original 16:12 */
     aspect-ratio: 16 / 15;
     background: var(--ink2);
 }
@@ -2435,7 +2436,7 @@ footer {
 }
 .footer-logo-rect img { height: 100%; width: auto; object-fit: contain; max-height: 32px; display: block; }
 
-/* ===== EXPERTEASE — more discreet, no shimmer ===== */
+/* ===== EXPERTEASE - more discreet, no shimmer ===== */
 .expertease-credit::before { display: none !important; }
 .ec-name {
     animation: none !important;
@@ -2451,7 +2452,7 @@ footer {
 .sectors-lead { max-width: 100%; }
 
 /* ===== LIVE BADGE on hero photo ===== */
-/* hero-photo-group keeps position:absolute from line 166 — do NOT override it here */
+/* hero-photo-group keeps position:absolute from line 166 - do NOT override it here */
 .live-badge {
     position: absolute;
     bottom: 6%; right: 3%;
@@ -2480,7 +2481,7 @@ footer {
     50%       { opacity: 0.45; transform: scale(0.7); }
 }
 
-/* ===== HERO PHOTO — accent border colour ===== */
+/* ===== HERO PHOTO - accent border colour ===== */
 .hero-photo-wrap {
     border-color: var(--accent) !important;
     animation: photoPulseAccent 3.5s ease-in-out infinite !important;
@@ -2498,7 +2499,7 @@ footer {
     display: inline-block;
 }
 
-/* ===== SECTORS COVERFLOW — nav arrows ===== */
+/* ===== SECTORS COVERFLOW - nav arrows ===== */
 .sectors-nav-arrow {
     position: absolute; top: 50%; transform: translateY(-50%);
     width: 44px; height: 44px; border-radius: 50%;
@@ -2513,7 +2514,7 @@ footer {
 .sectors-nav-arrow.right { right: 4px; }
 .sectors-nav-arrow:hover { background: var(--accent); border-color: var(--accent); }
 
-/* ===== CONTACT person-photo — rounded & centred ===== */
+/* ===== CONTACT person-photo - rounded & centred ===== */
 .person-photo {
     object-fit: cover;
     object-position: center top;
@@ -2712,7 +2713,7 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════════
-   SCROLL-EFFECTS — clean animation layer
+   SCROLL-EFFECTS - clean animation layer
    ═══════════════════════════════════════════════════ */
 
 /* ── Scroll progress bar ── */
@@ -2725,7 +2726,7 @@ footer {
     border-radius: 0 2px 2px 0;
 }
 
-/* ── Hero load sequence — slide from sides ── */
+/* ── Hero load sequence - slide from sides ── */
 .sx-hero-left {
     opacity: 0;
     transform: translateX(-70px);
@@ -2911,9 +2912,9 @@ footer {
 }
 .sectors-header.in-view .section-heading em::after { width: 100%; }
 
-/* ── About heading underline — removed ── */
+/* ── About heading underline - removed ── */
 
-/* ===== HERO — LFD CARD ===== */
+/* ===== HERO - LFD CARD ===== */
 .hero-lfd-group {
     position: absolute;
     right: 16%;
@@ -2940,7 +2941,7 @@ footer {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(232,84,26,0.18);
 }
 
-/* ===== ABOUT — PHOTO ===== */
+/* ===== ABOUT - PHOTO ===== */
 .about-photo-group {
     position: relative;
     width: clamp(160px, 22vw, 240px);
@@ -2964,13 +2965,13 @@ footer {
     filter: contrast(1.04) saturate(0.92);
 }
 
-/* live-badge reuses existing styles — just reposition relative to new parent */
+/* live-badge reuses existing styles - just reposition relative to new parent */
 .about-photo-group .live-badge {
     position: absolute;
     bottom: 6%; right: 3%;
 }
 
-/* ===== RESPONSIVE — LFD card ===== */
+/* ===== RESPONSIVE - LFD card ===== */
 @media (max-width: 900px) {
     .hero-lfd-group {
         position: relative;
@@ -3208,7 +3209,7 @@ footer {
 .sqz-col-progress     { padding-left: 5%; padding-right: 4px; }
 .sqz-col:last-child   { padding-left: 4px; padding-right: 5%; }
 
-/* Col 1 — Question */
+/* Col 1 - Question */
 .sqz-col-question { gap: 8px; }
 .sqz-step-label {
     font-family: 'Space Grotesk', sans-serif;
@@ -3262,7 +3263,7 @@ footer {
     color: var(--accent);
 }
 
-/* Col 2 — Image */
+/* Col 2 - Image */
 .sqz-col-img {
     padding: 10px 12px;
     overflow: hidden;
@@ -3286,7 +3287,7 @@ footer {
     transition: opacity 0.35s ease;
 }
 
-/* Col 3 — Progress */
+/* Col 3 - Progress */
 .sqz-col-progress { gap: 6px; }
 .sqz-progress-wrap {
     display: flex;
@@ -3350,7 +3351,7 @@ footer {
     transform: scale(1.15);
 }
 
-/* Col 4 — Score ring */
+/* Col 4 - Score ring */
 .sqz-col-ring {
     align-items: center;
     gap: 8px;
@@ -3579,7 +3580,7 @@ footer {
 }
 #cookie-banner a { color: #f5a36c; text-decoration: underline; }
 
-/* ===== ΑΝΑΒΑΘΜΙΣΗ SEO 09/2026 — νέα μικρά στοιχεία στο ίδιο ύφος ===== */
+/* ===== ΑΝΑΒΑΘΜΙΣΗ SEO 09/2026 - νέα μικρά στοιχεία στο ίδιο ύφος ===== */
 .skip-link {
     position: absolute; top: -100%; left: 16px; z-index: 10001;
     background: var(--accent); color: var(--white);

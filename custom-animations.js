@@ -1,5 +1,5 @@
 /**
- * custom-animations.js — Malliaris H&S
+ * custom-animations.js - Malliaris H&S
  * Infinite-scroll  strips, 3D tilt, magnetic buttons, cursor glow, stagger reveals
  */
 (function () {
@@ -9,15 +9,15 @@
     function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
     function qsa(sel, ctx) { return Array.from((ctx || document).querySelectorAll(sel)); }
 
-    /* ─── 1 & 2. INFINITE STRIPS — JS-driven via makeInfiniteCarousel ──── */
+    /* ─── 1 & 2. INFINITE STRIPS - JS-driven via makeInfiniteCarousel ──── */
     /* CSS animation is killed by the carousel factory; no handlers needed here. */
 
     /* ─── 3–6. POINTER-ONLY EFFECTS (skip on touch devices) ───────────── */
     if (!window.matchMedia('(hover: none)').matches) {
 
-    /* ─── 3. 3D TILT — disabled for sector coverflow cards ── */
+    /* ─── 3. 3D TILT - disabled for sector coverflow cards ── */
 
-    /* ─── 4. SERVICE CARDS — 3D tilt lite ─────────────────────────────── */
+    /* ─── 4. SERVICE CARDS - 3D tilt lite ─────────────────────────────── */
     qsa('.service-card').forEach(function (card) {
         card.addEventListener('mousemove', function (e) {
             var rect = card.getBoundingClientRect();
@@ -75,7 +75,7 @@
 
     } /* end (hover: none) guard */
 
-    /* ─── 7. STAGGER REVEAL — service + resource cards ────────────────── */
+    /* ─── 7. STAGGER REVEAL - service + resource cards ────────────────── */
     (function () {
         var cards = qsa('.service-card, .resource-card, .sector-carousel-card, .action-strip-item');
         cards.forEach(function (c, i) {
@@ -83,7 +83,7 @@
         });
     })();
 
-    /* ─── 8. COUNTER ANIMATION — hero stat1 (7+) ─────────────────────── */
+    /* ─── 8. COUNTER ANIMATION - hero stat1 (7+) ─────────────────────── */
     (function () {
         var el = qs('[data-countup]');
         if (!el) return; /* eng-animations handles this; skip if already handled */

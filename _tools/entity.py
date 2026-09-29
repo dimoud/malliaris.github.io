@@ -25,7 +25,7 @@ PEOPLE = [
           "name": "Δίπλωμα Πολιτικού Μηχανικού ΑΠΘ",
           "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης"}},
          {"@type": "EducationalOccupationalCredential", "credentialCategory": "certification",
-          "name": "ASP® — Associate Safety Professional",
+          "name": "ASP®: Associate Safety Professional",
           "recognizedBy": {"@type": "Organization", "name": "Board of Certified Safety Professionals (BCSP)"}}],
      "knowsAbout": ["Υγεία και ασφάλεια στην εργασία", "Τεχνικός ασφαλείας", "Γραπτή εκτίμηση επαγγελματικού κινδύνου",
                     "Διερεύνηση εργατικών ατυχημάτων", "ISO 45001", "Occupational health and safety"],
@@ -51,7 +51,7 @@ SERVICES = [
     ("Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ)", "Written occupational risk assessment", "/geek-grapti-ektimisi-kindynou/"),
     ("Προετοιμασία για έλεγχο της Επιθεώρησης Εργασίας", "Labour inspection readiness", "/elegxos-epitheorisis-ergasias/"),
     ("Εκπαιδεύσεις υγείας και ασφάλειας", "Health and safety training", "/ekpaideuseis-ygeias-asfaleias/"),
-    ("Σχέδια διαφυγής και εκκένωσης", "Escape and evacuation plans", "/schedia-diafygis-ekkenosis/"),
+    ("Μελέτες πυροπροστασίας, σχέδια διαφυγής, ΣΑΥ-ΦΑΥ και H&S Plan", "Fire protection studies, escape plans, SAY-FAY and H&S plans", "/schedia-diafygis-ekkenosis/"),
     ("Διερεύνηση εργατικών ατυχημάτων", "Workplace accident investigation", "/diereynisi-ergatikou-atyximatos/"),
 ]
 
