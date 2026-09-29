@@ -47,13 +47,12 @@
         'hero.stat3.lbl':{ el: 'ΠΛΗΡΗΣ ΚΑΛΥΨΗ ΣΕ ΘΕΜΑΤΑ Υ&Α',               en: 'FULL H&S COVERAGE' },
 
         /* MARQUEE */
-        'marquee.m1': { el: 'Τεχνικός Ασφαλείας',                              en: 'Safety Technician' },
-        'marquee.m2': { el: 'ΓΡΑΠΤΗ Εκτίμηση Επαγγελματικού Κινδύνου',        en: 'WRITTEN Risk Assessment (GEEK)' },
-        'marquee.m3': { el: 'Σχέδια Διαφυγής',                                en: 'Escape Plans' },
-        'marquee.m4': { el: 'Εκπαιδεύσεις Υ&Α',                              en: 'H&S Training' },
-        'marquee.m7': { el: 'ΔΙΕΡΕΥΝΗΣΗ ΕΡΓΑΤΙΚΩΝ ΑΤΥΧΗΜΑΤΩΝ',                en: 'WORKPLACE ACCIDENT INVESTIGATION' },
-        'marquee.m8': { el: 'ΣΧΕΔΙΑ ΕΚΚΕΝΩΣΗΣ',                              en: 'EVACUATION PLANS' },
-        'marquee.m9': { el: 'ΠΡΟΣΟΜΟΙΩΣΗ ΕΠΙΘΕΩΡΗΣΗΣ ΣΕΠΕ',                  en: 'LABOUR INSPECTORATE SIMULATION' },
+        'marquee.m1': { el: 'Τεχνικός Ασφαλείας - HSE Officer',                en: 'Safety Technician - HSE Officer' },
+        'marquee.m2': { el: 'Γραπτή Εκτίμηση Επαγγελματικού Κινδύνου (ΓΕΕΚ)',  en: 'Written Occupational Risk Assessment (GEEK)' },
+        'marquee.m3': { el: 'Εκπαιδεύσεις Υγείας & Ασφάλειας',                 en: 'H&S Training Programmes' },
+        'marquee.m4': { el: 'Διερεύνηση Εργατικών Ατυχημάτων',                 en: 'Workplace Accident Investigation' },
+        'marquee.m5': { el: 'Μελέτες Μηχανικού',                               en: 'Engineering Studies' },
+        'marquee.m6': { el: 'Προετοιμασία για Επιθεώρηση',                     en: 'Inspection Readiness' },
 
         /* TEAM */
         'team.eyebrow':        { el: 'Η ΟΜΑΔΑ ΜΑΣ',                                            en: 'OUR TEAM' },
@@ -343,7 +342,7 @@
         'team.m2.bio':  { el: 'Διπλ. Πολιτικός Μηχανικός ΑΠΘ', en: 'Civil Engineer, AUTh' },
         'team.m3.name': { el: 'Ελευθέριος Αδάμ', en: 'Eleftherios Adam' },
         'team.m3.bio':  { el: 'Πτυχ. Επιστήμονας Υλικών Παν. Πατρών', en: 'BSc Materials Science, University of Patras' },
-        'team.more': { el: 'Αναλυτικά βιογραφικά και πιστοποιήσεις της ομάδας', en: 'Full team profiles and credentials' },
+        'team.more': { el: 'Ανακαλύψτε περισσότερα για την ομάδα', en: 'Discover more about the team' },
         'quiz.eyebrow':  { el: 'Αυτοαξιολόγηση Ασφάλειας', en: 'Safety self-check' },
         'quiz.question': { el: 'Εσείς τι επίπεδο<br>ασφάλειας έχετε;', en: 'How safe is<br>your workplace?' },
         'quiz.start':    { el: 'Κάντε το κουίζ', en: 'Take the quiz' },
