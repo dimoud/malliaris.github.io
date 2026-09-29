@@ -456,17 +456,17 @@ PAGES.append(dict(
                 "en/health-safety-training/", "en/guides/safety-technician-hours/", "en/team/"),
     body=S("Your main obligations", f"""
 <ol class="steps">
-<li><strong>Safety technician</strong>Required from the first employee ({LAW}). Small category B and C businesses (up to 20 employees) may, under conditions, use the employer or a trained employee.</li>
+<li><strong>Safety technician</strong>Required from the first employee ({LAW}). Small businesses (up to 20 employees) of risk category B and C may, under conditions, use the employer or a trained employee as a Safety Technician.</li>
 <li><strong>Occupational physician</strong>As a rule, required from 50 employees upwards.</li>
 <li><strong>Written risk assessment (GEEK)</strong>Mandatory for every employer (Article 534 of P.D. 62/2025), prepared by a qualified person and kept up to date.</li>
 <li><strong>Accident reporting</strong>Every workplace accident must be reported within 24 hours to the Labour Inspectorate and e-EFKA, and to the police for serious injury or death. Evidence must be kept unchanged.</li>
 <li><strong>Occupational disease</strong>Reported within 5 days of being informed by the occupational physician or a public health system doctor.</li>
-<li><strong>CPR and Heimlich training</strong>Required since 1 January 2026: through free ministry video material for up to 50 employees per site; above that, courses by certified providers for at least half the staff every three years.</li>
+<li><strong>CPR and Heimlich training</strong>Required since 1 January 2026: through free video material provided by the Ministry of Labor for up to 50 employees per site; above that, courses by certified providers for at least half the staff every three years.</li>
 <li><strong>Records</strong>Recommendations book, accident book and list of accidents with more than three working days of incapacity.</li>
 </ol>
 <p class="src">Legal basis: Greek Labour Code (P.D. 62/2025), as amended by Law 5239/2025 (Government Gazette A' 178/2025). This summary is for orientation and does not replace advice for your specific case.</p>
 """, "Checklist", "h-duties") + S("How we help", """
-<p>We act as your safety technician in Attica, prepare the risk assessment, run training in English or Greek and keep the Greek records in order. You get one English-speaking engineer as contact, and reports your head office can read.</p>
+<p>We act as your safety technician in Greece, prepare the risk assessment, run training in English or Greek and keep the Greek records in order. You get one English-speaking engineer as contact, and reports that your management can easily understand.</p>
 {AUTHOR}
 """, "Service", "h-help"),
 ))
