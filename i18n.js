@@ -306,7 +306,7 @@
         'res.visit':  { el: 'Επίσκεψη', en: 'Visit' },
 
         /* CONTACT */
-        'contact.location': { el: 'Εξυπηρέτηση σε όλη την Αττική', en: 'Serving all of Attica' },
+        'contact.location': { el: 'Εξυπηρέτηση σε Ελλάδα και Εξωτερικό', en: 'Serving clients in Greece and abroad' },
 
         /* NAME */
         'name.stavros':  { el: 'ΜΑΛΛΙΑΡΗΣ ΣΤΑΥΡΟΣ',      en: 'MALLIARIS STAVROS' },

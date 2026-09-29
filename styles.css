@@ -17,6 +17,9 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    /* Χωρίς αυτόματη μεγέθυνση κειμένου σε κινητά (π.χ. μεγάλα στοιχεία του marquee) */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     /* iOS momentum scrolling */
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
