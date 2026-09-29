@@ -539,7 +539,7 @@ PAGES.append(dict(
   <div class="team-sub-card">
     <div class="team-sub-photo-wrap"><div class="team-sub-photo-circle"><img src="{PRE}img/eleftherios-adam.webp" alt="Eleftherios Adam" width="400" height="400" class="about-photo" loading="lazy" decoding="async"></div></div>
     <div class="team-sub-body">
-      <div class="team-profile-role team-profile-role--normal-spacing">HSE officer</div>
+      <div class="team-profile-role">HSE officer</div>
       <h4 class="team-sub-name">Eleftherios Adam</h4>
       <p class="team-sub-bio">BSc Materials Science, University of Patras. Supports the team in the field, in inspections and in training.</p>
     </div>

@@ -125,6 +125,8 @@
 .prose .team-sub-photo-circle { width: 84px; height: 84px; }
 .prose .team-sub-body { align-items: center; }
 .prose .team-sub-body .team-profile-role { justify-content: center; }
+/* ρόλος ιδρυτή: ίδιο στυλ με τους ρόλους των συνεργατών */
+.prose .team-profile-body .team-profile-role { font-size: 11px; letter-spacing: 1px; }
 
 /* Υπολογιστής ωρών */
 .calc {
