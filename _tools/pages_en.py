@@ -204,7 +204,7 @@ PAGES.append(dict(
     crumb="Health & safety training", eyebrow="Service", service="Health and safety training for employees",
     h1="Health and safety training <em>for your staff</em>",
     lead=("We train employees on your own premises, on your own equipment and on the hazards recorded in your risk "
-          "assessment. Every session leaves an attendance record and material for the file. Training is delivered in "
+          "assessment. Every session leaves an attendance record for the file. Training is delivered in "
           "English or Greek, and can be adapted for staff who do not speak Greek well."),
     faq=[
         ("Is CPR training mandatory?",
