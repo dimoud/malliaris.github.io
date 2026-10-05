@@ -78,11 +78,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/viomixania-logistics/"/>
   </url>
   <url>
-    <loc>https://malliarisandpartners.gr/katastimata-estiasi-grafeia/</loc>
+    <loc>https://malliarisandpartners.gr/katastimata-estiasi-tourismos/</loc>
     <lastmod>2026-10-05</lastmod>
-    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/katastimata-estiasi-grafeia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/shops-restaurants-offices/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/katastimata-estiasi-grafeia/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/katastimata-estiasi-tourismos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/shops-restaurants-tourism/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/katastimata-estiasi-tourismos/"/>
+  </url>
+  <url>
+    <loc>https://malliarisandpartners.gr/grafeia-ypiresies/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/grafeia-ypiresies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/offices-services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/grafeia-ypiresies/"/>
+  </url>
+  <url>
+    <loc>https://malliarisandpartners.gr/energeia-perivallon/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/energeia-perivallon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/energy-environment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/energeia-perivallon/"/>
   </url>
   <url>
     <loc>https://malliarisandpartners.gr/odigoi/</loc>
@@ -169,11 +183,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/viomixania-logistics/"/>
   </url>
   <url>
-    <loc>https://malliarisandpartners.gr/en/shops-restaurants-offices/</loc>
+    <loc>https://malliarisandpartners.gr/en/shops-restaurants-tourism/</loc>
     <lastmod>2026-10-05</lastmod>
-    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/katastimata-estiasi-grafeia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/shops-restaurants-offices/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/katastimata-estiasi-grafeia/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/katastimata-estiasi-tourismos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/shops-restaurants-tourism/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/katastimata-estiasi-tourismos/"/>
+  </url>
+  <url>
+    <loc>https://malliarisandpartners.gr/en/offices-services/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/grafeia-ypiresies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/offices-services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/grafeia-ypiresies/"/>
+  </url>
+  <url>
+    <loc>https://malliarisandpartners.gr/en/energy-environment/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/energeia-perivallon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/energy-environment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/energeia-perivallon/"/>
   </url>
   <url>
     <loc>https://malliarisandpartners.gr/en/foreign-companies-greece/</loc>

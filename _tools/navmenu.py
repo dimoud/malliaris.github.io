@@ -23,10 +23,13 @@ SERVICES_EL_MORE = [
 ]
 
 SECTORS_EL = [
-    ("kataskeves-ergotaxia/", "Κατασκευές &amp; Εργοτάξια"),
-    ("viomixania-logistics/", "Βιομηχανία &amp; Logistics"),
-    ("katastimata-estiasi-grafeia/", "Καταστήματα, Εστίαση, Γραφεία"),
-    ("en/foreign-companies-greece/", "Ξένες εταιρείες (στα αγγλικά)"),
+    ("energeia-perivallon/", "Ενέργεια &amp; Περιβάλλον"),
+    ("viomixania-logistics/", "Βιομηχανία &amp; Παραγωγή"),
+    ("kataskeves-ergotaxia/", "Κατασκευές &amp; Υποδομές"),
+    ("grafeia-ypiresies/", "Γραφεία &amp; Υπηρεσίες"),
+    ("katastimata-estiasi-tourismos/", "Καταστήματα, Εστίαση, Τουρισμός"),
+    ("viomixania-logistics/", "Μεταφορές &amp; Logistics"),
+    ("en/foreign-companies-greece/", "Ξένες Εταιρείες (στα Αγγλικά)"),
 ]
 
 SERVICES_EN = [
@@ -45,10 +48,13 @@ SERVICES_EN_MORE = [
 ]
 
 SECTORS_EN = [
-    ("en/construction-sites/", "Construction sites"),
-    ("en/industry-logistics/", "Industry &amp; logistics"),
-    ("en/shops-restaurants-offices/", "Shops, restaurants, offices"),
-    ("en/foreign-companies-greece/", "Foreign companies in Greece"),
+    ("en/energy-environment/", "Energy &amp; Environment"),
+    ("en/industry-logistics/", "Industry &amp; Production"),
+    ("en/construction-sites/", "Construction &amp; Infrastructure"),
+    ("en/offices-services/", "Offices &amp; Services"),
+    ("en/shops-restaurants-tourism/", "Shops, Restaurants, Tourism"),
+    ("en/industry-logistics/", "Transport &amp; Logistics"),
+    ("en/foreign-companies-greece/", "Foreign Companies in Greece"),
 ]
 
 

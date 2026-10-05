@@ -166,6 +166,15 @@
         }
     })();
 
+    /* ── P2. LINE ART (about, sectors) - draws itself once when visible, then stays ── */
+    (function() {
+        if (!io || reducedMotion) return;
+        qAll('.line-art').forEach(function(art) {
+            art.classList.add('is-armed');
+            once(art, function(t) { t.classList.add('is-drawn'); }, { threshold: 0.45 });
+        });
+    })();
+
     /* ── Q. SERVICE CARDS - alternate left/right ── */
     (function() {
         qAll('.service-card').forEach(function(card, i) {

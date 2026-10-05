@@ -403,7 +403,7 @@
             <div class="nav-links" id="navLinks">
                 <a href="#about" data-i18n="nav.about">WHO WE ARE</a>
                 <!--dd:services--><div class="nav-dd"><a href="#services" data-i18n="nav.services">Services</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-services" aria-label="Services submenu"></button><div class="nav-dd-menu" id="dd-services"><a href="safety-technician-greece/">Safety technician - HSE officer</a><a href="risk-assessment-greece/">Written risk assessment (GEEK)</a><a href="health-safety-training/">Health &amp; safety training</a><a href="safety-coordinator/">Safety coordinator</a><a href="evacuation-plans/">Engineering Studies</a><a href="labour-inspection-readiness/">Inspection readiness</a><span class="nav-dd-sep" aria-hidden="true"></span><a href="guides/">Guides for employers</a><a href="guides/safety-technician-hours/">Safety technician hours calculator</a><a href="guides/employer-as-safety-technician/">Employer as safety technician</a><a href="guides/workplace-accident-employer-steps/">Workplace accident: first steps</a></div></div><!--/dd:services-->
-                <!--dd:sectors--><div class="nav-dd"><a href="#sectors" data-i18n="nav.sectors">Sectors</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-sectors" aria-label="Sectors submenu"></button><div class="nav-dd-menu" id="dd-sectors"><a href="construction-sites/">Construction sites</a><a href="industry-logistics/">Industry &amp; logistics</a><a href="shops-restaurants-offices/">Shops, restaurants, offices</a><a href="foreign-companies-greece/">Foreign companies in Greece</a></div></div><!--/dd:sectors-->
+                <!--dd:sectors--><div class="nav-dd"><a href="#sectors" data-i18n="nav.sectors">Sectors</a><button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-sectors" aria-label="Sectors submenu"></button><div class="nav-dd-menu" id="dd-sectors"><a href="energy-environment/">Energy &amp; Environment</a><a href="industry-logistics/">Industry &amp; Production</a><a href="construction-sites/">Construction &amp; Infrastructure</a><a href="offices-services/">Offices &amp; Services</a><a href="shops-restaurants-tourism/">Shops, Restaurants, Tourism</a><a href="industry-logistics/">Transport &amp; Logistics</a><a href="foreign-companies-greece/">Foreign Companies in Greece</a></div></div><!--/dd:sectors-->
                 <a href="team/" data-i18n="nav.team">OUR TEAM</a>
                 <a href="#in-action" data-i18n="nav.action">IN ACTION</a>
                 <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
@@ -546,43 +546,89 @@
                         </svg>
                     </div>
                 </div>
-                <!-- Mobile accordions - hidden on desktop -->
-                <div class="about-accordion-wrap">
-                    <div class="about-accordion">
-                        <button class="about-acc-btn" onclick="toggleAcc(this)">
-                            <span data-i18n="acc1.t">What we do</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="about-acc-body">
-                            <div data-i18n-html="acc1.b"><p>Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician and Safety Coordinator coverage to staff training and occupational risk assessments.</p></div>
+                <!-- Profile: accordions in brackets (left) + line-art layered foundations (right, desktop only) -->
+                <div class="about-profile-row">
+                    <div class="about-bio-frame">
+                        <div class="about-accordion-wrap">
+                            <div class="about-accordion">
+                                <button class="about-acc-btn" onclick="toggleAcc(this)">
+                                    <span data-i18n="acc1.t">What We Do</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div class="about-acc-body">
+                                    <div data-i18n-html="acc1.b"><p>Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician and Safety Coordinator coverage to staff training and occupational risk assessments.</p></div>
+                                </div>
+                            </div>
+                            <div class="about-accordion">
+                                <button class="about-acc-btn" onclick="toggleAcc(this)">
+                                    <span data-i18n="acc2.t">Founding, Purpose and Vision</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div class="about-acc-body">
+                                    <div data-i18n-html="acc2.b"><p>Our company brought together engineers with over a decade of experience in construction, industry and services. The reason was the <strong>growing need for real safety</strong> in Greek workplaces. The goal is simple: every employee goes home safe.</p></div>
+                                </div>
+                            </div>
+                            <div class="about-accordion">
+                                <button class="about-acc-btn" onclick="toggleAcc(this)">
+                                    <span data-i18n="acc3.t">Our Commitments</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div class="about-acc-body">
+                                    <div data-i18n-html="acc3.b"><p>We believe safety should not be expensive; it should support production and the sustainability of the business. We respect your budget, focus on prevention and propose practical, high-impact solutions.</p><p style="margin-top:1em;"><em>Because real safety always starts from the right foundations.</em></p></div>
+                                </div>
+                            </div>
                         </div>
+                        <span class="about-bio-corner-bl" aria-hidden="true"></span>
+                        <span class="about-bio-corner-br" aria-hidden="true"></span>
                     </div>
-                    <div class="about-accordion">
-                        <button class="about-acc-btn" onclick="toggleAcc(this)">
-                            <span data-i18n="acc2.t">Founding, purpose and vision</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="about-acc-body">
-                            <div data-i18n-html="acc2.b"><p>Our company brought together engineers with over a decade of experience in construction, industry and services. The reason was the <strong>growing need for real safety</strong> in Greek workplaces. The goal is simple: every employee goes home safe.</p></div>
-                        </div>
-                    </div>
-                    <div class="about-accordion">
-                        <button class="about-acc-btn" onclick="toggleAcc(this)">
-                            <span data-i18n="acc3.t">Our commitments</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="about-acc-body">
-                            <div data-i18n-html="acc3.b"><p>We believe safety should not be expensive; it should support production and the sustainability of the business. We respect your budget, focus on prevention and propose practical, high-impact solutions.</p><p style="margin-top:1em;"><em>Because real safety always starts from the right foundations.</em></p></div>
-                        </div>
-                    </div>
-                </div>
+                    <div class="about-art line-art" aria-hidden="true">
+                        <svg viewBox="70 45 600 350" fill="none" stroke="#192744" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Layer 01: foundation, with grid -->
+                            <path class="ab-draw" pathLength="1" style="--d:0.1s" d="M130 300 L280 234 L430 300 L280 366 Z"/>
+                            <path class="ab-draw" pathLength="1" style="--d:0.5s" d="M130 300 V314 L280 380 L430 314 V300 M280 366 V380"/>
+                            <path class="ab-fade" style="--d:1s" d="M167.5 283.5 L317.5 349.5 M205 267 L355 333 M242.5 250.5 L392.5 316.5 M167.5 316.5 L317.5 250.5 M205 333 L355 267 M242.5 349.5 L392.5 283.5" stroke-width="1.5" opacity="0.3"/>
 
-                <div class="about-bio-frame">
-                    <div class="about-bio" data-reveal style="display:flex;flex-direction:column;gap:1.1em;font-size:clamp(14px, 1.3vw, 16px);line-height:1.7;color:var(--slate);">
-                        <p data-i18n-html="about.bio.p1">Stavros Malliaris and his partners provide specialised <strong>Occupational Health &amp; Safety</strong> services, from Safety Technician coverage to Staff Training and Written Risk Assessment (GEEK).<br><br>Our company was founded in 2026, bringing together engineers with over a decade of experience in construction, industry and services. The driving force was the growing need for meaningful safety in Greek workplaces. The goal is clear: every employee returns home safe.<br><br>We believe safety should not be expensive; on the contrary, it should support production and business sustainability. We respect each company's budget, focus on prevention and propose practical, high-impact solutions.<br><br>Because real safety always starts from the right foundations.</p>
+                            <!-- Layer 02, with concentric outlines -->
+                            <path class="ab-fade" style="--d:1.1s" d="M130 228 L280 162 L430 228 V242 L280 308 L130 242 Z" fill="var(--fog)" stroke="none"/>
+                            <path class="ab-draw" pathLength="1" style="--d:1.1s" d="M130 228 L280 162 L430 228 L280 294 Z"/>
+                            <path class="ab-draw" pathLength="1" style="--d:1.5s" d="M130 228 V242 L280 308 L430 242 V228 M280 294 V308"/>
+                            <path class="ab-fade" style="--d:2s" d="M181 228 L280 184.4 L379 228 L280 271.6 Z M230.5 228 L280 206.2 L329.5 228 L280 249.8 Z" stroke-width="1.5" opacity="0.3"/>
+
+                            <!-- Layer 03: top, accent -->
+                            <path class="ab-fade" style="--d:2.1s" d="M130 156 L280 90 L430 156 V170 L280 236 L130 170 Z" fill="var(--fog)" stroke="none"/>
+                            <path class="ab-draw" pathLength="1" style="--d:2.1s" d="M130 156 L280 90 L430 156 L280 222 Z" stroke="#E8541A"/>
+                            <path class="ab-draw" pathLength="1" style="--d:2.5s" d="M130 156 V170 L280 236 L430 170 V156 M280 222 V236" stroke="#E8541A"/>
+                            <path class="ab-fade" style="--d:3s" d="M175 156 L280 109.8 L385 156 L280 202.2 Z" stroke="#E8541A" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.5"/>
+
+                            <!-- Technical marks: corner guides, height bracket, numbered callouts -->
+                            <path class="ab-fade" style="--d:3s" d="M130 172 V226 M430 172 V226 M130 244 V298 M430 244 V298" stroke-width="1.5" stroke-dasharray="3 6" opacity="0.35"/>
+                            <path class="ab-fade" style="--d:3.1s" d="M96 156 V314 M90 156 H102 M90 235 H102 M90 314 H102" stroke-width="1.5" opacity="0.35"/>
+                            <path class="ab-draw" pathLength="1" style="--d:3.1s;animation-duration:0.6s" d="M430 300 H476" stroke-width="1.5"/>
+                            <path class="ab-draw" pathLength="1" style="--d:3.25s;animation-duration:0.6s" d="M430 228 H476" stroke-width="1.5"/>
+                            <path class="ab-draw" pathLength="1" style="--d:3.4s;animation-duration:0.6s" d="M430 156 H476" stroke="#E8541A" stroke-width="1.5"/>
+                            <g class="ab-fade" style="--d:3.6s" stroke="none" font-size="15">
+                                <circle cx="430" cy="300" r="4" fill="#192744"/>
+                                <circle cx="430" cy="228" r="4" fill="#192744"/>
+                                <circle cx="430" cy="156" r="4" fill="#E8541A"/>
+                                <text class="ab-label" x="486" y="305" fill="#192744">01</text>
+                                <text class="ab-label" x="514" y="305" font-size="13" fill="#192744" data-i18n="about.v1">Honesty</text>
+                                <text class="ab-label" x="486" y="233" fill="#192744">02</text>
+                                <text class="ab-label" x="514" y="233" font-size="13" fill="#192744" data-i18n="about.v2a">Method</text>
+                                <text class="ab-label" x="514" y="249" font-size="13" fill="#192744" data-i18n="about.v2b"></text>
+                                <text class="ab-label" x="486" y="161" fill="#E8541A">03</text>
+                                <text class="ab-label" x="514" y="161" font-size="13" fill="#E8541A" data-i18n="about.v3">Technical Knowledge</text>
+                            </g>
+
+                            <!-- Shield above the top layer -->
+                            <g class="ab-fade" style="--d:3.6s">
+                                <ellipse cx="280" cy="158" rx="26" ry="10" fill="#E8541A" fill-opacity="0.15" stroke="none"/>
+                                <path d="M280 136 V150" stroke="#E8541A" stroke-width="1.5" stroke-dasharray="3 5"/>
+                            </g>
+                            <path class="ab-fade" style="--d:3.7s" d="M280 62 L310 73 V98 C310 114 296 123 280 130 C264 123 250 114 250 98 V73 Z" fill="var(--fog)" stroke="none"/>
+                            <path class="ab-draw" pathLength="1" style="--d:3.7s;animation-duration:0.9s" d="M280 62 L310 73 V98 C310 114 296 123 280 130 C264 123 250 114 250 98 V73 Z" stroke="#E8541A" stroke-width="3"/>
+                            <path class="ab-draw" pathLength="1" style="--d:4.4s;animation-duration:0.5s" d="M267 97 L277 107 L295 86" stroke="#E8541A" stroke-width="3.5"/>
+                        </svg>
                     </div>
-                    <span class="about-bio-corner-bl" aria-hidden="true"></span>
-                    <span class="about-bio-corner-br" aria-hidden="true"></span>
                 </div>
 
                 <!-- Timeline -->
@@ -729,13 +775,12 @@
             <div class="eyebrow"><span data-i18n="sectors.eyebrow">SECTORS</span></div>
             <h2 id="h-sectors" class="section-heading" data-i18n-html="sectors.heading">Sectors of <em data-char-split>Activity</em></h2>
             <p class="sectors-lead" data-i18n="sectors.lead" data-sx="up" data-sx-delay="200">With years of experience across demanding infrastructure projects and businesses of all kinds, Stavros Malliaris and his team can advise clients from every sector of activity.</p>
-            <p class="sector-links"><span data-i18n="sectors.linkslabel">By sector:</span> <a href="construction-sites/" data-i18n="sectors.l1">Construction sites</a> <a href="industry-logistics/" data-i18n="sectors.l2">Industry &amp; logistics</a> <a href="shops-restaurants-offices/" data-i18n="sectors.l3">Shops, restaurants, offices</a> <a href="foreign-companies-greece/" data-i18n="sectors.l4">Foreign companies in Greece</a></p>
         </div>
 
         <!-- Mobile-only: compact 2-col sector grid (carousel hidden on mobile) -->
         <div class="sectors-mobile-grid" aria-hidden="false">
-            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-utensils"></i></div><div class="smc-title" data-i18n="sec1.title">Hospitality &amp; Tourism</div></div>
-            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-store"></i></div><div class="smc-title" data-i18n="sec2.title">Retail &amp; Services</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-store"></i></div><div class="smc-title" data-i18n="sec1.title">Shops, Restaurants, Tourism</div></div>
+            <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-building"></i></div><div class="smc-title" data-i18n="sec2.title">Offices &amp; Services</div></div>
             <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-helmet-safety"></i></div><div class="smc-title" data-i18n="sec3.title">Construction &amp; Infrastructure</div></div>
             <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-truck"></i></div><div class="smc-title" data-i18n="sec4.title">Transport &amp; Logistics</div></div>
             <div class="smc-card"><div class="smc-icon"><i class="fa-solid fa-bolt"></i></div><div class="smc-title" data-i18n="sec5.title">Energy &amp; Environment</div></div>
@@ -774,67 +819,151 @@
             </svg>
         </div>
 
-        <div class="sectors-coverflow-wrap" id="sectorsCoverflowWrap">
-            <button class="sectors-nav-arrow left" id="sectorsLeft" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="sectors-nav-arrow right" id="sectorsRight" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-            <div class="sectors-coverflow-stage" id="sectorsCoverflowStage">
-                <div class="sector-carousel-card" data-tilt>
-                    <img decoding="async" width="600" height="900" src="../img/tomeas-estiasi-tourismos.webp" alt="Hospitality &amp; Tourism" data-i18n-alt="sec1.title" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-utensils"></i></div>
-                        <div class="sector-card-title" data-i18n="sec1.title">Hospitality &amp; Tourism</div>
-                        <ul class="sector-card-list" data-i18n-html="sec1.text"><li>Ergonomics &amp; Workstations</li><li>Fire Safety &amp; Evacuation Plans</li><li>Hazard Identification in Catering Areas</li><li>Staff H&amp;S Training</li><li>Emergency Plans for Guests</li></ul>
-                    </div>
+        <!-- Sectors panel: line-art district (left) linked to an accordion with the texts (right). Hidden on mobile. -->
+        <div class="sectors-panel" id="sectorsPanel">
+            <div class="sectors-art line-art" aria-hidden="true">
+                <svg viewBox="0 30 640 420" fill="none" stroke="#192744" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ground lines -->
+                    <path class="ab-fade" style="--d:0s" d="M70 230 H628" opacity="0.5"/>
+                    <path class="ab-fade" style="--d:0s" d="M40 252 H600" stroke-width="2" stroke-dasharray="18 14" opacity="0.18"/>
+                    <path class="ab-fade" style="--d:0s" d="M12 430 H628"/>
+                    <path class="ab-fade" style="--d:0.1s" d="M48 440 H188 M214 440 H410 M432 440 H620" opacity="0.25"/>
+                    <path class="ab-fade" style="--d:2.6s" d="M250 70 H306 A12 12 0 0 0 294 52 A16 16 0 0 0 264 54 A9 9 0 0 0 250 70 Z" stroke-width="2" opacity="0.3"/>
+
+                    <!-- 5: Energy & environment -->
+                    <g class="sec-zone" data-sec="5">
+                        <rect class="sec-hit" x="82" y="68" width="142" height="170" rx="10" fill="#E8541A" fill-opacity="0" stroke="none"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.1s" d="M130 230 V120 M130 120 L130 78 M130 120 L166 141 M130 120 L94 141"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.3s" d="M192 230 V150 M192 150 L207 124 M192 150 L207 176 M192 150 L162 150"/>
+                        <circle class="ab-fade" style="--d:2s" cx="130" cy="120" r="4" fill="var(--fog)"/>
+                        <circle class="ab-fade" style="--d:2s" cx="192" cy="150" r="3.5" fill="var(--fog)"/>
+                        <path class="ab-fade" style="--d:2s" d="M148 228 L158 206 H184 L174 228 Z M166 206 L156 228 M153 217 H179" stroke-width="2"/>
+                    </g>
+
+                    <!-- 6: Industry & production -->
+                    <g class="sec-zone" data-sec="6">
+                        <rect class="sec-hit" x="262" y="100" width="146" height="138" rx="10" fill="#E8541A" fill-opacity="0" stroke="none"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.4s" d="M270 230 V170 L300 150 V170 L330 150 V170 L360 150 V170 H400 V230"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.7s" d="M368 170 V110 H382 V170 M386 170 V128 H398 V170"/>
+                        <g class="ab-fade" style="--d:2.3s" stroke-width="2">
+                            <rect x="284" y="190" width="18" height="14" rx="2"/>
+                            <rect x="314" y="190" width="18" height="14" rx="2"/>
+                            <rect x="344" y="190" width="18" height="14" rx="2"/>
+                            <path d="M374 230 V202 H390 V230 M368 120 H382"/>
+                        </g>
+                    </g>
+
+                    <!-- 3: Construction & infrastructure -->
+                    <g class="sec-zone" data-sec="3">
+                        <rect class="sec-hit" x="472" y="40" width="156" height="198" rx="10" fill="#E8541A" fill-opacity="0" stroke="none"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.7s" d="M480 230 V140 H550 V230 M480 185 H550 M515 140 V230"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.9s" d="M580 230 V70 M592 230 V70 M572 230 H600"/>
+                        <path class="ab-draw" pathLength="1" style="--d:2.1s" d="M580 230 L592 210 L580 190 L592 170 L580 150 L592 130 L580 110 L592 90 L580 70" stroke-width="1.6" opacity="0.6"/>
+                        <path class="ab-draw" pathLength="1" style="--d:2.2s" d="M500 70 H622 M586 70 V48 M586 48 L510 70 M586 48 L616 70"/>
+                        <g class="ab-fade" style="--d:2.8s" stroke-width="2">
+                            <path d="M530 70 V112" stroke-width="1.6"/>
+                            <rect x="520" y="112" width="20" height="14" rx="2"/>
+                            <path d="M480 185 L515 140 M515 185 L550 140 M490 140 V128 M505 140 V128 M540 140 V128" opacity="0.55"/>
+                        </g>
+                    </g>
+
+                    <!-- 2: Offices & services -->
+                    <g class="sec-zone" data-sec="2">
+                        <rect class="sec-hit" x="32" y="262" width="166" height="176" rx="10" fill="#E8541A" fill-opacity="0" stroke="none"/>
+                        <path class="ab-draw" pathLength="1" style="--d:0.2s" d="M48 430 V278 H140 V430"/>
+                        <path class="ab-draw" pathLength="1" style="--d:0.5s" d="M140 430 V346 H188 V430"/>
+                        <g class="ab-fade" style="--d:1.2s" stroke-width="2">
+                            <path d="M62 298 H126 M62 318 H126 M62 338 H126 M62 358 H126 M62 378 H126" stroke-dasharray="12 7" opacity="0.6"/>
+                            <path d="M84 430 V402 H104 V430 M70 278 V268 H96 V278"/>
+                            <rect x="152" y="360" width="24" height="16" rx="2"/>
+                            <rect x="152" y="390" width="24" height="16" rx="2"/>
+                        </g>
+                    </g>
+
+                    <!-- 1: Shops, restaurants, tourism -->
+                    <g class="sec-zone" data-sec="1">
+                        <rect class="sec-hit" x="206" y="262" width="210" height="176" rx="10" fill="#E8541A" fill-opacity="0" stroke="none"/>
+                        <path class="ab-draw" pathLength="1" style="--d:0.5s" d="M214 430 V352 H290"/>
+                        <path class="ab-draw" pathLength="1" style="--d:0.8s" d="M290 430 V288 H376 V430 M308 288 V272 H358 V288"/>
+                        <g class="ab-fade" style="--d:1.5s" stroke-width="2">
+                            <path d="M210 386 H290 M210 386 L218 370 H290"/>
+                            <rect x="224" y="396" width="30" height="22" rx="2"/>
+                            <path d="M266 430 V396 H282 V430 M228 352 V337 H276 V352"/>
+                            <text class="sec-sign" x="333" y="284" text-anchor="middle" font-size="10" fill="#192744" stroke="none">HOTEL</text>
+                            <text class="sec-sign" x="252" y="348" text-anchor="middle" font-size="10" fill="#192744" stroke="none">PIZZA</text>
+                            <rect x="302" y="304" width="16" height="16" rx="2"/>
+                            <rect x="325" y="304" width="16" height="16" rx="2"/>
+                            <rect x="348" y="304" width="16" height="16" rx="2"/>
+                            <rect x="302" y="332" width="16" height="16" rx="2"/>
+                            <rect x="325" y="332" width="16" height="16" rx="2"/>
+                            <rect x="348" y="332" width="16" height="16" rx="2"/>
+                            <rect x="302" y="360" width="16" height="16" rx="2"/>
+                            <rect x="325" y="360" width="16" height="16" rx="2"/>
+                            <rect x="348" y="360" width="16" height="16" rx="2"/>
+                            <path d="M324 430 V400 H342 V430 M316 392 H350"/>
+                            <path d="M382 402 Q396 384 410 402 Z M396 402 V430 M388 430 H404"/>
+                        </g>
+                    </g>
+
+                    <!-- 4: Transport & logistics -->
+                    <g class="sec-zone" data-sec="4">
+                        <rect class="sec-hit" x="424" y="314" width="204" height="124" rx="10" fill="#E8541A" fill-opacity="0" stroke="none"/>
+                        <path class="ab-draw" pathLength="1" style="--d:0.8s" d="M432 430 V350 L488 324 L544 350 V430"/>
+                        <path class="ab-draw" pathLength="1" style="--d:1.1s" d="M552 388 H598 V420 H552 Z M598 398 H611 L620 408 V420 H598"/>
+                        <g class="ab-fade" style="--d:1.8s" stroke-width="2">
+                            <path d="M450 430 V380 H488 V430 M450 392 H488 M450 404 H488 M450 416 H488"/>
+                            <rect x="502" y="372" width="24" height="16" rx="2"/>
+                            <circle cx="565" cy="423" r="6" fill="var(--fog)"/>
+                            <circle cx="607" cy="423" r="6" fill="var(--fog)"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="sectors-acc">
+                <div class="sec-item" data-sec="5">
+                    <button class="sec-btn" type="button" aria-expanded="false">
+                        <span class="sec-btn-label"><i class="fa-solid fa-bolt"></i><span data-i18n="sec5.title">Energy &amp; Environment</span></span>
+                        <i class="fa-solid fa-chevron-down sec-chev"></i>
+                    </button>
+                    <div class="sec-body"><ul class="sec-list" data-i18n-html="sec5.text"><li>Electrical Risk Management</li><li>Safety in Renewable Energy</li><li>Environmental Prevention</li><li>Confined Space Work</li><li>High Voltage Maintenance Protocols</li></ul><a class="sec-link" href="energy-environment/"><span data-i18n="sectors.more">See the sector page</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
                 </div>
-                <div class="sector-carousel-card" data-tilt>
-                    <img decoding="async" width="506" height="900" src="../img/tomeas-emporio-ypiresies.webp" alt="Retail &amp; Services" data-i18n-alt="sec2.title" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-store"></i></div>
-                        <div class="sector-card-title" data-i18n="sec2.title">Retail &amp; Services</div>
-                        <ul class="sector-card-list" data-i18n-html="sec2.text"><li>Office or Shop Risk Assessment</li><li>Electrical Installations Inspection</li><li>Basic First Aid Training</li><li>Lighting and Ventilation Study</li><li>Occupational Stress &amp; Fatigue Management</li></ul>
-                    </div>
+                <div class="sec-item" data-sec="6">
+                    <button class="sec-btn" type="button" aria-expanded="false">
+                        <span class="sec-btn-label"><i class="fa-solid fa-industry"></i><span data-i18n="sec6.title">Industry &amp; Production</span></span>
+                        <i class="fa-solid fa-chevron-down sec-chev"></i>
+                    </button>
+                    <div class="sec-body"><ul class="sec-list" data-i18n-html="sec6.text"><li>Safe Machine Operation</li><li>Chemical Agents Management</li><li>ATEX Studies</li><li>Workplace Safety Signage</li><li>Regular Safety System Inspections</li></ul><a class="sec-link" href="industry-logistics/"><span data-i18n="sectors.more">See the sector page</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
                 </div>
-                <div class="sector-carousel-card" data-tilt>
-                    <img decoding="async" width="600" height="900" src="../img/tomeas-kataskeves-ypodomes.webp" alt="Construction &amp; Infrastructure" data-i18n-alt="sec3.title" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-helmet-safety"></i></div>
-                        <div class="sector-card-title" data-i18n="sec3.title">Construction &amp; Infrastructure</div>
-                        <ul class="sector-card-list" data-i18n-html="sec3.text"><li>Safety &amp; Health Plan (SAY/FAY)</li><li>Fall Prevention &amp; Protection Measures</li><li>Site Inspection: Equipment Check</li><li>Safe Use of Construction Machinery</li><li>Site Fire Safety Organisation</li></ul>
-                    </div>
+                <div class="sec-item" data-sec="3">
+                    <button class="sec-btn" type="button" aria-expanded="false">
+                        <span class="sec-btn-label"><i class="fa-solid fa-helmet-safety"></i><span data-i18n="sec3.title">Construction &amp; Infrastructure</span></span>
+                        <i class="fa-solid fa-chevron-down sec-chev"></i>
+                    </button>
+                    <div class="sec-body"><ul class="sec-list" data-i18n-html="sec3.text"><li>Safety &amp; Health Plan (SAY/FAY)</li><li>Fall Prevention &amp; Protection Measures</li><li>Site Inspection: Equipment Check</li><li>Safe Use of Construction Machinery</li><li>Site Fire Safety Organisation</li></ul><a class="sec-link" href="construction-sites/"><span data-i18n="sectors.more">See the sector page</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
                 </div>
-                <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=60&w=800" alt="Transport &amp; Logistics" data-i18n-alt="sec4.title" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-truck"></i></div>
-                        <div class="sector-card-title" data-i18n="sec4.title">Transport &amp; Logistics</div>
-                        <ul class="sector-card-list" data-i18n-html="sec4.text"><li>Safe Storage &amp; Stacking</li><li>Traffic Management Within Premises</li><li>Manual Handling of Loads</li><li>Loading Equipment Condition Check</li><li>Safe Movement in Warehouses Seminars</li></ul>
-                    </div>
+                <div class="sec-item" data-sec="2">
+                    <button class="sec-btn" type="button" aria-expanded="false">
+                        <span class="sec-btn-label"><i class="fa-solid fa-building"></i><span data-i18n="sec2.title">Offices &amp; Services</span></span>
+                        <i class="fa-solid fa-chevron-down sec-chev"></i>
+                    </button>
+                    <div class="sec-body"><ul class="sec-list" data-i18n-html="sec2.text"><li>Office and Services Risk Assessment</li><li>Electrical Installations Inspection</li><li>Basic First Aid Training</li><li>Lighting and Ventilation Study</li><li>Occupational Stress &amp; Fatigue Management</li></ul><a class="sec-link" href="offices-services/"><span data-i18n="sectors.more">See the sector page</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
                 </div>
-                <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=60&w=800" alt="Energy &amp; Environment" data-i18n-alt="sec5.title" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="sector-card-title" data-i18n="sec5.title">Energy &amp; Environment</div>
-                        <ul class="sector-card-list" data-i18n-html="sec5.text"><li>Electrical Risk Management</li><li>Safety in Renewable Energy</li><li>Environmental Prevention</li><li>Confined Space Work</li><li>High Voltage Maintenance Protocols</li></ul>
-                    </div>
+                <div class="sec-item" data-sec="1">
+                    <button class="sec-btn" type="button" aria-expanded="false">
+                        <span class="sec-btn-label"><i class="fa-solid fa-store"></i><span data-i18n="sec1.title">Shops, Restaurants, Tourism</span></span>
+                        <i class="fa-solid fa-chevron-down sec-chev"></i>
+                    </button>
+                    <div class="sec-body"><ul class="sec-list" data-i18n-html="sec1.text"><li>Ergonomics &amp; Workstations</li><li>Fire Safety &amp; Evacuation Plans</li><li>Hazard Identification in Catering Areas</li><li>Staff H&amp;S Training</li><li>Emergency Plans for Guests</li></ul><a class="sec-link" href="shops-restaurants-tourism/"><span data-i18n="sectors.more">See the sector page</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
                 </div>
-                <div class="sector-carousel-card" data-tilt>
-                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=60&w=800" alt="Industry &amp; Production" data-i18n-alt="sec6.title" loading="lazy">
-                    <div class="sector-card-overlay"></div>
-                    <div class="sector-card-body">
-                        <div class="sector-card-icon"><i class="fa-solid fa-industry"></i></div>
-                        <div class="sector-card-title" data-i18n="sec6.title">Industry &amp; Production</div>
-                        <ul class="sector-card-list" data-i18n-html="sec6.text"><li>Safe Machine Operation</li><li>Chemical Agents Management</li><li>ATEX Studies</li><li>Workplace Safety Signage</li><li>Regular Safety System Inspections</li></ul>
-                    </div>
+                <div class="sec-item" data-sec="4">
+                    <button class="sec-btn" type="button" aria-expanded="false">
+                        <span class="sec-btn-label"><i class="fa-solid fa-truck"></i><span data-i18n="sec4.title">Transport &amp; Logistics</span></span>
+                        <i class="fa-solid fa-chevron-down sec-chev"></i>
+                    </button>
+                    <div class="sec-body"><ul class="sec-list" data-i18n-html="sec4.text"><li>Safe Storage &amp; Stacking</li><li>Traffic Management Within Premises</li><li>Manual Handling of Loads</li><li>Loading Equipment Condition Check</li><li>Safe Movement in Warehouses Seminars</li></ul><a class="sec-link" href="industry-logistics/"><span data-i18n="sectors.more">See the sector page</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
                 </div>
             </div>
         </div>
-        <div class="sectors-cf-dots" id="sectorsDots" aria-hidden="true"></div>
 
     </section>
 
@@ -1399,10 +1528,13 @@
             </div>
             <div class="footer-nav-col">
                 <p class="footer-nav-title" data-i18n="fn.sectors">Sectors</p>
-                <a href="construction-sites/" data-i18n="sectors.l1">Construction sites</a>
-                <a href="industry-logistics/" data-i18n="sectors.l2">Industry &amp; logistics</a>
-                <a href="shops-restaurants-offices/" data-i18n="sectors.l3">Shops, restaurants, offices</a>
-                <a href="foreign-companies-greece/" data-i18n="sectors.l4">Foreign companies in Greece</a>
+                <a href="energy-environment/" data-i18n="sectors.l1">Energy &amp; Environment</a>
+                <a href="industry-logistics/" data-i18n="sectors.l2">Industry &amp; Production</a>
+                <a href="construction-sites/" data-i18n="sectors.l3">Construction &amp; Infrastructure</a>
+                <a href="offices-services/" data-i18n="sectors.l4">Offices &amp; Services</a>
+                <a href="shops-restaurants-tourism/" data-i18n="sectors.l5">Shops, Restaurants, Tourism</a>
+                <a href="industry-logistics/" data-i18n="sectors.l6">Transport &amp; Logistics</a>
+                <a href="foreign-companies-greece/" data-i18n="sectors.l7">Foreign Companies in Greece</a>
             </div>
             <div class="footer-nav-col">
                 <p class="footer-nav-title" data-i18n="fn.company">Company</p>
@@ -1670,87 +1802,34 @@
     /* autoSpeed = px per frame at 60fps */
     var isMobile = window.innerWidth <= 600;
 
-    /* Sectors: 3D Coverflow on desktop/tablet, static grid on mobile (coverflow hidden via CSS) */
+    /* Sectors: accordion list linked to the line-art district (panel hidden on mobile via CSS) */
     (function() {
-        var stage = document.getElementById('sectorsCoverflowStage');
-        if (!stage) return;
-        var cards = Array.prototype.slice.call(stage.querySelectorAll('.sector-carousel-card'));
-        var total = cards.length;
-        var active = 0;
+        var panel = document.getElementById('sectorsPanel');
+        if (!panel) return;
+        var items = Array.prototype.slice.call(panel.querySelectorAll('.sec-item'));
+        var zones = Array.prototype.slice.call(panel.querySelectorAll('.sec-zone'));
 
-        /* Dot indicators */
-        var dotsEl = document.getElementById('sectorsDots');
-        var dots = [];
-        if (dotsEl) {
-            cards.forEach(function(_, i) {
-                var d = document.createElement('button');
-                d.className = 'cf-dot';
-                d.setAttribute('aria-label', 'Slide ' + (i + 1));
-                d.addEventListener('click', function() { active = i; applyPositions(); });
-                dotsEl.appendChild(d);
-                dots.push(d);
+        function activate(id) {
+            items.forEach(function(item) {
+                var on = item.getAttribute('data-sec') === id;
+                item.classList.toggle('open', on);
+                item.querySelector('.sec-btn').setAttribute('aria-expanded', on ? 'true' : 'false');
+            });
+            zones.forEach(function(z) {
+                z.classList.toggle('active', z.getAttribute('data-sec') === id);
             });
         }
 
-        function applyPositions() {
-            cards.forEach(function(card, i) {
-                var rel = i - active;
-                /* normalise to [-half, +half] for wrapping feel */
-                while (rel < -(total / 2)) rel += total;
-                while (rel >  (total / 2)) rel -= total;
-                var absRel = Math.abs(rel);
-                /* clear any inline transform/transition left by the tilt handler */
-                card.style.transform = '';
-                card.style.transition = '';
-                if (absRel > 2) {
-                    card.removeAttribute('data-cf-pos');
-                    card.setAttribute('data-cf-hidden', '');
-                } else {
-                    card.removeAttribute('data-cf-hidden');
-                    card.setAttribute('data-cf-pos', String(rel));
-                }
-            });
-            dots.forEach(function(d, i) {
-                d.classList.toggle('active', i === active);
-            });
-        }
-
-        function advance(dir) {
-            active = (active + dir + total) % total;
-            applyPositions();
-        }
-
-        /* Click on a side card to advance to it */
-        cards.forEach(function(card, i) {
-            card.addEventListener('click', function() {
-                var pos = card.getAttribute('data-cf-pos');
-                if (pos && pos !== '0') advance(parseInt(pos, 10));
+        items.forEach(function(item) {
+            item.querySelector('.sec-btn').addEventListener('click', function() {
+                activate(item.getAttribute('data-sec'));
             });
         });
+        zones.forEach(function(z) {
+            z.addEventListener('click', function() { activate(z.getAttribute('data-sec')); });
+        });
 
-        var btnL = document.getElementById('sectorsLeft');
-        var btnR = document.getElementById('sectorsRight');
-        if (btnL) btnL.addEventListener('click', function() { advance(-1); });
-        if (btnR) btnR.addEventListener('click', function() { advance(1); });
-
-        /* Keyboard navigation when focus is inside the wrap */
-        var wrap = document.getElementById('sectorsCoverflowWrap');
-        if (wrap) {
-            wrap.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowLeft')  { advance(-1); e.preventDefault(); }
-                if (e.key === 'ArrowRight') { advance(1);  e.preventDefault(); }
-            });
-        }
-
-        /* Swipe support */
-        var tStartX = 0;
-        stage.addEventListener('touchstart', function(e) { tStartX = e.touches[0].clientX; }, { passive: true });
-        stage.addEventListener('touchend', function(e) {
-            var dx = e.changedTouches[0].clientX - tStartX;
-            if (Math.abs(dx) > 40) advance(dx < 0 ? 1 : -1);
-        }, { passive: true });
-
-        applyPositions();
+        activate('5');
     })();
 
     /* In-action work photos: left-moving strip - pauses on hover */

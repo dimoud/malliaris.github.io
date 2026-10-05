@@ -17,7 +17,7 @@ REL = [
     ("en/guides/employer-as-safety-technician/", "fa-user-tie", "Employer as safety technician", "When it is allowed after 1 January 2026."),
     ("en/guides/workplace-accident-employer-steps/", "fa-triangle-exclamation", "Workplace accident", "The employer's first steps."),
     ("en/foreign-companies-greece/", "fa-earth-europe", "Foreign companies in Greece", "Your health and safety obligations, in plain English."),
-    ("en/shops-restaurants-offices/", "fa-store", "Shops, restaurants, offices", "Discreet, targeted visits and a clean file."),
+    ("en/shops-restaurants-tourism/", "fa-store", "Shops, restaurants, tourism", "Discreet, targeted visits and a clean file."),
     ("en/team/", "fa-users", "Our team", "Engineers from Aristotle University of Thessaloniki."),
 ]
 
@@ -85,11 +85,13 @@ PAGES.append(dict(
 </ol>
 {AUTHOR}
 """, "Process", "h-steps") + S("Sectors we work in", """
-<p>We work with construction sites, industry and warehouses, shops and restaurants, offices, and foreign companies with staff in Greece. For what each type of workplace needs:</p>
+<p>We work with energy projects, industry and warehouses, construction sites, offices, shops, restaurants and tourism, and foreign companies with staff in Greece. For what each type of workplace needs:</p>
 <ul>
-<li><a href="{PRE}en/construction-sites/">Construction sites</a>: work at height, scaffolding, construction machinery, safety plans</li>
+<li><a href="{PRE}en/energy-environment/">Energy and environment</a>: electrical hazards, work at height, confined spaces</li>
 <li><a href="{PRE}en/industry-logistics/">Industry, warehouses and logistics</a>: forklifts, racking, shift work</li>
-<li><a href="{PRE}en/shops-restaurants-offices/">Shops, restaurants, offices</a></li>
+<li><a href="{PRE}en/construction-sites/">Construction sites</a>: work at height, scaffolding, construction machinery, safety plans</li>
+<li><a href="{PRE}en/offices-services/">Offices and services</a>: ergonomics, fire safety, staff training</li>
+<li><a href="{PRE}en/shops-restaurants-tourism/">Shops, restaurants, tourism</a></li>
 <li><a href="{PRE}en/foreign-companies-greece/">Foreign companies in Greece</a></li>
 </ul>
 """, "Sectors", "h-sectors"),
@@ -426,18 +428,18 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P10 SMALL BUSINESSES
 PAGES.append(dict(
-    lang="en", path="/en/shops-restaurants-offices/", alt="/katastimata-estiasi-grafeia/",
-    title="Safety Technician for Shops, Restaurants and Offices",
-    desc="Health and safety for shops, restaurants and offices in Attica: safety technician, written risk assessment and staff training.",
-    crumb="Shops, restaurants, offices", eyebrow="Sector",
-    h1="Shops, restaurants <em>and offices</em>",
+    lang="en", path="/en/shops-restaurants-tourism/", alt="/katastimata-estiasi-tourismos/",
+    title="Safety Technician for Shops, Restaurants and Tourism",
+    desc="Health and safety for shops, restaurants and tourist accommodation in Attica: safety technician, written risk assessment and staff training.",
+    crumb="Shops, restaurants, tourism", eyebrow="Sector",
+    h1="Shops, restaurants <em>and tourism</em>",
     lead=("Even with one employee, a business needs a safety technician and a written occupational risk assessment. "
           "We keep things simple: discreet, targeted visits during your business hours, a clean file ready for inspection and "
           "staff training on what the law requires."),
     faq=[
         ("Can I act as safety technician myself?",
          "In category B and C businesses with up to 20 employees, the law allows it under conditions and with training, as applies from 1 January 2026. The written risk assessment, however, must be prepared by a person with safety technician qualifications. See the <a href=\"{PRE}en/guides/employer-as-safety-technician/\">detailed guide</a>."),
-        ("What applies to CPR training in shops, restaurants and offices?",
+        ("What applies to CPR training in shops, restaurants and hotels?",
          "With up to 50 employees on one site, the training is done with the free training material of the Ministry of Labour. We make sure it is recorded properly in the file."),
     ],
     related=rel("en/safety-technician-greece/", "en/guides/employer-as-safety-technician/", "en/risk-assessment-greece/",
@@ -447,8 +449,9 @@ PAGES.append(dict(
 <p>Burns and cuts in the kitchen, slips on wet floors, LPG and fryers, cold rooms, carrying heavy crates from the storeroom.</p>
 <h3>Shops</h3>
 <p>Ladders and high shelving, goods deliveries, electrical installations in old buildings, emergency exits blocked by boxes.</p>
-<h3>Offices</h3>
-<p>Ergonomics at screen workstations, lighting, ventilation, cables on the floor, fire safety in shared areas.</p>
+<h3>Tourism and accommodation</h3>
+<p>Room cleaning with chemicals and repetitive movements, laundries and linen rooms, pools and plant rooms, seasonal staff that changes every year, evacuation with guests who do not know the building.</p>
+<p>For offices and service companies, see <a href="{PRE}en/offices-services/">Offices and services</a>.</p>
 """, "Hazards", "h-risks") + S("Where we can help", """
 <ul class="check-grid">
 <li>Safety technician appointment and visits with the hours that apply</li>
@@ -460,6 +463,81 @@ PAGES.append(dict(
 </ul>
 {AUTHOR}
 """, "Services", "h-give"),
+))
+
+# ─────────────────────────────────────────────────────────────── P11 OFFICES AND SERVICES
+PAGES.append(dict(
+    lang="en", path="/en/offices-services/", alt="/grafeia-ypiresies/",
+    title="Safety Technician for Offices and Service Companies",
+    desc="Health and safety for offices and service companies in Attica: safety technician, written risk assessment, ergonomics, fire safety and staff training.",
+    crumb="Offices and services", eyebrow="Sector",
+    h1="Offices <em>and services</em>",
+    lead=("An office looks like a safe place, and it usually is. The duties still apply: a safety technician and a written "
+          "occupational risk assessment, even with one employee. We work discreetly, during your business hours, and "
+          "focus on what actually matters in an office: ergonomics, fire safety and staff training."),
+    faq=[
+        ("Does an office with a few employees need a safety technician?",
+         "Yes. Even with one employee, a business must have a safety technician and a written occupational risk assessment (Law 3850/2010, now codified in the Greek Labour Code, Presidential Decree 62/2025). The hours depend on the category and the headcount; see the <a href=\"{PRE}en/guides/safety-technician-hours/\">hours calculator</a>."),
+        ("Can I act as safety technician myself?",
+         "In category B and C businesses with up to 20 employees, the law allows it under conditions and with training, as applies from 1 January 2026. The written risk assessment, however, must be prepared by a person with safety technician qualifications. See the <a href=\"{PRE}en/guides/employer-as-safety-technician/\">detailed guide</a>."),
+    ],
+    related=rel("en/safety-technician-greece/", "en/risk-assessment-greece/", "en/health-safety-training/",
+                "en/evacuation-plans/", "en/guides/safety-technician-hours/", "en/guides/employer-as-safety-technician/"),
+    body=S("Common hazards", """
+<ul>
+<li>Ergonomics at screen workstations: chairs, screen height, long hours of sitting</li>
+<li>Lighting, ventilation and room temperature</li>
+<li>Electrical: extension leads, cables on the floor, old installations</li>
+<li>Fire safety and emergency exits, especially in the shared areas of multi-storey buildings</li>
+<li>Slips and falls on stairs, in corridors and in archive rooms</li>
+<li>Work-related stress, fatigue and psychosocial risks, which Law 5239/2025 explicitly requires to be taken into account</li>
+</ul>
+<p>For shops, restaurants and accommodation, see <a href="{PRE}en/shops-restaurants-tourism/">Shops, restaurants, tourism</a>.</p>
+""", "Hazards", "h-risks") + S("Where we can help", """
+<ul class="check-grid">
+<li>Safety technician appointment and visits with the hours that apply</li>
+<li>A risk assessment written for your own premises</li>
+<li>Ergonomic assessment of screen workstations</li>
+<li>Fire safety checks, escape plans and evacuation drills</li>
+<li>Staff training and basic first aid</li>
+<li>A file ready for a Labour Inspectorate inspection</li>
+</ul>
+{AUTHOR}
+""", "Services", "h-give"),
+))
+
+# ─────────────────────────────────────────────────────────────── P12 ENERGY AND ENVIRONMENT
+PAGES.append(dict(
+    lang="en", path="/en/energy-environment/", alt="/energeia-perivallon/",
+    title="Health and Safety in Energy and Environmental Projects, Greece",
+    desc="Safety technician, risk assessment and training for solar and wind farms, substations and environmental facilities: electrical hazards, work at height, confined spaces.",
+    crumb="Energy and environment", eyebrow="Sector",
+    h1="Energy <em>and environment</em>",
+    lead=("On energy projects the hazard is not always visible: voltage that remains after isolation, work at height far "
+          "from help, spaces with little oxygen. We act as safety technician and prepare risk assessments for solar and "
+          "wind farms, substations and environmental facilities, from construction to maintenance."),
+    related=rel("en/safety-technician-greece/", "en/risk-assessment-greece/", "en/labour-inspection-readiness/",
+                "en/health-safety-training/", "en/safety-coordinator/", "en/guides/workplace-accident-employer-steps/"),
+    body=S("The hazards that stand out", """
+<ul>
+<li>Electrical hazards: work near or on low, medium and high voltage installations</li>
+<li>Work at height: roofs with solar panels, wind turbine towers, poles</li>
+<li>Confined spaces: tanks, manholes, ducts, with a risk from gases or lack of oxygen</li>
+<li>Isolated work locations, far from immediate help</li>
+<li>Weather: heat, wind, lightning</li>
+<li>Chemicals, waste and the risk of pollution during operation and maintenance</li>
+</ul>
+""", "Hazards", "h-risks") + S("What we take on", """
+<ul class="check-grid">
+<li>Safety technician during construction and operation</li>
+<li>Risk assessment per facility and per maintenance task</li>
+<li>Isolation and lockout procedures before any intervention</li>
+<li>Permits to work for height, confined spaces and hot work</li>
+<li>Crew training and emergency plans</li>
+<li>Safety coordination when several contractors work together</li>
+</ul>
+{AUTHOR}
+""", "Services", "h-services"),
 ))
 
 # ─────────────────────────────────────────────────────────────── FOREIGN COMPANIES (English only)
@@ -607,7 +685,7 @@ PAGES.append(dict(
         ("When do I also need an occupational physician?",
          "As a rule, from 50 employees upwards. Below that it may be required in special cases. This is why the calculator shows physician hours only from 50 employees."),
     ],
-    related=rel("en/safety-technician-greece/", "en/guides/employer-as-safety-technician/", "en/shops-restaurants-offices/"),
+    related=rel("en/safety-technician-greece/", "en/guides/employer-as-safety-technician/", "en/shops-restaurants-tourism/"),
     body=S("Calculate the hours", CALC + """
 <p>The calculation uses the coefficients of Article 21 of Law 3850/2010, as in force after codification in the Greek Labour Code (P.D. 62/2025):</p>
 <div class="table-wrap"><table class="data-table">
