@@ -128,7 +128,7 @@ EN_LINKS = {
     "elegxos-epitheorisis-ergasias/": "labour-inspection-readiness/",
     "kataskeves-ergotaxia/": "construction-sites/",
     "viomixania-logistics/": "industry-logistics/",
-    "mikres-epixeiriseis/": "small-businesses/",
+    "katastimata-estiasi-grafeia/": "shops-restaurants-offices/",
     "omada/": "team/",
     "odigoi/": "guides/",
     "odigoi/ores-texnikou-asfaleias/": "guides/safety-technician-hours/",

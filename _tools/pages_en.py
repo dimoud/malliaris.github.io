@@ -17,7 +17,7 @@ REL = [
     ("en/guides/employer-as-safety-technician/", "fa-user-tie", "Employer as safety technician", "When it is allowed after 1 January 2026."),
     ("en/guides/workplace-accident-employer-steps/", "fa-triangle-exclamation", "Workplace accident", "The employer's first steps."),
     ("en/foreign-companies-greece/", "fa-earth-europe", "Foreign companies in Greece", "Your health and safety obligations, in plain English."),
-    ("en/small-businesses/", "fa-store", "Small businesses", "Shops, restaurants, offices."),
+    ("en/shops-restaurants-offices/", "fa-store", "Shops, restaurants, offices", "Discreet, targeted visits and a clean file."),
     ("en/team/", "fa-users", "Our team", "Engineers from Aristotle University of Thessaloniki."),
 ]
 
@@ -89,7 +89,7 @@ PAGES.append(dict(
 <ul>
 <li><a href="{PRE}en/construction-sites/">Construction sites</a>: work at height, scaffolding, construction machinery, safety plans</li>
 <li><a href="{PRE}en/industry-logistics/">Industry, warehouses and logistics</a>: forklifts, racking, shift work</li>
-<li><a href="{PRE}en/small-businesses/">Small businesses</a>: shops, restaurants, offices</li>
+<li><a href="{PRE}en/shops-restaurants-offices/">Shops, restaurants, offices</a></li>
 <li><a href="{PRE}en/foreign-companies-greece/">Foreign companies in Greece</a></li>
 </ul>
 """, "Sectors", "h-sectors"),
@@ -426,18 +426,18 @@ PAGES.append(dict(
 
 # ─────────────────────────────────────────────────────────────── P10 SMALL BUSINESSES
 PAGES.append(dict(
-    lang="en", path="/en/small-businesses/", alt="/mikres-epixeiriseis/",
+    lang="en", path="/en/shops-restaurants-offices/", alt="/katastimata-estiasi-grafeia/",
     title="Safety Technician for Shops, Restaurants and Offices",
-    desc="Health and safety for small businesses in Attica: safety technician, written risk assessment and training for shops, restaurants and offices.",
-    crumb="Small businesses", eyebrow="Sector",
+    desc="Health and safety for shops, restaurants and offices in Attica: safety technician, written risk assessment and staff training.",
+    crumb="Shops, restaurants, offices", eyebrow="Sector",
     h1="Shops, restaurants <em>and offices</em>",
     lead=("Even with one employee, a business needs a safety technician and a written occupational risk assessment. "
-          "For small businesses we keep things simple: a few targeted visits, a clean file ready for inspection and "
-          "training that fits the shop's opening hours."),
+          "We keep things simple: discreet, targeted visits during your business hours, a clean file ready for inspection and "
+          "staff training on what the law requires."),
     faq=[
         ("Can I act as safety technician myself?",
          "In category B and C businesses with up to 20 employees, the law allows it under conditions and with training, as applies from 1 January 2026. The written risk assessment, however, must be prepared by a person with safety technician qualifications. See the <a href=\"{PRE}en/guides/employer-as-safety-technician/\">detailed guide</a>."),
-        ("What is needed for CPR training in a small shop?",
+        ("What applies to CPR training in shops, restaurants and offices?",
          "With up to 50 employees on one site, the training is done with the free training material of the Ministry of Labour. We make sure it is recorded properly in the file."),
     ],
     related=rel("en/safety-technician-greece/", "en/guides/employer-as-safety-technician/", "en/risk-assessment-greece/",
@@ -449,9 +449,9 @@ PAGES.append(dict(
 <p>Ladders and high shelving, goods deliveries, electrical installations in old buildings, emergency exits blocked by boxes.</p>
 <h3>Offices</h3>
 <p>Ergonomics at screen workstations, lighting, ventilation, cables on the floor, fire safety in shared areas.</p>
-""", "Hazards", "h-risks") + S("What you get", """
+""", "Hazards", "h-risks") + S("Where we can help", """
 <ul class="check-grid">
-<li>Safety technician appointment with the hours that apply</li>
+<li>Safety technician appointment and visits with the hours that apply</li>
 <li>A risk assessment written for your own premises</li>
 <li>A file ready for a Labour Inspectorate inspection</li>
 <li>Staff training and CPR with the Ministry's material</li>
@@ -607,7 +607,7 @@ PAGES.append(dict(
         ("When do I also need an occupational physician?",
          "As a rule, from 50 employees upwards. Below that it may be required in special cases. This is why the calculator shows physician hours only from 50 employees."),
     ],
-    related=rel("en/safety-technician-greece/", "en/guides/employer-as-safety-technician/", "en/small-businesses/"),
+    related=rel("en/safety-technician-greece/", "en/guides/employer-as-safety-technician/", "en/shops-restaurants-offices/"),
     body=S("Calculate the hours", CALC + """
 <p>The calculation uses the coefficients of Article 21 of Law 3850/2010, as in force after codification in the Greek Labour Code (P.D. 62/2025):</p>
 <div class="table-wrap"><table class="data-table">

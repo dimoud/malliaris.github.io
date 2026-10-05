@@ -329,7 +329,7 @@
         'sectors.linkslabel': { el: 'Ανά κλάδο:', en: 'By sector:' },
         'sectors.l1': { el: 'Κατασκευές & εργοτάξια', en: 'Construction sites' },
         'sectors.l2': { el: 'Βιομηχανία & logistics', en: 'Industry & logistics' },
-        'sectors.l3': { el: 'Μικρές επιχειρήσεις', en: 'Small businesses' },
+        'sectors.l3': { el: 'Καταστήματα, Εστίαση, Γραφεία', en: 'Shops, restaurants, offices' },
         'sectors.l4': { el: 'Ξένες εταιρείες (EN)', en: 'Foreign companies in Greece' },
         'team.v1': { el: 'ΕΙΛΙΚΡΙΝΕΙΑ', en: 'HONESTY' },
         'team.v2': { el: 'ΜΕΘΟΔΙΚΟΤΗΤΑ', en: 'METHOD' },

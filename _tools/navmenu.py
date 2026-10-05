@@ -25,7 +25,7 @@ SERVICES_EL_MORE = [
 SECTORS_EL = [
     ("kataskeves-ergotaxia/", "Κατασκευές &amp; Εργοτάξια"),
     ("viomixania-logistics/", "Βιομηχανία &amp; Logistics"),
-    ("mikres-epixeiriseis/", "Καταστήματα, Εστίαση, Γραφεία"),
+    ("katastimata-estiasi-grafeia/", "Καταστήματα, Εστίαση, Γραφεία"),
     ("en/foreign-companies-greece/", "Ξένες εταιρείες (στα αγγλικά)"),
 ]
 
@@ -47,7 +47,7 @@ SERVICES_EN_MORE = [
 SECTORS_EN = [
     ("en/construction-sites/", "Construction sites"),
     ("en/industry-logistics/", "Industry &amp; logistics"),
-    ("en/small-businesses/", "Shops, restaurants, offices"),
+    ("en/shops-restaurants-offices/", "Shops, restaurants, offices"),
     ("en/foreign-companies-greece/", "Foreign companies in Greece"),
 ]
 
