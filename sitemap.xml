@@ -99,6 +99,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/energeia-perivallon/"/>
   </url>
   <url>
+    <loc>https://malliarisandpartners.gr/xenes-etaireies-ellada/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/xenes-etaireies-ellada/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/foreign-companies-greece/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/xenes-etaireies-ellada/"/>
+  </url>
+  <url>
     <loc>https://malliarisandpartners.gr/odigoi/</loc>
     <lastmod>2026-09-25</lastmod>
     <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/odigoi/"/>
@@ -206,6 +213,9 @@
   <url>
     <loc>https://malliarisandpartners.gr/en/foreign-companies-greece/</loc>
     <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="el" href="https://malliarisandpartners.gr/xenes-etaireies-ellada/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://malliarisandpartners.gr/en/foreign-companies-greece/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://malliarisandpartners.gr/xenes-etaireies-ellada/"/>
   </url>
   <url>
     <loc>https://malliarisandpartners.gr/en/team/</loc>

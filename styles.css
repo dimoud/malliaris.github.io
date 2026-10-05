@@ -770,7 +770,8 @@ nav.scrolled {
     gap: 4px;
     min-width: 0;
 }
-.team-sub-body .team-profile-role {
+.team-sub-body .team-profile-role,
+.team-profile-body .team-profile-role {
     font-size: 11px;
     letter-spacing: 1px;
 }
@@ -779,6 +780,7 @@ nav.scrolled {
     font-weight: 900;
     font-size: 12px;
 }
+html[lang="el"] .team-sub-body .team-profile-role--normal-spacing { font-size: 11px; }
 .team-sub-name {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
@@ -3746,7 +3748,7 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 @media (max-width: 900px) { .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .footer-nav { grid-template-columns: 1fr; } .footer-nav a { padding: 6px 0; } }
 
-/* ===== Υπομενού μπάρας: Υπηρεσίες / Τομείς ===== */
+/* ===== Υπομενού μπάρας: Υπηρεσίες / Τομείς / Εργαλεία ===== */
 .nav-dd { position: relative; display: flex; align-items: center; gap: 2px; }
 .nav-dd-toggle {
     width: 22px; height: 28px; padding: 0; border: 0; background: none; cursor: pointer;
@@ -3783,6 +3785,7 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 .nav-links .nav-dd-menu a:hover, .nav-links .nav-dd-menu a:focus-visible {
     color: var(--white); background: rgba(232,84,26,0.1); border-left-color: var(--accent);
 }
+.nav-links .nav-dd-menu a.nav-dd-accent, .nav-links .nav-dd-menu a.nav-dd-accent:hover, .nav-links .nav-dd-menu a.nav-dd-accent:focus-visible { color: var(--accent); }
 .nav-dd-sep { display: block; height: 1px; margin: 6px 20px; background: rgba(255,255,255,0.08); }
 
 @media (max-width: 900px) {

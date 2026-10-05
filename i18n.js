@@ -26,6 +26,7 @@
         'nav.services': { el: 'Υπηρεσίες',                    en: 'Services' },
         'nav.sectors':  { el: 'Τομείς',                       en: 'Sectors' },
         'nav.team':     { el: 'Η ΟΜΑΔΑ ΜΑΣ',                   en: 'OUR TEAM' },
+        'nav.tools':    { el: 'Εργαλεία',                     en: 'Tools' },
         'nav.action':   { el: 'ΣΤΗ ΔΡΑΣΗ',                     en: 'IN ACTION' },
         'nav.contact':  { el: 'Επικοινωνία',                  en: 'Contact' },
 
@@ -337,7 +338,7 @@
         'sectors.l4': { el: 'Γραφεία και Υπηρεσίες', en: 'Offices & Services' },
         'sectors.l5': { el: 'Καταστήματα, Εστίαση, Τουρισμός', en: 'Shops, Restaurants, Tourism' },
         'sectors.l6': { el: 'Μεταφορές και Logistics', en: 'Transport & Logistics' },
-        'sectors.l7': { el: 'Ξένες Εταιρείες (EN)', en: 'Foreign Companies in Greece' },
+        'sectors.l7': { el: 'Ξένες Εταιρείες στην Ελλάδα', en: 'Foreign Companies in Greece' },
         'team.v1': { el: 'ΕΙΛΙΚΡΙΝΕΙΑ', en: 'HONESTY' },
         'team.v2': { el: 'ΜΕΘΟΔΙΚΟΤΗΤΑ', en: 'METHOD' },
         'team.v3': { el: 'ΤΕΧΝΙΚΗ ΓΝΩΣΗ', en: 'TECHNICAL KNOW-HOW' },

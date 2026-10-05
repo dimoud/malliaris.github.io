@@ -540,9 +540,9 @@ PAGES.append(dict(
 """, "Services", "h-services"),
 ))
 
-# ─────────────────────────────────────────────────────────────── FOREIGN COMPANIES (English only)
+# ─────────────────────────────────────────────────────────────── FOREIGN COMPANIES
 PAGES.append(dict(
-    lang="en", path="/en/foreign-companies-greece/", alt=None,
+    lang="en", path="/en/foreign-companies-greece/", alt="/xenes-etaireies-ellada/",
     title="Health & Safety for Foreign Companies in Greece",
     desc="Plain-English guide to health and safety duties for foreign companies with staff in Greece: safety technician, risk assessment, accident reporting.",
     crumb="Foreign companies in Greece", eyebrow="Sector",

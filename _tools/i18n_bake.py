@@ -137,13 +137,14 @@ EN_LINKS = {
     "odigoi/ergodotis-texnikos-asfaleias/": "guides/employer-as-safety-technician/",
     "odigoi/ergatiko-atyxima-ti-kanei-o-ergodotis/": "guides/workplace-accident-employer-steps/",
     "aporrito/": "privacy/",
+    "xenes-etaireies-ellada/": "foreign-companies-greece/",
     "en/foreign-companies-greece/": "foreign-companies-greece/",
 }
 
 
 def refresh_dd(text, t, lang):
-    """Βάζει/ανανεώνει τα υπομενού «Υπηρεσίες» και «Τομείς» της μπάρας (δείκτες <!--dd:…-->)."""
-    for key in ("services", "sectors"):
+    """Βάζει/ανανεώνει τα υπομενού «Υπηρεσίες», «Τομείς» και «Εργαλεία» της μπάρας (δείκτες <!--dd:…-->)."""
+    for key in ("services", "sectors", "tools"):
         block = N.home_block(key, lang, t["nav." + key][lang])
         pat = re.compile(r"<!--dd:%s-->.*?<!--/dd:%s-->" % (key, key), re.S)
         if pat.search(text):
