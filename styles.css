@@ -2171,9 +2171,11 @@ footer {
     outline: 2px solid transparent;
     outline-offset: -2px;
 }
+@media (hover: hover) {
 .service-card:hover {
     box-shadow: 0 0 0 2px var(--accent), 0 8px 32px rgba(232,84,26,0.18);
     outline-color: var(--accent);
+}
 }
 .sc-bg {
     position: absolute; inset: 0;
@@ -2183,7 +2185,7 @@ footer {
     transition: opacity 0.5s ease, transform 0.6s ease;
     pointer-events: none;
 }
-.service-card:hover .sc-bg { opacity: 0.15; transform: scale(1.04); }
+@media (hover: hover) { .service-card:hover .sc-bg { opacity: 0.15; transform: scale(1.04); } }
 /* Dark gradient so text is always readable over image */
 .sc-content {
     position: absolute; inset: 0; z-index: 2;
@@ -2201,9 +2203,12 @@ footer {
     overflow: hidden; max-height: 0; opacity: 0;
     transition: max-height 0.6s cubic-bezier(.22,1,.36,1), opacity 0.5s ease;
 }
-/* Hover: subtle image dim, slide up text - NO height jump */
+/* Hover: subtle image dim, slide up text - NO height jump.
+   Μόνο με ποντίκι: σε οθόνες αφής το iOS έδειχνε το κείμενο στο πρώτο πάτημα αντί να ανοίγει τη σελίδα */
+@media (hover: hover) {
 .service-card:hover .sc-top { transform: translateY(-6px); }
 .service-card:hover .sc-text-wrap { max-height: 180px; opacity: 1; }
+}
 
 /* ===== SECTORS - 3D COVERFLOW CAROUSEL ===== */
 .sectors-coverflow-wrap {
@@ -3571,8 +3576,10 @@ a.lang-btn { text-decoration: none; display: inline-block; }
 .mobile-lang a.lang-btn { display: flex; }
 
 /* Σύνδεσμος στην κάρτα υπηρεσίας */
+@media (hover: hover) {
 .service-card:hover .sc-text-wrap,
 .service-card:focus-within .sc-text-wrap { max-height: 240px; opacity: 1; }
+}
 .sc-link {
     display: inline-flex; align-items: center; gap: 6px;
     margin-top: 10px;

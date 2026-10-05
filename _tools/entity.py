@@ -6,8 +6,8 @@ import json
 DOMAIN = "https://malliarisandpartners.gr"
 ORG_ID = DOMAIN + "/#organization"
 SITE_ID = DOMAIN + "/#website"
-PHONE_E164 = "+306976984845"
-PHONE_DISPLAY = "+30 697 698 4845"
+PHONE_E164 = "+302110040193"
+PHONE_DISPLAY = "+30 211 00 40 193"
 EMAIL = "info@malliarisandpartners.gr"
 MAP_URL = "https://share.google/xxk94ucxrcYaLiCtk"
 ADDRESS = {"@type": "PostalAddress", "streetAddress": "Δωδεκανήσου 16", "addressLocality": "Άλιμος",

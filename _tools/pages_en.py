@@ -548,7 +548,7 @@ PAGES.append(dict(
 """, "Team", "h-people") + S("How we work", """
 <p>Three words describe us: <strong>honesty, method, technical knowledge</strong>. We say clearly what is needed and what is not, give priority to the measures that really reduce risk and respect the company's budget.</p>
 <p>Every client has one contact person from the team who knows the premises and the staff. Where specialist knowledge is needed (mechanical, structural, drawings), the relevant engineer joins the work.</p>
-<p class="src">Malliaris &amp; Partners · Dodekanisou 16, 174 56 Alimos, Athens · +30 697 698 4845</p>
+<p class="src">Malliaris &amp; Partners · Dodekanisou 16, 174 56 Alimos, Athens · +30 211 00 40 193</p>
 """, "Approach", "h-how"),
 ))
 
@@ -691,7 +691,7 @@ PAGES.append(dict(
 <li><strong>Investigate and act</strong>The measures to prevent a repeat are recorded in the recommendations book, and the risk assessment is updated.</li>
 </ol>
 <p class="src">Legal basis: Article 534(2) of P.D. 62/2025 (formerly Article 43 of Law 3850/2010), as amended by Article 38 of Law 5239/2025.</p>
-<div class="facts"><strong>Need help now?</strong> Call us on <a href="tel:+306976984845">+30 697 698 4845</a>. If we act as your safety technician, we come for a site survey and investigation.</div>
+<div class="facts"><strong>Need help now?</strong> Call us on <a href="tel:+302110040193">+30 211 00 40 193</a>. If we act as your safety technician, we come for a site survey and investigation.</div>
 {AUTHOR}
 """, "Steps", "h-steps"),
 ))
@@ -705,7 +705,7 @@ PAGES.append(dict(
     h1="Privacy <em>and cookies</em>",
     lead="This page explains what data the website collects, why, and how you can exercise your rights.",
     body=S("Controller", """
-<p>The controller is Malliaris &amp; Partners, Dodekanisou 16, 174 56 Alimos, Greece, tel. +30 697 698 4845, email <a href="mailto:info@malliarisandpartners.gr">info@malliarisandpartners.gr</a>.</p>
+<p>The controller is Malliaris &amp; Partners, Dodekanisou 16, 174 56 Alimos, Greece, tel. +30 211 00 40 193, email <a href="mailto:info@malliarisandpartners.gr">info@malliarisandpartners.gr</a>.</p>
 """, "", "h-ctrl") + S("Contact form", """
 <p>When you use the contact form we receive your name, email, phone (if given), subject and message. We use them only to reply and to prepare an offer. The form is sent through a Google service (Apps Script) to our mailbox.</p>
 <p>We keep the correspondence as long as needed for your request and any resulting cooperation, and delete it when no longer needed or when you ask us to.</p>
