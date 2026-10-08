@@ -3582,9 +3582,15 @@ footer {
     /* Result */
     .sqz-result { padding: 28px 5%; }
     .sqz-result-inner { flex-direction: column; text-align: center; gap: 16px; }
-    .sqz-result-actions { justify-content: center; flex-wrap: wrap; }
-    .sqz-result-cta { width: 100%; text-align: center; box-sizing: border-box; }
-    .sqz-retry-btn  { width: 100%; text-align: center; box-sizing: border-box; }
+    .sqz-result-actions { flex-direction: column; align-items: stretch; flex-wrap: nowrap; }
+    /* Ίδιο κουτί για τα δύο κουμπιά: ακυρώνει όσα κληρονομεί το .btn-accent από το hero στο κινητό */
+    .sqz-result-cta,
+    .sqz-retry-btn {
+        display: flex; align-items: center; justify-content: center;
+        order: 0; width: 100%; max-width: 100%; min-height: 48px; margin: 0;
+        padding: 11px 24px; border-radius: 6px;
+        text-align: center; box-sizing: border-box;
+    }
 }
 
 /* ===== CONTACT MAP (αντικαθιστά το contact.gif) ===== */

@@ -369,7 +369,7 @@ PAGES.append(dict(
     h1="Health and safety <em>on construction sites</em>",
     lead=("Construction sites are where we started. We provide the safety technician and the safety coordinator, "
           "prepare the safety and health plan (SAY) and file (FAY), train crews in the field and check scaffolding, "
-          "machinery and guards before a mistake happens."),
+          "machinery and procedures, before a mistake happens."),
     faq=[
         ("Can the safety coordinator also be the safety technician?",
          "Yes, the coordinator can also be given the safety technician duties. Since 1 January 2026, however, the coordinator's time is not offset against the safety technician's time; it is calculated separately and the coordinator's minimum time is written explicitly in their contract (Article 6 of P.D. 305/1996, as amended by Law 5239/2025)."),

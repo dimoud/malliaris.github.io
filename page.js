@@ -25,6 +25,22 @@
     onScroll();
 })();
 
+/* Κουμπί «Top» - ίδιο με της αρχικής (στυλ .back-to-top στο styles.css), φτιάχνεται εδώ για όλες τις εσωτερικές σελίδες */
+(function () {
+    'use strict';
+    if (document.getElementById('backToTop')) return;
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.id = 'backToTop';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = '<svg viewBox="0 0 10 10" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2,7 5,3 8,7"/></svg> Top';
+    document.body.appendChild(btn);
+    function onScroll() { btn.classList.toggle('visible', window.scrollY > 120); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    onScroll();
+})();
+
 /* Δίκτυο κόμβων στην επάνω ζώνη - ίδιο με το hero της αρχικής, πυκνότητα ανάλογη με το εμβαδόν */
 (function () {
     'use strict';
