@@ -1537,7 +1537,7 @@ html[lang="el"] .team-sub-body .team-profile-role--normal-spacing { font-size: 1
 }
 .contact-detail:hover { color: var(--white); }
 .contact-detail i {
-    width: 20px; text-align: center;
+    width: 20px; flex-shrink: 0; text-align: center;
     color: var(--accent);
 }
 
@@ -1906,7 +1906,11 @@ footer {
     /* ABOUT */
     .about-grid { grid-template-columns: 1fr; }
     .about-aside { order: -1; }
-    .about-art { display: none; }
+    /* Το γραμμικό σχέδιο ανεβαίνει πρώτο, πάνω από eyebrow και τίτλο */
+    .about-profile-row { display: contents; }
+    .about-art { order: -1; margin: 0 -2%; }
+    .about-art svg { overflow: visible; }
+    .about-art .ab-label { font-size: 15px; }
 
     /* SERVICES */
     .services-grid { grid-template-columns: 1fr 1fr; }
@@ -3808,7 +3812,22 @@ a.lang-btn { text-decoration: none; display: inline-block; }
     .nav-links .nav-dd-menu a:hover { background: none; border-right-color: var(--accent); }
     .nav-dd-sep { margin: 4px 6px; }
 }
-@media (min-width: 901px) and (max-width: 1180px) {
+@media (min-width: 901px) {
+    .nav-links > a, .nav-dd > a, .lang-toggle .lang-btn { white-space: nowrap; }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+    .logo-text { display: none; }
+}
+@media (min-width: 901px) and (max-width: 1500px) {
+    nav { padding: 0 3%; }
+    .nav-right { gap: 16px; }
     .nav-links { gap: 20px; }
-    .nav-links > a, .nav-dd > a { white-space: nowrap; font-size: 12px; letter-spacing: 0.8px; }
+    .nav-links > a, .nav-dd > a { font-size: 12px; letter-spacing: 0.8px; }
+}
+@media (min-width: 901px) and (max-width: 1060px) {
+    nav { padding: 0 2%; }
+    .nav-right { gap: 12px; }
+    .nav-links { gap: 12px; }
+    .nav-links > a, .nav-dd > a { font-size: 11px; letter-spacing: 0.4px; }
+    .nav-links a.nav-cta { padding: 8px 12px; }
 }
