@@ -207,10 +207,10 @@ def contact_band(p, pre):
     home = pre if el else pre + "en/"
     if el:
         h, txt, form = "Μιλήστε <em>μαζί μας</em>", "Πείτε μας τι κάνει η επιχείρησή σας και πόσους εργαζόμενους έχει. Σας απαντάμε με συγκεκριμένη πρόταση.", "Φόρμα επικοινωνίας"
-        addr, book = "Δωδεκανήσου 16, 174 56 Άλιμος", "Κλείστε ραντεβού 15′"
+        addr, book = "Πάτμου 3, 174 56 Άλιμος", "Κλείστε ραντεβού 15′"
     else:
         h, txt, form = "Talk <em>to us</em>", "Tell us what your company does and how many people it employs. We reply with a concrete proposal, in English.", "Contact form"
-        addr, book = "Dodekanisou 16, 174 56 Alimos, Athens", "Book a 15′ call"
+        addr, book = "Patmou 3, 174 56 Alimos, Athens", "Book a 15′ call"
     return f'''
     <section class="page-contact" aria-labelledby="h-contact">
         <div class="page-contact-inner">

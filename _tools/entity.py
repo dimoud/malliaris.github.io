@@ -9,10 +9,10 @@ SITE_ID = DOMAIN + "/#website"
 PHONE_E164 = "+302110040193"
 PHONE_DISPLAY = "+30 211 00 40 193"
 EMAIL = "info@malliarisandpartners.gr"
-MAP_URL = "https://share.google/xxk94ucxrcYaLiCtk"
-ADDRESS = {"@type": "PostalAddress", "streetAddress": "Δωδεκανήσου 16", "addressLocality": "Άλιμος",
+MAP_URL = "https://maps.google.com/?q=%CE%A0%CE%AC%CF%84%CE%BC%CE%BF%CF%85%203%2C%20%CE%86%CE%BB%CE%B9%CE%BC%CE%BF%CF%82%20174%2056"
+ADDRESS = {"@type": "PostalAddress", "streetAddress": "Πάτμου 3", "addressLocality": "Άλιμος",
            "postalCode": "17456", "addressRegion": "Αττική", "addressCountry": "GR"}
-ADDRESS_EN = {"@type": "PostalAddress", "streetAddress": "Dodekanisou 16", "addressLocality": "Alimos",
+ADDRESS_EN = {"@type": "PostalAddress", "streetAddress": "Patmou 3", "addressLocality": "Alimos",
               "postalCode": "17456", "addressRegion": "Attica", "addressCountry": "GR"}
 
 PEOPLE = [
