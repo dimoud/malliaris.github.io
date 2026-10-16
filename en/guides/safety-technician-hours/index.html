@@ -202,17 +202,26 @@
             <h2 id="h-calc" class="section-heading">Calculate the hours</h2>
             <div class="prose">
 <form class="calc" id="taCalc" onsubmit="return false" aria-label="Safety technician hours calculator">
-  <div class="calc-row">
-    <div><label for="calcCat">Risk category</label>
-      <select id="calcCat"><option value="A">A: high</option><option value="B" selected>B: medium</option><option value="C">C: low</option></select></div>
-    <div><label for="calcEmp">Number of employees</label>
-      <input id="calcEmp" type="number" min="1" max="100000" value="10" inputmode="numeric"></div>
+  <div class="calc-head">Employees per risk category</div>
+  <div class="calc-row calc-row-3">
+    <div><label for="calcA">A: high</label>
+      <input id="calcA" type="number" min="0" max="100000" value="0" inputmode="numeric"></div>
+    <div><label for="calcB">B: medium</label>
+      <input id="calcB" type="number" min="0" max="100000" value="10" inputmode="numeric"></div>
+    <div><label for="calcC">C: low</label>
+      <input id="calcC" type="number" min="0" max="100000" value="0" inputmode="numeric"></div>
   </div>
   <div class="calc-out" aria-live="polite">
     <div class="calc-box"><div class="cb-label">Safety technician</div><div class="cb-num" id="calcTA">-</div><div class="cb-sub" id="calcTAsub"></div></div>
     <div class="calc-box"><div class="cb-label">Occupational physician</div><div class="cb-num" id="calcIE">-</div><div class="cb-sub" id="calcIEsub"></div></div>
   </div>
-  <p class="calc-note">Indicative calculation for a single site. The exact category follows from the activity code of the business (Article 500 of P.D. 62/2025), and special cases may change the result.</p>
+  <div class="calc-contract">
+    <div class="cc-head">Contract duration</div>
+    <div class="cc-in"><label for="calcFrom">From:</label><input id="calcFrom" type="date"></div>
+    <div class="cc-in"><label for="calcTo">To:</label><input id="calcTo" type="date"></div>
+    <div class="cc-out" id="calcDaysOut" aria-live="polite"></div>
+  </div>
+  <p class="calc-note">Indicative calculation for a single site. With employees in more than one category, the hours are calculated separately per category and added up; the minimum is set by the total number of employees.The exact category follows from the activity code of the business (Article 500 of P.D. 62/2025), and special cases may change the result.</p>
 </form>
 
 <p>The calculation uses the coefficients of Article 21 of Law 3850/2010, as in force after codification in the Greek Labour Code (P.D. 62/2025):</p>

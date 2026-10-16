@@ -134,6 +134,8 @@
     background: linear-gradient(160deg, #1a2a42 0%, #0f1929 100%); color: var(--white);
 }
 .calc-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.calc-row-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.calc-head { font: 600 12px 'Space Grotesk', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
 .calc label { display: block; font: 600 11px 'Space Grotesk', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 6px; }
 .calc select, .calc input {
     width: 100%; padding: 12px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15);
@@ -146,7 +148,14 @@
 .calc-box .cb-num { font: 800 34px 'Space Grotesk', sans-serif; color: var(--accent2); margin-top: 4px; }
 .calc-box .cb-sub { font-size: 12.5px; color: rgba(255,255,255,0.6); margin-top: 4px; line-height: 1.5; }
 .calc-note { margin-top: 14px; font-size: 12.5px; color: rgba(255,255,255,0.6); line-height: 1.6; }
-@media (max-width: 640px) { .calc-row, .calc-out { grid-template-columns: 1fr; } }
+.calc-contract { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 10px 16px; align-items: center; }
+.calc-contract .cc-head { font: 600 11px 'Space Grotesk', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+.calc-contract .cc-in { display: flex; align-items: center; gap: 8px; }
+.calc-contract .cc-in label { margin-bottom: 0; letter-spacing: 1px; white-space: nowrap; }
+.calc-contract .cc-in input { padding: 8px 10px; color-scheme: dark; }
+.calc-contract .cc-out { grid-column: 1 / -1; font-size: 13.5px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+.calc-contract .cc-out strong { color: var(--accent2); font-weight: 700; }
+@media (max-width: 640px) { .calc-row, .calc-out, .calc-contract { grid-template-columns: 1fr; } }
 
 /* Ζώνη επικοινωνίας στο τέλος κάθε σελίδας */
 .page-contact { background: linear-gradient(160deg, #1a2a42 0%, #141f33 40%, #0f1929 100%); padding: clamp(56px, 8vw, 100px) 5%; position: relative; }

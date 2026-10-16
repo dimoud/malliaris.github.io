@@ -202,17 +202,26 @@
             <h2 id="h-calc" class="section-heading">Υπολογίστε τις ώρες</h2>
             <div class="prose">
 <form class="calc" id="taCalc" onsubmit="return false" aria-label="Υπολογιστής ωρών Τεχνικού Ασφαλείας">
-  <div class="calc-row">
-    <div><label for="calcCat">Κατηγορία επικινδυνότητας</label>
-      <select id="calcCat"><option value="A">Α΄: υψηλή</option><option value="B" selected>Β΄: μέση</option><option value="C">Γ΄: χαμηλή</option></select></div>
-    <div><label for="calcEmp">Αριθμός εργαζομένων</label>
-      <input id="calcEmp" type="number" min="1" max="100000" value="10" inputmode="numeric"></div>
+  <div class="calc-head">Εργαζόμενοι ανά κατηγορία επικινδυνότητας</div>
+  <div class="calc-row calc-row-3">
+    <div><label for="calcA">Α΄: υψηλή</label>
+      <input id="calcA" type="number" min="0" max="100000" value="0" inputmode="numeric"></div>
+    <div><label for="calcB">Β΄: μέση</label>
+      <input id="calcB" type="number" min="0" max="100000" value="10" inputmode="numeric"></div>
+    <div><label for="calcC">Γ΄: χαμηλή</label>
+      <input id="calcC" type="number" min="0" max="100000" value="0" inputmode="numeric"></div>
   </div>
   <div class="calc-out" aria-live="polite">
     <div class="calc-box"><div class="cb-label">Τεχνικός Ασφαλείας</div><div class="cb-num" id="calcTA">-</div><div class="cb-sub" id="calcTAsub"></div></div>
     <div class="calc-box"><div class="cb-label">Ιατρός Εργασίας</div><div class="cb-num" id="calcIE">-</div><div class="cb-sub" id="calcIEsub"></div></div>
   </div>
-  <p class="calc-note">Ενδεικτικός υπολογισμός για μία εγκατάσταση. Η ακριβής κατηγορία προκύπτει από τον ΚΑΔ της επιχείρησης (άρθρο 500 ΠΔ 62/2025) και ειδικές περιπτώσεις μπορεί να αλλάζουν το αποτέλεσμα.</p>
+  <div class="calc-contract">
+    <div class="cc-head">Διάρκεια σύμβασης</div>
+    <div class="cc-in"><label for="calcFrom">Από:</label><input id="calcFrom" type="date"></div>
+    <div class="cc-in"><label for="calcTo">Μέχρι:</label><input id="calcTo" type="date"></div>
+    <div class="cc-out" id="calcDaysOut" aria-live="polite"></div>
+  </div>
+  <p class="calc-note">Ενδεικτικός υπολογισμός για μία εγκατάσταση. Με εργαζόμενους σε περισσότερες κατηγορίες, οι ώρες υπολογίζονται χωριστά ανά κατηγορία και αθροίζονται· το ελάχιστο ορίζεται από το σύνολο των εργαζομένων.Η ακριβής κατηγορία προκύπτει από τον ΚΑΔ της επιχείρησης (άρθρο 500 ΠΔ 62/2025) και ειδικές περιπτώσεις μπορεί να αλλάζουν το αποτέλεσμα.</p>
 </form>
 
 <p>Ο υπολογισμός στηρίζεται στους συντελεστές του άρθρου 21 του ν. 3850/2010, όπως ισχύει μετά την κωδικοποίηση στον Κώδικα Εργατικού Δικαίου (ΠΔ 62/2025):</p>
